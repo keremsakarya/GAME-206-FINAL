@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://cdmee2kayhkfk"]
 
+[ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="1_mqbuc"]
+
 [node name="Metro" type="Node3D" unique_id=513061234]
+
+[node name="gorund" type="CSGBox3D" parent="." unique_id=1692612747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3580017, -0.46166992, -7.508545)
+use_collision = true
+size = Vector3(20.847595, 0.076660156, 20.622559)
+
+[node name="Player" parent="." unique_id=1581314821 instance=ExtResource("1_mqbuc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54559445, 0)
