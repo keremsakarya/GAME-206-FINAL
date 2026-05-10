@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cdmee2kayhkfk"]
 
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="1_mqbuc"]
+[ext_resource type="PackedScene" uid="uid://68ueo2jgw61j" path="res://scenes/weapon_trigger.tscn" id="2_qqq2g"]
 
 [node name="Metro" type="Node3D" unique_id=513061234]
 
@@ -11,3 +12,6 @@ size = Vector3(20.847595, 0.076660156, 20.622559)
 
 [node name="Player" parent="." unique_id=1581314821 instance=ExtResource("1_mqbuc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54559445, 0)
+
+[node name="WeaponTrigger" parent="." unique_id=1731345302 instance=ExtResource("2_qqq2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.6455603)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://68ueo2jgw61j"]
+
+[ext_resource type="Script" uid="uid://bpewm5g4tgb0" path="res://scripts/weapon_trigger.gd" id="1_rfman"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bfpo"]
+size = Vector3(3.8086548, 4.0079346, 1)
+
+[node name="WeaponTrigger" type="Area3D" unique_id=1731345302]
+script = ExtResource("1_rfman")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1011593866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05557251, 1.5039673, 0)
+shape = SubResource("BoxShape3D_1bfpo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

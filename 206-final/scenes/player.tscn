@@ -2,8 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://bdlb6vptxdi4u" path="res://assets/pistol/Pistol.fbx" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b35lupl2eor2o" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dpffsn5qlu5ic" path="res://images/nuri.png" id="3_dqkch"]
+[ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="4_qlg0r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlg0r"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1581314821]
 script = ExtResource("1_g2els")
@@ -16,3 +25,55 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7974055, 0)
 
 [node name="Pistol" parent="Camera3D" unique_id=1070852897 instance=ExtResource("1_3vyb7")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.014355361, -0.63213766, -0.22994953)
+
+[node name="PickupUI" type="CanvasLayer" parent="." unique_id=1001942110]
+
+[node name="FadeTarget" type="Control" parent="PickupUI" unique_id=423770634]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PickupUI/FadeTarget" unique_id=1975726993]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7058824)
+
+[node name="TextureRect" type="TextureRect" parent="PickupUI/FadeTarget/ColorRect" unique_id=1156091296]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -271.0
+offset_right = 434.0
+offset_bottom = 191.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dqkch")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="PickupUI/FadeTarget" unique_id=1544738621]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 582.0
+offset_right = 641.0
+offset_bottom = 608.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("4_qlg0r")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
+text = "Continue"
+
+[connection signal="pressed" from="PickupUI/FadeTarget/Button" to="." method="_on_button_pressed"]

@@ -9,13 +9,20 @@ var current_speed = WALK_SPEED
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var camera = $Camera3D
+@onready var pistol_model = $Camera3D/Pistol
+@onready var pickup_ui = $PickupUI
+var can_move = true
 @onready var anim_player = $Camera3D/Pistol/AnimationPlayer
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	pistol_model.visible = false
+	pickup_ui.hide()
 
 # ----------- Fare Kontrolü (Etrafa Bakma) ----------
 func _unhandled_input(event):
+	if not can_move: return
+	
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		# Sağa sola bakarken player da döner
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
@@ -32,6 +39,8 @@ func _unhandled_input(event):
 
 # ----------- Fizik - Hareket -----------
 func _physics_process(delta):
+	if not can_move: return
+	
 	# Yerçekimi
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -69,3 +78,27 @@ func _physics_process(delta):
 			anim_player.play("Pistol_IDLE")
 	
 	move_and_slide()
+
+# Silah tetiklenmesi
+func show_weapon_pickup_ui():
+	can_move = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
+	# Fade-in
+	var fade_target = $PickupUI/FadeTarget
+	fade_target.modulate.a = 0.0 # başta görünmezlik
+	pickup_ui.show()
+	
+	# Alpha değerini 0.5 saniyede görünür yapma
+	var tween = create_tween()
+	tween.tween_property(fade_target, "modulate:a", 1.0, 0.5)
+
+# Butona basılınca
+
+
+
+func _on_button_pressed() -> void:
+	pickup_ui.hide()
+	pistol_model.visible = true
+	can_move = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
