@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rpe3ejqvpdda"
-path.s3tc="res://.godot/imported/Box.png-77e0071937fc5833a8c429dfaeb62243.s3tc.ctex"
+path.s3tc="res://.godot/imported/Box.png-3125adc9095358af5af9470301a0046e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/Minas/textures/Box.png"
-dest_files=["res://.godot/imported/Box.png-77e0071937fc5833a8c429dfaeb62243.s3tc.ctex"]
+source_file="res://assets/Mine/Minas/Textures/Box.png"
+dest_files=["res://.godot/imported/Box.png-3125adc9095358af5af9470301a0046e.s3tc.ctex"]
 
 [params]
 

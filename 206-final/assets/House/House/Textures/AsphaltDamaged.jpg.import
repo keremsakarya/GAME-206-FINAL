@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci4leqlh7310n"
-path.s3tc="res://.godot/imported/AsphaltDamaged.jpg-485a8abb07e9f0ff60718e9988be4965.s3tc.ctex"
+path.s3tc="res://.godot/imported/AsphaltDamaged.jpg-0fcfac4e6b904678beaf553e1b0f65d5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/House/House/textures/AsphaltDamaged.jpg"
-dest_files=["res://.godot/imported/AsphaltDamaged.jpg-485a8abb07e9f0ff60718e9988be4965.s3tc.ctex"]
+source_file="res://assets/House/House/Textures/AsphaltDamaged.jpg"
+dest_files=["res://.godot/imported/AsphaltDamaged.jpg-0fcfac4e6b904678beaf553e1b0f65d5.s3tc.ctex"]
 
 [params]
 

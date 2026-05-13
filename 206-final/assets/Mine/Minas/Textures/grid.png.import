@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtvs1kuo488eo"
-path.s3tc="res://.godot/imported/grid.png-ba5d8078950ea79b1e75cea735a227d3.s3tc.ctex"
+path.s3tc="res://.godot/imported/grid.png-3e35b8c8f477612de5a13483fa78b8d2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/Minas/textures/grid.png"
-dest_files=["res://.godot/imported/grid.png-ba5d8078950ea79b1e75cea735a227d3.s3tc.ctex"]
+source_file="res://assets/Mine/Minas/Textures/grid.png"
+dest_files=["res://.godot/imported/grid.png-3e35b8c8f477612de5a13483fa78b8d2.s3tc.ctex"]
 
 [params]
 

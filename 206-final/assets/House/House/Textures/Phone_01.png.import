@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bx28tpjdug4re"
-path.s3tc="res://.godot/imported/Phone_01.png-4896dd117354f5a2e1bc1b0761398961.s3tc.ctex"
+path.s3tc="res://.godot/imported/Phone_01.png-63ce3e079a87ee64f2c2c37b4135dea1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/House/House/textures/Phone_01.png"
-dest_files=["res://.godot/imported/Phone_01.png-4896dd117354f5a2e1bc1b0761398961.s3tc.ctex"]
+source_file="res://assets/House/House/Textures/Phone_01.png"
+dest_files=["res://.godot/imported/Phone_01.png-63ce3e079a87ee64f2c2c37b4135dea1.s3tc.ctex"]
 
 [params]
 

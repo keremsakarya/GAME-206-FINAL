@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://66nx4okp77xy"
-path.s3tc="res://.godot/imported/Fence.png-78d58fd604e4a10e93d397e5b0dbe768.s3tc.ctex"
+path.s3tc="res://.godot/imported/Fence.png-6b708a5d12cc9108900a73f88eeedf3a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/House/House/textures/Fence.png"
-dest_files=["res://.godot/imported/Fence.png-78d58fd604e4a10e93d397e5b0dbe768.s3tc.ctex"]
+source_file="res://assets/House/House/Textures/Fence.png"
+dest_files=["res://.godot/imported/Fence.png-6b708a5d12cc9108900a73f88eeedf3a.s3tc.ctex"]
 
 [params]
 

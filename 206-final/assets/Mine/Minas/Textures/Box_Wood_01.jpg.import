@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lv0hlppywfda"
-path.s3tc="res://.godot/imported/Box_Wood_01.jpg-aa9105184c83dbc818d54c4f33a48674.s3tc.ctex"
+path.s3tc="res://.godot/imported/Box_Wood_01.jpg-ada3d94d97deedc66263518129bb9bd0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/Minas/textures/Box_Wood_01.jpg"
-dest_files=["res://.godot/imported/Box_Wood_01.jpg-aa9105184c83dbc818d54c4f33a48674.s3tc.ctex"]
+source_file="res://assets/Mine/Minas/Textures/Box_Wood_01.jpg"
+dest_files=["res://.godot/imported/Box_Wood_01.jpg-ada3d94d97deedc66263518129bb9bd0.s3tc.ctex"]
 
 [params]
 

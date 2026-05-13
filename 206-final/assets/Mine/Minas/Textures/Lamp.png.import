@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbwr132g2tx3f"
-path.s3tc="res://.godot/imported/Lamp.png-36b5b42bb6544ca067ff346608e5fae7.s3tc.ctex"
+path.s3tc="res://.godot/imported/Lamp.png-4a3501d7851931933bef076c609fbaba.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/Minas/textures/Lamp.png"
-dest_files=["res://.godot/imported/Lamp.png-36b5b42bb6544ca067ff346608e5fae7.s3tc.ctex"]
+source_file="res://assets/Mine/Minas/Textures/Lamp.png"
+dest_files=["res://.godot/imported/Lamp.png-4a3501d7851931933bef076c609fbaba.s3tc.ctex"]
 
 [params]
 

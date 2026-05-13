@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blfhv82cluxt2"
-path.s3tc="res://.godot/imported/Generator.png-9d4303c3f17167d3f536ae80d1f89c01.s3tc.ctex"
+path.s3tc="res://.godot/imported/Generator.png-f8e46219fe70fb41ff3c4910ab6defb6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/Minas/textures/Generator.png"
-dest_files=["res://.godot/imported/Generator.png-9d4303c3f17167d3f536ae80d1f89c01.s3tc.ctex"]
+source_file="res://assets/Mine/Minas/Textures/Generator.png"
+dest_files=["res://.godot/imported/Generator.png-f8e46219fe70fb41ff3c4910ab6defb6.s3tc.ctex"]
 
 [params]
 

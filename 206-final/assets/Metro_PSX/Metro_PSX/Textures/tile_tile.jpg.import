@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://85tphlt8v1ac"
-path.s3tc="res://.godot/imported/tile_tile.jpg-d1c290511ff4e70f516a3c7f7a5199bc.s3tc.ctex"
+path.s3tc="res://.godot/imported/tile_tile.jpg-1c9874be885cebd4e31dc71d00bb60e3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Metro_PSX/Metro_PSX/textures/tile_tile.jpg"
-dest_files=["res://.godot/imported/tile_tile.jpg-d1c290511ff4e70f516a3c7f7a5199bc.s3tc.ctex"]
+source_file="res://assets/Metro_PSX/Metro_PSX/Textures/tile_tile.jpg"
+dest_files=["res://.godot/imported/tile_tile.jpg-1c9874be885cebd4e31dc71d00bb60e3.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnsg7b3vfkndk"
-path.s3tc="res://.godot/imported/Pizza.png-8b2a37a8c419e526a59d8e012568dea9.s3tc.ctex"
+path.s3tc="res://.godot/imported/Pizza.png-24a561fe5b68241679f2dfd6814d36a0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/House/House/textures/Pizza.png"
-dest_files=["res://.godot/imported/Pizza.png-8b2a37a8c419e526a59d8e012568dea9.s3tc.ctex"]
+source_file="res://assets/House/House/Textures/Pizza.png"
+dest_files=["res://.godot/imported/Pizza.png-24a561fe5b68241679f2dfd6814d36a0.s3tc.ctex"]
 
 [params]
 

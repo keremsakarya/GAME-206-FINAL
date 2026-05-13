@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buftvf68fvmbm"
-path.s3tc="res://.godot/imported/Button.png-252ac61a6dda2366749c010919aba34f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Button.png-0424f9cdd319ddd3d7cb67fe22664b56.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/Minas/textures/Button.png"
-dest_files=["res://.godot/imported/Button.png-252ac61a6dda2366749c010919aba34f.s3tc.ctex"]
+source_file="res://assets/Mine/Minas/Textures/Button.png"
+dest_files=["res://.godot/imported/Button.png-0424f9cdd319ddd3d7cb67fe22664b56.s3tc.ctex"]
 
 [params]
 

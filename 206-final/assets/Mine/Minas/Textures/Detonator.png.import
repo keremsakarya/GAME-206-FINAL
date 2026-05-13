@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://becgcilpcjakc"
-path.s3tc="res://.godot/imported/Detonator.png-c5c4ffe4e42e3a4bfd7e64e6a4b24295.s3tc.ctex"
+path.s3tc="res://.godot/imported/Detonator.png-08f613a5ea574b3651d9111f37386d11.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/Minas/textures/Detonator.png"
-dest_files=["res://.godot/imported/Detonator.png-c5c4ffe4e42e3a4bfd7e64e6a4b24295.s3tc.ctex"]
+source_file="res://assets/Mine/Minas/Textures/Detonator.png"
+dest_files=["res://.godot/imported/Detonator.png-08f613a5ea574b3651d9111f37386d11.s3tc.ctex"]
 
 [params]
 

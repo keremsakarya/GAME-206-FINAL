@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://doo7gaooyhsk7"
-path.s3tc="res://.godot/imported/WoodFine_02.jpg-3d741d702f0830ad8cdb7e152090813d.s3tc.ctex"
+path.s3tc="res://.godot/imported/WoodFine_02.jpg-63ea2a742b8e7d93cc744f654b1b7b8e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/House/House/textures/WoodFine_02.jpg"
-dest_files=["res://.godot/imported/WoodFine_02.jpg-3d741d702f0830ad8cdb7e152090813d.s3tc.ctex"]
+source_file="res://assets/House/House/Textures/WoodFine_02.jpg"
+dest_files=["res://.godot/imported/WoodFine_02.jpg-63ea2a742b8e7d93cc744f654b1b7b8e.s3tc.ctex"]
 
 [params]
 
