@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="1_mqbuc"]
 [ext_resource type="PackedScene" uid="uid://68ueo2jgw61j" path="res://scenes/weapon_trigger.tscn" id="2_qqq2g"]
+[ext_resource type="PackedScene" uid="uid://c33l30m2qotwk" path="res://scenes/metrodeneme.tscn" id="3_dp0y2"]
 
 [node name="Metro" type="Node3D" unique_id=513061234]
 
@@ -15,3 +16,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54559445, 0)
 
 [node name="WeaponTrigger" parent="." unique_id=1731345302 instance=ExtResource("2_qqq2g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.6455603)
+
+[node name="Metro" parent="." unique_id=1338959597 instance=ExtResource("3_dp0y2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.677681, -1.3511691, 0)
