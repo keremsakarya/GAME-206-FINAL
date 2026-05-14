@@ -35,7 +35,10 @@ func _unhandled_input(event):
 	
 	# Fareyi boşa çıkarmak için ESC
 	if event.is_action_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 # ----------- Fizik - Hareket -----------
 func _physics_process(delta):

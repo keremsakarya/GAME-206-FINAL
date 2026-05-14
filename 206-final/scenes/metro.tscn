@@ -3,8 +3,41 @@
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="1_mqbuc"]
 [ext_resource type="PackedScene" uid="uid://68ueo2jgw61j" path="res://scenes/weapon_trigger.tscn" id="2_qqq2g"]
 [ext_resource type="PackedScene" uid="uid://c33l30m2qotwk" path="res://scenes/metrodeneme.tscn" id="3_dp0y2"]
+[ext_resource type="Script" uid="uid://0b38x77j4y06" path="res://scripts/atm_light.gd" id="4_yv0r8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dp0y2"]
+sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
+sky_horizon_color = Color(0.24741504, 0.16807032, 0.15766531, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_yv0r8"]
+sky_material = SubResource("ProceduralSkyMaterial_dp0y2")
+
+[sub_resource type="Environment" id="Environment_g2jey"]
+background_mode = 2
+sky = SubResource("Sky_yv0r8")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 1.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dp0y2"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yv0r8"]
+albedo_color = Color(0, 0, 0, 1)
 
 [node name="Metro" type="Node3D" unique_id=513061234]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1744765733]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=74027674]
+environment = SubResource("Environment_g2jey")
 
 [node name="gorund" type="CSGBox3D" parent="." unique_id=1692612747]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3580017, -0.46166992, -7.508545)
@@ -12,10 +45,360 @@ use_collision = true
 size = Vector3(20.847595, 0.076660156, 20.622559)
 
 [node name="Player" parent="." unique_id=1581314821 instance=ExtResource("1_mqbuc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54559445, 0)
+transform = Transform3D(-0.0011693673, 0, -0.99999934, 0, 1, 0, 0.99999934, 0, -0.0011693673, -27.279844, 0.54559445, -12.554053)
 
 [node name="WeaponTrigger" parent="." unique_id=1731345302 instance=ExtResource("2_qqq2g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.6455603)
 
 [node name="Metro" parent="." unique_id=1338959597 instance=ExtResource("3_dp0y2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.677681, -1.3511691, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.959846, -1.3511691, 0)
+
+[node name="LevelCollisions" type="Node" parent="." unique_id=327384420]
+
+[node name="Ground1" type="CSGBox3D" parent="LevelCollisions" unique_id=830264661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.624147, -0.4385225, 12.176702)
+visible = false
+use_collision = true
+size = Vector3(9.291504, 1, 68.387985)
+
+[node name="Ground2" type="CSGBox3D" parent="LevelCollisions" unique_id=2008830177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.624147, 3.7094991, 61.65134)
+visible = false
+use_collision = true
+size = Vector3(9.291504, 1.0541992, 16.734411)
+
+[node name="Stair1" type="CSGBox3D" parent="LevelCollisions" unique_id=1739824262]
+transform = Transform3D(1, 0, 0, 0, 0.86377394, 0.50387955, 0, -0.50387955, 0.86377394, -24.624147, 1.7049495, 49.968704)
+visible = false
+use_collision = true
+size = Vector3(9.291504, 1.0541992, 8.350289)
+
+[node name="Stair2" type="CSGBox3D" parent="LevelCollisions" unique_id=2130794942]
+transform = Transform3D(-0.00015704149, -0.5067261, 0.8621071, -5.1803033e-07, 0.8621071, 0.5067261, -1, 7.913043e-05, -0.00013564908, -16.164139, 6.650485, 69.35165)
+visible = false
+use_collision = true
+size = Vector3(9.291504, 1.0541992, 11.399255)
+
+[node name="Wall1" type="CSGBox3D" parent="LevelCollisions" unique_id=477865483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.96692, 2.13237, 13.580819)
+visible = false
+use_collision = true
+size = Vector3(0.19970703, 5.26474, 62.498077)
+
+[node name="Wall2" type="CSGBox3D" parent="LevelCollisions" unique_id=1930631358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.89669, 2.13237, 13.3770485)
+visible = false
+use_collision = true
+size = Vector3(0.5148926, 5.26474, 62.90562)
+
+[node name="Wall3" type="CSGBox3D" parent="LevelCollisions" unique_id=167931736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.947014, 2.13237, -18.109629)
+visible = false
+use_collision = true
+size = Vector3(10.414246, 5.26474, 1.0388699)
+
+[node name="Wall4" type="CSGBox3D" parent="LevelCollisions" unique_id=271040964]
+transform = Transform3D(-0.00036649307, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.00036649307, -27.600346, 4.2131577, 54.634094)
+visible = false
+use_collision = true
+size = Vector3(19.631638, 9.426315, 3.6676764)
+
+[node name="Wall5" type="CSGBox3D" parent="LevelCollisions" unique_id=1307960433]
+transform = Transform3D(-0.00036649307, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.00036649307, -15.9627695, 4.922497, 55.01056)
+visible = false
+use_collision = true
+size = Vector3(20.36544, 10.844994, 10.527052)
+
+[node name="Wall6" type="CSGBox3D" parent="LevelCollisions" unique_id=1619501774]
+transform = Transform3D(-0.00036649307, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.00036649307, -20.063065, 4.922497, 70.348854)
+visible = false
+use_collision = true
+size = Vector3(0.8663459, 10.844994, 18.734425)
+
+[node name="Wall7" type="CSGBox3D" parent="LevelCollisions" unique_id=1912318560]
+transform = Transform3D(-0.00036649307, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.00036649307, -29.258558, 4.922497, 67.60755)
+visible = false
+use_collision = true
+size = Vector3(6.3555026, 10.844994, 0.81154823)
+
+[node name="Column1" type="CSGBox3D" parent="LevelCollisions" unique_id=1567682346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.670086, 2.1296692, 5.543269)
+visible = false
+use_collision = true
+size = Vector3(0.83703613, 5.2593384, 0.83587646)
+
+[node name="Column2" type="CSGBox3D" parent="LevelCollisions" unique_id=1237575180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.652956, 2.1296692, 28.4497)
+visible = false
+use_collision = true
+size = Vector3(0.88197327, 5.2593384, 0.8277817)
+
+[node name="Detail1" type="CSGBox3D" parent="LevelCollisions" unique_id=1203836347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.16097, 0.01373291, -13.418346)
+visible = false
+use_collision = true
+size = Vector3(0.9511719, 1.0274658, 2.2832031)
+
+[node name="Detail5" type="CSGBox3D" parent="LevelCollisions" unique_id=482467834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.16097, 0.01373291, 1.8100374)
+visible = false
+use_collision = true
+size = Vector3(0.9511719, 1.0274658, 2.2832031)
+
+[node name="Detail6" type="CSGBox3D" parent="LevelCollisions" unique_id=88595353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.16097, 0.01373291, 18.588385)
+visible = false
+use_collision = true
+size = Vector3(0.9511719, 1.0274658, 2.2832031)
+
+[node name="Detail7" type="CSGBox3D" parent="LevelCollisions" unique_id=1452973699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.16097, 0.01373291, 40.73218)
+visible = false
+use_collision = true
+size = Vector3(0.9511719, 1.0274658, 2.2832031)
+
+[node name="Detail2" type="CSGBox3D" parent="LevelCollisions" unique_id=1649626642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.203268, 0.70487976, -9.804646)
+visible = false
+use_collision = true
+size = Vector3(1.0357666, 2.4097595, 0.61595154)
+
+[node name="Detail8" type="CSGBox3D" parent="LevelCollisions" unique_id=1755231069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.203268, 0.51097107, 10.298513)
+visible = false
+use_collision = true
+size = Vector3(1.0357666, 2.0219421, 0.61595154)
+
+[node name="Detail9" type="CSGBox3D" parent="LevelCollisions" unique_id=1755103244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.203268, 0.50956726, 31.591175)
+visible = false
+use_collision = true
+size = Vector3(1.0357666, 2.0191345, 0.61595154)
+
+[node name="Detail10" type="CSGBox3D" parent="LevelCollisions" unique_id=2134162723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.345123, 5.0936003, 56.06196)
+visible = false
+use_collision = true
+size = Vector3(0.1775856, 1.7480164, 1.4307213)
+
+[node name="Detail11" type="CSGBox3D" parent="LevelCollisions" unique_id=442026219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.968666, 5.1373625, 56.06196)
+visible = false
+use_collision = true
+size = Vector3(1.0001907, 1.8355408, 1.4307213)
+
+[node name="Detail3" type="CSGBox3D" parent="LevelCollisions" unique_id=401464093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.21459, 1.1910586, -7.135101)
+visible = false
+use_collision = true
+size = Vector3(1.0584106, 2.3864594, 1.4145432)
+
+[node name="Detail4" type="CSGBox3D" parent="LevelCollisions" unique_id=966926872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.21459, 1.1910586, 34.983025)
+visible = false
+use_collision = true
+size = Vector3(1.0584106, 2.3864594, 1.4145432)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="LevelCollisions" unique_id=747953118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.608994, 2.46167, 49.386883)
+size = Vector3(8.012939, 5.92334, 1)
+material = SubResource("StandardMaterial3D_dp0y2")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="LevelCollisions" unique_id=581533712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.608994, 2.46167, -22.330078)
+size = Vector3(8.012939, 5.92334, 1)
+material = SubResource("StandardMaterial3D_yv0r8")
+
+[node name="Lights" type="Node" parent="." unique_id=1014657370]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=1096772633]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, -11.405253)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=400687124]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, -5.218424)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lights" unique_id=692515391]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, 1.0033286)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lights" unique_id=1581513562]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, 7.277625)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Lights" unique_id=496279545]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, 13.500085)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Lights" unique_id=1846022572]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, 19.776024)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Lights" unique_id=252513605]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, 26.08642)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Lights" unique_id=510763011]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, 32.279613)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Lights" unique_id=1919956910]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 4.7323112, 38.567562)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="Lights" unique_id=519562145]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.834425, 8.455322, 56.924694)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="Lights" unique_id=997480488]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -23.779184, 8.455322, 62.403824)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Lights" unique_id=1766499305]
+transform = Transform3D(1, 0, 0, 0, -0.001466079, 0.9999989, 0, -0.9999989, -0.001466079, -25.409351, 8.455322, 67.313835)
+light_energy = 5.56
+spot_range = 9.273
+spot_angle = 84.72
+
+[node name="VagonLights" type="Node" parent="." unique_id=1963655454]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="VagonLights" unique_id=1554543788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.202593, 1.9990704, 3.91252)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="VagonLights" unique_id=130283975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.202593, 1.9990704, 0.5000801)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="VagonLights" unique_id=1782007037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.202593, 1.9990704, -1.5587578)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="VagonLights" unique_id=862475168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.202593, 1.9990704, -4.201083)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="VagonLights" unique_id=308883646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.202593, 1.9990704, -7.1152363)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="VagonLights" unique_id=1416605206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.202593, 1.9990704, -8.85017)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="VagonLights" unique_id=980584885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.202593, 1.9990704, -10.726259)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="VagonLights" unique_id=1272286730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.202593, 1.9990704, -14.292799)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="VagonLights" unique_id=1475861661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.698742, 1.9990704, 27.253567)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="VagonLights" unique_id=449214642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.698742, 1.9990704, 23.841127)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="VagonLights" unique_id=1764904052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.698742, 1.9990704, 21.78229)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="VagonLights" unique_id=330528492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.698742, 1.9990704, 19.139965)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="VagonLights" unique_id=502977460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.698742, 1.9990704, 16.225811)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="VagonLights" unique_id=1875475856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.698742, 1.9990704, 14.490877)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="VagonLights" unique_id=267712221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.698742, 1.9990704, 12.614788)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="VagonLights" unique_id=1788658007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.698742, 1.9990704, 9.048248)
+light_color = Color(0.764054, 0.8777275, 0.991607, 1)
+omni_range = 3.031
+
+[node name="ATMLights" type="Node" parent="." unique_id=211319592]
+
+[node name="ATMLight" type="OmniLight3D" parent="ATMLights" unique_id=1041210516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.82494, 5.4745564, 68.70214)
+light_color = Color(0, 0.50147265, 0.12828448, 1)
+omni_range = 0.193
+script = ExtResource("4_yv0r8")
+
+[node name="ATMLight2" type="OmniLight3D" parent="ATMLights" unique_id=1955954663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.82494, 5.4745564, 67.03409)
+light_color = Color(0.76960933, 0, 0.24336424, 1)
+omni_range = 0.193
+script = ExtResource("4_yv0r8")
+
+[node name="ATMLight3" type="OmniLight3D" parent="ATMLights" unique_id=627356415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.82494, 5.4745564, 65.33954)
+light_color = Color(0.77841735, 0, 0.11470639, 1)
+omni_range = 0.193
+script = ExtResource("4_yv0r8")
+
+[node name="ATMLight4" type="OmniLight3D" parent="ATMLights" unique_id=1815230676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.283222, 5.3587775, 55.647068)
+light_color = Color(0, 0.50147265, 0.12828448, 1)
+omni_range = 0.218
+script = ExtResource("4_yv0r8")
+
+[node name="ATMLight5" type="OmniLight3D" parent="ATMLights" unique_id=807421146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.629265, 5.3563914, 56.51808)
+light_color = Color(0, 0.50147265, 0.12828448, 1)
+omni_range = 0.218
+script = ExtResource("4_yv0r8")
+
+[node name="ATMLight6" type="OmniLight3D" parent="ATMLights" unique_id=726282751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.337242, 5.3563914, 56.51808)
+light_color = Color(0, 0.50147265, 0.12828448, 1)
+omni_range = 0.218
+script = ExtResource("4_yv0r8")
