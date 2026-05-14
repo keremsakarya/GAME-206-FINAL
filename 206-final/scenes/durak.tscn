@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://d3oma3gowu2rh"]
+
+[ext_resource type="PackedScene" uid="uid://biuyxj8dsopp8" path="res://assets/Bus_stop/Bus_stop/Models/Props/Props.fbx" id="1_ivfko"]
+[ext_resource type="Texture2D" uid="uid://6ufqj2pccyfj" path="res://assets/Bus_stop/Bus_stop/Texture/Bus.png" id="2_rwy8a"]
+[ext_resource type="Texture2D" uid="uid://ci4ea4cmpv1sd" path="res://assets/Bus_stop/Bus_stop/Texture/BareConcrete.png" id="2_s5q74"]
+[ext_resource type="Texture2D" uid="uid://bqidmbbbi51vo" path="res://assets/Bus_stop/Bus_stop/Texture/Bus_stop_01.png" id="3_2tjd5"]
+[ext_resource type="Texture2D" uid="uid://dp0m3wdrao3ah" path="res://assets/Bus_stop/Bus_stop/Texture/Bus_stop_sign.png" id="4_ao6e0"]
+[ext_resource type="Texture2D" uid="uid://drabtwb1h8vun" path="res://assets/Bus_stop/Bus_stop/Texture/Tree.png" id="5_72ixc"]
+[ext_resource type="Texture2D" uid="uid://dx25iwo33vwxu" path="res://assets/Bus_stop/Bus_stop/Texture/Bus_stop.png" id="6_62ha4"]
+[ext_resource type="Texture2D" uid="uid://drcl38vwbb07u" path="res://assets/Bus_stop/Bus_stop/Texture/Bus_stop_sign_01.png" id="7_wcn1u"]
+[ext_resource type="Texture2D" uid="uid://crr2a3w5sjavi" path="res://assets/Bus_stop/Bus_stop/Texture/Bus_stop_sign_02.png" id="8_sgxtb"]
+[ext_resource type="Texture2D" uid="uid://dpjdb80lrpaxe" path="res://assets/Bus_stop/Bus_stop/Texture/Tree_01.png" id="9_qk77w"]
+[ext_resource type="Texture2D" uid="uid://0l1e80oa31q8" path="res://assets/Bus_stop/Bus_stop/Texture/Asphalt.jpg" id="10_6pq6e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1wke"]
+albedo_texture = ExtResource("2_s5q74")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xr3x"]
+albedo_texture = ExtResource("3_2tjd5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0laa"]
+albedo_texture = ExtResource("4_ao6e0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgm3b"]
+albedo_texture = ExtResource("5_72ixc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2biln"]
+albedo_texture = ExtResource("6_62ha4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfqrb"]
+albedo_texture = ExtResource("3_2tjd5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l7xno"]
+albedo_texture = ExtResource("7_wcn1u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gowrw"]
+albedo_texture = ExtResource("8_sgxtb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26slm"]
+albedo_texture = ExtResource("9_qk77w")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h258n"]
+albedo_texture = ExtResource("2_s5q74")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wubtn"]
+albedo_texture = ExtResource("2_s5q74")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jypl7"]
+albedo_texture = ExtResource("10_6pq6e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shr20"]
+albedo_texture = ExtResource("2_rwy8a")
+
+[node name="Props" unique_id=809721206 instance=ExtResource("1_ivfko")]
+
+[node name="Concrete" parent="." index="0" unique_id=1302105108]
+material_override = SubResource("StandardMaterial3D_c1wke")
+
+[node name="Bus_stop" parent="." index="1" unique_id=667144951]
+material_override = SubResource("StandardMaterial3D_4xr3x")
+
+[node name="Bus_stop_sign" parent="." index="2" unique_id=1158639706]
+material_override = SubResource("StandardMaterial3D_p0laa")
+
+[node name="Tree" parent="." index="3" unique_id=1061075711]
+visible = false
+material_override = SubResource("StandardMaterial3D_rgm3b")
+
+[node name="Bus_stop_01" parent="." index="4" unique_id=1355142480]
+material_override = SubResource("StandardMaterial3D_2biln")
+
+[node name="Bus_stop_01_" parent="." index="5" unique_id=2120350913]
+material_override = SubResource("StandardMaterial3D_gfqrb")
+
+[node name="Tree_03" parent="." index="6" unique_id=1169990209]
+visible = false
+
+[node name="Tree_02" parent="." index="7" unique_id=1030934521]
+visible = false
+
+[node name="Bus_stop_sign_01" parent="." index="8" unique_id=1636908044]
+material_override = SubResource("StandardMaterial3D_l7xno")
+
+[node name="Bus_stop_sign_02" parent="." index="9" unique_id=282314618]
+material_override = SubResource("StandardMaterial3D_gowrw")
+
+[node name="Tree_01" parent="." index="10" unique_id=1492384884]
+visible = false
+material_override = SubResource("StandardMaterial3D_26slm")
+
+[node name="Lamppost" parent="." index="11" unique_id=711240748]
+material_override = SubResource("StandardMaterial3D_h258n")
+
+[node name="Lamppost_01" parent="." index="12" unique_id=1632378530]
+material_override = SubResource("StandardMaterial3D_wubtn")
+
+[node name="House" parent="." index="13" unique_id=1840680686]
+visible = false
+
+[node name="Asphalt" parent="." index="14" unique_id=2112125619]
+material_override = SubResource("StandardMaterial3D_jypl7")
+
+[node name="Brick" parent="." index="15" unique_id=251015336]
+visible = false
+
+[node name="Cube_036" parent="." index="16" unique_id=362234068]
+visible = false
+
+[node name="Plants" parent="." index="17" unique_id=992369214]
+visible = false
+
+[node name="Plants_01" parent="." index="18" unique_id=1353903370]
+visible = false
+
+[node name="Plants_02" parent="." index="19" unique_id=281485299]
+visible = false
+
+[node name="Bus" parent="." index="21" unique_id=1983872433]
+material_override = SubResource("StandardMaterial3D_shr20")
