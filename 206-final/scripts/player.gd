@@ -12,6 +12,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pistol_model = $Camera3D/Pistol
 @onready var pickup_ui = $PickupUI
 var can_move = true
+var can_exit = false
 @onready var anim_player = $Camera3D/Pistol/AnimationPlayer
 
 func _ready() -> void:

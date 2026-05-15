@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://otw1a7pjkjmo"]
+
+[ext_resource type="Script" uid="uid://c7k7l3xu8bkv4" path="res://scripts/metro_exit_blocker.gd" id="1_ijipx"]
+[ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="2_ijipx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aor4r"]
+size = Vector3(4.904419, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j1ubl"]
+size = Vector3(5.1235046, 1, 1.2946014)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
+
+[node name="MetroExitBlocker" type="StaticBody3D" unique_id=1298120247]
+script = ExtResource("1_ijipx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2030682973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9522095, 0, 0)
+shape = SubResource("BoxShape3D_aor4r")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1060226335]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1570655641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9274445, 0, -0.0073776245)
+shape = SubResource("BoxShape3D_j1ubl")
+
+[node name="SubtitleUI" type="CanvasLayer" parent="." unique_id=189072568]
+
+[node name="Label" type="Label" parent="SubtitleUI" unique_id=131674477]
+visible = false
+offset_left = 190.0
+offset_top = 574.0
+offset_right = 970.0
+offset_bottom = 606.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_fonts/font = ExtResource("2_ijipx")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+text = "First, I need to withdraw money from the ATM."
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://68ueo2jgw61j" path="res://scenes/weapon_trigger.tscn" id="2_qqq2g"]
 [ext_resource type="PackedScene" uid="uid://c33l30m2qotwk" path="res://scenes/metrodeneme.tscn" id="3_dp0y2"]
 [ext_resource type="Script" uid="uid://0b38x77j4y06" path="res://scripts/atm_light.gd" id="4_yv0r8"]
+[ext_resource type="PackedScene" uid="uid://b3s8aiqc20gnu" path="res://scenes/atm_interact.tscn" id="5_g2jey"]
+[ext_resource type="PackedScene" uid="uid://otw1a7pjkjmo" path="res://scenes/metro_exit_blocker.tscn" id="6_tkbem"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dp0y2"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -402,3 +404,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.337242, 5.3563914, 56.518
 light_color = Color(0, 0.50147265, 0.12828448, 1)
 omni_range = 0.218
 script = ExtResource("4_yv0r8")
+
+[node name="ATMInteract" parent="." unique_id=432739233 instance=ExtResource("5_g2jey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.328608, 5.182817, 68.884155)
+
+[node name="MetroExitBlocker" parent="." unique_id=1298120247 instance=ExtResource("6_tkbem")]
+transform = Transform3D(-0.032876093, 0, 0.99945945, 0, 1, 0, -0.99945945, 0, -0.032876093, -19.529346, 6.638405, 69.550285)
