@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d1h0xias2h8ls"]
+
+[ext_resource type="PackedScene" uid="uid://cv4qet31pnw8a" path="res://assets/Trees/Trees/Trees.fbx" id="1_5x4qa"]
+
+[node name="Trees" unique_id=2007772307 instance=ExtResource("1_5x4qa")]
+
+[node name="Tree_4" parent="." index="0" unique_id=149131892]
+visible = false
+
+[node name="Tree_3" parent="." index="1" unique_id=196226778]
+visible = false
+
+[node name="Tree_1" parent="." index="2" unique_id=795327038]
+visible = false
+
+[node name="Tree_2" parent="." index="3" unique_id=1122512067]
+visible = false
+
+[node name="Tree_5" parent="." index="4" unique_id=648194493]
+visible = false
+
+[node name="Tree_6" parent="." index="5" unique_id=1797603686]
+visible = false
+
+[node name="Tree_7" parent="." index="6" unique_id=943465106]
+visible = false
