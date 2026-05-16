@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://l42j42lulku8" path="res://scripts/atm_interact.gd" id="1_fmtte"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="2_jvudx"]
 [ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="2_tlqdn"]
-[ext_resource type="VideoStream" uid="uid://b708vl2nxbuit" path="res://videos/IMG_5634.ogv" id="3_tlqdn"]
+[ext_resource type="VideoStream" uid="uid://bl6okvk7rry84" path="res://videos/atm-cutscene.ogv" id="3_jvudx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k3htp"]
 
@@ -50,7 +50,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("3_tlqdn")
+stream = ExtResource("3_jvudx")
 expand = true
 
 [node name="ContinueButton" type="Button" parent="UI" unique_id=1946439084]
