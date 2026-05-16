@@ -55,10 +55,10 @@ expand = true
 
 [node name="ContinueButton" type="Button" parent="UI" unique_id=1946439084]
 visible = false
-offset_left = 940.0
-offset_top = 550.0
-offset_right = 1037.0
-offset_bottom = 572.0
+offset_left = 525.0
+offset_top = 602.0
+offset_right = 622.0
+offset_bottom = 624.0
 theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
 theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
 theme_override_fonts/font = ExtResource("2_jvudx")
