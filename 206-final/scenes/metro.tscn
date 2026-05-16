@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://0b38x77j4y06" path="res://scripts/atm_light.gd" id="4_yv0r8"]
 [ext_resource type="PackedScene" uid="uid://b3s8aiqc20gnu" path="res://scenes/atm_interact.tscn" id="5_g2jey"]
 [ext_resource type="PackedScene" uid="uid://otw1a7pjkjmo" path="res://scenes/metro_exit_blocker.tscn" id="6_tkbem"]
+[ext_resource type="Script" uid="uid://bw322jxuij70q" path="res://scripts/intro_cinematic.gd" id="7_tvrsl"]
+[ext_resource type="VideoStream" uid="uid://5nqhlb3w0rb3" path="res://videos/metro-cutscene.ogv" id="8_t2d2l"]
+[ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="9_nobsb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dp0y2"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -30,6 +33,13 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yv0r8"]
 albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlg0r"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
 
 [node name="Metro" type="Node3D" unique_id=513061234]
 
@@ -410,3 +420,40 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.328608, 5.182817, 68.8841
 
 [node name="MetroExitBlocker" parent="." unique_id=1298120247 instance=ExtResource("6_tkbem")]
 transform = Transform3D(-0.032876093, 0, 0.99945945, 0, 1, 0, -0.99945945, 0, -0.032876093, -19.529346, 6.638405, 69.550285)
+
+[node name="IntroCinematic" type="CanvasLayer" parent="." unique_id=1634190633]
+script = ExtResource("7_tvrsl")
+
+[node name="BlackBG" type="ColorRect" parent="IntroCinematic" unique_id=1279652452]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="IntroVideo" type="VideoStreamPlayer" parent="IntroCinematic" unique_id=124080455]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("8_t2d2l")
+expand = true
+
+[node name="ContinueButton" type="Button" parent="IntroCinematic" unique_id=1605386577]
+offset_left = 514.0
+offset_top = 617.0
+offset_right = 611.0
+offset_bottom = 639.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("9_nobsb")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
+text = "Continue"
+
+[connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
+[connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
