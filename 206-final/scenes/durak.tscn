@@ -816,17 +816,17 @@ _data = {
 
 [node name="Props" unique_id=809721206 instance=ExtResource("1_ivfko")]
 
-[node name="Concrete" parent="." index="0" unique_id=1302105108]
+[node name="Concrete" parent="." index="0" unique_id=1313024935]
 transform = Transform3D(-1.1355361e-05, -263.9084, -1.1535802e-05, 0, -1.1535802e-05, 263.9084, -259.78036, 1.1535802e-05, 5.042459e-13, -10.924973, 0.5427666, -66.47521)
 visible = false
 material_override = SubResource("StandardMaterial3D_c1wke")
 
-[node name="Bus_stop" parent="." index="1" unique_id=667144951]
+[node name="Bus_stop" parent="." index="1" unique_id=1018527494]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -10.924969, 2.8689392, -66.475204)
 visible = false
 material_override = SubResource("StandardMaterial3D_4xr3x")
 
-[node name="Bus_stop_sign" parent="." index="2" unique_id=1158639706]
+[node name="Bus_stop_sign" parent="." index="2" unique_id=506482418]
 transform = Transform3D(-4.524114e-06, -103.499664, -4.5241154e-06, 0, -4.524114e-06, 103.499695, -103.499664, 4.524114e-06, 1.9775536e-13, -14.488899, 0.5427666, -69.68466)
 visible = false
 material_override = SubResource("StandardMaterial3D_p0laa")
@@ -836,22 +836,22 @@ transform = Transform3D(-4.524114e-06, -103.499664, -4.5241154e-06, 0, -4.524114
 material_override = SubResource("StandardMaterial3D_p0laa")
 mesh = SubResource("ArrayMesh_yn7qe")
 
-[node name="Tree" parent="." index="4" unique_id=1061075711]
+[node name="Tree" parent="." index="4" unique_id=1756394618]
 transform = Transform3D(-1.4153078, 14.9780855, 387.88947, -36.48942, 386.1692, -15.044811, -386.45963, -36.516846, -1.6955188e-05, 3.5741997, 0.5427666, -59.55587)
 visible = false
 material_override = SubResource("StandardMaterial3D_rgm3b")
 
-[node name="Bus_stop_01" parent="." index="5" unique_id=1355142480]
+[node name="Bus_stop_01" parent="." index="5" unique_id=402491170]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -14.128334, 2.7459404, -67.127045)
 visible = false
 material_override = SubResource("StandardMaterial3D_2biln")
 
 [node name="Bus_stop_02" type="MeshInstance3D" parent="." index="6" unique_id=1153379647]
-transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -43.386158, 6.120408, -38.032917)
+transform = Transform3D(-0.69114894, 99.997604, 4.3710347e-06, -1.4826131e-16, -4.3711393e-06, 100, 99.997604, 0.69114894, 3.0211076e-08, -43.386158, 6.120408, -38.032917)
 material_override = SubResource("StandardMaterial3D_2biln")
 mesh = SubResource("ArrayMesh_jq23a")
 
-[node name="Bus_stop_01_" parent="." index="7" unique_id=2120350913]
+[node name="Bus_stop_01_" parent="." index="7" unique_id=606479141]
 transform = Transform3D(-4.418535e-06, -101.08428, -4.4185344e-06, 0, -4.4185344e-06, 101.08429, -101.0843, 4.4185344e-06, 1.9314028e-13, -14.033167, 2.1876354, -64.205505)
 visible = false
 material_override = SubResource("StandardMaterial3D_gfqrb")
@@ -861,30 +861,30 @@ transform = Transform3D(101.08431, 0, 0, 0, -4.4185344e-06, 101.08428, 0, -101.0
 material_override = SubResource("StandardMaterial3D_gfqrb")
 mesh = SubResource("ArrayMesh_mt0ae")
 
-[node name="Tree_03" parent="." index="9" unique_id=1169990209]
+[node name="Tree_03" parent="." index="9" unique_id=818956781]
 transform = Transform3D(-0.7278635, 18.761194, 113.38904, -4.39573, 113.303825, -18.775305, -114.84658, -4.455585, -4.9563923e-06, -14.620316, 0.5427666, -59.640343)
 visible = false
 
-[node name="Tree_02" parent="." index="10" unique_id=1030934521]
+[node name="Tree_02" parent="." index="10" unique_id=1566818389]
 transform = Transform3D(-1.7779676e-05, 1.925846e-05, 440.58215, 1.7779685e-05, 440.58218, -1.9258456e-05, -406.7516, 1.9258467e-05, -1.9258458e-05, -9.4218025, 0.5427666, -59.616203)
 visible = false
 
-[node name="Bus_stop_sign_01" parent="." index="11" unique_id=1636908044]
+[node name="Bus_stop_sign_01" parent="." index="11" unique_id=225583101]
 transform = Transform3D(-4.713908e-06, -107.84164, -4.713908e-06, 0, -4.713908e-06, 107.84164, -107.84164, 4.713908e-06, 2.0605144e-13, -13.489374, 0.5427666, -69.680016)
 visible = false
 material_override = SubResource("StandardMaterial3D_l7xno")
 
-[node name="Bus_stop_sign_02" parent="." index="12" unique_id=282314618]
+[node name="Bus_stop_sign_02" parent="." index="12" unique_id=1568912877]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -12.506617, 0.5427666, -69.67545)
 visible = false
 material_override = SubResource("StandardMaterial3D_gowrw")
 
-[node name="Tree_01" parent="." index="13" unique_id=1492384884]
+[node name="Tree_01" parent="." index="13" unique_id=732544548]
 transform = Transform3D(1.2208934e-12, -1.2847284e-05, 293.9116, -293.91147, -1.2847284e-05, 6.593214e-13, 1.2847278e-05, -293.9116, -1.2847284e-05, -26.276867, 0.5427666, -59.694458)
 visible = false
 material_override = SubResource("StandardMaterial3D_26slm")
 
-[node name="Lamppost" parent="." index="14" unique_id=711240748]
+[node name="Lamppost" parent="." index="14" unique_id=1991896293]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -7.109993, 0.5427666, -69.01792)
 visible = false
 material_override = SubResource("StandardMaterial3D_h258n")
@@ -909,7 +909,7 @@ transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393
 material_override = SubResource("StandardMaterial3D_h258n")
 mesh = SubResource("ArrayMesh_dfd6k")
 
-[node name="Lamppost_01" parent="." index="19" unique_id=1632378530]
+[node name="Lamppost_01" parent="." index="19" unique_id=2047109513]
 transform = Transform3D(-4.3711393e-06, -100.000015, -4.3711393e-06, 0, -4.3711393e-06, 100.00001, -100.000015, 4.3711393e-06, 1.9106856e-13, -8.646263, 0.5427666, -69.02504)
 visible = false
 material_override = SubResource("StandardMaterial3D_wubtn")
@@ -939,69 +939,69 @@ transform = Transform3D(-4.3711393e-06, -100.000015, -4.3711393e-06, 0, -4.37113
 material_override = SubResource("StandardMaterial3D_wubtn")
 mesh = SubResource("ArrayMesh_df12c")
 
-[node name="House" parent="." index="25" unique_id=1840680686]
+[node name="House" parent="." index="25" unique_id=1216293580]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -23.463972, 3.767227, -80.27508)
 visible = false
 
-[node name="Asphalt" parent="." index="26" unique_id=2112125619]
+[node name="Asphalt" parent="." index="26" unique_id=651741351]
 transform = Transform3D(4.3711384e-06, -80.9818, 4.3711384e-06, 0, 3.5398268e-06, 99.99999, 99.99999, 3.5398268e-06, -1.9106853e-13, -13.4971695, 0.7180605, -75.910255)
 visible = false
 material_override = SubResource("StandardMaterial3D_jypl7")
 
-[node name="Brick" parent="." index="27" unique_id=251015336]
+[node name="Brick" parent="." index="27" unique_id=1451839827]
 transform = Transform3D(-4.3711398e-06, -100.00002, -4.3711393e-06, 0, -4.3711398e-06, 100.00001, -100.00002, 4.3711398e-06, 1.9106856e-13, -21.212008, 2.0122573, -82.95759)
 visible = false
 
-[node name="Cube_036" parent="." index="28" unique_id=362234068]
+[node name="Cube_036" parent="." index="28" unique_id=28783860]
 transform = Transform3D(-4.3711398e-06, -100.00002, -4.3711393e-06, 0, -4.3711398e-06, 100.00001, -100.00002, 4.3711398e-06, 1.9106856e-13, -9.435719, 1.94285, -83.09421)
 visible = false
 
-[node name="Plants" parent="." index="29" unique_id=992369214]
+[node name="Plants" parent="." index="29" unique_id=1580255392]
 transform = Transform3D(-6.269815e-06, 8.519779e-06, 143.43666, 6.2698173e-06, 194.90977, -6.2698164e-06, -143.43666, 8.519778e-06, -6.2698155e-06, -23.290861, 0.6203542, -65.715706)
 visible = false
 
-[node name="Plants_01" parent="." index="30" unique_id=1353903370]
+[node name="Plants_01" parent="." index="30" unique_id=619701278]
 transform = Transform3D(-5.2144196e-06, 7.0856445e-06, 119.29203, 5.2144196e-06, 162.10068, -5.214419e-06, -119.29203, 7.085644e-06, -5.21442e-06, -20.727488, 0.6203542, -65.703804)
 visible = false
 
-[node name="Plants_02" parent="." index="31" unique_id=281485299]
+[node name="Plants_02" parent="." index="31" unique_id=2074218539]
 transform = Transform3D(-6.0783254e-06, 8.2595725e-06, 139.0559, 6.0783273e-06, 188.95695, -6.0783273e-06, -139.0559, 8.259572e-06, -6.0783264e-06, -18.05246, 0.6203542, -65.69138)
 visible = false
 
-[node name="Tire_01" parent="." index="32" unique_id=63924249]
+[node name="Tire_01" parent="." index="32" unique_id=1535100691]
 transform = Transform3D(-4.645399e-06, 4.6453993e-06, 106.27434, -2.0238035e-13, 106.27434, -4.6453993e-06, -106.27434, -4.054372e-13, -4.645399e-06, -3.830944, 0.8317449, -69.16505)
 visible = false
 
-[node name="Bus" parent="." index="33" unique_id=1983872433]
+[node name="Bus" parent="." index="33" unique_id=1823644809]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -2.3993073, 2.1522672, -65.79245)
 visible = false
 material_override = SubResource("StandardMaterial3D_shr20")
 
-[node name="Tire_03" parent="." index="34" unique_id=2003962934]
+[node name="Tire_03" parent="." index="34" unique_id=930077768]
 transform = Transform3D(-4.645399e-06, 4.6453993e-06, 106.27434, -2.0238035e-13, 106.27434, -4.6453993e-06, -106.27434, -4.054372e-13, -4.645399e-06, -1.0895042, 0.8317449, -69.15232)
 visible = false
 
-[node name="Tire" parent="." index="35" unique_id=94688826]
+[node name="Tire" parent="." index="35" unique_id=1728042294]
 transform = Transform3D(-4.645399e-06, 4.6453993e-06, 106.27434, -2.0238035e-13, 106.27434, -4.6453993e-06, -106.27434, -4.054372e-13, -4.645399e-06, -3.8589668, 0.8317449, -63.128555)
 visible = false
 
-[node name="Tire_02" parent="." index="36" unique_id=723712398]
+[node name="Tire_02" parent="." index="36" unique_id=329915257]
 transform = Transform3D(-4.645399e-06, 4.6453993e-06, 106.27434, -2.0238035e-13, 106.27434, -4.6453993e-06, -106.27434, -4.054372e-13, -4.645399e-06, -1.1175308, 0.8317449, -63.11583)
 visible = false
 
-[node name="Cube_038" parent="." index="37" unique_id=1739460047]
+[node name="Cube_038" parent="." index="37" unique_id=1138213362]
 transform = Transform3D(-4.478049e-06, -99.99999, -4.371139e-06, 0, -4.3711384e-06, 100, -102.44582, 4.3711384e-06, 1.9106854e-13, -4.0567436, 1.9666439, -61.145706)
 visible = false
 
-[node name="Cube_039" parent="." index="38" unique_id=1858337313]
+[node name="Cube_039" parent="." index="38" unique_id=2080232285]
 transform = Transform3D(4.478049e-06, -99.99999, 4.371139e-06, 0, 4.3711384e-06, 100, 102.44582, 4.3711384e-06, -1.9106854e-13, -4.0508842, 1.9666439, -62.40754)
 visible = false
 
-[node name="Cube_040" parent="." index="39" unique_id=371238035]
+[node name="Cube_040" parent="." index="39" unique_id=562536184]
 transform = Transform3D(-4.478049e-06, -99.99999, -4.371139e-06, 0, -4.3711384e-06, 100, -102.44582, 4.3711384e-06, 1.9106854e-13, -4.028942, 1.9666439, -67.13387)
 visible = false
 
-[node name="Cube_041" parent="." index="40" unique_id=638061140]
+[node name="Cube_041" parent="." index="40" unique_id=793726850]
 transform = Transform3D(4.478049e-06, -99.99999, 4.371139e-06, 0, 4.3711384e-06, 100, 102.44582, 4.3711384e-06, -1.9106854e-13, -4.0230865, 1.9666439, -68.3957)
 visible = false
 
@@ -1392,6 +1392,142 @@ mesh = SubResource("ArrayMesh_ghe53")
 transform = Transform3D(1.0627438, 0, 0, 0, -1.7314298e-07, -1.062744, 0, 1.062744, -1.7314298e-07, -0.027596436, -0.012941897, -0.0132052265)
 material_override = SubResource("StandardMaterial3D_auoj1")
 mesh = SubResource("ArrayMesh_81n83")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Path3D/PathFollow3D/Bus2" index="4" unique_id=1031146605]
+transform = Transform3D(0.00044080787, -0.00020944791, 0.009988278, -0.00020944301, 0.009995611, 0.00021884462, -0.009988094, -0.00021883595, 0.00043614436, -0.058241963, 0.011979073, -0.0095171295)
+light_color = Color(0.6820189, 0.60302895, 5.7756904e-07, 1)
+light_energy = 16.0
+spot_range = 13.0
+spot_attenuation = 0.5
+spot_angle = 45.89
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Path3D/PathFollow3D/Bus2" index="5" unique_id=207612865]
+transform = Transform3D(0.00044080787, -0.00020944796, 0.009988278, -0.00020944302, 0.009995611, 0.00021884464, -0.009988094, -0.00021883592, 0.0004361442, -0.057736218, -0.01110518, -0.009517122)
+light_color = Color(0.6820189, 0.60302895, 5.7756904e-07, 1)
+light_energy = 16.0
+spot_range = 13.0
+spot_attenuation = 0.5
+spot_angle = 45.89
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="6" unique_id=1583889371]
+transform = Transform3D(0.0100002, -2.6193447e-10, 2.6020852e-17, 2.1827873e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.762358e-17, 0.010000001, -0.043671906, -0.014743984, 0.0028537512)
+omni_range = 0.781
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="7" unique_id=207278965]
+transform = Transform3D(0.010000199, -3.2014214e-10, 2.6020852e-17, 2.910383e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.756937e-17, 0.010000001, -0.026539922, -0.015095979, 0.003693264)
+omni_range = 0.781
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="8" unique_id=1692606333]
+transform = Transform3D(0.0100002, -3.6379788e-10, 2.6020852e-17, 3.2014214e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.7542265e-17, 0.010000001, -0.014280617, -0.0148274, 0.003693264)
+omni_range = 0.781
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="9" unique_id=1965132378]
+transform = Transform3D(0.0100002, -3.929017e-10, 2.6020852e-17, 3.4924597e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.7501608e-17, 0.010000001, -0.0010948777, -0.014630228, 0.003693264)
+omni_range = 0.781
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="10" unique_id=87280962]
+transform = Transform3D(0.0100002, -4.3655746e-10, 2.6020852e-17, 3.929017e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.746095e-17, 0.010000001, 0.010255277, -0.01488471, 0.003693264)
+omni_range = 0.781
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="11" unique_id=924518579]
+transform = Transform3D(0.0100002, -4.947651e-10, 2.6888214e-17, 4.5110937e-10, 0.0100002, 1.6955187e-14, -2.6020852e-18, 4.740674e-17, 0.010000001, 0.022720754, -0.014800221, 0.003693264)
+omni_range = 0.781
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="12" unique_id=1460971547]
+transform = Transform3D(0.0100002, -5.2386895e-10, 2.6888214e-17, 4.802132e-10, 0.0100002, 1.6955187e-14, -3.469447e-18, 4.7379635e-17, 0.010000001, 0.034243345, -0.014755487, 0.003693264)
+omni_range = 0.781
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="13" unique_id=1955463525]
+transform = Transform3D(0.0100002, -5.675247e-10, 2.7755576e-17, 5.2386895e-10, 0.0100002, 1.6955214e-14, -4.3368087e-18, 4.7338977e-17, 0.010000001, 0.043475926, -0.01459071, 0.003693264)
+omni_range = 0.781
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="14" unique_id=1617724528]
+transform = Transform3D(0.010000199, -2.910383e-10, 2.6020852e-17, 2.4738256e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.7610028e-17, 0.010000001, -0.043671906, -0.014743984, 0.0068399347)
+omni_range = 0.781
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="15" unique_id=1110093664]
+transform = Transform3D(0.0100002, -3.6379788e-10, 2.6020852e-17, 3.2014214e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.7542265e-17, 0.010000001, -0.026539922, -0.015095979, 0.0076794513)
+omni_range = 0.781
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="16" unique_id=744962891]
+transform = Transform3D(0.010000199, -3.783498e-10, 2.6020852e-17, 3.3469405e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.751516e-17, 0.010000001, -0.014280617, -0.0148274, 0.0076794513)
+omni_range = 0.781
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="17" unique_id=303648358]
+transform = Transform3D(0.010000199, -4.2200554e-10, 2.6020852e-17, 3.783498e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.7488055e-17, 0.010000001, -0.0010948181, -0.014630228, 0.0076794513)
+omni_range = 0.781
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="18" unique_id=705083953]
+transform = Transform3D(0.010000199, -4.5110937e-10, 2.6020852e-17, 4.2200554e-10, 0.0100002, 1.695516e-14, -2.6020852e-18, 4.7447398e-17, 0.010000001, 0.010255277, -0.01488471, 0.0076794513)
+omni_range = 0.781
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="19" unique_id=46682940]
+transform = Transform3D(0.010000199, -5.0931703e-10, 2.6888214e-17, 4.656613e-10, 0.0100002, 1.6955187e-14, -3.469447e-18, 4.7393187e-17, 0.010000001, 0.022720814, -0.0148002505, 0.0076794513)
+omni_range = 0.781
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="20" unique_id=968515081]
+transform = Transform3D(0.010000199, -5.529728e-10, 2.7755576e-17, 5.0931703e-10, 0.0100002, 1.6955214e-14, -3.469447e-18, 4.735253e-17, 0.010000001, 0.034243345, -0.014755517, 0.0076794513)
+omni_range = 0.781
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="21" unique_id=190168662]
+transform = Transform3D(0.010000199, -5.820766e-10, 2.94903e-17, 5.3842086e-10, 0.0100002, 1.6955241e-14, -4.3368087e-18, 4.7325425e-17, 0.010000001, 0.043475926, -0.01459074, 0.0076794513)
+omni_range = 0.781
+
+[node name="OmniLight3D17" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="22" unique_id=1717068430]
+transform = Transform3D(0.0100002, -3.0559022e-10, 2.6020852e-17, 2.6193447e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.7596475e-17, 0.010000001, -0.043671906, -0.014743984, -0.00010050833)
+omni_range = 0.781
+
+[node name="OmniLight3D18" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="23" unique_id=1177564913]
+transform = Transform3D(0.010000199, -3.783498e-10, 2.6020852e-17, 3.3469405e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.751516e-17, 0.010000001, -0.026539922, -0.015095979, 0.0007390082)
+omni_range = 0.781
+
+[node name="OmniLight3D19" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="24" unique_id=607828277]
+transform = Transform3D(0.0100002, -3.929017e-10, 2.6020852e-17, 3.4924597e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.7501608e-17, 0.010000001, -0.014280617, -0.0148274, 0.0007390082)
+omni_range = 0.781
+
+[node name="OmniLight3D20" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="25" unique_id=1997652472]
+transform = Transform3D(0.0100002, -4.3655746e-10, 2.6020852e-17, 3.929017e-10, 0.0100002, 1.695516e-14, -1.7347235e-18, 4.746095e-17, 0.010000001, -0.0010947585, -0.014630228, 0.0007390082)
+omni_range = 0.781
+
+[node name="OmniLight3D21" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="26" unique_id=1507552330]
+transform = Transform3D(0.0100002, -4.947651e-10, 2.6888214e-17, 4.5110937e-10, 0.0100002, 1.6955187e-14, -2.6020852e-18, 4.740674e-17, 0.010000001, 0.010255277, -0.01488471, 0.0007390082)
+omni_range = 0.781
+
+[node name="OmniLight3D22" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="27" unique_id=1104862136]
+transform = Transform3D(0.0100002, -5.2386895e-10, 2.6888214e-17, 4.802132e-10, 0.0100002, 1.6955187e-14, -3.469447e-18, 4.7379635e-17, 0.010000001, 0.022720873, -0.014800221, 0.0007390082)
+omni_range = 0.781
+
+[node name="OmniLight3D23" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="28" unique_id=1845130294]
+transform = Transform3D(0.0100002, -5.675247e-10, 2.7755576e-17, 5.2386895e-10, 0.0100002, 1.6955214e-14, -4.3368087e-18, 4.7338977e-17, 0.010000001, 0.034243345, -0.014755517, 0.0007390082)
+omni_range = 0.781
+
+[node name="OmniLight3D24" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="29" unique_id=1251169830]
+transform = Transform3D(0.0100002, -5.966285e-10, 2.7755576e-17, 5.529728e-10, 0.0100002, 1.6955214e-14, -4.3368087e-18, 4.7311872e-17, 0.010000001, 0.043475926, -0.01459074, 0.0007390082)
+omni_range = 0.781
+
+[node name="OmniLight3D25" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="30" unique_id=1363143730]
+transform = Transform3D(0.0100002, -7.2759576e-10, 2.7755576e-17, 6.8394e-10, 0.0100002, 1.6955214e-14, -4.3368087e-18, 4.7176347e-17, 0.010000001, -0.05656171, -0.0064566135, 0.00073900446)
+omni_range = 0.781
+
+[node name="OmniLight3D26" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="31" unique_id=2105078827]
+transform = Transform3D(0.010000199, -7.566996e-10, 2.94903e-17, 7.1304385e-10, 0.0100002, 1.6955241e-14, -4.3368087e-18, 4.7162795e-17, 0.010000001, -0.05656171, -0.0064566135, 0.0046503767)
+omni_range = 0.781
+
+[node name="OmniLight3D27" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="32" unique_id=2018382262]
+transform = Transform3D(0.0100002, -7.712515e-10, 2.94903e-17, 7.2759576e-10, 0.0100002, 1.6955241e-14, -5.2041704e-18, 4.7149242e-17, 0.010000001, -0.05656171, -0.0064566135, 0.0084299855)
+omni_range = 0.781
+
+[node name="OmniLight3D28" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="33" unique_id=1551362590]
+transform = Transform3D(0.0100002, -7.712515e-10, 2.94903e-17, 7.2759576e-10, 0.0100002, 1.6955241e-14, -5.2041704e-18, 4.7149242e-17, 0.010000001, -0.05537778, 0.006723553, 0.00073900074)
+omni_range = 0.781
+
+[node name="OmniLight3D29" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="34" unique_id=1000378282]
+transform = Transform3D(0.010000199, -7.858034e-10, 2.94903e-17, 7.566996e-10, 0.0100002, 1.6955241e-14, -6.071532e-18, 4.7122137e-17, 0.010000001, -0.05537778, 0.006723553, 0.0046503767)
+omni_range = 0.781
+
+[node name="OmniLight3D30" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="35" unique_id=872006532]
+transform = Transform3D(0.0100002, -8.2945917e-10, 2.94903e-17, 7.858034e-10, 0.0100002, 1.6955241e-14, -6.071532e-18, 4.7095032e-17, 0.010000001, -0.05537778, 0.006723553, 0.0084299855)
+omni_range = 0.781
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path3D" index="1" unique_id=607164341]
 root_node = NodePath("../..")

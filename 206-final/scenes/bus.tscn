@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://bwl0vlcfu7qbv"]
+
+[ext_resource type="PackedScene" uid="uid://d3oma3gowu2rh" path="res://scenes/durak.tscn" id="1_t7ha2"]
+[ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="2_stnsb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_stnsb"]
+sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
+sky_horizon_color = Color(0.24741504, 0.16807032, 0.15766531, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_yv0r8"]
+sky_material = SubResource("ProceduralSkyMaterial_stnsb")
+
+[sub_resource type="Environment" id="Environment_8154j"]
+background_mode = 2
+sky = SubResource("Sky_yv0r8")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.4525857, 0.4525857, 0.4525857, 1)
+volumetric_fog_emission = Color(0.2109277, 0.09379674, 0.013545353, 1)
+volumetric_fog_emission_energy = 0.5
+volumetric_fog_length = 128.0
+adjustment_enabled = true
+adjustment_brightness = 1.3
+
+[node name="Bus" type="Node3D" unique_id=1065074711]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=454878106]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=188571907]
+environment = SubResource("Environment_8154j")
+
+[node name="Props" parent="." unique_id=809721206 instance=ExtResource("1_t7ha2")]
+
+[node name="Player" parent="." unique_id=1581314821 instance=ExtResource("2_stnsb")]
+transform = Transform3D(-0.00036649307, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -0.00036649307, -43.973736, 4.0645266, -39.647915)
+
+[node name="LevelCollisions" type="Node" parent="." unique_id=988038393]
+
+[node name="Sidewalk" type="CSGBox3D" parent="LevelCollisions" unique_id=2086371242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.54149, 3.8872433, -42.79134)
+visible = false
+use_collision = true
+size = Vector3(2.0799255, 0.24230957, 39.60817)
+
+[node name="BusStop" type="CSGBox3D" parent="LevelCollisions" unique_id=1485871308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.373886, 4.82866, -38.06612)
+visible = false
+use_collision = true
+size = Vector3(0.3872528, 2.3491516, 2.6114502)
+
+[node name="Cat" type="CSGBox3D" parent="LevelCollisions" unique_id=1352430355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.239296, 4.9914303, -41.443016)
+visible = false
+use_collision = true
+size = Vector3(0.22241211, 1.9852295, 1.7562256)
+
+[node name="Lamppost" type="CSGBox3D" parent="LevelCollisions" unique_id=951968307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.9747, 5.6267347, -44.77166)
+visible = false
+use_collision = true
+size = Vector3(0.460083, 3.3377686, 0.4156494)
+
+[node name="StopSign1" type="CSGBox3D" parent="LevelCollisions" unique_id=730470217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.52249, 4.459568, -32.52884)
+visible = false
+use_collision = true
+size = Vector3(0.055236816, 1.1362305, 0.020263672)
+
+[node name="StopSign2" type="CSGBox3D" parent="LevelCollisions" unique_id=732806829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.482365, 5.224188, -32.541492)
+visible = false
+use_collision = true
+size = Vector3(0.50744057, 0.3466797, 0.020263672)
+
+[node name="LevelBorder" type="CSGBox3D" parent="LevelCollisions" unique_id=668572819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6485, 5.9125137, -38.679497)
+visible = false
+use_collision = true
+size = Vector3(2.7697754, 4.1914063, 23.059937)
+
+[node name="LevelBorder2" type="CSGBox3D" parent="LevelCollisions/LevelBorder" unique_id=1498511440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007873535, 0.036254883, 0.0056533813)
+operation = 2
+use_collision = true
+size = Vector3(2.41687, 4.263916, 22.997055)
+
+[node name="StreetLights" type="Node" parent="." unique_id=1658668651]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StreetLights" unique_id=385617827]
+transform = Transform3D(-3.4109304e-05, 0.8723936, -0.488804, 6.0876628e-05, 0.488804, 0.8723936, 1, 0, -6.978115e-05, -53.775593, 12.829089, -30.086542)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="StreetLights" unique_id=665843484]
+transform = Transform3D(-3.4109304e-05, 0.8723936, -0.488804, 6.0876628e-05, 0.488804, 0.8723936, 1, -1.8189894e-12, -6.978115e-05, -53.775593, 12.829089, -11.709763)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="StreetLights" unique_id=1652176222]
+transform = Transform3D(-3.4109304e-05, 0.8723936, -0.488804, 6.0876628e-05, 0.488804, 0.8723936, 1, -1.8189894e-12, -6.978115e-05, -53.775593, 12.829089, 9.839948)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="StreetLights" unique_id=1003385681]
+transform = Transform3D(-3.4109304e-05, 0.8723936, -0.488804, 6.0876628e-05, 0.488804, 0.8723936, 1, -1.8189894e-12, -6.978115e-05, -53.775593, 12.829089, -44.04908)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="StreetLights" unique_id=66246138]
+transform = Transform3D(-3.4109304e-05, 0.8723936, -0.488804, 6.0876628e-05, 0.488804, 0.8723936, 1, -1.8189894e-12, -6.978115e-05, -53.775593, 12.829089, -63.868004)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="StreetLights" unique_id=206217085]
+transform = Transform3D(-0.00031484806, -0.87239355, 0.488804, 6.0876628e-05, 0.488804, 0.8723936, -0.99999994, 0.0003044282, -0.00010079062, -45.076855, 12.829089, -26.228607)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="StreetLights" unique_id=411450851]
+transform = Transform3D(-0.00031484806, -0.87239355, 0.488804, 6.0876628e-05, 0.488804, 0.8723936, -0.99999994, 0.0003044282, -0.00010079062, -45.083267, 12.829089, -44.605385)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="StreetLights" unique_id=586261487]
+transform = Transform3D(-0.00031484806, -0.87239355, 0.488804, 6.0876628e-05, 0.488804, 0.8723936, -0.99999994, 0.0003044282, -0.00010079062, -45.090786, 12.829089, -66.15509)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="StreetLights" unique_id=624119121]
+transform = Transform3D(-0.00031484806, -0.87239355, 0.488804, 6.0876628e-05, 0.488804, 0.8723936, -0.99999994, 0.0003044282, -0.00010079062, -45.071983, 12.829089, -12.266071)
+light_energy = 1.475
+spot_range = 17.92
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="StreetLights" unique_id=1811952447]
+transform = Transform3D(-0.00031484806, -0.87239355, 0.488804, 6.0876628e-05, 0.488804, 0.8723936, -0.99999994, 0.0003044282, -0.00010079062, -45.065067, 12.829089, 7.5528507)
+light_energy = 1.475
+spot_range = 17.92

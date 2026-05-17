@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ccl74fafmfign"]
+
+[ext_resource type="Texture2D" uid="uid://txlgurn224ee" path="res://images/isim.png" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="2_bqqt6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlg0r"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
+
+[node name="MainMenu" type="Control" unique_id=440338905]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=57897736]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1462732320]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect" unique_id=1651626011]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -4.0
+offset_top = -81.0
+offset_right = -4.0
+offset_bottom = 526.0
+grow_horizontal = 2
+texture = ExtResource("1_ekxnf")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="CanvasLayer" unique_id=1865973255]
+offset_left = 224.0
+offset_top = 409.0
+offset_right = 333.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
+text = "Start"
+
+[node name="ControlsButton" type="Button" parent="CanvasLayer" unique_id=735393801]
+offset_left = 197.0
+offset_top = 479.0
+offset_right = 370.0
+offset_bottom = 527.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
+text = "Controls"
+
+[node name="ExitButton" type="Button" parent="CanvasLayer" unique_id=139171461]
+offset_left = 227.0
+offset_top = 549.0
+offset_right = 336.0
+offset_bottom = 597.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
+text = "Exit
+"
