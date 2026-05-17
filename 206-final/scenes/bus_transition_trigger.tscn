@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ceahl0lj3of1e"]
+
+[ext_resource type="Script" uid="uid://c8gk8g5vj7hht" path="res://scripts/bus_transition_trigger.gd" id="1_sq8dr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1m6wp"]
+size = Vector3(5.4849243, 2.1713867, 1)
+
+[node name="BusTransitionTrigger" type="Area3D" unique_id=760027492]
+script = ExtResource("1_sq8dr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=919998419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2424622, 0.58569336, 0)
+shape = SubResource("BoxShape3D_1m6wp")
+
+[node name="FadeUI" type="CanvasLayer" parent="." unique_id=360096160]
+
+[node name="FadeRect" type="ColorRect" parent="FadeUI" unique_id=447872370]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

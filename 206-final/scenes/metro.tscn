@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bw322jxuij70q" path="res://scripts/intro_cinematic.gd" id="7_tvrsl"]
 [ext_resource type="VideoStream" uid="uid://5nqhlb3w0rb3" path="res://videos/metro-cutscene.ogv" id="8_t2d2l"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="9_nobsb"]
+[ext_resource type="PackedScene" uid="uid://ceahl0lj3of1e" path="res://scenes/bus_transition_trigger.tscn" id="10_t2d2l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dp0y2"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -454,6 +455,9 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
 text = "Continue"
+
+[node name="BusTransitionTrigger" parent="." unique_id=760027492 instance=ExtResource("10_t2d2l")]
+transform = Transform3D(-0.0031938935, 0, -0.9999949, 0, 1, 0, 0.9999949, 0, -0.0031938935, -16.55768, 6.926732, 65.47923)
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]

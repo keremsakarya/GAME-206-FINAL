@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://biuyxj8dsopp8" path="res://assets/Bus_stop/Bus_stop/Models/Props/Props.fbx" id="1_ivfko"]
 [ext_resource type="Texture2D" uid="uid://6ufqj2pccyfj" path="res://assets/Bus_stop/Bus_stop/Texture/Bus.png" id="2_rwy8a"]
 [ext_resource type="Texture2D" uid="uid://ci4ea4cmpv1sd" path="res://assets/Bus_stop/Bus_stop/Texture/BareConcrete.png" id="2_s5q74"]
+[ext_resource type="Script" uid="uid://bbdox6w4rbuln" path="res://scripts/durak.gd" id="2_wcn1u"]
 [ext_resource type="Texture2D" uid="uid://bqidmbbbi51vo" path="res://assets/Bus_stop/Bus_stop/Texture/Bus_stop_01.png" id="3_2tjd5"]
 [ext_resource type="Texture2D" uid="uid://dp0m3wdrao3ah" path="res://assets/Bus_stop/Bus_stop/Texture/Bus_stop_sign.png" id="4_ao6e0"]
 [ext_resource type="Texture2D" uid="uid://drabtwb1h8vun" path="res://assets/Bus_stop/Bus_stop/Texture/Tree.png" id="5_72ixc"]
@@ -508,7 +509,7 @@ uv1_triplanar = true
 
 [sub_resource type="Curve3D" id="Curve3D_wcn1u"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0024032593, 0.0013189316, -0.023143768, 0, 0, 0, 0, 0, 0, 1.7350693, -0.061249018, 29.880373),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0024032593, 0.0013189316, -0.023143768, 0, 0, 0, 0, 0, 0, 1.7350693, -0.061249018, 43.098335),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -815,6 +816,7 @@ _data = {
 }
 
 [node name="Props" unique_id=809721206 instance=ExtResource("1_ivfko")]
+script = ExtResource("2_wcn1u")
 
 [node name="Concrete" parent="." index="0" unique_id=1313024935]
 transform = Transform3D(-1.1355361e-05, -263.9084, -1.1535802e-05, 0, -1.1535802e-05, 263.9084, -259.78036, 1.1535802e-05, 5.042459e-13, -10.924973, 0.5427666, -66.47521)
@@ -1361,11 +1363,11 @@ transform = Transform3D(-1.43281005e-08, 0, 0.5056605, 0, 0.5536139, 0, -0.32778
 transform = Transform3D(-1.43281005e-08, 0, 0.5056605, 0, 0.5536139, 0, -0.32778874, 0, -2.2103121e-08, -32.67115, 4.4258585, -36.732803)
 
 [node name="Path3D" type="Path3D" parent="." index="156" unique_id=1406491619]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.633442, 3.734723, -55.17543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.633442, 3.734723, -74.038925)
 curve = SubResource("Curve3D_wcn1u")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" index="0" unique_id=1962459800]
-transform = Transform3D(-0.9983057, 0, -0.057843752, 0, 1, 0, 0.057843752, 0, -0.9983057, 0.0024032593, 0.0013189316, -0.023143768)
+transform = Transform3D(-0.9991669, 0, -0.040147506, 0, 1, 0, 0.040147506, 0, -0.9991669, 0.0024032593, 0.0013189316, -0.023143768)
 rotation_mode = 1
 
 [node name="Bus2" type="MeshInstance3D" parent="Path3D/PathFollow3D" index="0" unique_id=1981811651]
@@ -1505,27 +1507,63 @@ omni_range = 0.781
 transform = Transform3D(0.0100002, -5.966285e-10, 2.7755576e-17, 5.529728e-10, 0.0100002, 1.6955214e-14, -4.3368087e-18, 4.7311872e-17, 0.010000001, 0.043475926, -0.01459074, 0.0007390082)
 omni_range = 0.781
 
-[node name="OmniLight3D25" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="30" unique_id=1363143730]
+[node name="OmniLight3D32" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="30" unique_id=95682798]
+transform = Transform3D(0.010000199, -7.566996e-10, 2.94903e-17, 7.1304385e-10, 0.0100002, 1.6955241e-14, -4.3368087e-18, 4.7162795e-17, 0.010000001, 0.053863466, -0.013069689, -0.0051121004)
+light_color = Color(0.759221, 0, 0.14323813, 1)
+light_energy = 2.0
+omni_range = 0.781
+
+[node name="OmniLight3D33" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="31" unique_id=1210474166]
+transform = Transform3D(0.0100002, -7.712515e-10, 2.94903e-17, 7.2759576e-10, 0.0100002, 1.6955241e-14, -5.2041704e-18, 4.7149242e-17, 0.010000001, 0.053863466, -0.013069689, -0.0068457015)
+light_color = Color(0.759221, 0, 0.14323813, 1)
+light_energy = 2.0
+omni_range = 0.781
+
+[node name="OmniLight3D34" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="32" unique_id=787466775]
+transform = Transform3D(0.010000199, -7.858034e-10, 2.94903e-17, 7.566996e-10, 0.0100002, 1.6955241e-14, -6.071532e-18, 4.7122137e-17, 0.010000001, 0.053863466, -0.013069689, -0.008569773)
+light_color = Color(0.759221, 0, 0.14323813, 1)
+light_energy = 2.0
+omni_range = 0.781
+
+[node name="OmniLight3D35" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="33" unique_id=1083579463]
+transform = Transform3D(0.0100002, -8.58563e-10, 3.1225023e-17, 8.1490725e-10, 0.0100002, 1.6955282e-14, -6.938894e-18, 4.7054374e-17, 0.010000001, 0.053869188, 0.014184684, -0.0051121004)
+light_color = Color(0.759221, 0, 0.14323813, 1)
+light_energy = 2.0
+omni_range = 0.781
+
+[node name="OmniLight3D36" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="34" unique_id=1157652653]
+transform = Transform3D(0.010000199, -8.8766683e-10, 3.035766e-17, 8.440111e-10, 0.0100002, 1.6955269e-14, -6.938894e-18, 4.7040822e-17, 0.010000001, 0.053869188, 0.014184684, -0.006845709)
+light_color = Color(0.759221, 0, 0.14323813, 1)
+light_energy = 2.0
+omni_range = 0.781
+
+[node name="OmniLight3D37" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="35" unique_id=2142001209]
+transform = Transform3D(0.0100002, -9.0221874e-10, 3.035766e-17, 8.58563e-10, 0.0100002, 1.6955269e-14, -7.806256e-18, 4.7013717e-17, 0.010000001, 0.053869188, 0.014184684, -0.008569781)
+light_color = Color(0.759221, 0, 0.14323813, 1)
+light_energy = 2.0
+omni_range = 0.781
+
+[node name="OmniLight3D25" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="36" unique_id=1363143730]
 transform = Transform3D(0.0100002, -7.2759576e-10, 2.7755576e-17, 6.8394e-10, 0.0100002, 1.6955214e-14, -4.3368087e-18, 4.7176347e-17, 0.010000001, -0.05656171, -0.0064566135, 0.00073900446)
 omni_range = 0.781
 
-[node name="OmniLight3D26" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="31" unique_id=2105078827]
+[node name="OmniLight3D26" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="37" unique_id=2105078827]
 transform = Transform3D(0.010000199, -7.566996e-10, 2.94903e-17, 7.1304385e-10, 0.0100002, 1.6955241e-14, -4.3368087e-18, 4.7162795e-17, 0.010000001, -0.05656171, -0.0064566135, 0.0046503767)
 omni_range = 0.781
 
-[node name="OmniLight3D27" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="32" unique_id=2018382262]
+[node name="OmniLight3D27" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="38" unique_id=2018382262]
 transform = Transform3D(0.0100002, -7.712515e-10, 2.94903e-17, 7.2759576e-10, 0.0100002, 1.6955241e-14, -5.2041704e-18, 4.7149242e-17, 0.010000001, -0.05656171, -0.0064566135, 0.0084299855)
 omni_range = 0.781
 
-[node name="OmniLight3D28" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="33" unique_id=1551362590]
+[node name="OmniLight3D28" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="39" unique_id=1551362590]
 transform = Transform3D(0.0100002, -7.712515e-10, 2.94903e-17, 7.2759576e-10, 0.0100002, 1.6955241e-14, -5.2041704e-18, 4.7149242e-17, 0.010000001, -0.05537778, 0.006723553, 0.00073900074)
 omni_range = 0.781
 
-[node name="OmniLight3D29" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="34" unique_id=1000378282]
+[node name="OmniLight3D29" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="40" unique_id=1000378282]
 transform = Transform3D(0.010000199, -7.858034e-10, 2.94903e-17, 7.566996e-10, 0.0100002, 1.6955241e-14, -6.071532e-18, 4.7122137e-17, 0.010000001, -0.05537778, 0.006723553, 0.0046503767)
 omni_range = 0.781
 
-[node name="OmniLight3D30" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="35" unique_id=872006532]
+[node name="OmniLight3D30" type="OmniLight3D" parent="Path3D/PathFollow3D/Bus2" index="41" unique_id=872006532]
 transform = Transform3D(0.0100002, -8.2945917e-10, 2.94903e-17, 7.858034e-10, 0.0100002, 1.6955241e-14, -6.071532e-18, 4.7095032e-17, 0.010000001, -0.05537778, 0.006723553, 0.0084299855)
 omni_range = 0.781
 

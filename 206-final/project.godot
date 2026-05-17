@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="206Final"
-run/main_scene="uid://cdmee2kayhkfk"
+run/main_scene="uid://ccl74fafmfign"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://rt2b2pbn1vqj"
 
 [display]
 

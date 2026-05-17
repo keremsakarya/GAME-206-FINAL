@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ccl74fafmfign"]
 
 [ext_resource type="Texture2D" uid="uid://txlgurn224ee" path="res://images/isim.png" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://djocxrvph7x41" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="2_bqqt6"]
+[ext_resource type="VideoStream" uid="uid://bsr6sbgihl83u" path="res://videos/Logo.ogv" id="4_8ln24"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
 
@@ -17,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wu84c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=57897736]
 
@@ -82,3 +85,17 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
 text = "Exit
 "
+
+[node name="LogoPlayer" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=822696719]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("4_8ln24")
+expand = true
+
+[connection signal="pressed" from="CanvasLayer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="finished" from="CanvasLayer/LogoPlayer" to="." method="_on_logo_player_finished"]
