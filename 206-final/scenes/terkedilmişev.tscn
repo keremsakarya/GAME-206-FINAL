@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://cjjkq7jyabap"]
+
+[ext_resource type="PackedScene" uid="uid://dcmgk74dy23do" path="res://assets/Abandoned_House/Models/Abandoned_House.fbx" id="1_k8fo5"]
+
+[node name="Abandoned_House" unique_id=1304806814 instance=ExtResource("1_k8fo5")]
+
+[node name="Grass_155" parent="grass" parent_id_path=PackedInt32Array(291573735) index="8" unique_id=564766266]
+visible = false
+
+[node name="Grass_154" parent="grass" parent_id_path=PackedInt32Array(291573735) index="9" unique_id=1021726321]
+visible = false
+
+[node name="Grass_094" parent="grass" parent_id_path=PackedInt32Array(291573735) index="69" unique_id=630847633]
+visible = false
+
+[node name="Grass_092" parent="grass" parent_id_path=PackedInt32Array(291573735) index="71" unique_id=1708116296]
+visible = false
+
+[node name="Mesa_016" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="0" unique_id=463931995]
+visible = false
+
+[node name="B" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="1" unique_id=1164091731]
+visible = false
+
+[node name="Cables_002" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="2" unique_id=1843275824]
+visible = false
+
+[node name="Monitor" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="3" unique_id=713433143]
+visible = false
+
+[node name="Monitor_001" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="4" unique_id=2114919646]
+visible = false
+
+[node name="Monitor_002" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="5" unique_id=1373855769]
+visible = false
+
+[node name="Monitor_003" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="6" unique_id=1805037555]
+visible = false
+
+[node name="Monitor_004" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="7" unique_id=1318067809]
+visible = false
+
+[node name="Monitor_005" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="8" unique_id=514188734]
+visible = false
+
+[node name="Monitor_006" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="9" unique_id=970159256]
+visible = false
+
+[node name="R_003" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="10" unique_id=1185246577]
+visible = false
+
+[node name="R_004" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="11" unique_id=1801767067]
+visible = false
+
+[node name="R_005" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="12" unique_id=1185400830]
+visible = false
+
+[node name="Radio" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="13" unique_id=1310277782]
+visible = false
+
+[node name="T" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="14" unique_id=2082354272]
+visible = false
+
+[node name="Teclado" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="15" unique_id=537116869]
+visible = false
+
+[node name="Conector" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="16" unique_id=918227920]
+visible = false
+
+[node name="Pizarra" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="17" unique_id=1045884637]
+visible = false
+
+[node name="Luz" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="18" unique_id=1431788760]
+visible = false
+
+[node name="Conector_001" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="19" unique_id=2116234727]
+visible = false
+
+[node name="Cable_001" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="20" unique_id=670346566]
+visible = false
+
+[node name="Cables" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="21" unique_id=960596]
+visible = false
+
+[node name="Cable" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="22" unique_id=1465806529]
+visible = false
+
+[node name="Generador" parent="Base" parent_id_path=PackedInt32Array(1879185682) index="23" unique_id=1621925852]
+visible = false
+
+[node name="Patio" parent="Casa" parent_id_path=PackedInt32Array(684833457) index="7" unique_id=1948185507]
+visible = false
+
+[node name="E" parent="Casa" parent_id_path=PackedInt32Array(684833457) index="31" unique_id=1594269568]
+visible = false
+
+[node name="Vecindario" parent="." index="27" unique_id=2009858854]
+visible = false
+
+[node name="Ban" parent="." index="29" unique_id=1555080910]
+visible = false
+
+[node name="Rueda_001" parent="Ban" index="10" unique_id=1899285797]
+visible = false
+
+[node name="Rueda_002" parent="Ban" index="11" unique_id=421021327]
+visible = false
+
+[node name="Rueda_003" parent="Ban" index="12" unique_id=1554786232]
+visible = false
+
+[node name="Cylinder" parent="." index="30" unique_id=835957768]
+visible = false
+
+[node name="Cylinder_001" parent="." index="31" unique_id=2079119987]
+visible = false
+
+[node name="Reseptor_Señal" parent="." index="33" unique_id=682255303]
+visible = false
+
+[node name="Antena" parent="Reseptor_Señal" index="0" unique_id=1699443196]
+visible = false

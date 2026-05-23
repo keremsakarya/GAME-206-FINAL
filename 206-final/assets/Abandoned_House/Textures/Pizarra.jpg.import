@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy8pkprvkqaw2"
-path.s3tc="res://.godot/imported/Pizarra.jpg-b0acfcc407e6d2599864aaec47d1eb0a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Pizarra.jpg-13ed1d2465ce0620f409bb0e48188931.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Abandoned_House/textures/Pizarra.jpg"
-dest_files=["res://.godot/imported/Pizarra.jpg-b0acfcc407e6d2599864aaec47d1eb0a.s3tc.ctex"]
+source_file="res://assets/Abandoned_House/Textures/Pizarra.jpg"
+dest_files=["res://.godot/imported/Pizarra.jpg-13ed1d2465ce0620f409bb0e48188931.s3tc.ctex"]
 
 [params]
 

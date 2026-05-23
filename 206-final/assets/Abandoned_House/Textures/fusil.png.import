@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsusubsosnyn1"
-path.s3tc="res://.godot/imported/fusil.png-098b5ecb090a7413368f30c422397089.s3tc.ctex"
+path.s3tc="res://.godot/imported/fusil.png-ea04f0b3d4914006aca69f7ed839a74f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Abandoned_House/textures/fusil.png"
-dest_files=["res://.godot/imported/fusil.png-098b5ecb090a7413368f30c422397089.s3tc.ctex"]
+source_file="res://assets/Abandoned_House/Textures/fusil.png"
+dest_files=["res://.godot/imported/fusil.png-ea04f0b3d4914006aca69f7ed839a74f.s3tc.ctex"]
 
 [params]
 

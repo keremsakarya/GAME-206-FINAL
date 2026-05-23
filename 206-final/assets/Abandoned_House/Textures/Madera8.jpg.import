@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4l8g22kqvci2"
-path.s3tc="res://.godot/imported/Madera8.jpg-9a2b41e4e23a1dc947b4b2e11d36e7b5.s3tc.ctex"
+path.s3tc="res://.godot/imported/Madera8.jpg-5697671b181eee62f2877d1587ff6371.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Abandoned_House/textures/Madera8.jpg"
-dest_files=["res://.godot/imported/Madera8.jpg-9a2b41e4e23a1dc947b4b2e11d36e7b5.s3tc.ctex"]
+source_file="res://assets/Abandoned_House/Textures/Madera8.jpg"
+dest_files=["res://.godot/imported/Madera8.jpg-5697671b181eee62f2877d1587ff6371.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x1rf681k7jj2"
-path.s3tc="res://.godot/imported/Vidrio.jpg-a7b8312eb848e91ffed99a36238d2a0c.s3tc.ctex"
+path.s3tc="res://.godot/imported/Vidrio.jpg-7319b509e5638f8ee358903f25a4397a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Abandoned_House/textures/Vidrio.jpg"
-dest_files=["res://.godot/imported/Vidrio.jpg-a7b8312eb848e91ffed99a36238d2a0c.s3tc.ctex"]
+source_file="res://assets/Abandoned_House/Textures/Vidrio.jpg"
+dest_files=["res://.godot/imported/Vidrio.jpg-7319b509e5638f8ee358903f25a4397a.s3tc.ctex"]
 
 [params]
 

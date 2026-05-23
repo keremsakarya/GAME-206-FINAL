@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cddv7uy3yqmx1"
-path.s3tc="res://.godot/imported/Arbol1.png-dacb2672f1b1abf20da2551bf173a69f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Arbol1.png-539c6aa4ab7bf6ac496c3325ca73ac0e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Abandoned_House/textures/Arbol1.png"
-dest_files=["res://.godot/imported/Arbol1.png-dacb2672f1b1abf20da2551bf173a69f.s3tc.ctex"]
+source_file="res://assets/Abandoned_House/Textures/Arbol1.png"
+dest_files=["res://.godot/imported/Arbol1.png-539c6aa4ab7bf6ac496c3325ca73ac0e.s3tc.ctex"]
 
 [params]
 
