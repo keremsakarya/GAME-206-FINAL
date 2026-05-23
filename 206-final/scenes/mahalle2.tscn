@@ -1,0 +1,1445 @@
+[gd_scene format=3 uid="uid://cjwh5imer6epw"]
+
+[ext_resource type="PackedScene" uid="uid://bxx1e8513nqkc" path="res://assets/House/House/Models/House.fbx" id="1_7xhfd"]
+
+[node name="House" unique_id=402678545 instance=ExtResource("1_7xhfd")]
+
+[node name="AsphaltDamaged" parent="." index="0" unique_id=2094866329]
+visible = false
+
+[node name="AsphaltDamaged_001" parent="." index="1" unique_id=746081270]
+visible = false
+
+[node name="AsphaltDamaged_002" parent="." index="2" unique_id=1870788614]
+visible = false
+
+[node name="AsphaltDamaged_003" parent="." index="3" unique_id=2046798556]
+visible = false
+
+[node name="AsphaltDamaged_004" parent="." index="4" unique_id=1230230842]
+visible = false
+
+[node name="AsphaltDamaged_005" parent="." index="5" unique_id=1053399769]
+visible = false
+
+[node name="Background" parent="." index="6" unique_id=1586539467]
+visible = false
+
+[node name="BrickOld" parent="." index="7" unique_id=1073285263]
+visible = false
+
+[node name="BrickOld_01" parent="." index="8" unique_id=1780705732]
+visible = false
+
+[node name="BrickSmallBrown" parent="." index="9" unique_id=1437232800]
+visible = false
+
+[node name="BrickSmallBrown_01" parent="." index="10" unique_id=1450977329]
+visible = false
+
+[node name="Bush_004" parent="." index="11" unique_id=1526637269]
+visible = false
+
+[node name="Bush_005" parent="." index="12" unique_id=1575961903]
+visible = false
+
+[node name="Bush_006" parent="." index="13" unique_id=1791774018]
+visible = false
+
+[node name="Bush_007" parent="." index="14" unique_id=202280612]
+visible = false
+
+[node name="Bush_008" parent="." index="15" unique_id=598438214]
+visible = false
+
+[node name="Bush_009" parent="." index="16" unique_id=1695966384]
+visible = false
+
+[node name="Bush_010" parent="." index="17" unique_id=2143911976]
+visible = false
+
+[node name="Bush_011" parent="." index="18" unique_id=110567974]
+visible = false
+
+[node name="Bush_012" parent="." index="19" unique_id=1660664905]
+visible = false
+
+[node name="Bush_013" parent="." index="20" unique_id=1684676546]
+visible = false
+
+[node name="Bush_014" parent="." index="21" unique_id=1291986355]
+visible = false
+
+[node name="Bush_015" parent="." index="22" unique_id=1250009653]
+visible = false
+
+[node name="Bush_016" parent="." index="23" unique_id=1778112520]
+visible = false
+
+[node name="Bush_017" parent="." index="24" unique_id=2127743581]
+visible = false
+
+[node name="Bush_018" parent="." index="25" unique_id=725375751]
+visible = false
+
+[node name="Bush_019" parent="." index="26" unique_id=744060515]
+visible = false
+
+[node name="Bush_020" parent="." index="27" unique_id=1940754705]
+visible = false
+
+[node name="Bush_021" parent="." index="28" unique_id=39422387]
+visible = false
+
+[node name="Bush_022" parent="." index="29" unique_id=1471543853]
+visible = false
+
+[node name="Bush_023" parent="." index="30" unique_id=1794834518]
+visible = false
+
+[node name="Bush_024" parent="." index="31" unique_id=146253191]
+visible = false
+
+[node name="Bush_025" parent="." index="32" unique_id=926878619]
+visible = false
+
+[node name="Bush_026" parent="." index="33" unique_id=1530160762]
+visible = false
+
+[node name="Bush_027" parent="." index="34" unique_id=874701104]
+visible = false
+
+[node name="Bush_028" parent="." index="35" unique_id=1575880642]
+visible = false
+
+[node name="Bush_029" parent="." index="36" unique_id=1647945826]
+visible = false
+
+[node name="Bush_030" parent="." index="37" unique_id=107810438]
+visible = false
+
+[node name="Bush_031" parent="." index="38" unique_id=1112569247]
+visible = false
+
+[node name="Bush_032" parent="." index="39" unique_id=1147466500]
+visible = false
+
+[node name="Bush_033" parent="." index="40" unique_id=335166166]
+visible = false
+
+[node name="Bush_034" parent="." index="41" unique_id=965534224]
+visible = false
+
+[node name="Bush_035" parent="." index="42" unique_id=1397921652]
+visible = false
+
+[node name="Bush_036" parent="." index="43" unique_id=1388615762]
+visible = false
+
+[node name="Bush_037" parent="." index="44" unique_id=296770054]
+visible = false
+
+[node name="Bush_038" parent="." index="45" unique_id=1159621120]
+visible = false
+
+[node name="Bush_039" parent="." index="46" unique_id=1127855142]
+visible = false
+
+[node name="Bush_040" parent="." index="47" unique_id=1020710014]
+visible = false
+
+[node name="Bush_041" parent="." index="48" unique_id=1284443611]
+visible = false
+
+[node name="Bush_047" parent="." index="49" unique_id=814494670]
+visible = false
+
+[node name="Bush_050" parent="." index="50" unique_id=1944558712]
+visible = false
+
+[node name="Fence" parent="." index="51" unique_id=479622775]
+visible = false
+
+[node name="Fence_001" parent="." index="52" unique_id=1040452555]
+visible = false
+
+[node name="Fence_002" parent="." index="53" unique_id=1749554112]
+visible = false
+
+[node name="Fence_003" parent="." index="54" unique_id=352186081]
+visible = false
+
+[node name="Fence_004" parent="." index="55" unique_id=488628529]
+visible = false
+
+[node name="Fence_005" parent="." index="56" unique_id=123594411]
+visible = false
+
+[node name="Fence_006" parent="." index="57" unique_id=1760390709]
+visible = false
+
+[node name="Fence_007" parent="." index="58" unique_id=21466205]
+visible = false
+
+[node name="Fence_008" parent="." index="59" unique_id=1028556934]
+visible = false
+
+[node name="Fence_009" parent="." index="60" unique_id=809967028]
+visible = false
+
+[node name="Fence_010" parent="." index="61" unique_id=1864435860]
+visible = false
+
+[node name="Fence_011" parent="." index="62" unique_id=1852624918]
+visible = false
+
+[node name="Fence_012" parent="." index="63" unique_id=1988961611]
+visible = false
+
+[node name="Fence_013" parent="." index="64" unique_id=529330759]
+visible = false
+
+[node name="Fence_014" parent="." index="65" unique_id=440660144]
+visible = false
+
+[node name="Fence_015" parent="." index="66" unique_id=36894958]
+visible = false
+
+[node name="Fence_016" parent="." index="67" unique_id=1159905702]
+visible = false
+
+[node name="Fence_017" parent="." index="68" unique_id=1555052070]
+visible = false
+
+[node name="Fence_018" parent="." index="69" unique_id=2054217653]
+visible = false
+
+[node name="Fence_019" parent="." index="70" unique_id=644660693]
+visible = false
+
+[node name="Fence_020" parent="." index="71" unique_id=260439860]
+visible = false
+
+[node name="Fence_021" parent="." index="72" unique_id=1981765579]
+visible = false
+
+[node name="Fence_022" parent="." index="73" unique_id=1277629056]
+visible = false
+
+[node name="Fence_023" parent="." index="74" unique_id=1317266276]
+visible = false
+
+[node name="Fence_024" parent="." index="75" unique_id=1381779119]
+visible = false
+
+[node name="Fence_025" parent="." index="76" unique_id=629494591]
+visible = false
+
+[node name="Fence_026" parent="." index="77" unique_id=875082125]
+visible = false
+
+[node name="Fence_027" parent="." index="78" unique_id=1513255530]
+visible = false
+
+[node name="Fence_028" parent="." index="79" unique_id=832593910]
+visible = false
+
+[node name="Fence_029" parent="." index="80" unique_id=1620348053]
+visible = false
+
+[node name="Fence_030" parent="." index="81" unique_id=2096266655]
+visible = false
+
+[node name="Fence_031" parent="." index="82" unique_id=1390920385]
+visible = false
+
+[node name="Fence_032" parent="." index="83" unique_id=1705145159]
+visible = false
+
+[node name="Fence_False" parent="." index="84" unique_id=1733033022]
+visible = false
+
+[node name="Fence_False_01" parent="." index="85" unique_id=373775389]
+visible = false
+
+[node name="Flowers_001" parent="." index="86" unique_id=560461021]
+visible = false
+
+[node name="Flowers_028" parent="." index="87" unique_id=196133710]
+visible = false
+
+[node name="Flowers_029" parent="." index="88" unique_id=2091699509]
+visible = false
+
+[node name="Flowers_030" parent="." index="89" unique_id=443060188]
+visible = false
+
+[node name="Flowers_031" parent="." index="90" unique_id=1118426335]
+visible = false
+
+[node name="Flowers_032" parent="." index="91" unique_id=1507876694]
+visible = false
+
+[node name="grass_soil" parent="." index="92" unique_id=973078162]
+visible = false
+
+[node name="grass_soil_001" parent="." index="93" unique_id=615607123]
+visible = false
+
+[node name="grass_soil_002" parent="." index="94" unique_id=1487208587]
+visible = false
+
+[node name="grass_soil_003" parent="." index="95" unique_id=1225601943]
+visible = false
+
+[node name="grass_soil_005" parent="." index="96" unique_id=202105646]
+visible = false
+
+[node name="grass_soil_006" parent="." index="97" unique_id=70005550]
+visible = false
+
+[node name="grass_soil_007" parent="." index="98" unique_id=316822896]
+visible = false
+
+[node name="grass_soil_008" parent="." index="99" unique_id=2005891961]
+visible = false
+
+[node name="grass_soil_009" parent="." index="100" unique_id=631031548]
+visible = false
+
+[node name="grass_soil_010" parent="." index="101" unique_id=2066033331]
+visible = false
+
+[node name="grass_soil_011" parent="." index="102" unique_id=592691210]
+visible = false
+
+[node name="grass_soil_012" parent="." index="103" unique_id=1679091841]
+visible = false
+
+[node name="grass_soil_013" parent="." index="104" unique_id=440986869]
+visible = false
+
+[node name="grass_soil_014" parent="." index="105" unique_id=1347551478]
+visible = false
+
+[node name="grass_soil_015" parent="." index="106" unique_id=546043118]
+visible = false
+
+[node name="grass_soil_016" parent="." index="107" unique_id=2094112452]
+visible = false
+
+[node name="grass_soil_017" parent="." index="108" unique_id=2081243068]
+visible = false
+
+[node name="grass_soil_018" parent="." index="109" unique_id=632311883]
+visible = false
+
+[node name="grass_soil_019" parent="." index="110" unique_id=1444773863]
+visible = false
+
+[node name="grass_soil_020" parent="." index="111" unique_id=421615117]
+visible = false
+
+[node name="grass_soil_021" parent="." index="112" unique_id=515659075]
+visible = false
+
+[node name="grass_soil_022" parent="." index="113" unique_id=1622595797]
+visible = false
+
+[node name="grass_soil_023" parent="." index="114" unique_id=594891568]
+visible = false
+
+[node name="grass_soil_024" parent="." index="115" unique_id=44304739]
+visible = false
+
+[node name="grass_soil_025" parent="." index="116" unique_id=821086432]
+visible = false
+
+[node name="grass_soil_027" parent="." index="117" unique_id=1672928720]
+visible = false
+
+[node name="grass_soil_028" parent="." index="118" unique_id=2121222235]
+visible = false
+
+[node name="grass_soil_029" parent="." index="119" unique_id=1791687207]
+visible = false
+
+[node name="grass_soil_030" parent="." index="120" unique_id=883941171]
+visible = false
+
+[node name="grass_soil_031" parent="." index="121" unique_id=679583544]
+visible = false
+
+[node name="grass_soil_032" parent="." index="122" unique_id=643063175]
+visible = false
+
+[node name="grass_soil_033" parent="." index="123" unique_id=1820482103]
+visible = false
+
+[node name="grass_soil_034" parent="." index="124" unique_id=319325184]
+visible = false
+
+[node name="grass_soil_035" parent="." index="125" unique_id=1911775730]
+visible = false
+
+[node name="grass_soil_036" parent="." index="126" unique_id=1182293667]
+visible = false
+
+[node name="Hedges" parent="." index="127" unique_id=85389654]
+visible = false
+
+[node name="Hedges_001" parent="." index="128" unique_id=2074390914]
+visible = false
+
+[node name="Hedges_002" parent="." index="129" unique_id=1637781873]
+visible = false
+
+[node name="Hedges_003" parent="." index="130" unique_id=1321981308]
+visible = false
+
+[node name="Hedges_004" parent="." index="131" unique_id=604950006]
+visible = false
+
+[node name="Hedges_005" parent="." index="132" unique_id=381315725]
+visible = false
+
+[node name="Hedges_006" parent="." index="133" unique_id=508031502]
+visible = false
+
+[node name="Hedges_007" parent="." index="134" unique_id=463758318]
+visible = false
+
+[node name="Hedges_008" parent="." index="135" unique_id=242578709]
+visible = false
+
+[node name="Hedges_009" parent="." index="136" unique_id=1422380052]
+visible = false
+
+[node name="Hedges_010" parent="." index="137" unique_id=1780435049]
+visible = false
+
+[node name="Hedges_011" parent="." index="138" unique_id=1833842839]
+visible = false
+
+[node name="Hedges_012" parent="." index="139" unique_id=866184296]
+visible = false
+
+[node name="Hedges_013" parent="." index="140" unique_id=1027852632]
+visible = false
+
+[node name="Hedges_014" parent="." index="141" unique_id=1995074457]
+visible = false
+
+[node name="Hedges_015" parent="." index="142" unique_id=407445801]
+visible = false
+
+[node name="Hedges_016" parent="." index="143" unique_id=700712587]
+visible = false
+
+[node name="Hedges_017" parent="." index="144" unique_id=203561356]
+visible = false
+
+[node name="Hedges_018" parent="." index="145" unique_id=404624253]
+visible = false
+
+[node name="Hedges_019" parent="." index="146" unique_id=764258974]
+visible = false
+
+[node name="Hedges_020" parent="." index="147" unique_id=209305857]
+visible = false
+
+[node name="Hedges_021" parent="." index="148" unique_id=72459378]
+visible = false
+
+[node name="Hedges_022" parent="." index="149" unique_id=2018396171]
+visible = false
+
+[node name="Hedges_023" parent="." index="150" unique_id=568440030]
+visible = false
+
+[node name="House" parent="." index="151" unique_id=1641165957]
+visible = false
+
+[node name="Lamppost" parent="." index="152" unique_id=1196609339]
+visible = false
+
+[node name="NaturePlants" parent="." index="153" unique_id=279418210]
+visible = false
+
+[node name="NaturePlants_002" parent="." index="154" unique_id=771909759]
+visible = false
+
+[node name="NaturePlants_003" parent="." index="155" unique_id=29337888]
+visible = false
+
+[node name="NaturePlants_005" parent="." index="156" unique_id=741198605]
+visible = false
+
+[node name="NaturePlants_006" parent="." index="157" unique_id=229943890]
+visible = false
+
+[node name="NaturePlants_007" parent="." index="158" unique_id=2047935242]
+visible = false
+
+[node name="NaturePlants_008" parent="." index="159" unique_id=1224001193]
+visible = false
+
+[node name="NaturePlants_009" parent="." index="160" unique_id=1770657318]
+visible = false
+
+[node name="NaturePlants_010" parent="." index="161" unique_id=1277627472]
+visible = false
+
+[node name="NaturePlants_011" parent="." index="162" unique_id=1945271745]
+visible = false
+
+[node name="NaturePlants_012" parent="." index="163" unique_id=1392342960]
+visible = false
+
+[node name="NaturePlants_013" parent="." index="164" unique_id=630034955]
+visible = false
+
+[node name="NaturePlants_014" parent="." index="165" unique_id=625173071]
+visible = false
+
+[node name="NaturePlants_015" parent="." index="166" unique_id=1811365524]
+visible = false
+
+[node name="NaturePlants_016" parent="." index="167" unique_id=1731182836]
+visible = false
+
+[node name="NaturePlants_017" parent="." index="168" unique_id=1647578687]
+visible = false
+
+[node name="NaturePlants_018" parent="." index="169" unique_id=1466852899]
+visible = false
+
+[node name="plants_flowers_004" parent="." index="170" unique_id=2014322575]
+visible = false
+
+[node name="plants_flowers_005" parent="." index="171" unique_id=1477163739]
+visible = false
+
+[node name="plants_flowers_006" parent="." index="172" unique_id=2063963081]
+visible = false
+
+[node name="plants_flowers_007" parent="." index="173" unique_id=1569666084]
+visible = false
+
+[node name="plants_flowers_008" parent="." index="174" unique_id=1769498522]
+visible = false
+
+[node name="plants_flowers_009" parent="." index="175" unique_id=286388518]
+visible = false
+
+[node name="plants_flowers_010" parent="." index="176" unique_id=2018500958]
+visible = false
+
+[node name="plants_flowers_011" parent="." index="177" unique_id=71986425]
+visible = false
+
+[node name="plants_flowers_012" parent="." index="178" unique_id=720582310]
+visible = false
+
+[node name="plants_flowers_013" parent="." index="179" unique_id=580398535]
+visible = false
+
+[node name="plants_flowers_014" parent="." index="180" unique_id=456500663]
+visible = false
+
+[node name="plants_flowers_015" parent="." index="181" unique_id=1703355543]
+visible = false
+
+[node name="plants_flowers_016" parent="." index="182" unique_id=769679667]
+visible = false
+
+[node name="plants_flowers_017" parent="." index="183" unique_id=1459685778]
+visible = false
+
+[node name="plants_flowers_018" parent="." index="184" unique_id=1679463486]
+visible = false
+
+[node name="plants_flowers_019" parent="." index="185" unique_id=1017879237]
+visible = false
+
+[node name="plants_flowers_020" parent="." index="186" unique_id=1948025940]
+visible = false
+
+[node name="plants_flowers_021" parent="." index="187" unique_id=882118327]
+visible = false
+
+[node name="plants_flowers_022" parent="." index="188" unique_id=346538218]
+visible = false
+
+[node name="plants_flowers_023" parent="." index="189" unique_id=175143557]
+visible = false
+
+[node name="plants_flowers_024" parent="." index="190" unique_id=1699025730]
+visible = false
+
+[node name="plants_flowers_025" parent="." index="191" unique_id=22249708]
+visible = false
+
+[node name="plants_flowers_026" parent="." index="192" unique_id=1832994893]
+visible = false
+
+[node name="plants_flowers_027" parent="." index="193" unique_id=1619411765]
+visible = false
+
+[node name="plants_flowers_028" parent="." index="194" unique_id=1571438042]
+visible = false
+
+[node name="Sidewalk" parent="." index="195" unique_id=1382045923]
+visible = false
+
+[node name="Sidewalk_001" parent="." index="196" unique_id=654431891]
+visible = false
+
+[node name="Sidewalk_002" parent="." index="197" unique_id=1120155116]
+visible = false
+
+[node name="Sidewalk_003" parent="." index="198" unique_id=333253776]
+visible = false
+
+[node name="Sidewalk_004" parent="." index="199" unique_id=226837178]
+visible = false
+
+[node name="Sidewalk_005" parent="." index="200" unique_id=1473652471]
+visible = false
+
+[node name="Tree_01" parent="." index="201" unique_id=767169773]
+visible = false
+
+[node name="Tree_01_002" parent="." index="202" unique_id=1294931221]
+visible = false
+
+[node name="Tree_01_003" parent="." index="203" unique_id=513247855]
+visible = false
+
+[node name="Tree_01_004" parent="." index="204" unique_id=1692907553]
+visible = false
+
+[node name="Tree_01_005" parent="." index="205" unique_id=1427800901]
+visible = false
+
+[node name="Tree_01_006" parent="." index="206" unique_id=51258924]
+visible = false
+
+[node name="Tree_01_007" parent="." index="207" unique_id=157228680]
+visible = false
+
+[node name="Tree_01_008" parent="." index="208" unique_id=1096965083]
+visible = false
+
+[node name="Tree_01_009" parent="." index="209" unique_id=1663499768]
+visible = false
+
+[node name="Tree_01_010" parent="." index="210" unique_id=1365617250]
+visible = false
+
+[node name="Tree_01_011" parent="." index="211" unique_id=545470908]
+visible = false
+
+[node name="Tree_01_012" parent="." index="212" unique_id=694383700]
+visible = false
+
+[node name="Tree_01_013" parent="." index="213" unique_id=1657350867]
+visible = false
+
+[node name="Tree_01_014" parent="." index="214" unique_id=1263084199]
+visible = false
+
+[node name="Tree_01_015" parent="." index="215" unique_id=311735570]
+visible = false
+
+[node name="Tree_01_016" parent="." index="216" unique_id=1033241969]
+visible = false
+
+[node name="Tree_01_017" parent="." index="217" unique_id=778035836]
+visible = false
+
+[node name="Tree_01_018" parent="." index="218" unique_id=1928315989]
+visible = false
+
+[node name="Tree_01_019" parent="." index="219" unique_id=1198804311]
+visible = false
+
+[node name="Tree_01_020" parent="." index="220" unique_id=1611005501]
+visible = false
+
+[node name="Tree_01_021" parent="." index="221" unique_id=538367134]
+visible = false
+
+[node name="Tree_01_022" parent="." index="222" unique_id=2082351127]
+visible = false
+
+[node name="Tree_001" parent="." index="223" unique_id=1325996989]
+visible = false
+
+[node name="Tree_02_002" parent="." index="224" unique_id=1151687965]
+visible = false
+
+[node name="Tree_02_004" parent="." index="225" unique_id=741960371]
+visible = false
+
+[node name="Tree_02_005" parent="." index="226" unique_id=1066752079]
+visible = false
+
+[node name="Tree_02_006" parent="." index="227" unique_id=1089433068]
+visible = false
+
+[node name="Tree_02_007" parent="." index="228" unique_id=1835158578]
+visible = false
+
+[node name="Tree_02_008" parent="." index="229" unique_id=2097055803]
+visible = false
+
+[node name="Tree_02_009" parent="." index="230" unique_id=983353563]
+visible = false
+
+[node name="Tree_02_010" parent="." index="231" unique_id=344915770]
+visible = false
+
+[node name="Tree_02_011" parent="." index="232" unique_id=1086013741]
+visible = false
+
+[node name="Tree_02_012" parent="." index="233" unique_id=516032916]
+visible = false
+
+[node name="Tree_02_013" parent="." index="234" unique_id=603551520]
+visible = false
+
+[node name="Tree_02_014" parent="." index="235" unique_id=1100513036]
+visible = false
+
+[node name="Tree_02_015" parent="." index="236" unique_id=510704056]
+visible = false
+
+[node name="Tree_02_016" parent="." index="237" unique_id=1093625751]
+visible = false
+
+[node name="Tree_02_017" parent="." index="238" unique_id=949090529]
+visible = false
+
+[node name="Tree_02_018" parent="." index="239" unique_id=1827624031]
+visible = false
+
+[node name="Tree_02_019" parent="." index="240" unique_id=704788520]
+visible = false
+
+[node name="Tree_02_020" parent="." index="241" unique_id=678392395]
+visible = false
+
+[node name="Tree_02_021" parent="." index="242" unique_id=678854221]
+visible = false
+
+[node name="Tree_02_022" parent="." index="243" unique_id=1468556680]
+visible = false
+
+[node name="Tree_02_023" parent="." index="244" unique_id=1175533942]
+visible = false
+
+[node name="Tree_02_024" parent="." index="245" unique_id=821586756]
+visible = false
+
+[node name="Tree_02_025" parent="." index="246" unique_id=664539819]
+visible = false
+
+[node name="Tree_02_026" parent="." index="247" unique_id=1104623998]
+visible = false
+
+[node name="Tree_02_027" parent="." index="248" unique_id=1412043668]
+visible = false
+
+[node name="Tree_02_028" parent="." index="249" unique_id=1286607192]
+visible = false
+
+[node name="Tree_02_029" parent="." index="250" unique_id=55837956]
+visible = false
+
+[node name="Tree_002" parent="." index="251" unique_id=1639150655]
+visible = false
+
+[node name="Tree_03_001" parent="." index="252" unique_id=171709013]
+visible = false
+
+[node name="Tree_03_002" parent="." index="253" unique_id=1351244929]
+visible = false
+
+[node name="Tree_03_003" parent="." index="254" unique_id=681364189]
+visible = false
+
+[node name="Tree_03_004" parent="." index="255" unique_id=2123270113]
+visible = false
+
+[node name="Tree_03_005" parent="." index="256" unique_id=641898837]
+visible = false
+
+[node name="Tree_03_006" parent="." index="257" unique_id=645785539]
+visible = false
+
+[node name="Tree_03_007" parent="." index="258" unique_id=880344835]
+visible = false
+
+[node name="Tree_003" parent="." index="259" unique_id=1492776471]
+visible = false
+
+[node name="Tree_04" parent="." index="260" unique_id=521695746]
+visible = false
+
+[node name="Tree_04_001" parent="." index="261" unique_id=1747420898]
+visible = false
+
+[node name="Tree_04_002" parent="." index="262" unique_id=445068850]
+visible = false
+
+[node name="Tree_04_003" parent="." index="263" unique_id=1590475884]
+visible = false
+
+[node name="Tree_04_004" parent="." index="264" unique_id=369713634]
+visible = false
+
+[node name="Tree_04_005" parent="." index="265" unique_id=1029908214]
+visible = false
+
+[node name="Tree_04_006" parent="." index="266" unique_id=1295506596]
+visible = false
+
+[node name="Tree_04_007" parent="." index="267" unique_id=678352185]
+visible = false
+
+[node name="Tree_04_008" parent="." index="268" unique_id=1083540392]
+visible = false
+
+[node name="Tree_04_009" parent="." index="269" unique_id=1137553366]
+visible = false
+
+[node name="Tree_04_010" parent="." index="270" unique_id=780286896]
+visible = false
+
+[node name="Tree_04_011" parent="." index="271" unique_id=1438927028]
+visible = false
+
+[node name="Tree_04_012" parent="." index="272" unique_id=2140865524]
+visible = false
+
+[node name="Tree_04_013" parent="." index="273" unique_id=2124056878]
+visible = false
+
+[node name="Tree_04_014" parent="." index="274" unique_id=1315797057]
+visible = false
+
+[node name="Tree_04_015" parent="." index="275" unique_id=1174486956]
+visible = false
+
+[node name="Tree_04_016" parent="." index="276" unique_id=1719628378]
+visible = false
+
+[node name="Tree_04_017" parent="." index="277" unique_id=139803413]
+visible = false
+
+[node name="Tree_04_018" parent="." index="278" unique_id=660700028]
+visible = false
+
+[node name="Tree_04_019" parent="." index="279" unique_id=799225332]
+visible = false
+
+[node name="Tree_04_020" parent="." index="280" unique_id=1002276489]
+visible = false
+
+[node name="Tree_04_021" parent="." index="281" unique_id=979584558]
+visible = false
+
+[node name="Tree_04_022" parent="." index="282" unique_id=2052302407]
+visible = false
+
+[node name="Tree_04_023" parent="." index="283" unique_id=1484088087]
+visible = false
+
+[node name="Tree_04_024" parent="." index="284" unique_id=2133035984]
+visible = false
+
+[node name="Tree_04_025" parent="." index="285" unique_id=944854690]
+visible = false
+
+[node name="Tree_04_026" parent="." index="286" unique_id=850380720]
+visible = false
+
+[node name="Tree_04_027" parent="." index="287" unique_id=1118588571]
+visible = false
+
+[node name="Tree_04_028" parent="." index="288" unique_id=453346569]
+visible = false
+
+[node name="Tree_04_029" parent="." index="289" unique_id=1706007376]
+visible = false
+
+[node name="Tree_04_030" parent="." index="290" unique_id=2046658160]
+visible = false
+
+[node name="Tree_04_031" parent="." index="291" unique_id=1673945857]
+visible = false
+
+[node name="Tree_04_032" parent="." index="292" unique_id=1350577599]
+visible = false
+
+[node name="Tree_04_033" parent="." index="293" unique_id=2118096311]
+visible = false
+
+[node name="Tree_04_034" parent="." index="294" unique_id=389499312]
+visible = false
+
+[node name="Tree_04_035" parent="." index="295" unique_id=1098946923]
+visible = false
+
+[node name="Tree_04_036" parent="." index="296" unique_id=1630105259]
+visible = false
+
+[node name="Tree_04_037" parent="." index="297" unique_id=595933158]
+visible = false
+
+[node name="Tree_04_038" parent="." index="298" unique_id=431919752]
+visible = false
+
+[node name="Tree_04_039" parent="." index="299" unique_id=1142549521]
+visible = false
+
+[node name="Tree_04_040" parent="." index="300" unique_id=1080551943]
+visible = false
+
+[node name="Tree_04_041" parent="." index="301" unique_id=799042248]
+visible = false
+
+[node name="Tree_04_042" parent="." index="302" unique_id=2073329442]
+visible = false
+
+[node name="Tree_04_043" parent="." index="303" unique_id=1946512250]
+visible = false
+
+[node name="Tree_04_044" parent="." index="304" unique_id=1992992967]
+visible = false
+
+[node name="Tree_04_045" parent="." index="305" unique_id=282245361]
+visible = false
+
+[node name="Tree_04_046" parent="." index="306" unique_id=836707567]
+visible = false
+
+[node name="Tree_04_047" parent="." index="307" unique_id=99621608]
+visible = false
+
+[node name="Tree_04_048" parent="." index="308" unique_id=243082007]
+visible = false
+
+[node name="Tree_04_049" parent="." index="309" unique_id=588871035]
+visible = false
+
+[node name="Tree_04_050" parent="." index="310" unique_id=687215522]
+visible = false
+
+[node name="Tree_04_051" parent="." index="311" unique_id=976579279]
+visible = false
+
+[node name="Tree_04_052" parent="." index="312" unique_id=1282947073]
+visible = false
+
+[node name="Tree_04_053" parent="." index="313" unique_id=1171506447]
+visible = false
+
+[node name="Tree_04_054" parent="." index="314" unique_id=1683531257]
+visible = false
+
+[node name="Tree_04_055" parent="." index="315" unique_id=1540025419]
+visible = false
+
+[node name="Tree_04_056" parent="." index="316" unique_id=2101806301]
+visible = false
+
+[node name="Tree_04_057" parent="." index="317" unique_id=15845984]
+visible = false
+
+[node name="Tree_004" parent="." index="318" unique_id=1208704693]
+visible = false
+
+[node name="Tree_005" parent="." index="319" unique_id=132371170]
+visible = false
+
+[node name="Tree_06" parent="." index="320" unique_id=960072401]
+visible = false
+
+[node name="Tree_06_001" parent="." index="321" unique_id=929764601]
+visible = false
+
+[node name="Tree_06_002" parent="." index="322" unique_id=1847045294]
+visible = false
+
+[node name="Tree_06_003" parent="." index="323" unique_id=1566035706]
+visible = false
+
+[node name="Tree_06_004" parent="." index="324" unique_id=1793211655]
+visible = false
+
+[node name="Tree_06_005" parent="." index="325" unique_id=1190244121]
+visible = false
+
+[node name="Tree_06_006" parent="." index="326" unique_id=623666713]
+visible = false
+
+[node name="Tree_06_007" parent="." index="327" unique_id=1563463600]
+visible = false
+
+[node name="Tree_06_008" parent="." index="328" unique_id=1798109901]
+visible = false
+
+[node name="Tree_06_009" parent="." index="329" unique_id=8374605]
+visible = false
+
+[node name="Tree_06_010" parent="." index="330" unique_id=1823504761]
+visible = false
+
+[node name="Tree_06_011" parent="." index="331" unique_id=811056959]
+visible = false
+
+[node name="Tree_06_012" parent="." index="332" unique_id=819523530]
+visible = false
+
+[node name="Tree_06_013" parent="." index="333" unique_id=1154380414]
+visible = false
+
+[node name="Tree_06_014" parent="." index="334" unique_id=996893254]
+visible = false
+
+[node name="Tree_06_015" parent="." index="335" unique_id=842401047]
+visible = false
+
+[node name="Tree_06_016" parent="." index="336" unique_id=2083747026]
+visible = false
+
+[node name="Tree_06_017" parent="." index="337" unique_id=1046087900]
+visible = false
+
+[node name="Tree_06_018" parent="." index="338" unique_id=1143833265]
+visible = false
+
+[node name="Tree_06_019" parent="." index="339" unique_id=160603962]
+visible = false
+
+[node name="Tree_06_020" parent="." index="340" unique_id=1487273087]
+visible = false
+
+[node name="Tree_06_021" parent="." index="341" unique_id=531184187]
+visible = false
+
+[node name="Tree_06_022" parent="." index="342" unique_id=155729033]
+visible = false
+
+[node name="Tree_06_023" parent="." index="343" unique_id=1468026690]
+visible = false
+
+[node name="Tree_06_024" parent="." index="344" unique_id=528251982]
+visible = false
+
+[node name="Tree_06_025" parent="." index="345" unique_id=1581177783]
+visible = false
+
+[node name="Tree_06_026" parent="." index="346" unique_id=649076091]
+visible = false
+
+[node name="Tree_06_027" parent="." index="347" unique_id=802289138]
+visible = false
+
+[node name="Tree_06_028" parent="." index="348" unique_id=1854530867]
+visible = false
+
+[node name="Tree_06_029" parent="." index="349" unique_id=1359334971]
+visible = false
+
+[node name="Tree_06_030" parent="." index="350" unique_id=996035120]
+visible = false
+
+[node name="Tree_06_031" parent="." index="351" unique_id=1340563566]
+visible = false
+
+[node name="Tree_06_032" parent="." index="352" unique_id=848531650]
+visible = false
+
+[node name="Tree_06_033" parent="." index="353" unique_id=1203524640]
+visible = false
+
+[node name="Tree_06_034" parent="." index="354" unique_id=1221133782]
+visible = false
+
+[node name="Tree_06_035" parent="." index="355" unique_id=137005707]
+visible = false
+
+[node name="Tree_06_036" parent="." index="356" unique_id=2121389913]
+visible = false
+
+[node name="Tree_006" parent="." index="357" unique_id=1341766254]
+visible = false
+
+[node name="Tree_007" parent="." index="358" unique_id=354575480]
+visible = false
+
+[node name="Tree_008" parent="." index="359" unique_id=703531319]
+visible = false
+
+[node name="Tree_009" parent="." index="360" unique_id=914846844]
+visible = false
+
+[node name="Tree_010" parent="." index="361" unique_id=1124470919]
+visible = false
+
+[node name="Tree_011" parent="." index="362" unique_id=1752392670]
+visible = false
+
+[node name="Tree_012" parent="." index="363" unique_id=392459356]
+visible = false
+
+[node name="Tree_013" parent="." index="364" unique_id=835506605]
+visible = false
+
+[node name="Tree_014" parent="." index="365" unique_id=861570931]
+visible = false
+
+[node name="Tree_015" parent="." index="366" unique_id=1420124701]
+visible = false
+
+[node name="Tree_016" parent="." index="367" unique_id=686488221]
+visible = false
+
+[node name="Tree_017" parent="." index="368" unique_id=1085755132]
+visible = false
+
+[node name="Tree_018" parent="." index="369" unique_id=831028816]
+visible = false
+
+[node name="Tree_019" parent="." index="370" unique_id=773874470]
+visible = false
+
+[node name="Tree_020" parent="." index="371" unique_id=1401894888]
+visible = false
+
+[node name="Tree_021" parent="." index="372" unique_id=1640257980]
+visible = false
+
+[node name="Tree_022" parent="." index="373" unique_id=653775544]
+visible = false
+
+[node name="Tree_023" parent="." index="374" unique_id=2010086434]
+visible = false
+
+[node name="Tree_024" parent="." index="375" unique_id=902987488]
+visible = false
+
+[node name="Tree_025" parent="." index="376" unique_id=813601913]
+visible = false
+
+[node name="Tree_026" parent="." index="377" unique_id=1726398358]
+visible = false
+
+[node name="Tree_027" parent="." index="378" unique_id=1186506802]
+visible = false
+
+[node name="Tree_028" parent="." index="379" unique_id=1466626930]
+visible = false
+
+[node name="Tree_029" parent="." index="380" unique_id=28768201]
+visible = false
+
+[node name="Tree_030" parent="." index="381" unique_id=873006654]
+visible = false
+
+[node name="Tree_031" parent="." index="382" unique_id=733750783]
+visible = false
+
+[node name="Tree_032" parent="." index="383" unique_id=1892607370]
+visible = false
+
+[node name="Tree_033" parent="." index="384" unique_id=164557087]
+visible = false
+
+[node name="Tree_034" parent="." index="385" unique_id=336153226]
+visible = false
+
+[node name="Tree_035" parent="." index="386" unique_id=2119182234]
+visible = false
+
+[node name="Tree_036" parent="." index="387" unique_id=199835258]
+visible = false
+
+[node name="Tree_037" parent="." index="388" unique_id=106152760]
+visible = false
+
+[node name="Tree_038" parent="." index="389" unique_id=347410037]
+visible = false
+
+[node name="Tree_039" parent="." index="390" unique_id=673719194]
+visible = false
+
+[node name="Tree_040" parent="." index="391" unique_id=266075710]
+visible = false
+
+[node name="Tree_041" parent="." index="392" unique_id=107447666]
+visible = false
+
+[node name="Tree_042" parent="." index="393" unique_id=2119692262]
+visible = false
+
+[node name="Tree_043" parent="." index="394" unique_id=1765371832]
+visible = false
+
+[node name="Tree_044" parent="." index="395" unique_id=1984676756]
+visible = false
+
+[node name="Tree_045" parent="." index="396" unique_id=1401163481]
+visible = false
+
+[node name="Tree_046" parent="." index="397" unique_id=2129762387]
+visible = false
+
+[node name="Tree_047" parent="." index="398" unique_id=2033433052]
+visible = false
+
+[node name="Lamppost_001" parent="." index="399" unique_id=363205165]
+visible = false
+
+[node name="Lamppost_002" parent="." index="400" unique_id=1161663332]
+visible = false
+
+[node name="Lamppost_003" parent="." index="401" unique_id=1519156643]
+visible = false
+
+[node name="Lamppost_004" parent="." index="402" unique_id=2144735611]
+visible = false
+
+[node name="Lamppost_005" parent="." index="403" unique_id=1011700766]
+visible = false
+
+[node name="Lamppost_006" parent="." index="404" unique_id=2012432629]
+visible = false
+
+[node name="Lamppost_007" parent="." index="405" unique_id=487704545]
+visible = false
+
+[node name="Lamppost_008" parent="." index="406" unique_id=61036008]
+visible = false
+
+[node name="Lamppost_009" parent="." index="407" unique_id=147149135]
+visible = false
+
+[node name="Lamppost_010" parent="." index="408" unique_id=221935733]
+visible = false
+
+[node name="Lamppost_011" parent="." index="409" unique_id=317784759]
+visible = false
+
+[node name="Lamppost_012" parent="." index="410" unique_id=1641192501]
+visible = false
+
+[node name="Lamppost_013" parent="." index="411" unique_id=1064293445]
+visible = false
+
+[node name="Lamppost_014" parent="." index="412" unique_id=838133072]
+visible = false
+
+[node name="Lamppost_015" parent="." index="413" unique_id=548752647]
+visible = false
+
+[node name="Lamppost_016" parent="." index="414" unique_id=538547987]
+visible = false
+
+[node name="Lamppost_017" parent="." index="415" unique_id=1523014340]
+visible = false
+
+[node name="Lamppost_018" parent="." index="416" unique_id=1161732369]
+visible = false
+
+[node name="Lamppost_019" parent="." index="417" unique_id=603695132]
+visible = false
+
+[node name="Lamppost_020" parent="." index="418" unique_id=1260537231]
+visible = false
+
+[node name="Lamppost_021" parent="." index="419" unique_id=822705065]
+visible = false
+
+[node name="Lamppost_022" parent="." index="420" unique_id=420359276]
+visible = false
+
+[node name="Lamppost_023" parent="." index="421" unique_id=346112774]
+visible = false
+
+[node name="Lamppost_024" parent="." index="422" unique_id=1083610823]
+visible = false
+
+[node name="Lamppost_025" parent="." index="423" unique_id=1579791542]
+visible = false
+
+[node name="Lamppost_026" parent="." index="424" unique_id=1230563591]
+visible = false
+
+[node name="ConcreteBare" parent="." index="425" unique_id=970297316]
+visible = false
+
+[node name="trash_can" parent="." index="426" unique_id=746963511]
+visible = false
+
+[node name="trash_can_001" parent="." index="427" unique_id=694785642]
+visible = false
+
+[node name="trash_can_002" parent="." index="428" unique_id=91979514]
+visible = false
+
+[node name="trash_can_003" parent="." index="429" unique_id=1933106956]
+visible = false
+
+[node name="trash_can_004" parent="." index="430" unique_id=1013706104]
+visible = false
+
+[node name="trash_can_005" parent="." index="431" unique_id=1992340455]
+visible = false
+
+[node name="trash_can_006" parent="." index="432" unique_id=1995109260]
+visible = false
+
+[node name="trash_can_007" parent="." index="433" unique_id=811980762]
+visible = false
+
+[node name="trash_can_008" parent="." index="434" unique_id=1432771999]
+visible = false
+
+[node name="trash_can_cover" parent="." index="435" unique_id=873069288]
+visible = false
+
+[node name="trash_can_cover_001" parent="." index="436" unique_id=1680358106]
+visible = false
+
+[node name="trash_can_cover_002" parent="." index="437" unique_id=1907107744]
+visible = false
+
+[node name="trash_can_cover_003" parent="." index="438" unique_id=1143163539]
+visible = false
+
+[node name="trash_can_cover_004" parent="." index="439" unique_id=1410714632]
+visible = false
+
+[node name="trash_can_cover_005" parent="." index="440" unique_id=2022582364]
+visible = false
+
+[node name="trash_can_cover_006" parent="." index="441" unique_id=889300628]
+visible = false
+
+[node name="trash_can_cover_007" parent="." index="442" unique_id=1177784731]
+visible = false
+
+[node name="trash_can_cover_008" parent="." index="443" unique_id=1664641765]
+visible = false
+
+[node name="House_001" parent="." index="444" unique_id=810852129]
+visible = false
+
+[node name="House_002" parent="." index="445" unique_id=1597490173]
+visible = false
+
+[node name="House_003" parent="." index="446" unique_id=874377463]
+visible = false
+
+[node name="House_004" parent="." index="447" unique_id=1180259316]
+visible = false
+
+[node name="House_005" parent="." index="448" unique_id=1724732629]
+visible = false
+
+[node name="House_006" parent="." index="449" unique_id=1819371524]
+visible = false
+
+[node name="House_007" parent="." index="450" unique_id=1911740494]
+visible = false
+
+[node name="House_008" parent="." index="451" unique_id=14506196]
+visible = false
+
+[node name="House_009" parent="." index="452" unique_id=630029120]
+visible = false
+
+[node name="House_010" parent="." index="453" unique_id=97336389]
+visible = false
+
+[node name="House_011" parent="." index="454" unique_id=2135580433]
+visible = false
+
+[node name="House_012" parent="." index="455" unique_id=674711340]
+visible = false
+
+[node name="House_013" parent="." index="456" unique_id=313081153]
+visible = false
+
+[node name="House_014" parent="." index="457" unique_id=1208906066]
+visible = false
+
+[node name="House_015" parent="." index="458" unique_id=1573473348]
+visible = false
+
+[node name="House_016" parent="." index="459" unique_id=858232658]
+visible = false
+
+[node name="House_017" parent="." index="460" unique_id=251944725]
+visible = false
+
+[node name="House_018" parent="." index="461" unique_id=232213883]
+visible = false
+
+[node name="House_019" parent="." index="462" unique_id=917703400]
+visible = false
+
+[node name="House_020" parent="." index="463" unique_id=125240799]
+visible = false
+
+[node name="House_021" parent="." index="464" unique_id=2043721034]
+visible = false
+
+[node name="House_022" parent="." index="465" unique_id=2007581823]
+visible = false
+
+[node name="House_023" parent="." index="466" unique_id=1827022170]
+visible = false
+
+[node name="House_024" parent="." index="467" unique_id=1098009868]
+visible = false
+
+[node name="House_025" parent="." index="468" unique_id=440279653]
+visible = false
+
+[node name="House_026" parent="." index="469" unique_id=1973244762]
+visible = false
+
+[node name="House_027" parent="." index="470" unique_id=1529970377]
+visible = false
+
+[node name="House_028" parent="." index="471" unique_id=1260753346]
+visible = false
+
+[node name="House_029" parent="." index="472" unique_id=539896309]
+visible = false
+
+[node name="House_030" parent="." index="473" unique_id=1096687405]
+visible = false
+
+[node name="House_031" parent="." index="474" unique_id=737215442]
+visible = false
+
+[node name="House_032" parent="." index="475" unique_id=383814896]
+visible = false
+
+[node name="Garbage_bags_003" parent="." index="865" unique_id=895781377]
+visible = false
+
+[node name="Garbage_bags_002" parent="." index="866" unique_id=1210226577]
+visible = false
+
+[node name="Garbage_bags_004" parent="." index="867" unique_id=1104514886]
+visible = false
+
+[node name="Garbage_bags_005" parent="." index="868" unique_id=2030815931]
+visible = false
