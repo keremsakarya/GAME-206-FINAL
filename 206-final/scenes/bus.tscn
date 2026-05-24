@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://d3oma3gowu2rh" path="res://scenes/durak.tscn" id="1_t7ha2"]
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="2_stnsb"]
+[ext_resource type="Script" uid="uid://bw322jxuij70q" path="res://scripts/intro_cinematic.gd" id="3_6x00d"]
+[ext_resource type="VideoStream" uid="uid://5nqhlb3w0rb3" path="res://videos/metro-cutscene.ogv" id="4_5urgl"]
+[ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="5_uur5s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_stnsb"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -25,6 +28,13 @@ volumetric_fog_emission_energy = 0.5
 volumetric_fog_length = 200.0
 adjustment_enabled = true
 adjustment_brightness = 1.3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqllh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83o2r"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymqks"]
 
 [node name="Bus" type="Node3D" unique_id=1065074711]
 
@@ -143,3 +153,40 @@ spot_range = 17.92
 transform = Transform3D(-0.00031484806, -0.87239355, 0.488804, 6.0876628e-05, 0.488804, 0.8723936, -0.99999994, 0.0003044282, -0.00010079062, -45.065067, 12.829089, 7.5528507)
 light_energy = 1.475
 spot_range = 17.92
+
+[node name="IntroCinematic" type="CanvasLayer" parent="." unique_id=290166604]
+script = ExtResource("3_6x00d")
+
+[node name="BlackBG" type="ColorRect" parent="IntroCinematic" unique_id=1329294964]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="IntroVideo" type="VideoStreamPlayer" parent="IntroCinematic" unique_id=25360189]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("4_5urgl")
+expand = true
+
+[node name="ContinueButton" type="Button" parent="IntroCinematic" unique_id=1872494368]
+offset_left = 514.0
+offset_top = 617.0
+offset_right = 611.0
+offset_bottom = 639.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("5_uur5s")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uqllh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_83o2r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymqks")
+text = "Continue"
+
+[connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
+[connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
