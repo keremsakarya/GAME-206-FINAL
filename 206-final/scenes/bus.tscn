@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bwl0vlcfu7qbv"]
 
+[ext_resource type="Script" uid="uid://c1im3fb3bgkhi" path="res://scripts/bus.gd" id="1_5urgl"]
 [ext_resource type="PackedScene" uid="uid://d3oma3gowu2rh" path="res://scenes/durak.tscn" id="1_t7ha2"]
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="2_stnsb"]
 [ext_resource type="Script" uid="uid://bw322jxuij70q" path="res://scripts/intro_cinematic.gd" id="3_6x00d"]
-[ext_resource type="VideoStream" uid="uid://5nqhlb3w0rb3" path="res://videos/metro-cutscene.ogv" id="4_5urgl"]
+[ext_resource type="VideoStream" uid="uid://b1iueuudobqs3" path="res://videos/bus-intro.ogv" id="4_6x00d"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="5_uur5s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_stnsb"]
@@ -37,6 +38,7 @@ bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymqks"]
 
 [node name="Bus" type="Node3D" unique_id=1065074711]
+script = ExtResource("1_5urgl")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=454878106]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -49,8 +51,7 @@ environment = SubResource("Environment_8154j")
 [node name="Props" parent="." unique_id=809721206 instance=ExtResource("1_t7ha2")]
 
 [node name="Player" parent="." unique_id=1581314821 instance=ExtResource("2_stnsb")]
-transform = Transform3D(-0.00036649307, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -0.00036649307, -43.973736, 4.0645266, -39.647915)
-visible = false
+transform = Transform3D(0.6093428, 0, 0.7929069, 0, 1, 0, -0.7929069, 0, 0.6093428, -43.973736, 4.0645266, -39.647915)
 
 [node name="LevelCollisions" type="Node" parent="." unique_id=988038393]
 
@@ -171,14 +172,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("4_5urgl")
+stream = ExtResource("4_6x00d")
 expand = true
 
 [node name="ContinueButton" type="Button" parent="IntroCinematic" unique_id=1872494368]
 offset_left = 514.0
-offset_top = 617.0
+offset_top = 490.0
 offset_right = 611.0
-offset_bottom = 639.0
+offset_bottom = 512.0
 theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
 theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
 theme_override_fonts/font = ExtResource("5_uur5s")

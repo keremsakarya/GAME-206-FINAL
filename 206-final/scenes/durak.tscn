@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://bhd3e7cutx2iv" path="res://YogeStylizedNatureTextures/Texture_11_Diffuse.png" id="13_72ixc"]
 [ext_resource type="PackedScene" uid="uid://d1h0xias2h8ls" path="res://agac.tscn" id="14_62ha4"]
 [ext_resource type="Texture2D" uid="uid://cmilry1dgijxs" path="res://assets/House/House/Textures/Alarm_clock_Emissor.png" id="15_62ha4"]
+[ext_resource type="AudioStream" uid="uid://crs1w2gl5veej" path="res://sounds/bus-coming.mp3" id="17_sgxtb"]
+[ext_resource type="PackedScene" uid="uid://528uhx0xh743" path="res://scenes/bus_interact.tscn" id="18_qk77w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1wke"]
 albedo_texture = ExtResource("2_s5q74")
@@ -1567,6 +1569,14 @@ omni_range = 0.781
 transform = Transform3D(0.0100002, -8.2945917e-10, 2.94903e-17, 7.858034e-10, 0.0100002, 1.6955241e-14, -6.071532e-18, 4.7095032e-17, 0.010000001, -0.05537778, 0.006723553, 0.0084299855)
 omni_range = 0.781
 
+[node name="BusAudio" type="AudioStreamPlayer3D" parent="Path3D/PathFollow3D/Bus2" index="42" unique_id=351797414]
+stream = ExtResource("17_sgxtb")
+attenuation_model = 2
+max_distance = 200.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path3D" index="1" unique_id=607164341]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_ltb8r")
+
+[node name="ATMInteract" parent="." index="157" unique_id=432739233 instance=ExtResource("18_qk77w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.617615, 4.6479483, -34.333706)

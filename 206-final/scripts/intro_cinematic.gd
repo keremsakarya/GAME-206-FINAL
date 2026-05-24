@@ -20,8 +20,8 @@ func _on_intro_video_finished() -> void:
 
 
 func _on_continue_button_pressed() -> void:
-	if player:
-		player.can_move = true
+	#if player:
+		#player.can_move = true
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
