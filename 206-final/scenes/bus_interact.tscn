@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://528uhx0xh743"]
+
+[ext_resource type="Script" uid="uid://l42j42lulku8" path="res://scripts/atm_interact.gd" id="1_x3pr4"]
+[ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="2_ttqxr"]
+[ext_resource type="VideoStream" uid="uid://bl6okvk7rry84" path="res://videos/atm-cutscene.ogv" id="3_ut5q1"]
+[ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="4_3k20j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k3htp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlg0r"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
+
+[node name="ATMInteract" type="Area3D" unique_id=432739233]
+script = ExtResource("1_x3pr4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1064200221]
+shape = SubResource("BoxShape3D_k3htp")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=537845862]
+
+[node name="PromptLabel" type="Label" parent="UI" unique_id=1580596971]
+visible = false
+offset_left = 444.0
+offset_top = 543.0
+offset_right = 702.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_fonts/font = ExtResource("2_ttqxr")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+text = "[E] to interact"
+
+[node name="BlackBackground" type="ColorRect" parent="UI" unique_id=1392144256]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="UI" unique_id=1488068346]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("3_ut5q1")
+expand = true
+
+[node name="ContinueButton" type="Button" parent="UI" unique_id=1946439084]
+visible = false
+offset_left = 525.0
+offset_top = 602.0
+offset_right = 622.0
+offset_bottom = 624.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("4_3k20j")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
+text = "Continue"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="finished" from="UI/VideoPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="UI/ContinueButton" to="." method="_on_continue_button_pressed"]
