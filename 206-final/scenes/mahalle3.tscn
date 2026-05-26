@@ -54,14 +54,17 @@ visible = false
 visible = false
 
 [node name="BrickSmallBrown_01" parent="." index="10" unique_id=1450977329]
-transform = Transform3D(100, 1.4210855e-12, -8.742278e-06, 8.742278e-06, -1.7881393e-05, 99.99999, 0, 99.99999, 1.1920929e-05, 21.466852, 0.79069495, 58.62854)
+transform = Transform3D(100, 1.4210855e-12, -8.742278e-06, 8.742278e-06, -1.7881393e-05, 99.99999, 0, 99.99999, 1.1920929e-05, 21.466852, 0.79069495, 63.304886)
+
+[node name="Fence_003" parent="." index="54" unique_id=352186081]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 12.814581, 0.77427894, -1.1311812)
 
 [node name="Fence_034" type="MeshInstance3D" parent="." index="55" unique_id=385873148]
-transform = Transform3D(169.2707, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 47.58822, 0.77427894, 40.878952)
+transform = Transform3D(169.2707, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 47.58822, 0.77427894, 33.662846)
 mesh = SubResource("ArrayMesh_62n48")
 
 [node name="Fence_035" type="MeshInstance3D" parent="." index="56" unique_id=2134960199]
-transform = Transform3D(123.90558, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 48.666073, 0.77427894, 81.46428)
+transform = Transform3D(123.90558, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 48.666073, 0.77427894, 86.25512)
 mesh = SubResource("ArrayMesh_62n48")
 
 [node name="Lamppost" parent="." index="154" unique_id=1196609339]
@@ -118,6 +121,9 @@ visible = false
 [node name="Tree_01_007" parent="." index="209" unique_id=157228680]
 visible = false
 
+[node name="Tree_01_008" parent="." index="210" unique_id=1096965083]
+visible = false
+
 [node name="Tree_02_015" parent="." index="238" unique_id=510704056]
 visible = false
 
@@ -125,6 +131,9 @@ visible = false
 visible = false
 
 [node name="Tree_03_006" parent="." index="259" unique_id=645785539]
+visible = false
+
+[node name="Tree_04_003" parent="." index="265" unique_id=1590475884]
 visible = false
 
 [node name="Tree_04_006" parent="." index="268" unique_id=1295506596]
@@ -139,19 +148,31 @@ visible = false
 [node name="Tree_04_009" parent="." index="271" unique_id=1137553366]
 visible = false
 
+[node name="Tree_04_010" parent="." index="272" unique_id=780286896]
+visible = false
+
 [node name="Tree_04_014" parent="." index="276" unique_id=1315797057]
 visible = false
 
 [node name="Tree_04_015" parent="." index="277" unique_id=1174486956]
 visible = false
 
+[node name="Tree_04_034" parent="." index="296" unique_id=389499312]
+visible = false
+
 [node name="Tree_06" parent="." index="322" unique_id=960072401]
+visible = false
+
+[node name="Tree_06_001" parent="." index="323" unique_id=929764601]
 visible = false
 
 [node name="Tree_06_013" parent="." index="335" unique_id=1154380414]
 visible = false
 
 [node name="Tree_06_014" parent="." index="336" unique_id=996893254]
+visible = false
+
+[node name="Tree_06_015" parent="." index="337" unique_id=842401047]
 visible = false
 
 [node name="Tree_006" parent="." index="359" unique_id=1341766254]
