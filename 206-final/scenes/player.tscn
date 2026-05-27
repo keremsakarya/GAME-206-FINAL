@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b35lupl2eor2o" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dpffsn5qlu5ic" path="res://images/nuri.png" id="3_dqkch"]
 [ext_resource type="Shader" uid="uid://w56ev18f83lq" path="res://shaders/fears-to-fathom.gdshader" id="3_qlg0r"]
+[ext_resource type="Script" uid="uid://c5vsa531ve3b" path="res://scenes/Flashlight.gd" id="3_tuyoq"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="4_qlg0r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
@@ -32,6 +33,9 @@ script = ExtResource("1_g2els")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1319999342]
 shape = SubResource("CapsuleShape3D_g2els")
 
+[node name="FlashlightController" type="Node" parent="." unique_id=818936025]
+script = ExtResource("3_tuyoq")
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=923466672]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7974055, 0)
 
@@ -39,10 +43,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7974055, 0)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.014355361, -0.63213766, -0.22994953)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=1667011876]
+transform = Transform3D(1, 0, 0, 0, 0.99619466, 0.08715573, 0, -0.08715573, 0.99619466, 0, -0.2225666, 0)
 visible = false
-light_energy = 4.0
+light_energy = 6.0
 light_volumetric_fog_energy = 0.1
 spot_range = 100.0
+spot_angle = 22.5
 spot_angle_attenuation = 2.0
 
 [node name="Shader" type="CanvasLayer" parent="." unique_id=967931211]

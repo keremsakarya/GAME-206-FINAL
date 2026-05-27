@@ -4,6 +4,12 @@ const WALK_SPEED = 3.0
 const SPRINT_SPEED = 5.5
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.002
+const NORMAL_FOV = 75.0
+const SPRINT_FOV = 90.0 # Increase this to 100 for a more extreme speed effect
+var bob_time: float = 0.0
+const BOB_FREQ = 2.0
+const BOB_AMP = 0.06 # How aggressive the camera shake is
+# ------------------------------------
 
 var current_speed = WALK_SPEED
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -81,7 +87,33 @@ func _physics_process(delta):
 		if is_on_floor():
 			anim_player.play("Pistol_IDLE")
 	
-	move_and_slide()
+	move_and_slide() # This is your existing code
+	
+	# --- SPRINT EFFECTS (FOV & HEADBOB) ---
+	var target_fov = NORMAL_FOV
+	
+	# If we are moving, on the ground, and sprinting, trigger the speed effect
+	if direction and current_speed == SPRINT_SPEED and is_on_floor():
+		target_fov = SPRINT_FOV
+		
+	# Smoothly zoom the camera in and out for that "motion blur" speed feel
+	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
+	
+	# Camera Shake (Headbob)
+	if direction and is_on_floor():
+		# If sprinting, make the shake much more violent
+		var shake_multiplier = 1.5 if current_speed == SPRINT_SPEED else 1.0
+		bob_time += delta * BOB_FREQ * current_speed * shake_multiplier
+		
+		# v_offset and h_offset shake the camera lens without messing up mouse aiming!
+		camera.v_offset = sin(bob_time) * BOB_AMP * shake_multiplier
+		camera.h_offset = cos(bob_time * 0.5) * (BOB_AMP / 2.0) * shake_multiplier
+	else:
+		# Smoothly calm the camera down when the player stops moving
+		bob_time = 0.0
+		camera.v_offset = lerp(camera.v_offset, 0.0, delta * 5.0)
+		camera.h_offset = lerp(camera.h_offset, 0.0, delta * 5.0)
+	# --------------------------------------
 
 # Silah tetiklenmesi
 func show_weapon_pickup_ui():
