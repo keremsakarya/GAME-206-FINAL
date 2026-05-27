@@ -3372,7 +3372,7 @@ shape = SubResource("ConcavePolygonShape3D_rwmyr")
 [node name="Floor_01" parent="." index="567" unique_id=1634721064]
 transform = Transform3D(108.7497, 0, 0, 0, -1.2730738e-05, 104.537506, 0, -106.79316, -1.2461843e-05, 3.094811, 0.29501057, -7.0793095)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Floor_01" index="0" unique_id=884624009]
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor_01" index="0" unique_id=884624009 groups=["House"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_01/StaticBody3D" index="0" unique_id=636323447]
 shape = SubResource("ConcavePolygonShape3D_6e4vc")

@@ -1780,10 +1780,10 @@ data = PackedVector3Array(0.0359, 0.035099998, 0, 0.0359, -0.035099998, 0, -0.03
 
 [node name="Abandoned_House" unique_id=1304806814 instance=ExtResource("1_k8fo5")]
 
-[node name="Piso_001" parent="Colision" parent_id_path=PackedInt32Array(195816923) index="0" unique_id=1042845403]
+[node name="Piso_001" parent="Colision" parent_id_path=PackedInt32Array(195816923) index="0" unique_id=1042845403 groups=["House"]]
 transform = Transform3D(1.3007979, 0, 0, 0, 1.1464813, -4.2632564e-14, 0, 2.842171e-14, 1.0912315, -0.06619212, 0.00040316582, -0.08745088)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Colision/Piso_001" index="0" unique_id=694822382]
+[node name="StaticBody3D" type="StaticBody3D" parent="Colision/Piso_001" index="0" unique_id=694822382 groups=["House"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Colision/Piso_001/StaticBody3D" index="0" unique_id=1465484768]
 shape = SubResource("ConcavePolygonShape3D_k8fo5")

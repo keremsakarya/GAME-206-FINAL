@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bdlb6vptxdi4u" path="res://assets/pistol/Pistol.fbx" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b35lupl2eor2o" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://up60vnixtq0e" path="res://sounds/woodwalking.wav" id="2_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dpffsn5qlu5ic" path="res://images/nuri.png" id="3_dqkch"]
 [ext_resource type="Shader" uid="uid://w56ev18f83lq" path="res://shaders/fears-to-fathom.gdshader" id="3_qlg0r"]
 [ext_resource type="Script" uid="uid://c5vsa531ve3b" path="res://scenes/Flashlight.gd" id="3_tuyoq"]
@@ -29,6 +30,12 @@ bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 
 [node name="Player" type="CharacterBody3D" unique_id=1581314821]
 script = ExtResource("1_g2els")
+
+[node name="FloorDetector" type="RayCast3D" parent="." unique_id=505521655]
+target_position = Vector3(0, -1.5, 0)
+
+[node name="FootstepAudio" type="AudioStreamPlayer" parent="." unique_id=2136557157]
+stream = ExtResource("2_fjrip")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1319999342]
 shape = SubResource("CapsuleShape3D_g2els")

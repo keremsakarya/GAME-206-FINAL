@@ -20,6 +20,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var can_move = true
 var can_exit = false
 @onready var anim_player = $Camera3D/Pistol/AnimationPlayer
+# --- AUDIO VARIABLES ---
+@onready var footstep_audio = $FootstepAudio
+@onready var floor_detector = $FloorDetector
+var step_timer: float = 0.0
+# -----------------------
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -114,6 +119,35 @@ func _physics_process(delta):
 		camera.v_offset = lerp(camera.v_offset, 0.0, delta * 5.0)
 		camera.h_offset = lerp(camera.h_offset, 0.0, delta * 5.0)
 	# --------------------------------------
+	# --- FOOTSTEP AUDIO ---
+	if direction and is_on_floor():
+		step_timer -= delta
+		if step_timer <= 0:
+			if floor_detector.is_colliding():
+				var ground = floor_detector.get_collider()
+				
+				# DEBUG 1: Tells us exactly what the laser hit
+				print("The laser hit an object named: ", ground.name)
+				
+				if ground.is_in_group("House"):
+					# DEBUG 2: Tells us the tag worked
+					print("House tag found! Playing sound!")
+					
+					footstep_audio.pitch_scale = randf_range(0.85, 1.15)
+					footstep_audio.play()
+				else:
+					# DEBUG 3: Tells us if the tag is missing
+					print("WARNING: This floor does NOT have the 'House' tag! Its current groups are: ", ground.get_groups())
+			else:
+				print("WARNING: Laser is floating and not hitting anything!")
+			
+			if current_speed == SPRINT_SPEED:
+				step_timer = 0.3 
+			else:
+				step_timer = 0.6 
+	else:
+		step_timer = 0.0
+	# ----------------------
 
 # Silah tetiklenmesi
 func show_weapon_pickup_ui():
