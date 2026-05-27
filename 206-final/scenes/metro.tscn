@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cdmee2kayhkfk"]
 
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="1_mqbuc"]
+[ext_resource type="Script" uid="uid://bobbgt5gjorq5" path="res://scripts/metro.gd" id="1_nobsb"]
 [ext_resource type="PackedScene" uid="uid://68ueo2jgw61j" path="res://scenes/weapon_trigger.tscn" id="2_qqq2g"]
 [ext_resource type="PackedScene" uid="uid://c33l30m2qotwk" path="res://scenes/metrodeneme.tscn" id="3_dp0y2"]
 [ext_resource type="Script" uid="uid://0b38x77j4y06" path="res://scripts/atm_light.gd" id="4_yv0r8"]
@@ -43,6 +44,7 @@ bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
 
 [node name="Metro" type="Node3D" unique_id=513061234]
+script = ExtResource("1_nobsb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1744765733]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
