@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bhe3dmp86uf5t"
-path="res://.godot/imported/dirtwalking.wav-c6077e70579fc12aba7b171efa0e1ca0.sample"
+uid="uid://b008oewpbevod"
+path="res://.godot/imported/Landing.wav-0a1664e17c1bd2e95de145173f507ba0.sample"
 
 [deps]
 
-source_file="res://sounds/dirtwalking.wav"
-dest_files=["res://.godot/imported/dirtwalking.wav-c6077e70579fc12aba7b171efa0e1ca0.sample"]
+source_file="res://sounds/Landing.wav"
+dest_files=["res://.godot/imported/Landing.wav-0a1664e17c1bd2e95de145173f507ba0.sample"]
 
 [params]
 
