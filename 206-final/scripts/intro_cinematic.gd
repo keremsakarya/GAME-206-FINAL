@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var intro_video = $IntroVideo
 @onready var continue_button = $ContinueButton
 
-@onready var player: CharacterBody3D = $"../Player"
+@onready var player = $"../Player"
 
 func _ready():
 	continue_button.hide()
@@ -20,8 +20,8 @@ func _on_intro_video_finished() -> void:
 
 
 func _on_continue_button_pressed() -> void:
-	#if player:
-		#player.can_move = true
+	if player:
+		player.can_move = true
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	

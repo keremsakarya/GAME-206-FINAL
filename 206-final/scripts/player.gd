@@ -22,6 +22,13 @@ func _ready() -> void:
 
 # ----------- Fare Kontrolü (Etrafa Bakma) ----------
 func _unhandled_input(event):
+	# Fareyi boşa çıkarmak için ESC
+	if event.is_action_pressed("ui_cancel"):
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 	if not can_move: return
 	
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -33,13 +40,6 @@ func _unhandled_input(event):
 		
 		# Kamera takla atmasın diye açı sınırlaması
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
-	
-	# Fareyi boşa çıkarmak için ESC
-	if event.is_action_pressed("ui_cancel"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 # ----------- Fizik - Hareket -----------
 func _physics_process(delta):
