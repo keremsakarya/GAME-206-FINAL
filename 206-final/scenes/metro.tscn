@@ -70,25 +70,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.959846, -1.3511691, 0)
 
 [node name="LevelCollisions" type="Node" parent="." unique_id=327384420]
 
-[node name="Ground1" type="CSGBox3D" parent="LevelCollisions" unique_id=830264661]
+[node name="Ground1" type="CSGBox3D" parent="LevelCollisions" unique_id=830264661 groups=["Sidewalk"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.624147, -0.4385225, 12.176702)
 visible = false
 use_collision = true
 size = Vector3(9.291504, 1, 68.387985)
 
-[node name="Ground2" type="CSGBox3D" parent="LevelCollisions" unique_id=2008830177]
+[node name="Ground2" type="CSGBox3D" parent="LevelCollisions" unique_id=2008830177 groups=["Sidewalk"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.624147, 3.7094991, 61.65134)
 visible = false
 use_collision = true
 size = Vector3(9.291504, 1.0541992, 16.734411)
 
-[node name="Stair1" type="CSGBox3D" parent="LevelCollisions" unique_id=1739824262]
+[node name="Stair1" type="CSGBox3D" parent="LevelCollisions" unique_id=1739824262 groups=["Sidewalk"]]
 transform = Transform3D(1, 0, 0, 0, 0.86377394, 0.50387955, 0, -0.50387955, 0.86377394, -24.624147, 1.7049495, 49.968704)
 visible = false
 use_collision = true
 size = Vector3(9.291504, 1.0541992, 8.350289)
 
-[node name="Stair2" type="CSGBox3D" parent="LevelCollisions" unique_id=2130794942]
+[node name="Stair2" type="CSGBox3D" parent="LevelCollisions" unique_id=2130794942 groups=["Sidewalk"]]
 transform = Transform3D(-0.00015704149, -0.5067261, 0.8621071, -5.1803033e-07, 0.8621071, 0.5067261, -1, 7.913043e-05, -0.00013564908, -16.164139, 6.650485, 69.35165)
 visible = false
 use_collision = true
