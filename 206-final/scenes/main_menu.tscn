@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ccl74fafmfign"]
 
-[ext_resource type="Texture2D" uid="uid://txlgurn224ee" path="res://images/isim.png" id="1_ekxnf"]
 [ext_resource type="Script" uid="uid://djocxrvph7x41" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://cdhkv0luia7h3" path="res://images/menu resim.png" id="2_wu84c"]
 [ext_resource type="VideoStream" uid="uid://bsr6sbgihl83u" path="res://videos/Logo.ogv" id="4_8ln24"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
@@ -36,11 +36,11 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = -4.0
-offset_top = -81.0
+offset_top = 4.0
 offset_right = -4.0
-offset_bottom = 526.0
+offset_bottom = 755.0
 grow_horizontal = 2
-texture = ExtResource("1_ekxnf")
+texture = ExtResource("2_wu84c")
 expand_mode = 1
 
 [node name="StartButton" type="Button" parent="CanvasLayer" unique_id=1865973255]
