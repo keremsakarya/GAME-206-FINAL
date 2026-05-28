@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjjkq7jyabap"]
 
 [ext_resource type="PackedScene" uid="uid://dcmgk74dy23do" path="res://assets/Abandoned_House/Models/Abandoned_House.fbx" id="1_k8fo5"]
-[ext_resource type="Script" uid="uid://c20dgw67alq4e" path="res://scenes/music_trigger.gd" id="2_ljtai"]
+[ext_resource type="Script" uid="uid://c20dgw67alq4e" path="res://scripts/music_trigger.gd" id="2_ljtai"]
 [ext_resource type="AudioStream" uid="uid://cp0uwsudm5o1n" path="res://sounds/terkedilmişev müzik.mp3" id="3_8lkyg"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k8fo5"]
@@ -1799,7 +1799,7 @@ data = PackedVector3Array(0.0359, 0.035099998, 0, 0.0359, -0.035099998, 0, -0.03
 data = PackedVector3Array(0.0359, 0.035099998, 0, 0.0359, -0.035099998, 0, -0.0382, -0.035099998, 0, -0.0382, -0.035099998, 0, -0.0382, 0.035099998, 0, 0.0359, 0.035099998, 0, 0.0382, 0.035099998, 0, 0.0382, -0.035099998, 0, 0.0359, -0.035099998, 0, 0.0359, -0.035099998, 0, 0.0359, 0.035099998, 0, 0.0382, 0.035099998, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_64taa"]
-size = Vector3(2.744629, 3.704956, 1)
+size = Vector3(46.372494, 21.138786, 23.182205)
 
 [node name="Abandoned_House" unique_id=1304806814 instance=ExtResource("1_k8fo5")]
 
@@ -6208,7 +6208,7 @@ size = Vector3(12.816162, 0.100097656, 7.902542)
 script = ExtResource("2_ljtai")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MusicTrigger" index="0" unique_id=1780098073]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.503557, 1.352478, -117.34953)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.68766, 0.7648201, -128.4324)
 shape = SubResource("BoxShape3D_64taa")
 
 [node name="AmbientPlayer" type="AudioStreamPlayer" parent="MusicTrigger" index="1" unique_id=421711805]

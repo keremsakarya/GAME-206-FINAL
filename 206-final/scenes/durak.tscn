@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://cmilry1dgijxs" path="res://assets/House/House/Textures/Alarm_clock_Emissor.png" id="15_62ha4"]
 [ext_resource type="AudioStream" uid="uid://crs1w2gl5veej" path="res://sounds/bus-coming.mp3" id="17_sgxtb"]
 [ext_resource type="PackedScene" uid="uid://528uhx0xh743" path="res://scenes/bus_interact.tscn" id="18_qk77w"]
+[ext_resource type="Script" uid="uid://c20dgw67alq4e" path="res://scripts/music_trigger.gd" id="19_c1wke"]
+[ext_resource type="AudioStream" uid="uid://cpybhmuasc25p" path="res://sounds/durakmusic.MP3" id="20_4xr3x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1wke"]
 albedo_texture = ExtResource("2_s5q74")
@@ -817,6 +819,9 @@ _data = {
 &"otobüshareket": SubResource("Animation_16geb")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_p0laa"]
+size = Vector3(83.97266, 18.803223, 104.007324)
+
 [node name="Props" unique_id=809721206 instance=ExtResource("1_ivfko")]
 script = ExtResource("2_wcn1u")
 
@@ -1580,3 +1585,13 @@ libraries/ = SubResource("AnimationLibrary_ltb8r")
 
 [node name="ATMInteract" parent="." index="157" unique_id=432739233 instance=ExtResource("18_qk77w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.617615, 4.6479483, -34.333706)
+
+[node name="MusicTrigger" type="Area3D" parent="." index="158" unique_id=1669967735]
+script = ExtResource("19_c1wke")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MusicTrigger" index="0" unique_id=2052671331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.264, 8.644315, -21.73169)
+shape = SubResource("BoxShape3D_p0laa")
+
+[node name="AmbientPlayer" type="AudioStreamPlayer" parent="MusicTrigger" index="1" unique_id=1200268868]
+stream = ExtResource("20_4xr3x")

@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/durakmusic.MP3-eb840cbe591b4c69e1045c939e9b12
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
