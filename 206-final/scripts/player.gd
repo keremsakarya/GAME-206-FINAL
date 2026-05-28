@@ -27,8 +27,16 @@ var can_exit = false
 
 # --- AUDIO VARIABLES ---
 @onready var footstep_audio = $FootstepAudio
-@onready var landing_audio = $LandingAudio 
-@onready var grass_audio = $GrassAudio # <-- Added this back for you!
+@onready var landing_audio = $LandingAudio # (House Landing)
+
+# THE 3 NEW LANDING NODES (Assassination Fix):
+@onready var grass_landing = $GrassLanding
+@onready var carpet_landing = $CarpetLanding
+@onready var sidewalk_landing = $SidewalkLanding
+
+@onready var grass_audio = $GrassAudio 
+@onready var carpet_audio = $CarpetAudio 
+@onready var sidewalk_audio = $SidewalkAudio 
 @onready var floor_detector = $FloorDetector
 var step_timer: float = 0.0
 # -----------------------
@@ -97,21 +105,28 @@ func _physics_process(delta):
 	# 1. Check if we are in the air BEFORE we move
 	var was_in_air = not is_on_floor()
 	
-	move_and_slide() # This is your existing code
+	move_and_slide() 
 	
 	# 2. Check if we hit the ground AFTER we move
 	if was_in_air and is_on_floor():
 		if floor_detector.is_colliding():
 			var ground = floor_detector.get_collider()
+			print("Walking on: ", ground.name, " | Tags: ", ground.get_groups())
 			
+			# DELAY BUG FIXED: All .play() parentheses are empty!
 			if ground.is_in_group("House"):
 				landing_audio.pitch_scale = randf_range(0.9, 1.1)
 				landing_audio.volume_db = -8.0 
-				landing_audio.play(0.79) 
+				landing_audio.play() 
 			elif ground.is_in_group("Grass"):
-				# Soft dirt landing!
-				grass_audio.pitch_scale = randf_range(0.6, 0.7)
-				grass_audio.play()
+				grass_landing.pitch_scale = randf_range(0.6, 0.7)
+				grass_landing.play()
+			elif ground.is_in_group("Carpet"):
+				carpet_landing.pitch_scale = randf_range(0.6, 0.7)
+				carpet_landing.play()
+			elif ground.is_in_group("Sidewalk"):
+				sidewalk_landing.pitch_scale = randf_range(0.8, 0.9)
+				sidewalk_landing.play()
 				
 			# --- CAMERA DIP TWEEN (Happens on all floors) ---
 			if dip_tween and dip_tween.is_valid():
@@ -150,14 +165,27 @@ func _physics_process(delta):
 			if floor_detector.is_colliding():
 				var ground = floor_detector.get_collider()
 				
+				# THE HACK: Calculate the pitch BEFORE playing the sound
+				var current_pitch = 1.0
+				if current_speed == SPRINT_SPEED:
+					# Fast, snappy, and light for sprinting
+					current_pitch = randf_range(0.95, 1.15) 
+				else:
+					# Deep, heavy, and STRETCHED OUT for walking!
+					current_pitch = randf_range(0.5, 0.7) 
+				
 				if ground.is_in_group("House"):
-					footstep_audio.pitch_scale = randf_range(0.85, 1.15)
+					footstep_audio.pitch_scale = current_pitch
 					footstep_audio.play()
 				elif ground.is_in_group("Grass"):
-					grass_audio.pitch_scale = randf_range(0.85, 1.15)
+					grass_audio.pitch_scale = current_pitch
 					grass_audio.play()
-				else:
-					print("WARNING: This floor does NOT have a tag! Its current groups are: ", ground.get_groups())
+				elif ground.is_in_group("Carpet"):
+					carpet_audio.pitch_scale = current_pitch
+					carpet_audio.play()
+				elif ground.is_in_group("Sidewalk"):
+					sidewalk_audio.pitch_scale = current_pitch
+					sidewalk_audio.play()
 			
 			if current_speed == SPRINT_SPEED:
 				step_timer = 0.3 
@@ -165,6 +193,13 @@ func _physics_process(delta):
 				step_timer = 0.6 
 	else:
 		step_timer = 0.0
+		
+		# Force the WALKING audio players to shut up when you stop moving!
+		# (Notice how the new Landing nodes are NOT in this list, so they survive!)
+		footstep_audio.stop()
+		grass_audio.stop()
+		carpet_audio.stop()
+		sidewalk_audio.stop()
 	# ----------------------
 	
 # Silah tetiklenmesi
