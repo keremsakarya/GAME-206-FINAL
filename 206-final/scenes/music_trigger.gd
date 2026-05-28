@@ -1,6 +1,6 @@
 extends Area3D
 
-@onready var music_player = $HouseMusic
+@onready var music_player = $AmbientPlayer
 var fade_tween: Tween
 
 func _ready() -> void:

@@ -6211,5 +6211,5 @@ script = ExtResource("2_ljtai")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.503557, 1.352478, -117.34953)
 shape = SubResource("BoxShape3D_64taa")
 
-[node name="HouseMusic" type="AudioStreamPlayer" parent="MusicTrigger" index="1" unique_id=421711805]
+[node name="AmbientPlayer" type="AudioStreamPlayer" parent="MusicTrigger" index="1" unique_id=421711805]
 stream = ExtResource("3_8lkyg")
