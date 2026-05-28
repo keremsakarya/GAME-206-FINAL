@@ -18,8 +18,6 @@ bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 script/source = "extends Button
 
 
-
-
 func _on_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://scenes/mahalle.tscn\")
 "
