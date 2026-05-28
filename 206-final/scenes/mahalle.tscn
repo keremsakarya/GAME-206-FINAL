@@ -5,7 +5,38 @@
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="3_echme"]
 [ext_resource type="PackedScene" uid="uid://cjwh5imer6epw" path="res://scenes/mahalle2.tscn" id="4_ve28u"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
+sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
+sky_horizon_color = Color(0.24741504, 0.16807032, 0.15766531, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_yv0r8"]
+sky_material = SubResource("ProceduralSkyMaterial_ve28u")
+
+[sub_resource type="Environment" id="Environment_uccnb"]
+background_mode = 2
+sky = SubResource("Sky_yv0r8")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.4525857, 0.4525857, 0.4525857, 1)
+volumetric_fog_emission = Color(0.10237748, 0.03326152, 0.003319253, 1)
+volumetric_fog_emission_energy = 0.5
+volumetric_fog_length = 35.0
+adjustment_enabled = true
+adjustment_brightness = 1.3
+
 [node name="Mahalle" type="Node3D" unique_id=434452024]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=864033353]
+environment = SubResource("Environment_uccnb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=43332181]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
+shadow_enabled = true
 
 [node name="House" parent="." unique_id=402678545 instance=ExtResource("1_bfg2u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018550873, -0.04726219, 0.020316124)
@@ -108,3 +139,711 @@ transform = Transform3D(1, 0, 0, 0, 0.8527223, -0.52236474, 0, 0.52236474, 0.852
 visible = false
 use_collision = true
 size = Vector3(2.2954102, 0.43948364, 7.7380447)
+
+[node name="StreetLights" type="Node" parent="." unique_id=622537533]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StreetLights" unique_id=721930169]
+transform = Transform3D(1, 0, 0, 0, -0.0017104577, 0.9999985, 0, -0.9999985, -0.0017104577, -14.252274, 7.9911795, 51.125725)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="StreetLights" unique_id=1201234625]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -50.637005, 7.9911795, 51.037357)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="StreetLights" unique_id=559000100]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -85.361496, 7.9911795, 51.037357)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="StreetLights" unique_id=581199546]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -121.3482, 7.9911795, 51.037357)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="StreetLights" unique_id=833824273]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -157.28252, 7.9911795, 51.037357)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="StreetLights" unique_id=2139205954]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -183.44893, 7.9911795, 72.76081)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="StreetLights" unique_id=1254044064]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -183.44893, 7.9911795, 45.92308)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="StreetLights" unique_id=122517649]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -157.31885, 7.9911795, 37.389706)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="StreetLights" unique_id=1218072226]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -121.36407, 7.9911795, 37.389706)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="StreetLights" unique_id=1824320729]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -76.63538, 7.9911795, 33.256134)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="StreetLights" unique_id=409064396]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -50.742718, 7.9911795, 36.782143)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="StreetLights" unique_id=1976834024]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -61.247997, 7.9911795, 10.536297)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="StreetLights" unique_id=1063036562]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -61.247997, 7.9911795, -20.556492)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="StreetLights" unique_id=1126348803]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -61.247997, 7.9911795, -51.492435)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="StreetLights" unique_id=439203999]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -73.5564, 7.9911795, -51.38148)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="StreetLights" unique_id=100555943]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -73.5564, 7.9911795, -20.325537)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="StreetLights" unique_id=2005416433]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -73.45482, 7.9911795, 10.882333)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="HouseLights" type="Node" parent="." unique_id=92732336]
+
+[node name="House1" type="Node" parent="HouseLights" unique_id=1699528287]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseLights/House1" unique_id=1746817530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.940453, 2.3409586, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="HouseLights/House1" unique_id=776469193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.43591, 5.344905, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="HouseLights/House1" unique_id=1343544031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.526279, 5.344905, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="HouseLights/House1" unique_id=1812635746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.594702, 5.344905, -1.5752597)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="HouseLights/House1" unique_id=1561420158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.382463, 5.344905, -1.5752597)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="HouseLights/House1" unique_id=1747659383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.940453, 1.5970352, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="HouseLights/House1" unique_id=1920312252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.625427, 2.3409586, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="HouseLights/House1" unique_id=730086387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.625427, 1.5970352, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="HouseLights/House1" unique_id=416047096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.569206, 2.3409586, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="HouseLights/House1" unique_id=1041512602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.569206, 1.5970352, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="HouseLights/House1" unique_id=371733984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.266646, 2.3409586, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="HouseLights/House1" unique_id=1334247769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.266646, 1.5970352, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="House2" type="Node" parent="HouseLights" unique_id=308341695]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseLights/House2" unique_id=916634769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.483658, 2.3409586, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="HouseLights/House2" unique_id=371394137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.979115, 5.344905, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="HouseLights/House2" unique_id=673062902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.069485, 5.344905, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="HouseLights/House2" unique_id=474247043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.137905, 5.344905, -1.5752597)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="HouseLights/House2" unique_id=1081492108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.92567, 5.344905, -1.5752597)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="HouseLights/House2" unique_id=1440324628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.483658, 1.5970352, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="HouseLights/House2" unique_id=311247158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.168633, 2.3409586, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="HouseLights/House2" unique_id=2112354285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.168633, 1.5970352, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="HouseLights/House2" unique_id=191296927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.11241, 2.3409586, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="HouseLights/House2" unique_id=1064745093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.11241, 1.5970352, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="HouseLights/House2" unique_id=907670841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.809853, 2.3409586, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="HouseLights/House2" unique_id=1039925920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.809853, 1.5970352, 0.8628017)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="House3" type="Node" parent="HouseLights" unique_id=24530189]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseLights/House3" unique_id=1112818350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.483658, 2.3409586, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="HouseLights/House3" unique_id=308421129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.979115, 5.344905, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="HouseLights/House3" unique_id=1437703773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.069485, 5.344905, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="HouseLights/House3" unique_id=1513277722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.137905, 5.344905, 64.53007)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="HouseLights/House3" unique_id=609131955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.92567, 5.344905, 64.53007)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="HouseLights/House3" unique_id=1952263129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.483658, 1.5970352, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="HouseLights/House3" unique_id=1250264236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.168633, 2.3409586, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="HouseLights/House3" unique_id=392587337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.168633, 1.5970352, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="HouseLights/House3" unique_id=963768517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.11241, 2.3409586, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="HouseLights/House3" unique_id=1404249688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.11241, 1.5970352, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="HouseLights/House3" unique_id=220759738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.809853, 2.3409586, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="HouseLights/House3" unique_id=826251939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.809853, 1.5970352, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="House4" type="Node" parent="HouseLights" unique_id=882039189]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseLights/House4" unique_id=468603963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.974762, 2.3409586, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="HouseLights/House4" unique_id=555333816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.470219, 5.344905, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="HouseLights/House4" unique_id=1771186364]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.560589, 5.344905, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="HouseLights/House4" unique_id=1788432254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.62901, 5.344905, 64.53007)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="HouseLights/House4" unique_id=362373915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.416775, 5.344905, 64.53007)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="HouseLights/House4" unique_id=212846907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.974762, 1.5970352, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="HouseLights/House4" unique_id=1331651663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.659737, 2.3409586, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="HouseLights/House4" unique_id=1590946836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.659737, 1.5970352, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="HouseLights/House4" unique_id=559066381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.603516, 2.3409586, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="HouseLights/House4" unique_id=494987296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.603516, 1.5970352, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="HouseLights/House4" unique_id=730581177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.300957, 2.3409586, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="HouseLights/House4" unique_id=263166186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.300957, 1.5970352, 62.161835)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="House5" type="Node" parent="HouseLights" unique_id=711141234]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseLights/House5" unique_id=825793890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.490864, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="HouseLights/House5" unique_id=2038240240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.995407, 5.344905, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="HouseLights/House5" unique_id=981446222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.905037, 5.344905, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="HouseLights/House5" unique_id=1292015303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1633835, 5.344905, 64.455475)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="HouseLights/House5" unique_id=2036572435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.951149, 5.344905, 64.455475)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="HouseLights/House5" unique_id=226098576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.490864, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="HouseLights/House5" unique_id=2145014238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.805889, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="HouseLights/House5" unique_id=390785970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.805889, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="HouseLights/House5" unique_id=379743553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.86211, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="HouseLights/House5" unique_id=749579873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.86211, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="HouseLights/House5" unique_id=1271784630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.164669, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="HouseLights/House5" unique_id=1406452304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.164669, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="House6" type="Node" parent="HouseLights" unique_id=2054979056]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseLights/House6" unique_id=698505816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.98032, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="HouseLights/House6" unique_id=1711551335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.475777, 5.344905, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="HouseLights/House6" unique_id=1431849036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.566147, 5.344905, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="HouseLights/House6" unique_id=1389986831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.634567, 5.344905, 64.455475)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="HouseLights/House6" unique_id=548118631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.422333, 5.344905, 64.455475)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="HouseLights/House6" unique_id=1561930525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.98032, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="HouseLights/House6" unique_id=1510706495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.665295, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="HouseLights/House6" unique_id=34397124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.665295, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="HouseLights/House6" unique_id=1500730090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.609074, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="HouseLights/House6" unique_id=1949407966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.609074, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="HouseLights/House6" unique_id=1308134062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.306515, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="HouseLights/House6" unique_id=738089917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.306515, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="House7" type="Node" parent="HouseLights" unique_id=109063220]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseLights/House7" unique_id=1041495351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.53614, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="HouseLights/House7" unique_id=267258226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.0316, 5.344905, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="HouseLights/House7" unique_id=274896181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.12197, 5.344905, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="HouseLights/House7" unique_id=515091204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.19039, 5.344905, 64.455475)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="HouseLights/House7" unique_id=260130844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.97816, 5.344905, 64.455475)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="HouseLights/House7" unique_id=1600335073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.53614, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="HouseLights/House7" unique_id=23130141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.22112, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="HouseLights/House7" unique_id=492903334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.22112, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="HouseLights/House7" unique_id=2054436730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.164894, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="HouseLights/House7" unique_id=2026003200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.164894, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="HouseLights/House7" unique_id=1563208515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.86234, 2.3409586, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="HouseLights/House7" unique_id=721315336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.86234, 1.5970352, 62.087242)
+light_color = Color(0.99198943, 0.861773, 0.45565557, 1)
+light_energy = 0.5
+omni_range = 1.385
+omni_attenuation = 0.0
