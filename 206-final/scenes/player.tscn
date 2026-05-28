@@ -32,7 +32,7 @@ bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1581314821]
+[node name="Player" type="CharacterBody3D" unique_id=1581314821 groups=["Player"]]
 script = ExtResource("1_g2els")
 
 [node name="FloorDetector" type="RayCast3D" parent="." unique_id=505521655]
@@ -54,7 +54,7 @@ volume_db = -10.0
 
 [node name="CarpetAudio" type="AudioStreamPlayer" parent="." unique_id=1417898420]
 stream = ExtResource("6_d2wvv")
-volume_db = 5.0
+volume_db = 3.0
 
 [node name="CarpetLanding" type="AudioStreamPlayer" parent="." unique_id=662859817]
 stream = ExtResource("3_d2wvv")

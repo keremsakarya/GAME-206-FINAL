@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cp0uwsudm5o1n"
+path="res://.godot/imported/terkedilmişev müzik.mp3-b4f062e0ce42e144eec1e8405f3d7952.mp3str"
+
+[deps]
+
+source_file="res://sounds/terkedilmişev müzik.mp3"
+dest_files=["res://.godot/imported/terkedilmişev müzik.mp3-b4f062e0ce42e144eec1e8405f3d7952.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
