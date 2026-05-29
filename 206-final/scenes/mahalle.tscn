@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://diobf4af5cw3t"]
 
 [ext_resource type="PackedScene" uid="uid://dgu1nkagjw0ri" path="res://scenes/mahalle3.tscn" id="1_bfg2u"]
+[ext_resource type="Script" uid="uid://1h84bnfihis4" path="res://scripts/mahalle.gd" id="1_rfy44"]
 [ext_resource type="PackedScene" uid="uid://cjjkq7jyabap" path="res://scenes/terkedilmişev.tscn" id="2_wbvp5"]
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="3_echme"]
 [ext_resource type="PackedScene" uid="uid://cjwh5imer6epw" path="res://scenes/mahalle2.tscn" id="4_ve28u"]
 [ext_resource type="Script" uid="uid://c20dgw67alq4e" path="res://scripts/music_trigger.gd" id="5_uccnb"]
 [ext_resource type="AudioStream" uid="uid://c30a3wlkgik6f" path="res://sounds/mahalleses.mp3" id="6_cina8"]
+[ext_resource type="Script" uid="uid://bw322jxuij70q" path="res://scripts/intro_cinematic.gd" id="7_yg0c1"]
+[ext_resource type="VideoStream" uid="uid://bvmwibfyt0sgf" path="res://videos/mahalle-intr.ogv" id="8_rfy44"]
+[ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="9_1qokc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -33,7 +37,15 @@ adjustment_brightness = 1.3
 [sub_resource type="BoxShape3D" id="BoxShape3D_cina8"]
 size = Vector3(232.34761, 51.89209, 265.7973)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1di4k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vjxp"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v17sk"]
+
 [node name="Mahalle" type="Node3D" unique_id=434452024]
+script = ExtResource("1_rfy44")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=864033353]
 environment = SubResource("Environment_uccnb")
@@ -858,3 +870,40 @@ shape = SubResource("BoxShape3D_cina8")
 [node name="AmbientPlayer" type="AudioStreamPlayer" parent="MusicTrigger" unique_id=748919642]
 stream = ExtResource("6_cina8")
 volume_db = -26.0
+
+[node name="IntroCinematic" type="CanvasLayer" parent="." unique_id=911400151]
+script = ExtResource("7_yg0c1")
+
+[node name="BlackBG" type="ColorRect" parent="IntroCinematic" unique_id=1942161227]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="IntroVideo" type="VideoStreamPlayer" parent="IntroCinematic" unique_id=332909547]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("8_rfy44")
+expand = true
+
+[node name="ContinueButton" type="Button" parent="IntroCinematic" unique_id=1895124600]
+offset_left = 514.0
+offset_top = 490.0
+offset_right = 611.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("9_1qokc")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1di4k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5vjxp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v17sk")
+text = "Continue"
+
+[connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
+[connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
