@@ -55,11 +55,11 @@ transform = Transform3D(0.6093428, 0, 0.7929069, 0, 1, 0, -0.7929069, 0, 0.60934
 
 [node name="LevelCollisions" type="Node" parent="." unique_id=988038393]
 
-[node name="Sidewalk" type="CSGBox3D" parent="LevelCollisions" unique_id=2086371242]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.54149, 3.8872433, -42.79134)
+[node name="Sidewalk" type="CSGBox3D" parent="LevelCollisions" unique_id=2086371242 groups=["Sidewalk"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.511497, 3.8872433, -38.640404)
 visible = false
 use_collision = true
-size = Vector3(2.0799255, 0.24230957, 39.60817)
+size = Vector3(12.019943, 0.24230957, 22.904911)
 
 [node name="BusStop" type="CSGBox3D" parent="LevelCollisions" unique_id=1485871308]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.373886, 4.82866, -38.06612)
@@ -92,16 +92,16 @@ use_collision = true
 size = Vector3(0.50744057, 0.3466797, 0.020263672)
 
 [node name="LevelBorder" type="CSGBox3D" parent="LevelCollisions" unique_id=668572819]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6485, 5.9125137, -38.679497)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.498955, 5.9125137, -38.679497)
 visible = false
 use_collision = true
-size = Vector3(2.7697754, 4.1914063, 23.059937)
+size = Vector3(11.1028595, 4.1914063, 23.059937)
 
 [node name="LevelBorder2" type="CSGBox3D" parent="LevelCollisions/LevelBorder" unique_id=1498511440]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007873535, 0.036254883, 0.0056533813)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035469055, 0.036254883, 0.0056533813)
 operation = 2
 use_collision = true
-size = Vector3(2.41687, 4.263916, 22.997055)
+size = Vector3(10.992063, 4.263916, 22.997055)
 
 [node name="StreetLights" type="Node" parent="." unique_id=1658668651]
 
