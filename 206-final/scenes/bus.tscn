@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://bw322jxuij70q" path="res://scripts/intro_cinematic.gd" id="3_6x00d"]
 [ext_resource type="VideoStream" uid="uid://b1iueuudobqs3" path="res://videos/bus-intro.ogv" id="4_6x00d"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="5_uur5s"]
+[ext_resource type="PackedScene" uid="uid://c820p75ltdwg5" path="res://assets/hooded+figure+3d+model/tripo_convert_3052095d-77c5-4e57-9f0e-501304fba070.fbx" id="7_uqllh"]
+[ext_resource type="Script" uid="uid://cuvqg8g5dwjek" path="res://scripts/stalkerscript.gd" id="8_uqllh"]
+[ext_resource type="Texture2D" uid="uid://c2jkujscy2q3c" path="res://assets/smilerface.jpg" id="9_83o2r"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_stnsb"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -36,6 +39,15 @@ adjustment_brightness = 1.3
 bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymqks"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uqllh"]
+size = Vector3(6.4640617, 1.392456, 12.210365)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymqks"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+albedo_texture = ExtResource("9_83o2r")
 
 [node name="Bus" type="Node3D" unique_id=1065074711]
 script = ExtResource("1_5urgl")
@@ -188,6 +200,29 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_uqllh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_83o2r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ymqks")
 text = "Continue"
+
+[node name="Stalker" parent="." unique_id=1303804270 instance=ExtResource("7_uqllh")]
+transform = Transform3D(3.18, 0, 0, 0, 3.18, 0, 0, 0, 3.18, -71.55125, 5.026092, -35.469334)
+script = ExtResource("8_uqllh")
+
+[node name="Area3D" type="Area3D" parent="Stalker" unique_id=863065478]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stalker/Area3D" unique_id=1338883852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7320309, 0.19622803, 2.1531115)
+shape = SubResource("BoxShape3D_uqllh")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Stalker" unique_id=1740466661]
+light_color = Color(0.44313726, 0, 0, 1)
+light_energy = 2.5
+light_volumetric_fog_energy = 5.0
+omni_range = 3.0
+
+[node name="Sprite3D" type="Sprite3D" parent="Stalker" unique_id=1624315127]
+transform = Transform3D(-2.6226834e-09, 0, 0.06, 0, 0.06, 0, -0.06, 0, -2.6226834e-09, 0.08961105, 0.36330593, 0)
+material_override = SubResource("StandardMaterial3D_ymqks")
+billboard = 1
+no_depth_test = true
+texture = ExtResource("9_83o2r")
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]

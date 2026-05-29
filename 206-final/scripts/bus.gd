@@ -7,7 +7,7 @@ func _ready() -> void:
 	if player:
 		player.can_move = false
 	
-	await get_tree().create_timer(21.0).timeout
+	await get_tree().create_timer(0.0).timeout
 	
 	if player:
 		player.can_move = true
