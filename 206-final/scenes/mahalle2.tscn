@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cjwh5imer6epw"]
+[gd_scene format=4 uid="uid://cjwh5imer6epw"]
 
 [ext_resource type="PackedScene" uid="uid://bxx1e8513nqkc" path="res://assets/House/House/Models/House.fbx" id="1_7xhfd"]
 [ext_resource type="Script" uid="uid://s6kc03kie38b" path="res://scripts/eat_area.gd" id="2_5idic"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://xk2a7sljfd5x" path="res://scripts/sleep_area.gd" id="5_gfiru"]
 [ext_resource type="AudioStream" uid="uid://djjhmblneu4v2" path="res://sounds/night sleep.mp3" id="6_j7qix"]
 [ext_resource type="AudioStream" uid="uid://dakh1v45d1ieg" path="res://sounds/man scream.mp3" id="7_kxtbb"]
+[ext_resource type="Texture2D" uid="uid://bugsp3nwgidar" path="res://assets/House/House/Textures/Door_01.jpg" id="9_j7qix"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7xhfd"]
 data = PackedVector3Array(-0.0053, 0.0025, -0.0023999999, -0.0053, 0.0025, 0.0026, -0.0053, -0.0021, 0.0026, -0.0053, -0.0021, 0.0026, -0.0053, -0.0029, -0.0023999999, -0.0053, 0.0025, -0.0023999999, 0.0053, 0.0025, 0.0026, -0.0053, 0.0025, 0.0026, -0.0053, 0.0025, -0.0023999999, -0.0053, 0.0025, -0.0023999999, 0.0053, 0.0025, -0.0023999999, 0.0053, 0.0025, 0.0026, 0.0053, -0.0021, 0.0026, 0.0053, 0.0025, 0.0026, 0.0053, 0.0025, -0.0023999999, 0.0053, 0.0025, -0.0023999999, 0.0053, -0.0029, -0.0023999999, 0.0053, -0.0021, 0.0026, -0.0053, -0.0021, 0.0026, 0.0053, -0.0021, 0.0026, 0.0053, -0.0029, -0.0023999999, 0.0053, -0.0029, -0.0023999999, -0.0053, -0.0029, -0.0023999999, -0.0053, -0.0021, 0.0026, 0.0053, -0.0029, -0.0023999999, 0.0053, 0.0025, -0.0023999999, -0.0053, 0.0025, -0.0023999999, -0.0053, 0.0025, -0.0023999999, -0.0053, -0.0029, -0.0023999999, 0.0053, -0.0029, -0.0023999999, -0.0053, -0.0021, 0.0026, -0.0053, 0.0025, 0.0026, 0.0053, 0.0025, 0.0026, 0.0053, 0.0025, 0.0026, 0.0053, -0.0021, 0.0026, -0.0053, -0.0021, 0.0026)
@@ -452,6 +453,44 @@ size = Vector3(0.008705871, 0.009058252, 0.022018433)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hnfnd"]
 data = PackedVector3Array(0.0001, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2deir"]
+resource_name = "Door_01"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("9_j7qix")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_krf42"]
+_surfaces = [{
+"aabb": AABB(-0.00927191, -0.00031942767, -0.012535197, 0.009392669, 0.00067708304, 0.025070393),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgAEAAAAAQADAAUABQACAAEABgAEAAIAAgAFAAYABwAAAAQAAAAHAAMABAAGAAcABQADAAcABwAGAAUA"),
+"name": "Door_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("M0D9ONt4p7ltYE28NukXvNt4p7ltYE28NukXvNt4p7ltYE08NukXvLKDuzltYE28M0D9ONt4p7ltYE08NukXvLKDuzltYE08M0D9OLKDuzltYE08M0D9OLKDuzltYE28")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_roh0s"]
+resource_name = "Door_001"
+_surfaces = [{
+"aabb": AABB(-0.00927191, -0.00031942767, -0.012535197, 0.009392669, 0.00067708304, 0.025070393),
+"attribute_data": PackedByteArray("6d1/P9f3fz8AXgg61/d/PwBeCDoAoAI56d1/PwCgAjnp3X8/1/d/P+ndfz8AoAI5AF4IOgCgAjkAXgg61/d/P/HGBz/wOWY9HHLwPvA5Zj0ccvA+YpxxP/HGBz9inHE/8MYHP4aQKj8bcvA+hpAqPx1y8D743qo+8MYHP/jeqj7xxgc/YpxxPxxy8D5inHE/HHLwPvA5Zj3xxgc/8DlmPfDGBz/43qo+HXLwPvjeqj4bcvA+hpAqP/DGBz+GkCo/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_2deir"),
+"name": "Door_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("M0D9ONt4p7ltYE28NukXvNt4p7ltYE28NukXvNt4p7ltYE08M0D9ONt4p7ltYE08M0D9OLKDuzltYE28M0D9OLKDuzltYE08NukXvLKDuzltYE08NukXvLKDuzltYE28NukXvLKDuzltYE08NukXvNt4p7ltYE08NukXvNt4p7ltYE28NukXvLKDuzltYE28M0D9OLKDuzltYE08M0D9ONt4p7ltYE08NukXvNt4p7ltYE08NukXvLKDuzltYE08M0D9OLKDuzltYE28M0D9ONt4p7ltYE28M0D9ONt4p7ltYE08M0D9OLKDuzltYE08NukXvLKDuzltYE28NukXvNt4p7ltYE28M0D9ONt4p7ltYE28M0D9OLKDuzltYE28/38AAP///7//fwAA////v/9/AAD///+//38AAP///7//f///////P/9///////8//3///////z//f///////PwAA/3//fwAAAAD/f/9/AAAAAP9//38AAAAA/3//fwAA/3//f/9/////f/9//3////9//3//f////3//f/9///////9//3///////3//f///////f/9///////9//3//////////fwAA//////9/AAD//////38AAP//////fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_krf42")
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1ippw"]
 data = PackedVector3Array(-0.0072, 0.0001, 0.012, -0.0072, 0.0001, -0.012, 0.0001, 0.0001, -0.012, 0.0001, 0.0001, -0.012, 0.0001, 0.0001, 0.012, -0.0072, 0.0001, 0.012, -0.0072, -0.0002, 0.012, 0.0001, -0.0002, 0.012, 0.0001, -0.0002, -0.012, 0.0001, -0.0002, -0.012, -0.0072, -0.0002, -0.012, -0.0072, -0.0002, 0.012, -0.0072, -0.0002, 0.012, -0.0072, 0.0001, 0.012, 0.0001, 0.0001, 0.012, 0.0001, 0.0001, 0.012, 0.0001, -0.0002, 0.012, -0.0072, -0.0002, 0.012, -0.0072, -0.0002, -0.012, -0.0072, 0.0001, -0.012, -0.0072, 0.0001, 0.012, -0.0072, 0.0001, 0.012, -0.0072, -0.0002, 0.012, -0.0072, -0.0002, -0.012, 0.0001, -0.0002, 0.012, 0.0001, 0.0001, 0.012, 0.0001, 0.0001, -0.012, 0.0001, 0.0001, -0.012, 0.0001, -0.0002, -0.012, 0.0001, -0.0002, 0.012, 0.0001, -0.0002, -0.012, 0.0001, 0.0001, -0.012, -0.0072, 0.0001, -0.012, -0.0072, 0.0001, -0.012, -0.0072, -0.0002, -0.012, 0.0001, -0.0002, -0.012)
 
@@ -480,9 +519,6 @@ data = PackedVector3Array(0.0050999997, -0.0001, 0.0123, 0.0050999997, -0.0001, 
 data = PackedVector3Array(0.0001, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6jx2h"]
-data = PackedVector3Array(0.0001, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_51hku"]
 data = PackedVector3Array(0.0001, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7biat"]
@@ -3901,7 +3937,11 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.
 transform = Transform3D(0.9999701, 0, 0, 0, 1.0000001, -1.9895197e-13, 0, -1.4210855e-14, 1.0001175, -0.005306229, -0.0020045452, -0.0025974438)
 shape = SubResource("BoxShape3D_vhg04")
 
-[node name="closet_door" parent="." index="618" unique_id=442509694]
+[node name="Door_007" type="MeshInstance3D" parent="." index="618" unique_id=1946795843]
+transform = Transform3D(126.06977, 0, 0, 0, -5.0204435e-06, 104.5375, 0, -114.85436, -4.569479e-06, 2.7146366, 5.087472, -8.692675)
+mesh = SubResource("ArrayMesh_roh0s")
+
+[node name="closet_door" parent="." index="619" unique_id=442509694]
 transform = Transform3D(-126.06978, 0, 0, 0, 1.3691708e-05, 104.537506, 0, -114.85436, 1.2461843e-05, 0.8958752, 1.5400138, -3.1307178)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="closet_door" index="0" unique_id=741789389]
@@ -3909,7 +3949,7 @@ transform = Transform3D(-126.06978, 0, 0, 0, 1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="closet_door/StaticBody3D" index="0" unique_id=867057715]
 shape = SubResource("ConcavePolygonShape3D_1ippw")
 
-[node name="Table" parent="." index="619" unique_id=460610533]
+[node name="Table" parent="." index="620" unique_id=460610533]
 transform = Transform3D(0, 126.06978, 3.1154607e-06, 3.422927e-06, 0, 104.53751, 114.85437, 3.7571722e-06, 0, 8.53773, 1.0479451, -6.6317673)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table" index="0" unique_id=1709261849]
@@ -3917,7 +3957,7 @@ transform = Transform3D(0, 126.06978, 3.1154607e-06, 3.422927e-06, 0, 104.53751,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Table/StaticBody3D" index="0" unique_id=599345883]
 shape = SubResource("ConcavePolygonShape3D_4o5el")
 
-[node name="closet_door_01" parent="." index="620" unique_id=1842096316]
+[node name="closet_door_01" parent="." index="621" unique_id=1842096316]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, 2.7082367, 1.5400138, -3.1307178)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="closet_door_01" index="0" unique_id=1154821627]
@@ -3925,7 +3965,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="closet_door_01/StaticBody3D" index="0" unique_id=1467215555]
 shape = SubResource("ConcavePolygonShape3D_4rrx8")
 
-[node name="Home_018" parent="." index="621" unique_id=1850949154]
+[node name="Home_018" parent="." index="622" unique_id=1850949154]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -2.924682, 4.2453322, -1.4931827)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Home_018" index="0" unique_id=1668045334]
@@ -3933,7 +3973,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Home_018/StaticBody3D" index="0" unique_id=437790929]
 shape = SubResource("ConcavePolygonShape3D_8qx8i")
 
-[node name="Shower" parent="." index="622" unique_id=1766243718]
+[node name="Shower" parent="." index="623" unique_id=1766243718]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -0.5771549, 3.775997, -9.688893)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shower" index="0" unique_id=1354248642]
@@ -3941,7 +3981,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shower/StaticBody3D" index="0" unique_id=579869284]
 shape = SubResource("ConcavePolygonShape3D_ov0ex")
 
-[node name="Glass_Shower" parent="." index="623" unique_id=1469673415]
+[node name="Glass_Shower" parent="." index="624" unique_id=1469673415]
 transform = Transform3D(-126.06978, 0, 0, 0, 1.3691708e-05, 104.537506, 0, -114.85436, 1.2461843e-05, 0.19319892, 5.097583, -9.340383)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Glass_Shower" index="0" unique_id=1559916338]
@@ -3949,7 +3989,7 @@ transform = Transform3D(-126.06978, 0, 0, 0, 1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_Shower/StaticBody3D" index="0" unique_id=1310103514]
 shape = SubResource("ConcavePolygonShape3D_1pwyr")
 
-[node name="Shower_Door" parent="." index="624" unique_id=972465851]
+[node name="Shower_Door" parent="." index="625" unique_id=972465851]
 transform = Transform3D(-126.06978, 0, 0, 0, 1.3691708e-05, 104.537506, 0, -114.85436, 1.2461843e-05, 0.14178276, 5.097583, -10.0627985)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shower_Door" index="0" unique_id=1500644107]
@@ -3957,7 +3997,7 @@ transform = Transform3D(-126.06978, 0, 0, 0, 1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shower_Door/StaticBody3D" index="0" unique_id=742339628]
 shape = SubResource("ConcavePolygonShape3D_dotfk")
 
-[node name="Glass_Shower_02" parent="." index="625" unique_id=532193987]
+[node name="Glass_Shower_02" parent="." index="626" unique_id=532193987]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -0.54424787, 5.110031, -10.512103)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Glass_Shower_02" index="0" unique_id=1730081602]
@@ -3965,7 +4005,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_Shower_02/StaticBody3D" index="0" unique_id=1527815508]
 shape = SubResource("ConcavePolygonShape3D_8ijvy")
 
-[node name="Door_002" parent="." index="626" unique_id=1757095212]
+[node name="Door_002" parent="." index="627" unique_id=1757095212]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -4.1123085, 5.087472, -8.813328)
 script = ExtResource("2_a6v0c")
 
@@ -3981,7 +4021,7 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.
 transform = Transform3D(0.99998134, 0, -5.5013763e-21, 0, 1.0000001, -6.3238303e-13, 0, -1.4210601e-14, 1.0001175, -0.004310645, 0.0002823472, -0.0025974438)
 shape = SubResource("BoxShape3D_vhg04")
 
-[node name="Door_003" parent="." index="627" unique_id=983770766]
+[node name="Door_003" parent="." index="628" unique_id=983770766]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, 1.466696, 5.087472, -8.822896)
 script = ExtResource("2_a6v0c")
 
@@ -3997,23 +4037,12 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.
 transform = Transform3D(0.99998134, 0, -5.5013763e-21, 0, 1.0000001, -6.3238303e-13, 0, -1.4210601e-14, 1.0001175, -0.004310645, 0.0002823472, -0.0025974438)
 shape = SubResource("BoxShape3D_vhg04")
 
-[node name="Door_004" parent="." index="628" unique_id=1476409706]
-transform = Transform3D(0, -126.06978, -3.1154607e-06, -3.422927e-06, 0, 104.53751, -114.85437, 3.7571722e-06, 0, 2.6536708, 5.098853, -8.603772)
+[node name="Door_004" parent="." index="629" unique_id=1476409706]
+transform = Transform3D(-5.020443e-06, 126.06975, -4.569479e-06, 0, -5.510684e-06, -104.5375, -114.85435, -5.510684e-06, 1.9973828e-13, 2.6986, 5.1862855, -8.59685)
+visible = false
 script = ExtResource("2_a6v0c")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Door_004" index="0" unique_id=1227421123]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_004/StaticBody3D" index="0" unique_id=1877098201]
-shape = SubResource("ConcavePolygonShape3D_51hku")
-
-[node name="InteractArea" type="Area3D" parent="Door_004" index="1" unique_id=2102711727]
-transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.99999994, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_004/InteractArea" index="0" unique_id=721391720]
-transform = Transform3D(0.99998134, 0, -5.5013763e-21, 0, 1.0000001, -6.3238303e-13, 0, -1.4210601e-14, 1.0001175, -0.004310645, 0.0002823472, -0.0025974438)
-shape = SubResource("BoxShape3D_vhg04")
-
-[node name="Door_005" parent="." index="629" unique_id=2084206056]
+[node name="Door_005" parent="." index="630" unique_id=2084206056]
 transform = Transform3D(0, -126.06978, -3.1154607e-06, -3.422927e-06, 0, 104.53751, -114.85437, 3.7571722e-06, 0, 6.6150064, 5.098853, -6.4508114)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door_005" index="0" unique_id=774075735]
@@ -4028,7 +4057,7 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.
 transform = Transform3D(0.99998134, 0, -5.5013763e-21, 0, 1.0000001, -6.3238303e-13, 0, -1.4210601e-14, 1.0001175, -0.004310645, 0.0002823472, -0.0025974438)
 shape = SubResource("BoxShape3D_vhg04")
 
-[node name="Door_006" parent="." index="630" unique_id=437457368]
+[node name="Door_006" parent="." index="631" unique_id=437457368]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, 6.225187, 5.087472, -9.002805)
 script = ExtResource("2_a6v0c")
 
@@ -4044,7 +4073,7 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.
 transform = Transform3D(0.99998134, 0, 0, 0, 1.0000001, -1.9895197e-13, 0, -1.4210855e-14, 1.0001175, -0.005798339, 0.0011444688, -0.0025974344)
 shape = SubResource("BoxShape3D_vhg04")
 
-[node name="closet_door_03" parent="." index="631" unique_id=1372400335]
+[node name="closet_door_03" parent="." index="632" unique_id=1372400335]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, 8.015344, 5.087472, -9.529509)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="closet_door_03" index="0" unique_id=324007225]
@@ -4052,7 +4081,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="closet_door_03/StaticBody3D" index="0" unique_id=1641270463]
 shape = SubResource("ConcavePolygonShape3D_2np3p")
 
-[node name="closet_door_02" parent="." index="632" unique_id=1374263730]
+[node name="closet_door_02" parent="." index="633" unique_id=1374263730]
 transform = Transform3D(0, -126.06978, 3.1154607e-06, -3.422927e-06, 0, 104.53751, 114.85437, 3.7571722e-06, 0, 5.0096197, 1.5400138, -3.3265724)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="closet_door_02" index="0" unique_id=26688522]
@@ -4060,7 +4089,7 @@ transform = Transform3D(0, -126.06978, 3.1154607e-06, -3.422927e-06, 0, 104.5375
 [node name="CollisionShape3D" type="CollisionShape3D" parent="closet_door_02/StaticBody3D" index="0" unique_id=344492323]
 shape = SubResource("ConcavePolygonShape3D_aafxl")
 
-[node name="Door_frame_014" parent="." index="633" unique_id=1585116179]
+[node name="Door_frame_014" parent="." index="634" unique_id=1585116179]
 transform = Transform3D(0, -126.06978, -3.1154607e-06, -3.422927e-06, 0, 104.53751, -114.85437, 3.7571722e-06, 0, 4.9562087, 1.8659455, -4.4172153)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door_frame_014" index="0" unique_id=424435386]
@@ -4068,7 +4097,7 @@ transform = Transform3D(0, -126.06978, -3.1154607e-06, -3.422927e-06, 0, 104.537
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door_frame_014/StaticBody3D" index="0" unique_id=993073463]
 shape = SubResource("ConcavePolygonShape3D_1fti5")
 
-[node name="bathtub" parent="." index="634" unique_id=1955147151]
+[node name="bathtub" parent="." index="635" unique_id=1955147151]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, 10.314958, 4.286803, -7.3045807)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="bathtub" index="0" unique_id=119525236]
@@ -4076,7 +4105,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bathtub/StaticBody3D" index="0" unique_id=1015518604]
 shape = SubResource("ConcavePolygonShape3D_ias2t")
 
-[node name="PlasterWhite" parent="." index="635" unique_id=1689266575]
+[node name="PlasterWhite" parent="." index="636" unique_id=1689266575]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, 8.358385, 4.1226206, -7.3354836)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="PlasterWhite" index="0" unique_id=656176063]
@@ -4084,7 +4113,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlasterWhite/StaticBody3D" index="0" unique_id=1534072276]
 shape = SubResource("ConcavePolygonShape3D_qxumn")
 
-[node name="Door_008" parent="." index="636" unique_id=288160074]
+[node name="Door_008" parent="." index="637" unique_id=288160074]
 transform = Transform3D(0, -126.06978, 3.1154607e-06, -3.422927e-06, 0, 104.53751, 114.85437, 3.7571722e-06, 0, 1.3626156, 1.6070225, -7.7916255)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door_008" index="0" unique_id=651095980]
@@ -4099,7 +4128,7 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.
 transform = Transform3D(0.99998134, 0, -5.5013763e-21, 0, 1.0000001, -6.3238303e-13, 0, -1.4210601e-14, 1.0001175, -0.004310645, 0.0002823472, -0.0025974438)
 shape = SubResource("BoxShape3D_vhg04")
 
-[node name="Door_frame_015" parent="." index="637" unique_id=1002814730]
+[node name="Door_frame_015" parent="." index="638" unique_id=1002814730]
 transform = Transform3D(-126.06978, 4.4725937e-05, -2.9711348e-12, 0, 6.845853e-06, 104.53751, 4.909338e-05, 114.854355, -1.2461843e-05, -0.52616477, 1.3532767, -14.587914)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door_frame_015" index="0" unique_id=2136441462]
@@ -4107,7 +4136,7 @@ transform = Transform3D(-126.06978, 4.4725937e-05, -2.9711348e-12, 0, 6.845853e-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door_frame_015/StaticBody3D" index="0" unique_id=472876990]
 shape = SubResource("ConcavePolygonShape3D_yiwcu")
 
-[node name="Door_009" parent="." index="638" unique_id=1420914170]
+[node name="Door_009" parent="." index="639" unique_id=1420914170]
 transform = Transform3D(126.06978, 4.4725948e-05, 2.9711348e-12, 0, -6.845855e-06, 104.53751, -4.909338e-05, 114.854385, 1.2461843e-05, 0.02466917, 1.1038556, -14.604427)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door_009" index="0" unique_id=1943558953]
@@ -4115,7 +4144,7 @@ transform = Transform3D(126.06978, 4.4725948e-05, 2.9711348e-12, 0, -6.845855e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door_009/StaticBody3D" index="0" unique_id=1697439175]
 shape = SubResource("ConcavePolygonShape3D_ja8pi")
 
-[node name="Table_01" parent="." index="639" unique_id=283025032]
+[node name="Table_01" parent="." index="640" unique_id=283025032]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -5.234231, 0.349818, -10.686656)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table_01" index="0" unique_id=1918425512]
@@ -4123,7 +4152,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Table_01/StaticBody3D" index="0" unique_id=238723879]
 shape = SubResource("ConcavePolygonShape3D_j35ad")
 
-[node name="Tool_Table" parent="." index="640" unique_id=1237387189]
+[node name="Tool_Table" parent="." index="641" unique_id=1237387189]
 transform = Transform3D(118.93135, 0, 0, 0, -1.29164455e-05, 98.6183, 0, -108.35099, -1.1756219e-05, -5.7467604, 1.377995, -10.66238)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tool_Table" index="0" unique_id=1471156854]
@@ -4131,7 +4160,7 @@ transform = Transform3D(118.93135, 0, 0, 0, -1.29164455e-05, 98.6183, 0, -108.35
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tool_Table/StaticBody3D" index="0" unique_id=1574641907]
 shape = SubResource("ConcavePolygonShape3D_3nrpk")
 
-[node name="Tool_Table_01" parent="." index="641" unique_id=1150977290]
+[node name="Tool_Table_01" parent="." index="642" unique_id=1150977290]
 transform = Transform3D(65.53325, 0, 0, 0, -6.290115e-06, 54.3404, 0, -52.7653, -6.477881e-06, -5.7582083, 1.6529579, -9.051733)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tool_Table_01" index="0" unique_id=1442730509]
@@ -4139,7 +4168,7 @@ transform = Transform3D(65.53325, 0, 0, 0, -6.290115e-06, 54.3404, 0, -52.7653, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tool_Table_01/StaticBody3D" index="0" unique_id=1274875974]
 shape = SubResource("ConcavePolygonShape3D_8fnnu")
 
-[node name="Rocks" parent="." index="642" unique_id=1401822276]
+[node name="Rocks" parent="." index="643" unique_id=1401822276]
 transform = Transform3D(3.1881146, -104.35293, -44.0168, -6.449524, -47.199482, 97.35675, -106.779106, -0.2648068, -7.194642, -4.457659, -0.094852924, -26.497334)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rocks" index="0" unique_id=797560250]
@@ -4147,7 +4176,7 @@ transform = Transform3D(3.1881146, -104.35293, -44.0168, -6.449524, -47.199482, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rocks/StaticBody3D" index="0" unique_id=1031254061]
 shape = SubResource("ConcavePolygonShape3D_mxuib")
 
-[node name="Water" parent="." index="643" unique_id=1543024803]
+[node name="Water" parent="." index="644" unique_id=1543024803]
 transform = Transform3D(132.95436, 0, 0, 0, 7.351972e-06, 114.688446, 0, -123.34562, 6.835964e-06, -4.444357, -0.12068057, -26.403383)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Water" index="0" unique_id=2096932344]
@@ -4155,7 +4184,7 @@ transform = Transform3D(132.95436, 0, 0, 0, 7.351972e-06, 114.688446, 0, -123.34
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Water/StaticBody3D" index="0" unique_id=1393964886]
 shape = SubResource("ConcavePolygonShape3D_gntvn")
 
-[node name="Tree_03_008" parent="." index="644" unique_id=681889639]
+[node name="Tree_03_008" parent="." index="645" unique_id=681889639]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_03_008" index="0" unique_id=1660488138]
@@ -4163,7 +4192,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_03_008/StaticBody3D" index="0" unique_id=367179641]
 shape = SubResource("ConcavePolygonShape3D_7koeb")
 
-[node name="Chair_07" parent="." index="645" unique_id=775353786]
+[node name="Chair_07" parent="." index="646" unique_id=775353786]
 transform = Transform3D(115.92655, 1.4210855e-12, -8.742278e-06, 1.0134621e-05, -1.7881393e-05, 99.99999, 0, 99.99999, 1.1920929e-05, 9.889187, 0.46214294, -24.815176)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Chair_07" index="0" unique_id=169767188]
@@ -4171,7 +4200,7 @@ transform = Transform3D(115.92655, 1.4210855e-12, -8.742278e-06, 1.0134621e-05, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Chair_07/StaticBody3D" index="0" unique_id=16030822]
 shape = SubResource("ConcavePolygonShape3D_rei71")
 
-[node name="Chair_05" parent="." index="646" unique_id=719153578]
+[node name="Chair_05" parent="." index="647" unique_id=719153578]
 transform = Transform3D(0, -115.92655, -2.9802322e-06, -2.9802322e-06, 0, 100, -100, 3.4548805e-06, 0, 11.153998, 0.46214294, -23.72413)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Chair_05" index="0" unique_id=466687990]
@@ -4179,7 +4208,7 @@ transform = Transform3D(0, -115.92655, -2.9802322e-06, -2.9802322e-06, 0, 100, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Chair_05/StaticBody3D" index="0" unique_id=477081564]
 shape = SubResource("ConcavePolygonShape3D_hpd1p")
 
-[node name="Chair_06" parent="." index="647" unique_id=1200561107]
+[node name="Chair_06" parent="." index="648" unique_id=1200561107]
 transform = Transform3D(115.92655, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 9.889187, 0.46214294, -22.633085)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Chair_06" index="0" unique_id=1261667030]
@@ -4187,7 +4216,7 @@ transform = Transform3D(115.92655, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.999
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Chair_06/StaticBody3D" index="0" unique_id=1230844756]
 shape = SubResource("ConcavePolygonShape3D_jqk12")
 
-[node name="Chair_08" parent="." index="648" unique_id=2017902930]
+[node name="Chair_08" parent="." index="649" unique_id=2017902930]
 transform = Transform3D(0, 115.92655, -2.9802322e-06, 2.9802322e-06, 0, 100, -100, 3.4548805e-06, 0, 8.624375, 0.46214294, -23.72413)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Chair_08" index="0" unique_id=2032047755]
@@ -4195,7 +4224,7 @@ transform = Transform3D(0, 115.92655, -2.9802322e-06, 2.9802322e-06, 0, 100, -10
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Chair_08/StaticBody3D" index="0" unique_id=2137011407]
 shape = SubResource("ConcavePolygonShape3D_tj6fs")
 
-[node name="Chair_10" parent="." index="649" unique_id=1510431259]
+[node name="Chair_10" parent="." index="650" unique_id=1510431259]
 transform = Transform3D(-58.647034, 103.35513, 0, 0, 0, 104.53751, -75.05363, -80.761894, 0, 1.7141292, 0.8321614, -15.991856)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Chair_10" index="0" unique_id=531734662]
@@ -4203,7 +4232,7 @@ transform = Transform3D(-58.647034, 103.35513, 0, 0, 0, 104.53751, -75.05363, -8
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Chair_10/StaticBody3D" index="0" unique_id=1588450907]
 shape = SubResource("ConcavePolygonShape3D_r4jji")
 
-[node name="Chair_12" parent="." index="650" unique_id=981415443]
+[node name="Chair_12" parent="." index="651" unique_id=981415443]
 transform = Transform3D(73.95702, 91.03704, -3.1154607e-06, -3.8297358e-06, 0, 104.53751, -105.08945, 64.0676, -6.2309214e-06, 1.7092257, 0.8321614, -17.972954)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Chair_12" index="0" unique_id=533919767]
@@ -4211,7 +4240,7 @@ transform = Transform3D(73.95702, 91.03704, -3.1154607e-06, -3.8297358e-06, 0, 1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Chair_12/StaticBody3D" index="0" unique_id=1349412411]
 shape = SubResource("ConcavePolygonShape3D_sjcnp")
 
-[node name="Chair_09" parent="." index="651" unique_id=1608121443]
+[node name="Chair_09" parent="." index="652" unique_id=1608121443]
 transform = Transform3D(-120.214355, -22.068808, -2.3365953e-06, 9.112478e-07, -1.4287545e-05, 104.53751, 22.520487, -117.80328, -1.2461843e-05, 9.877492, 0.8321614, -17.48286)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Chair_09" index="0" unique_id=48355912]
@@ -4219,7 +4248,7 @@ transform = Transform3D(-120.214355, -22.068808, -2.3365953e-06, 9.112478e-07, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Chair_09/StaticBody3D" index="0" unique_id=1249971004]
 shape = SubResource("ConcavePolygonShape3D_1hd76")
 
-[node name="Garage_Door" parent="." index="652" unique_id=1425752651]
+[node name="Garage_Door" parent="." index="653" unique_id=1425752651]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -3.019863, 2.8429716, -0.8129649)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Garage_Door" index="0" unique_id=886714979]
@@ -4227,7 +4256,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Garage_Door/StaticBody3D" index="0" unique_id=1491973595]
 shape = SubResource("ConcavePolygonShape3D_vtk5g")
 
-[node name="Garage_Door_01" parent="." index="653" unique_id=1685376643]
+[node name="Garage_Door_01" parent="." index="654" unique_id=1685376643]
 transform = Transform3D(123.51962, 0, 0, 0, -1.341475e-05, 102.422905, 0, -112.531075, -1.2209763e-05, -3.6762793, 2.79426, -14.553812)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Garage_Door_01" index="0" unique_id=140014710]
@@ -4235,7 +4264,7 @@ transform = Transform3D(123.51962, 0, 0, 0, -1.341475e-05, 102.422905, 0, -112.5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Garage_Door_01/StaticBody3D" index="0" unique_id=914765042]
 shape = SubResource("ConcavePolygonShape3D_xeath")
 
-[node name="Cupboard_01_002" parent="." index="654" unique_id=1134978248]
+[node name="Cupboard_01_002" parent="." index="655" unique_id=1134978248]
 transform = Transform3D(-39.437412, 1.1707151e-05, -2.3235916e-12, -5.6043934e-13, 4.283069e-06, 32.701645, -1.28503425e-05, -35.928978, 3.89834e-06, 10.625376, 2.265304, -11.320771)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cupboard_01_002" index="0" unique_id=1615973791]
@@ -4243,7 +4272,7 @@ transform = Transform3D(-39.437412, 1.1707151e-05, -2.3235916e-12, -5.6043934e-1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cupboard_01_002/StaticBody3D" index="0" unique_id=1243348621]
 shape = SubResource("ConcavePolygonShape3D_hdg4p")
 
-[node name="Cupboard_01_003" parent="." index="655" unique_id=1634911255]
+[node name="Cupboard_01_003" parent="." index="656" unique_id=1634911255]
 transform = Transform3D(-39.437412, 1.1707151e-05, -2.3235916e-12, -5.6043934e-13, 4.283069e-06, 32.701645, -1.28503425e-05, -35.928978, 3.89834e-06, 10.625376, 2.265304, -13.130807)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cupboard_01_003" index="0" unique_id=79484702]
@@ -4251,7 +4280,7 @@ transform = Transform3D(-39.437412, 1.1707151e-05, -2.3235916e-12, -5.6043934e-1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cupboard_01_003/StaticBody3D" index="0" unique_id=1583629805]
 shape = SubResource("ConcavePolygonShape3D_7q32s")
 
-[node name="Cutlery" parent="." index="656" unique_id=1123050483]
+[node name="Cutlery" parent="." index="657" unique_id=1123050483]
 transform = Transform3D(-9.829945, 0, 0, 0, 2.1351466e-06, -8.151025, 0, 8.955453, 1.9433558e-06, 7.8008738, 1.4561679, -11.1896)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cutlery" index="0" unique_id=872220544]
@@ -4259,7 +4288,7 @@ transform = Transform3D(-9.829945, 0, 0, 0, 2.1351466e-06, -8.151025, 0, 8.95545
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cutlery/StaticBody3D" index="0" unique_id=1424182541]
 shape = SubResource("ConcavePolygonShape3D_dvv5f")
 
-[node name="Table_02" parent="." index="657" unique_id=891774462]
+[node name="Table_02" parent="." index="658" unique_id=891774462]
 transform = Transform3D(115.92655, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 9.911606, 0.6023519, -23.786472)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table_02" index="0" unique_id=1536221832]
@@ -4267,7 +4296,7 @@ transform = Transform3D(115.92655, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.999
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Table_02/StaticBody3D" index="0" unique_id=1772569687]
 shape = SubResource("ConcavePolygonShape3D_lkvk7")
 
-[node name="Desk_lamp" parent="." index="658" unique_id=516102411]
+[node name="Desk_lamp" parent="." index="659" unique_id=516102411]
 transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.61471, -8.596492e-06, -5.4051657, 4.7787957, -4.08024)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Desk_lamp" index="0" unique_id=758537540]
@@ -4275,7 +4304,7 @@ transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.614
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk_lamp/StaticBody3D" index="0" unique_id=1365094895]
 shape = SubResource("ConcavePolygonShape3D_fqre5")
 
-[node name="Desk_lamp_001" parent="." index="659" unique_id=1180525967]
+[node name="Desk_lamp_001" parent="." index="660" unique_id=1180525967]
 transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.61471, -8.596492e-06, -5.4177322, 4.7787957, -7.188108)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Desk_lamp_001" index="0" unique_id=455277375]
@@ -4283,7 +4312,7 @@ transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.614
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk_lamp_001/StaticBody3D" index="0" unique_id=1205849948]
 shape = SubResource("ConcavePolygonShape3D_jnm2n")
 
-[node name="Desk_lamp_003" parent="." index="660" unique_id=921854193]
+[node name="Desk_lamp_003" parent="." index="661" unique_id=921854193]
 transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.61471, -8.596492e-06, 8.28999, 4.7785535, -13.799795)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Desk_lamp_003" index="0" unique_id=1428185590]
@@ -4291,7 +4320,7 @@ transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.614
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk_lamp_003/StaticBody3D" index="0" unique_id=897234694]
 shape = SubResource("ConcavePolygonShape3D_am8r1")
 
-[node name="Desk_lamp_004" parent="." index="661" unique_id=333783]
+[node name="Desk_lamp_004" parent="." index="662" unique_id=333783]
 transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.61471, -8.596492e-06, 8.28999, 4.7785535, -11.00444)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Desk_lamp_004" index="0" unique_id=367765630]
@@ -4299,7 +4328,7 @@ transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.614
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk_lamp_004/StaticBody3D" index="0" unique_id=1669622874]
 shape = SubResource("ConcavePolygonShape3D_ftjer")
 
-[node name="Desk_lamp_01" parent="." index="662" unique_id=1752500152]
+[node name="Desk_lamp_01" parent="." index="663" unique_id=1752500152]
 transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.61471, -8.596492e-06, 3.446527, 4.78156, 0.9798231)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Desk_lamp_01" index="0" unique_id=1096068107]
@@ -4307,7 +4336,7 @@ transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.614
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk_lamp_01/StaticBody3D" index="0" unique_id=1302986718]
 shape = SubResource("ConcavePolygonShape3D_7npu0")
 
-[node name="Desk_lamp_01_002" parent="." index="663" unique_id=1984809759]
+[node name="Desk_lamp_01_002" parent="." index="664" unique_id=1984809759]
 transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.61471, -8.596492e-06, 3.446527, 4.78156, -1.7826676)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Desk_lamp_01_002" index="0" unique_id=330793624]
@@ -4315,7 +4344,7 @@ transform = Transform3D(43.483047, 0, 0, 0, -9.444884e-06, 36.056297, 0, -39.614
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk_lamp_01_002/StaticBody3D" index="0" unique_id=1038349056]
 shape = SubResource("ConcavePolygonShape3D_vvbvp")
 
-[node name="Dirty _clothes_01" parent="." index="664" unique_id=637647695]
+[node name="Dirty _clothes_01" parent="." index="665" unique_id=637647695]
 transform = Transform3D(154.46873, 0, 0, 0, -3.3551907e-05, 128.08601, 0, -140.7269, -3.053809e-05, 8.854414, 4.026649, -4.0033436)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Dirty _clothes_01" index="0" unique_id=1379195441]
@@ -4323,7 +4352,7 @@ transform = Transform3D(154.46873, 0, 0, 0, -3.3551907e-05, 128.08601, 0, -140.7
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dirty _clothes_01/StaticBody3D" index="0" unique_id=1641217145]
 shape = SubResource("ConcavePolygonShape3D_276pr")
 
-[node name="Dish_001" parent="." index="665" unique_id=1565970589]
+[node name="Dish_001" parent="." index="666" unique_id=1565970589]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 9.460397, 1.227618, -6.6826324)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Dish_001" index="0" unique_id=1688695232]
@@ -4331,7 +4360,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dish_001/StaticBody3D" index="0" unique_id=29226064]
 shape = SubResource("ConcavePolygonShape3D_jfi7g")
 
-[node name="Dish_002" parent="." index="666" unique_id=1256899733]
+[node name="Dish_002" parent="." index="667" unique_id=1256899733]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 8.210205, 1.227618, -7.103449)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Dish_002" index="0" unique_id=1703786121]
@@ -4339,7 +4368,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dish_002/StaticBody3D" index="0" unique_id=1622938325]
 shape = SubResource("ConcavePolygonShape3D_3q4w8")
 
-[node name="Dish_003" parent="." index="667" unique_id=1140506489]
+[node name="Dish_003" parent="." index="668" unique_id=1140506489]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 8.210205, 1.227618, -6.1664243)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Dish_003" index="0" unique_id=2124674910]
@@ -4347,7 +4376,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dish_003/StaticBody3D" index="0" unique_id=1209474132]
 shape = SubResource("ConcavePolygonShape3D_5d3nl")
 
-[node name="Flan_001" parent="." index="668" unique_id=1406235153]
+[node name="Flan_001" parent="." index="669" unique_id=1406235153]
 transform = Transform3D(67.374374, 0, 0, 0, -1.4634281e-05, 55.86707, 0, -61.38062, -1.3319748e-05, 10.377801, 1.2227343, -9.205236)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Flan_001" index="0" unique_id=780866263]
@@ -4355,7 +4384,7 @@ transform = Transform3D(67.374374, 0, 0, 0, -1.4634281e-05, 55.86707, 0, -61.380
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Flan_001/StaticBody3D" index="0" unique_id=24605246]
 shape = SubResource("ConcavePolygonShape3D_v4upr")
 
-[node name="Flower_Table" parent="." index="669" unique_id=37818707]
+[node name="Flower_Table" parent="." index="670" unique_id=37818707]
 transform = Transform3D(107.83651, 0, 0, 0, -2.3422997e-05, 89.41841, 0, -98.24316, -2.1319012e-05, 8.319909, 1.2814287, -6.5874286)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Flower_Table" index="0" unique_id=38909086]
@@ -4363,7 +4392,7 @@ transform = Transform3D(107.83651, 0, 0, 0, -2.3422997e-05, 89.41841, 0, -98.243
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Flower_Table/StaticBody3D" index="0" unique_id=667961859]
 shape = SubResource("ConcavePolygonShape3D_0v03t")
 
-[node name="Focus_01" parent="." index="670" unique_id=1381634642]
+[node name="Focus_01" parent="." index="671" unique_id=1381634642]
 transform = Transform3D(120.7689, -9.618697e-06, 2.8462068e-12, 0, -3.9348026e-05, -100.14199, -1.0557953e-05, -110.025055, 3.581357e-05, -2.6852405, 3.5119436, -4.094357)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_01" index="0" unique_id=727197193]
@@ -4371,7 +4400,7 @@ transform = Transform3D(120.7689, -9.618697e-06, 2.8462068e-12, 0, -3.9348026e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_01/StaticBody3D" index="0" unique_id=1712372795]
 shape = SubResource("ConcavePolygonShape3D_v24fu")
 
-[node name="Focus_01_002" parent="." index="671" unique_id=1111219430]
+[node name="Focus_01_002" parent="." index="672" unique_id=1111219430]
 transform = Transform3D(120.7689, -9.618697e-06, 2.8462068e-12, 0, -3.9348026e-05, -100.14199, -1.0557953e-05, -110.025055, 3.581357e-05, -2.6852405, 3.5119436, -10.397382)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_01_002" index="0" unique_id=1801234629]
@@ -4379,7 +4408,7 @@ transform = Transform3D(120.7689, -9.618697e-06, 2.8462068e-12, 0, -3.9348026e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_01_002/StaticBody3D" index="0" unique_id=778650525]
 shape = SubResource("ConcavePolygonShape3D_57xn0")
 
-[node name="Focus_01_003" parent="." index="672" unique_id=483756680]
+[node name="Focus_01_003" parent="." index="673" unique_id=483756680]
 transform = Transform3D(120.7689, -1.4263204e-12, -9.618696e-06, 0, -100.142, 1.7925358e-05, 1.0557951e-05, 1.6315204e-05, 110.02506, -2.9282892, 3.1573849, -0.42360115)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_01_003" index="0" unique_id=1391154494]
@@ -4387,7 +4416,7 @@ transform = Transform3D(120.7689, -1.4263204e-12, -9.618696e-06, 0, -100.142, 1.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_01_003/StaticBody3D" index="0" unique_id=1519652261]
 shape = SubResource("ConcavePolygonShape3D_nhxrh")
 
-[node name="Focus_01_004" parent="." index="673" unique_id=1690319859]
+[node name="Focus_01_004" parent="." index="674" unique_id=1690319859]
 transform = Transform3D(120.7689, 0, 0, 0, -100.142, -1.6613325e-05, 0, 1.5121022e-05, -110.02506, -0.54050565, 2.791748, -14.747387)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_01_004" index="0" unique_id=120325733]
@@ -4395,7 +4424,7 @@ transform = Transform3D(120.7689, 0, 0, 0, -100.142, -1.6613325e-05, 0, 1.512102
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_01_004/StaticBody3D" index="0" unique_id=823843940]
 shape = SubResource("ConcavePolygonShape3D_qlbif")
 
-[node name="Focus_02" parent="." index="674" unique_id=1641689760]
+[node name="Focus_02" parent="." index="675" unique_id=1641689760]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 8.2045965, 3.4416318, -1.3253174)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02" index="0" unique_id=223307619]
@@ -4403,7 +4432,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02/StaticBody3D" index="0" unique_id=1599597453]
 shape = SubResource("ConcavePolygonShape3D_4y3gi")
 
-[node name="Focus_02_002" parent="." index="675" unique_id=778849917]
+[node name="Focus_02_002" parent="." index="676" unique_id=778849917]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 1.8183088, 3.4416318, -2.0592165)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_002" index="0" unique_id=758679657]
@@ -4411,7 +4440,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_002/StaticBody3D" index="0" unique_id=30743075]
 shape = SubResource("ConcavePolygonShape3D_xll3g")
 
-[node name="Focus_02_003" parent="." index="676" unique_id=1143584407]
+[node name="Focus_02_003" parent="." index="677" unique_id=1143584407]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 8.01146, 3.4416318, -10.762693)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_003" index="0" unique_id=1498720468]
@@ -4419,7 +4448,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_003/StaticBody3D" index="0" unique_id=672681092]
 shape = SubResource("ConcavePolygonShape3D_yk0ge")
 
-[node name="Focus_02_004" parent="." index="677" unique_id=975004816]
+[node name="Focus_02_004" parent="." index="678" unique_id=975004816]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 6.1329975, 3.4416318, -6.514291)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_004" index="0" unique_id=300161022]
@@ -4427,7 +4456,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_004/StaticBody3D" index="0" unique_id=291726822]
 shape = SubResource("ConcavePolygonShape3D_4xouo")
 
-[node name="Focus_02_005" parent="." index="678" unique_id=1473154384]
+[node name="Focus_02_005" parent="." index="679" unique_id=1473154384]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 2.9396403, 3.4416318, -11.51996)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_005" index="0" unique_id=388469568]
@@ -4435,7 +4464,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_005/StaticBody3D" index="0" unique_id=1395635623]
 shape = SubResource("ConcavePolygonShape3D_lfpq5")
 
-[node name="Focus_02_006" parent="." index="679" unique_id=205549690]
+[node name="Focus_02_006" parent="." index="680" unique_id=205549690]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 3.4388802, 6.9333363, -5.863658)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_006" index="0" unique_id=1724752548]
@@ -4443,7 +4472,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_006/StaticBody3D" index="0" unique_id=821527139]
 shape = SubResource("ConcavePolygonShape3D_mpeie")
 
-[node name="Focus_02_007" parent="." index="680" unique_id=1866821678]
+[node name="Focus_02_007" parent="." index="681" unique_id=1866821678]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 5.8572416, 6.9333363, -11.948299)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_007" index="0" unique_id=1808939345]
@@ -4451,7 +4480,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_007/StaticBody3D" index="0" unique_id=208908762]
 shape = SubResource("ConcavePolygonShape3D_h1jyi")
 
-[node name="Focus_02_008" parent="." index="681" unique_id=316720408]
+[node name="Focus_02_008" parent="." index="682" unique_id=316720408]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 1.0787513, 6.9333363, -9.563945)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_008" index="0" unique_id=1349014380]
@@ -4459,7 +4488,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_008/StaticBody3D" index="0" unique_id=264843104]
 shape = SubResource("ConcavePolygonShape3D_83y8r")
 
-[node name="Focus_02_009" parent="." index="682" unique_id=496241796]
+[node name="Focus_02_009" parent="." index="683" unique_id=496241796]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, -2.3149922, 6.9333363, -6.4087954)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_009" index="0" unique_id=1364642177]
@@ -4467,7 +4496,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_009/StaticBody3D" index="0" unique_id=1840018664]
 shape = SubResource("ConcavePolygonShape3D_0tl1x")
 
-[node name="Focus_02_010" parent="." index="683" unique_id=910532327]
+[node name="Focus_02_010" parent="." index="684" unique_id=910532327]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, -3.4380062, 6.9333363, -9.512478)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_010" index="0" unique_id=836097636]
@@ -4475,7 +4504,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_010/StaticBody3D" index="0" unique_id=944042460]
 shape = SubResource("ConcavePolygonShape3D_bpei7")
 
-[node name="Focus_02_011" parent="." index="684" unique_id=270944527]
+[node name="Focus_02_011" parent="." index="685" unique_id=270944527]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 5.9597893, 6.9333363, -1.2377586)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_011" index="0" unique_id=1033223485]
@@ -4483,7 +4512,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_011/StaticBody3D" index="0" unique_id=448667877]
 shape = SubResource("ConcavePolygonShape3D_l6pry")
 
-[node name="Focus_02_012" parent="." index="685" unique_id=1862444210]
+[node name="Focus_02_012" parent="." index="686" unique_id=1862444210]
 transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-05, -62.59636, -6.5995223e-06, -68.77402, 2.2386204e-05, 8.912505, 6.9333363, -5.863658)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_02_012" index="0" unique_id=24529780]
@@ -4491,7 +4520,7 @@ transform = Transform3D(75.48973, -6.012416e-06, 1.7790956e-12, 0, -2.4595507e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_02_012/StaticBody3D" index="0" unique_id=1258810176]
 shape = SubResource("ConcavePolygonShape3D_8bcue")
 
-[node name="Fried_Foods_001" parent="." index="686" unique_id=1998941180]
+[node name="Fried_Foods_001" parent="." index="687" unique_id=1998941180]
 transform = Transform3D(75.37093, 70.61552, 8.204585e-06, -2.8695088e-06, -1.3527644e-05, 91.76673, 59.916374, -88.82977, 0, 7.1224713, 0.8257699, -1.43679)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Fried_Foods_001" index="0" unique_id=1772578039]
@@ -4499,7 +4528,7 @@ transform = Transform3D(75.37093, 70.61552, 8.204585e-06, -2.8695088e-06, -1.352
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Fried_Foods_001/StaticBody3D" index="0" unique_id=1666358355]
 shape = SubResource("ConcavePolygonShape3D_n8qyj")
 
-[node name="Gadgets" parent="." index="687" unique_id=387198097]
+[node name="Gadgets" parent="." index="688" unique_id=387198097]
 transform = Transform3D(4.9838745e-06, 91.7805, 2.2680974e-06, -2.4919373e-06, 0, 76.10472, 83.61554, -2.7352721e-06, 4.536195e-06, 10.987932, 1.9081483, -11.266488)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Gadgets" index="0" unique_id=414377035]
@@ -4507,7 +4536,7 @@ transform = Transform3D(4.9838745e-06, 91.7805, 2.2680974e-06, -2.4919373e-06, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gadgets/StaticBody3D" index="0" unique_id=1667268764]
 shape = SubResource("ConcavePolygonShape3D_cxxah")
 
-[node name="Garbage_bags_001" parent="." index="688" unique_id=1985624985]
+[node name="Garbage_bags_001" parent="." index="689" unique_id=1985624985]
 transform = Transform3D(23.614168, -0.5445808, -2.6887834, 3.3785377, -0.23071702, 18.767923, -0.63695925, -21.41315, -0.13383612, 7.247538, 0.49572158, -9.8760605)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Garbage_bags_001" index="0" unique_id=1158086607]
@@ -4515,7 +4544,7 @@ transform = Transform3D(23.614168, -0.5445808, -2.6887834, 3.3785377, -0.2307170
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Garbage_bags_001/StaticBody3D" index="0" unique_id=2004410179]
 shape = SubResource("ConcavePolygonShape3D_5w41g")
 
-[node name="Glass" parent="." index="689" unique_id=1751149099]
+[node name="Glass" parent="." index="690" unique_id=1751149099]
 transform = Transform3D(108.7497, 0, 0, 0, -1.2730738e-05, 104.537506, 0, -106.79316, -1.2461843e-05, -2.1228232, 5.5904336, -1.4059772)
 visible = false
 
@@ -4524,7 +4553,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass/StaticBody3D" index="0" unique_id=1766099103]
 shape = SubResource("ConcavePolygonShape3D_ik7ps")
 
-[node name="Glass_001" parent="." index="690" unique_id=1363896039]
+[node name="Glass_001" parent="." index="691" unique_id=1363896039]
 transform = Transform3D(108.7497, 0, 0, 0, -1.2730738e-05, 104.537506, 0, -106.79316, -1.2461843e-05, 5.534392, 5.498845, -14.12944)
 visible = false
 
@@ -4533,7 +4562,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_001/StaticBody3D" index="0" unique_id=1520669996]
 shape = SubResource("ConcavePolygonShape3D_k1gcy")
 
-[node name="Glass_008" parent="." index="691" unique_id=360405760]
+[node name="Glass_008" parent="." index="692" unique_id=360405760]
 transform = Transform3D(108.7497, 0, 0, 0, -1.2730738e-05, 104.537506, 0, -106.79316, -1.2461843e-05, 5.5299172, 5.5827136, 1.1284633)
 visible = false
 
@@ -4542,7 +4571,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_008/StaticBody3D" index="0" unique_id=1715956145]
 shape = SubResource("ConcavePolygonShape3D_n66bc")
 
-[node name="Glass_003" parent="." index="692" unique_id=1837135353]
+[node name="Glass_003" parent="." index="693" unique_id=1837135353]
 transform = Transform3D(0, -108.7497, -3.1154607e-06, -3.1826844e-06, 0, 104.53751, -106.79317, 3.2409937e-06, 0, -4.555414, 5.571835, -8.001204)
 visible = false
 
@@ -4551,7 +4580,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_003/StaticBody3D" index="0" unique_id=224596847]
 shape = SubResource("ConcavePolygonShape3D_571e6")
 
-[node name="Glass_004" parent="." index="693" unique_id=341261849]
+[node name="Glass_004" parent="." index="694" unique_id=341261849]
 transform = Transform3D(0, -108.7497, -3.1154607e-06, -3.1826844e-06, 0, 104.53751, -106.79317, 3.2409937e-06, 0, 10.112582, 5.531909, -5.9058256)
 visible = false
 
@@ -4560,7 +4589,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_004/StaticBody3D" index="0" unique_id=540561977]
 shape = SubResource("ConcavePolygonShape3D_0trb6")
 
-[node name="Glass_005" parent="." index="694" unique_id=655596495]
+[node name="Glass_005" parent="." index="695" unique_id=655596495]
 transform = Transform3D(0, -108.7497, -3.1154607e-06, -3.1826844e-06, 0, 104.53751, -106.79317, 3.2409937e-06, 0, 10.16502, 1.8902782, -5.9530587)
 visible = false
 
@@ -4569,7 +4598,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_005/StaticBody3D" index="0" unique_id=1192253743]
 shape = SubResource("ConcavePolygonShape3D_o47nf")
 
-[node name="Glass_006" parent="." index="695" unique_id=628722597]
+[node name="Glass_006" parent="." index="696" unique_id=628722597]
 transform = Transform3D(-108.7497, 4.158679e-05, -2.9711348e-12, 0, 6.3653683e-06, 104.53751, 4.2348696e-05, 106.79316, -1.2461843e-05, 6.56178, 1.8902782, 1.122189)
 visible = false
 
@@ -4578,7 +4607,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_006/StaticBody3D" index="0" unique_id=794872040]
 shape = SubResource("ConcavePolygonShape3D_muok2")
 
-[node name="Glass_007" parent="." index="696" unique_id=376402071]
+[node name="Glass_007" parent="." index="697" unique_id=376402071]
 transform = Transform3D(0, -108.7497, -3.1154607e-06, -3.1826844e-06, 0, 104.53751, -106.79317, 3.2409937e-06, 0, 2.9225583, 1.8902782, 0.011068821)
 visible = false
 
@@ -4587,7 +4616,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass_007/StaticBody3D" index="0" unique_id=1504807615]
 shape = SubResource("ConcavePolygonShape3D_uwjyr")
 
-[node name="Hand_soap" parent="." index="697" unique_id=1049371331]
+[node name="Hand_soap" parent="." index="698" unique_id=1049371331]
 transform = Transform3D(0.47612178, 4.8027315, 1.5765472e-06, -2.7315664e-07, -2.3025812e-06, 4.069242, 4.5580072, -0.50168556, 0, 0.8958578, 1.5929873, -10.515205)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Hand_soap" index="0" unique_id=910846537]
@@ -4595,7 +4624,7 @@ transform = Transform3D(0.47612178, 4.8027315, 1.5765472e-06, -2.7315664e-07, -2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hand_soap/StaticBody3D" index="0" unique_id=1060223819]
 shape = SubResource("ConcavePolygonShape3D_gxyjm")
 
-[node name="Hand_soap_001" parent="." index="698" unique_id=1251797734]
+[node name="Hand_soap_001" parent="." index="699" unique_id=1251797734]
 transform = Transform3D(0.4523239, -4.9480085, -3.6381854e-07, -1.2975143e-07, 0, 4.069242, 4.3301754, 0.5168613, 4.850914e-07, 2.316299, 5.0683546, -10.052622)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Hand_soap_001" index="0" unique_id=820206565]
@@ -4603,7 +4632,7 @@ transform = Transform3D(0.4523239, -4.9480085, -3.6381854e-07, -1.2975143e-07, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hand_soap_001/StaticBody3D" index="0" unique_id=256502598]
 shape = SubResource("ConcavePolygonShape3D_08icl")
 
-[node name="Hand_soap_02" parent="." index="699" unique_id=1117766961]
+[node name="Hand_soap_02" parent="." index="700" unique_id=1117766961]
 transform = Transform3D(3.2061214, 0, 0, 0, -1.392793e-06, 2.658527, 0, -2.9208982, -1.2676845e-06, 10.740873, 4.8692513, -3.6769733)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Hand_soap_02" index="0" unique_id=1097533088]
@@ -4611,7 +4640,7 @@ transform = Transform3D(3.2061214, 0, 0, 0, -1.392793e-06, 2.658527, 0, -2.92089
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hand_soap_02/StaticBody3D" index="0" unique_id=212877045]
 shape = SubResource("ConcavePolygonShape3D_bwy6l")
 
-[node name="Hand_soap_04" parent="." index="700" unique_id=250258593]
+[node name="Hand_soap_04" parent="." index="701" unique_id=250258593]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 7.508963, 4.858807, -3.695753)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Hand_soap_04" index="0" unique_id=1033148651]
@@ -4619,7 +4648,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hand_soap_04/StaticBody3D" index="0" unique_id=1043004026]
 shape = SubResource("ConcavePolygonShape3D_tkcg3")
 
-[node name="Home" parent="." index="701" unique_id=978571942]
+[node name="Home" parent="." index="702" unique_id=978571942]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, 2.3505988, 0.5289011, -18.955898)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Home" index="0" unique_id=858522877]
@@ -4627,7 +4656,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Home/StaticBody3D" index="0" unique_id=2042986507]
 shape = SubResource("ConcavePolygonShape3D_sb64y")
 
-[node name="hose" parent="." index="702" unique_id=1734545556]
+[node name="hose" parent="." index="703" unique_id=1734545556]
 transform = Transform3D(125.94444, -25.288914, -1.5577303e-06, -1.930493e-06, -1.2862235e-05, 104.53751, -30.364912, -104.890755, -1.2461843e-05, -5.658366, 0.6599915, -5.196623)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="hose" index="0" unique_id=1742505345]
@@ -4635,7 +4664,7 @@ transform = Transform3D(125.94444, -25.288914, -1.5577303e-06, -1.930493e-06, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hose/StaticBody3D" index="0" unique_id=791427574]
 shape = SubResource("ConcavePolygonShape3D_mr2bo")
 
-[node name="hose_01" parent="." index="703" unique_id=128130156]
+[node name="hose_01" parent="." index="704" unique_id=128130156]
 transform = Transform3D(125.94444, -25.288914, -1.5577303e-06, -1.930493e-06, -1.2862235e-05, 104.53751, -30.364912, -104.890755, -1.2461843e-05, -5.656111, 0.6599915, -3.9493089)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="hose_01" index="0" unique_id=1041958052]
@@ -4643,7 +4672,7 @@ transform = Transform3D(125.94444, -25.288914, -1.5577303e-06, -1.930493e-06, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hose_01/StaticBody3D" index="0" unique_id=499077802]
 shape = SubResource("ConcavePolygonShape3D_fafhs")
 
-[node name="Ice_cream_001" parent="." index="704" unique_id=965023755]
+[node name="Ice_cream_001" parent="." index="705" unique_id=965023755]
 transform = Transform3D(66.49373, 0, 0, 0, -1.4442997e-05, 55.136833, 0, -60.578316, -1.3145646e-05, 10.483205, 2.1765237, -9.522131)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ice_cream_001" index="0" unique_id=654654969]
@@ -4651,7 +4680,7 @@ transform = Transform3D(66.49373, 0, 0, 0, -1.4442997e-05, 55.136833, 0, -60.578
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ice_cream_001/StaticBody3D" index="0" unique_id=1095169455]
 shape = SubResource("ConcavePolygonShape3D_5mwv5")
 
-[node name="Ice_cream_01_001" parent="." index="705" unique_id=1305515022]
+[node name="Ice_cream_01_001" parent="." index="706" unique_id=1305515022]
 transform = Transform3D(66.49373, 0, 0, 0, -1.4442997e-05, 55.136833, 0, -60.578316, -1.3145646e-05, 10.483205, 2.1765237, -9.788071)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ice_cream_01_001" index="0" unique_id=515902412]
@@ -4659,7 +4688,7 @@ transform = Transform3D(66.49373, 0, 0, 0, -1.4442997e-05, 55.136833, 0, -60.578
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ice_cream_01_001/StaticBody3D" index="0" unique_id=1919855853]
 shape = SubResource("ConcavePolygonShape3D_egoyg")
 
-[node name="Kitchen" parent="." index="706" unique_id=64640424]
+[node name="Kitchen" parent="." index="707" unique_id=64640424]
 transform = Transform3D(-59.571648, 1.7684079e-05, -3.5098697e-12, -8.4656403e-13, 6.4697315e-06, 49.397022, -1.941091e-05, -54.272038, 5.8885844e-06, 9.395173, 1.0359585, -13.006126)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kitchen" index="0" unique_id=977549777]
@@ -4667,7 +4696,7 @@ transform = Transform3D(-59.571648, 1.7684079e-05, -3.5098697e-12, -8.4656403e-1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kitchen/StaticBody3D" index="0" unique_id=157009847]
 shape = SubResource("ConcavePolygonShape3D_klw66")
 
-[node name="Kitchen_01" parent="." index="707" unique_id=968726484]
+[node name="Kitchen_01" parent="." index="708" unique_id=968726484]
 transform = Transform3D(3.234866e-06, 59.57165, 1.4721462e-06, -1.617433e-06, 0, 49.39703, 54.272045, -1.7753736e-06, 2.9442924e-06, 7.730938, 0.9784421, -11.305281)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kitchen_01" index="0" unique_id=484577437]
@@ -4675,7 +4704,7 @@ transform = Transform3D(3.234866e-06, 59.57165, 1.4721462e-06, -1.617433e-06, 0,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kitchen_01/StaticBody3D" index="0" unique_id=883215057]
 shape = SubResource("ConcavePolygonShape3D_lp6xl")
 
-[node name="Ladder" parent="." index="708" unique_id=1113792207]
+[node name="Ladder" parent="." index="709" unique_id=1113792207]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -5.672406, 0.4520986, -2.9345264)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ladder" index="0" unique_id=1595334051]
@@ -4683,7 +4712,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ladder/StaticBody3D" index="0" unique_id=777376795]
 shape = SubResource("ConcavePolygonShape3D_xuhb0")
 
-[node name="Ladder_01" parent="." index="709" unique_id=14612597]
+[node name="Ladder_01" parent="." index="710" unique_id=14612597]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -5.6234703, 1.1760788, -2.0153456)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ladder_01" index="0" unique_id=591455703]
@@ -4691,7 +4720,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ladder_01/StaticBody3D" index="0" unique_id=1214797702]
 shape = SubResource("ConcavePolygonShape3D_x8gr2")
 
-[node name="Lamp_01" parent="." index="710" unique_id=1601540264]
+[node name="Lamp_01" parent="." index="711" unique_id=1601540264]
 transform = Transform3D(52.39378, -111.07161, -1.5577303e-05, -2.9240846e-06, -1.5660553e-05, 104.537506, -82.95565, -70.15148, -1.2461843e-05, 3.5638947, 4.6795683, -2.6353521)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Lamp_01" index="0" unique_id=1049615677]
@@ -4699,7 +4728,7 @@ transform = Transform3D(52.39378, -111.07161, -1.5577303e-05, -2.9240846e-06, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp_01/StaticBody3D" index="0" unique_id=1015702002]
 shape = SubResource("ConcavePolygonShape3D_vai3l")
 
-[node name="Magazines" parent="." index="711" unique_id=480572479]
+[node name="Magazines" parent="." index="712" unique_id=480572479]
 transform = Transform3D(34.712124, 0, 0, 0, -7.5397647e-06, 28.783415, 0, -31.624063, -6.8625013e-06, 8.757201, 0.8381474, -1.3721948)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Magazines" index="0" unique_id=2089751422]
@@ -4707,7 +4736,7 @@ transform = Transform3D(34.712124, 0, 0, 0, -7.5397647e-06, 28.783415, 0, -31.62
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Magazines/StaticBody3D" index="0" unique_id=1269417391]
 shape = SubResource("ConcavePolygonShape3D_b3ty7")
 
-[node name="Manija_Washbasin_03_001" parent="." index="712" unique_id=1703467117]
+[node name="Manija_Washbasin_03_001" parent="." index="713" unique_id=1703467117]
 transform = Transform3D(9.618526e-06, 4.1438347e-05, 177.1299, 0, 146.87675, -4.997367e-05, -161.37209, 4.1744884e-12, 1.0557765e-05, 10.875962, 4.713583, -7.4868894)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Manija_Washbasin_03_001" index="0" unique_id=205788165]
@@ -4715,7 +4744,7 @@ transform = Transform3D(9.618526e-06, 4.1438347e-05, 177.1299, 0, 146.87675, -4.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Manija_Washbasin_03_001/StaticBody3D" index="0" unique_id=92481485]
 shape = SubResource("ConcavePolygonShape3D_hrdu8")
 
-[node name="Manija_Washbasin_04_001" parent="." index="713" unique_id=842203308]
+[node name="Manija_Washbasin_04_001" parent="." index="714" unique_id=842203308]
 transform = Transform3D(9.618526e-06, 4.1438347e-05, 177.1299, 0, 146.87675, -4.997367e-05, -161.37209, 4.1744884e-12, 1.0557765e-05, 10.875962, 4.713583, -7.250942)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Manija_Washbasin_04_001" index="0" unique_id=248040881]
@@ -4723,7 +4752,7 @@ transform = Transform3D(9.618526e-06, 4.1438347e-05, 177.1299, 0, 146.87675, -4.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Manija_Washbasin_04_001/StaticBody3D" index="0" unique_id=1386341612]
 shape = SubResource("ConcavePolygonShape3D_ss3an")
 
-[node name="Meat_001" parent="." index="714" unique_id=541291222]
+[node name="Meat_001" parent="." index="715" unique_id=541291222]
 transform = Transform3D(1.3587982e-05, -77.01894, 0, 0, 0, 69.163704, -75.9895, -1.6067403e-05, 0, 10.260847, 1.5800202, -9.205444)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Meat_001" index="0" unique_id=356125487]
@@ -4731,7 +4760,7 @@ transform = Transform3D(1.3587982e-05, -77.01894, 0, 0, 0, 69.163704, -75.9895, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Meat_001/StaticBody3D" index="0" unique_id=1721860364]
 shape = SubResource("ConcavePolygonShape3D_nh1xu")
 
-[node name="Microwave_02" parent="." index="715" unique_id=782087164 node_paths=PackedStringArray("eat_area")]
+[node name="Microwave_02" parent="." index="716" unique_id=782087164 node_paths=PackedStringArray("eat_area")]
 transform = Transform3D(-17.04444, -13.607621, 1.1588754e-06, 6.181181e-07, 2.846939e-06, 19.442705, 11.817771, -19.62589, 2.3177508e-06, 10.445071, 1.5091789, -10.348346)
 script = ExtResource("3_ic7bd")
 eat_area = NodePath("../Armchair_15_001/EatArea")
@@ -4764,7 +4793,7 @@ theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxEmpty_le6gi")
 text = "[G] to place your meal"
 
-[node name="Milk_001" parent="." index="716" unique_id=1012703458]
+[node name="Milk_001" parent="." index="717" unique_id=1012703458]
 transform = Transform3D(67.44038, 0, 0, 0, -1.4648617e-05, 55.9218, 0, -61.440746, -1.3332797e-05, 10.754859, 1.2954811, -9.104403)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Milk_001" index="0" unique_id=700734769]
@@ -4772,7 +4801,7 @@ transform = Transform3D(67.44038, 0, 0, 0, -1.4648617e-05, 55.9218, 0, -61.44074
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Milk_001/StaticBody3D" index="0" unique_id=611258688]
 shape = SubResource("ConcavePolygonShape3D_4o5ul")
 
-[node name="Mop_01" parent="." index="717" unique_id=1624595981]
+[node name="Mop_01" parent="." index="718" unique_id=1624595981]
 transform = Transform3D(0, -129.39027, 3.044809, -3.5102769e-06, 3.7025597, 106.4043, -117.78535, -3.8577086e-06, 0, 4.987384, 1.1507685, -9.810995)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mop_01" index="0" unique_id=597926330]
@@ -4780,7 +4809,7 @@ transform = Transform3D(0, -129.39027, 3.044809, -3.5102769e-06, 3.7025597, 106.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mop_01/StaticBody3D" index="0" unique_id=369425157]
 shape = SubResource("ConcavePolygonShape3D_bjcow")
 
-[node name="Mop_01_001" parent="." index="718" unique_id=1042149961]
+[node name="Mop_01_001" parent="." index="719" unique_id=1042149961]
 transform = Transform3D(7.4280574e-06, -136.90068, 3.2215297, 3.7140287e-06, 3.9174566, 112.580475, -124.62212, -1.2244884e-05, 0, 2.493078, 4.6923537, -10.917952)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mop_01_001" index="0" unique_id=564074000]
@@ -4788,7 +4817,7 @@ transform = Transform3D(7.4280574e-06, -136.90068, 3.2215297, 3.7140287e-06, 3.9
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mop_01_001/StaticBody3D" index="0" unique_id=1480107691]
 shape = SubResource("ConcavePolygonShape3D_4uiah")
 
-[node name="Mower" parent="." index="719" unique_id=1521126102]
+[node name="Mower" parent="." index="720" unique_id=1521126102]
 transform = Transform3D(0, -83.61178, 2.0662303e-06, -2.2701474e-06, 0, 69.331184, 76.17351, 2.4918252e-06, 0, -5.258587, 0.00019288063, -12.881797)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mower" index="0" unique_id=33677502]
@@ -4796,7 +4825,7 @@ transform = Transform3D(0, -83.61178, 2.0662303e-06, -2.2701474e-06, 0, 69.33118
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mower/StaticBody3D" index="0" unique_id=2050189932]
 shape = SubResource("ConcavePolygonShape3D_t5ylp")
 
-[node name="NaturePlants_01_001" parent="." index="720" unique_id=686378064]
+[node name="NaturePlants_01_001" parent="." index="721" unique_id=686378064]
 transform = Transform3D(23.35812, -1.4363484e-06, -38.7308, 2.0919781e-13, 40.885155, -2.1064518e-06, 31.550423, 1.0633895e-06, 28.674057, -7.576132, -0.11164856, -24.131863)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_01_001" index="0" unique_id=833528717]
@@ -4804,7 +4833,7 @@ transform = Transform3D(23.35812, -1.4363484e-06, -38.7308, 2.0919781e-13, 40.88
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_01_001/StaticBody3D" index="0" unique_id=486935914]
 shape = SubResource("ConcavePolygonShape3D_q1ql7")
 
-[node name="NaturePlants_01_001_001" parent="." index="721" unique_id=1292965913]
+[node name="NaturePlants_01_001_001" parent="." index="722" unique_id=1292965913]
 transform = Transform3D(47.289204, -2.784015e-07, -6.674178, -2.1260175e-14, 40.885155, -1.872756e-06, 7.4577513, 1.7653292e-06, 42.320614, -3.1485026, -0.102924585, -25.424263)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_01_001_001" index="0" unique_id=1155090833]
@@ -4812,7 +4841,7 @@ transform = Transform3D(47.289204, -2.784015e-07, -6.674178, -2.1260175e-14, 40.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_01_001_001/StaticBody3D" index="0" unique_id=1614586175]
 shape = SubResource("ConcavePolygonShape3D_2vu11")
 
-[node name="NaturePlants_01_002_001" parent="." index="722" unique_id=1611684971]
+[node name="NaturePlants_01_002_001" parent="." index="723" unique_id=1611684971]
 transform = Transform3D(29.300692, -1.8017722e-06, -48.584362, 1.7494675e-13, 51.286816, -2.6423572e-06, 39.577217, 1.3339284e-06, 35.969063, -2.9812558, -0.21333098, -27.444904)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_01_002_001" index="0" unique_id=1894330311]
@@ -4820,7 +4849,7 @@ transform = Transform3D(29.300692, -1.8017722e-06, -48.584362, 1.7494675e-13, 51
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_01_002_001/StaticBody3D" index="0" unique_id=98749820]
 shape = SubResource("ConcavePolygonShape3D_6c12p")
 
-[node name="NaturePlants_02_001" parent="." index="723" unique_id=992995541]
+[node name="NaturePlants_02_001" parent="." index="724" unique_id=992995541]
 transform = Transform3D(-19.21622, 2.9533628e-06, 79.50554, 0, 70.10733, -3.6060594e-06, -69.399826, -8.1776074e-07, -22.014404, -1.8718069, -0.05253148, -26.654789)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_02_001" index="0" unique_id=794654701]
@@ -4828,7 +4857,7 @@ transform = Transform3D(-19.21622, 2.9533628e-06, 79.50554, 0, 70.10733, -3.6060
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_02_001/StaticBody3D" index="0" unique_id=325286371]
 shape = SubResource("ConcavePolygonShape3D_s7rmq")
 
-[node name="NaturePlants_02_001_001" parent="." index="724" unique_id=1077304503]
+[node name="NaturePlants_02_001_001" parent="." index="725" unique_id=1077304503]
 transform = Transform3D(72.23978, 1.1665383e-06, 30.280983, 0, 70.10733, -3.477152e-06, -29.73788, 2.8337752e-06, 73.55908, -6.7661552, -0.039638996, -24.010124)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_02_001_001" index="0" unique_id=603256965]
@@ -4836,7 +4865,7 @@ transform = Transform3D(72.23978, 1.1665383e-06, 30.280983, 0, 70.10733, -3.4771
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_02_001_001/StaticBody3D" index="0" unique_id=298681634]
 shape = SubResource("ConcavePolygonShape3D_1ome0")
 
-[node name="NaturePlants_02_002_001" parent="." index="725" unique_id=448498532]
+[node name="NaturePlants_02_002_001" parent="." index="726" unique_id=448498532]
 transform = Transform3D(72.23978, 1.1665383e-06, 30.280983, 0, 70.10733, -3.477152e-06, -29.73788, 2.8337752e-06, 73.55908, -3.4655626, -0.05253148, -27.987951)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_02_002_001" index="0" unique_id=1768760851]
@@ -4844,7 +4873,7 @@ transform = Transform3D(72.23978, 1.1665383e-06, 30.280983, 0, 70.10733, -3.4771
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_02_002_001/StaticBody3D" index="0" unique_id=130772342]
 shape = SubResource("ConcavePolygonShape3D_yoytm")
 
-[node name="NaturePlants_02_003_001" parent="." index="726" unique_id=914196830]
+[node name="NaturePlants_02_003_001" parent="." index="727" unique_id=914196830]
 transform = Transform3D(59.03782, 9.533509e-07, 24.747068, -1.1341048e-13, 57.29507, -2.8416953e-06, -24.30322, 2.3158968e-06, 60.116024, -8.129994, -0.123010874, -25.739355)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_02_003_001" index="0" unique_id=996197532]
@@ -4852,7 +4881,7 @@ transform = Transform3D(59.03782, 9.533509e-07, 24.747068, -1.1341048e-13, 57.29
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_02_003_001/StaticBody3D" index="0" unique_id=1422269340]
 shape = SubResource("ConcavePolygonShape3D_ar66d")
 
-[node name="NaturePlants_03_001" parent="." index="727" unique_id=91852990]
+[node name="NaturePlants_03_001" parent="." index="728" unique_id=91852990]
 transform = Transform3D(45.943188, 1.1792605e-07, 2.932223, -1.5337188e-14, 39.938133, -1.8974232e-06, -3.110582, 1.7417634e-06, 43.308834, -5.807522, -0.09969735, -24.203682)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_03_001" index="0" unique_id=1023534317]
@@ -4860,7 +4889,7 @@ transform = Transform3D(45.943188, 1.1792605e-07, 2.932223, -1.5337188e-14, 39.9
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_03_001/StaticBody3D" index="0" unique_id=157833875]
 shape = SubResource("ConcavePolygonShape3D_70lsm")
 
-[node name="NaturePlants_03_01_001" parent="." index="728" unique_id=361288871]
+[node name="NaturePlants_03_01_001" parent="." index="729" unique_id=361288871]
 transform = Transform3D(45.527935, 1.16860186e-07, 2.9057202, -1.5198563e-14, 39.577156, -1.8802732e-06, -3.082467, 1.7260207e-06, 42.917393, -8.130311, -0.07690954, -26.774225)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_03_01_001" index="0" unique_id=1326573697]
@@ -4868,7 +4897,7 @@ transform = Transform3D(45.527935, 1.16860186e-07, 2.9057202, -1.5198563e-14, 39
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_03_01_001/StaticBody3D" index="0" unique_id=1888674145]
 shape = SubResource("ConcavePolygonShape3D_spqr6")
 
-[node name="NaturePlants_04_001" parent="." index="729" unique_id=1658394031]
+[node name="NaturePlants_04_001" parent="." index="730" unique_id=1658394031]
 transform = Transform3D(-30.02085, 3.1823819, -23.180723, -0.36410946, 33.027992, 6.95437, 21.870903, 4.9181147, -31.702988, -6.355136, -0.1456368, -28.74215)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_04_001" index="0" unique_id=1142805288]
@@ -4876,7 +4905,7 @@ transform = Transform3D(-30.02085, 3.1823819, -23.180723, -0.36410946, 33.027992
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_04_001/StaticBody3D" index="0" unique_id=1395251532]
 shape = SubResource("ConcavePolygonShape3D_qfgnf")
 
-[node name="NaturePlants_04_01_001" parent="." index="730" unique_id=1686365584]
+[node name="NaturePlants_04_01_001" parent="." index="731" unique_id=1686365584]
 transform = Transform3D(-2.6845505, -1.4065685e-06, -37.073402, 6.239342e-14, 32.272976, -1.6252817e-06, 35.021637, -1.07819154e-07, -2.8418264, -4.0597506, -0.059114456, -28.46955)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_04_01_001" index="0" unique_id=1338687506]
@@ -4884,7 +4913,7 @@ transform = Transform3D(-2.6845505, -1.4065685e-06, -37.073402, 6.239342e-14, 32
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_04_01_001/StaticBody3D" index="0" unique_id=622552551]
 shape = SubResource("ConcavePolygonShape3D_dt3qh")
 
-[node name="NaturePlants_05_001" parent="." index="731" unique_id=345505695]
+[node name="NaturePlants_05_001" parent="." index="732" unique_id=345505695]
 transform = Transform3D(-0.7923759, 1.5613856e-06, 41.472702, 2.040906e-13, 35.72789, -1.8132225e-06, -38.289394, -3.23118e-08, -0.85825247, -0.118712425, -0.18013811, -25.460867)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_05_001" index="0" unique_id=453527553]
@@ -4892,7 +4921,7 @@ transform = Transform3D(-0.7923759, 1.5613856e-06, 41.472702, 2.040906e-13, 35.7
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_05_001/StaticBody3D" index="0" unique_id=2070608957]
 shape = SubResource("ConcavePolygonShape3D_3oq7g")
 
-[node name="NaturePlants_05_001_001" parent="." index="732" unique_id=292623702]
+[node name="NaturePlants_05_001_001" parent="." index="733" unique_id=292623702]
 transform = Transform3D(29.434341, 6.9726474e-07, 18.366562, 0, 31.293901, -1.5749958e-06, -17.43939, 1.1768489e-06, 30.999231, -3.9594004, -0.16461658, -25.827383)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_05_001_001" index="0" unique_id=1904783716]
@@ -4900,7 +4929,7 @@ transform = Transform3D(29.434341, 6.9726474e-07, 18.366562, 0, 31.293901, -1.57
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_05_001_001/StaticBody3D" index="0" unique_id=1092084616]
 shape = SubResource("ConcavePolygonShape3D_7asbp")
 
-[node name="NaturePlants_05_002_001" parent="." index="733" unique_id=1585238874]
+[node name="NaturePlants_05_002_001" parent="." index="734" unique_id=1585238874]
 transform = Transform3D(3.002936, 1.362592e-06, 35.877934, -1.8182038e-13, 31.293901, -1.5743848e-06, -33.98618, 1.2039523e-07, 3.1700864, -5.0668383, -0.16461658, -28.609663)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_05_002_001" index="0" unique_id=1668228519]
@@ -4908,7 +4937,7 @@ transform = Transform3D(3.002936, 1.362592e-06, 35.877934, -1.8182038e-13, 31.29
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_05_002_001/StaticBody3D" index="0" unique_id=222334374]
 shape = SubResource("ConcavePolygonShape3D_3h8tm")
 
-[node name="NaturePlants_05_003_001" parent="." index="734" unique_id=2072327901]
+[node name="NaturePlants_05_003_001" parent="." index="735" unique_id=2072327901]
 transform = Transform3D(29.434341, 6.9726474e-07, 18.366562, 0, 31.293901, -1.5749958e-06, -17.43939, 1.1768489e-06, 30.999231, 0.536196, -0.1939447, -25.460867)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_05_003_001" index="0" unique_id=39398182]
@@ -4916,7 +4945,7 @@ transform = Transform3D(29.434341, 6.9726474e-07, 18.366562, 0, 31.293901, -1.57
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_05_003_001/StaticBody3D" index="0" unique_id=87338779]
 shape = SubResource("ConcavePolygonShape3D_6tc0i")
 
-[node name="NaturePlants_05_004_001" parent="." index="735" unique_id=771185807]
+[node name="NaturePlants_05_004_001" parent="." index="736" unique_id=771185807]
 transform = Transform3D(-14.580596, 1.4255723e-06, 38.50609, 1.2685305e-13, 35.72789, -1.8438968e-06, -32.593277, -6.3772933e-07, -17.22569, -7.514125, -0.15882659, -27.22623)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_05_004_001" index="0" unique_id=1263703821]
@@ -4924,7 +4953,7 @@ transform = Transform3D(-14.580596, 1.4255723e-06, 38.50609, 1.2685305e-13, 35.7
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_05_004_001/StaticBody3D" index="0" unique_id=243925931]
 shape = SubResource("ConcavePolygonShape3D_p0efe")
 
-[node name="NaturePlants_06_001" parent="." index="736" unique_id=805805927]
+[node name="NaturePlants_06_001" parent="." index="737" unique_id=805805927]
 transform = Transform3D(-25.668165, 4.7196774, -110.283035, -0.889968, 99.25854, 5.7524786, 108.2836, 1.9345714, -26.094845, -8.062118, -0.07329416, -24.820723)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_06_001" index="0" unique_id=979210278]
@@ -4932,7 +4961,7 @@ transform = Transform3D(-25.668165, 4.7196774, -110.283035, -0.889968, 99.25854,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_06_001/StaticBody3D" index="0" unique_id=312091585]
 shape = SubResource("ConcavePolygonShape3D_obcsn")
 
-[node name="NaturePlants_06_001_001" parent="." index="737" unique_id=1011362919]
+[node name="NaturePlants_06_001_001" parent="." index="738" unique_id=1011362919]
 transform = Transform3D(52.750122, -3.6705287e-06, -99.10445, -1.7255872e-13, 100, -5.1588613e-06, 81.571915, 2.3736216e-06, 64.08789, -0.20827746, -0.064466715, -26.094513)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_06_001_001" index="0" unique_id=1308912880]
@@ -4940,7 +4969,7 @@ transform = Transform3D(52.750122, -3.6705287e-06, -99.10445, -1.7255872e-13, 10
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_06_001_001/StaticBody3D" index="0" unique_id=242506668]
 shape = SubResource("ConcavePolygonShape3D_qqfss")
 
-[node name="NaturePlants_06_002_001" parent="." index="738" unique_id=2089262868]
+[node name="NaturePlants_06_002_001" parent="." index="739" unique_id=2089262868]
 transform = Transform3D(56.176735, -3.9089637e-06, -105.54221, -3.6753603e-13, 106.495926, -5.4939774e-06, 86.87077, 2.5278105e-06, 68.25099, -6.5197697, -0.21863699, -27.644758)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_06_002_001" index="0" unique_id=1584862576]
@@ -4948,7 +4977,7 @@ transform = Transform3D(56.176735, -3.9089637e-06, -105.54221, -3.6753603e-13, 1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_06_002_001/StaticBody3D" index="0" unique_id=1281447377]
 shape = SubResource("ConcavePolygonShape3D_ggbhn")
 
-[node name="Paint_pot" parent="." index="739" unique_id=243029619]
+[node name="Paint_pot" parent="." index="740" unique_id=243029619]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -5.4525023, -0.021469355, -8.049866)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Paint_pot" index="0" unique_id=1319481637]
@@ -4956,7 +4985,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paint_pot/StaticBody3D" index="0" unique_id=321082021]
 shape = SubResource("ConcavePolygonShape3D_hjqmh")
 
-[node name="Paint_pot_001" parent="." index="740" unique_id=254766262]
+[node name="Paint_pot_001" parent="." index="741" unique_id=254766262]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -0.06047678, 1.4337436, -2.8289142)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Paint_pot_001" index="0" unique_id=427102121]
@@ -4964,7 +4993,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paint_pot_001/StaticBody3D" index="0" unique_id=1173057669]
 shape = SubResource("ConcavePolygonShape3D_smk7t")
 
-[node name="Paint_pot_002" parent="." index="741" unique_id=430031673]
+[node name="Paint_pot_002" parent="." index="742" unique_id=430031673]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -0.1794784, 1.444501, -9.795387)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Paint_pot_002" index="0" unique_id=1165403042]
@@ -4972,7 +5001,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paint_pot_002/StaticBody3D" index="0" unique_id=133705473]
 shape = SubResource("ConcavePolygonShape3D_fvsga")
 
-[node name="Palette_001" parent="." index="742" unique_id=149715604]
+[node name="Palette_001" parent="." index="743" unique_id=149715604]
 transform = Transform3D(-17.700968, 38.385185, 5.344094e-06, 0, -5.3726576e-06, 35.863605, 28.768696, 23.617857, 2.1376375e-06, 10.254135, 1.8423126, -9.180684)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Palette_001" index="0" unique_id=1199802470]
@@ -4980,7 +5009,7 @@ transform = Transform3D(-17.700968, 38.385185, 5.344094e-06, 0, -5.3726576e-06, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Palette_001/StaticBody3D" index="0" unique_id=1414497340]
 shape = SubResource("ConcavePolygonShape3D_dpuw1")
 
-[node name="Paper_rolls" parent="." index="743" unique_id=1909080781]
+[node name="Paper_rolls" parent="." index="744" unique_id=1909080781]
 transform = Transform3D(1.3345938e-05, -122.88601, -1.5183914e-05, -3.3364845e-06, -1.4649154e-05, 101.897514, -111.95384, -7.324577e-06, 0, 4.1360807, 2.1478858, -12.650927)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Paper_rolls" index="0" unique_id=757272435]
@@ -4988,7 +5017,7 @@ transform = Transform3D(1.3345938e-05, -122.88601, -1.5183914e-05, -3.3364845e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paper_rolls/StaticBody3D" index="0" unique_id=122847073]
 shape = SubResource("ConcavePolygonShape3D_k2fs6")
 
-[node name="Paper_rolls_01" parent="." index="744" unique_id=1530866]
+[node name="Paper_rolls_01" parent="." index="745" unique_id=1530866]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 7.3788505, 5.841129, -3.7644863)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Paper_rolls_01" index="0" unique_id=735548154]
@@ -4996,7 +5025,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paper_rolls_01/StaticBody3D" index="0" unique_id=1623043000]
 shape = SubResource("ConcavePolygonShape3D_rf02g")
 
-[node name="Paper_rolls_02" parent="." index="745" unique_id=2015783422]
+[node name="Paper_rolls_02" parent="." index="746" unique_id=2015783422]
 transform = Transform3D(1.3345938e-05, -122.88601, -1.5183914e-05, -3.3364845e-06, -1.4649154e-05, 101.897514, -111.95384, -7.324577e-06, 0, 4.1360807, 2.7063565, -12.259329)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Paper_rolls_02" index="0" unique_id=715003196]
@@ -5004,7 +5033,7 @@ transform = Transform3D(1.3345938e-05, -122.88601, -1.5183914e-05, -3.3364845e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paper_rolls_02/StaticBody3D" index="0" unique_id=190135973]
 shape = SubResource("ConcavePolygonShape3D_bfl7m")
 
-[node name="Paper_rolls_03" parent="." index="746" unique_id=137635700]
+[node name="Paper_rolls_03" parent="." index="747" unique_id=137635700]
 transform = Transform3D(1.3345938e-05, -122.88601, -1.5183914e-05, -3.3364845e-06, -1.4649154e-05, 101.897514, -111.95384, -7.324577e-06, 0, 4.1360807, 2.1478858, -12.259329)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Paper_rolls_03" index="0" unique_id=412226840]
@@ -5012,7 +5041,7 @@ transform = Transform3D(1.3345938e-05, -122.88601, -1.5183914e-05, -3.3364845e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paper_rolls_03/StaticBody3D" index="0" unique_id=423225052]
 shape = SubResource("ConcavePolygonShape3D_6ps7w")
 
-[node name="Petrol_Can" parent="." index="747" unique_id=1857255213]
+[node name="Petrol_Can" parent="." index="748" unique_id=1857255213]
 transform = Transform3D(0, 198.86505, 4.9143914e-06, 5.3993954e-06, 0, 164.89961, 181.17365, 5.9266404e-06, 0, -5.3903685, 0.066538334, -13.790954)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Petrol_Can" index="0" unique_id=138644737]
@@ -5020,7 +5049,7 @@ transform = Transform3D(0, 198.86505, 4.9143914e-06, 5.3993954e-06, 0, 164.89961
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Petrol_Can/StaticBody3D" index="0" unique_id=1363336648]
 shape = SubResource("ConcavePolygonShape3D_1ekuu")
 
-[node name="Petrol_Can_001" parent="." index="748" unique_id=1753197931]
+[node name="Petrol_Can_001" parent="." index="749" unique_id=1753197931]
 transform = Transform3D(154.76802, 101.26177, -4.9143914e-06, -5.342659e-06, 2.3920242e-05, 164.89961, 90.4685, -173.2325, 1.9657566e-05, -0.13849497, 0.2823007, -1.9743972)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Petrol_Can_001" index="0" unique_id=1658536329]
@@ -5028,7 +5057,7 @@ transform = Transform3D(154.76802, 101.26177, -4.9143914e-06, -5.342659e-06, 2.3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Petrol_Can_001/StaticBody3D" index="0" unique_id=2071045985]
 shape = SubResource("ConcavePolygonShape3D_xc85m")
 
-[node name="Petrol_Can_01" parent="." index="749" unique_id=1321973562]
+[node name="Petrol_Can_01" parent="." index="750" unique_id=1321973562]
 transform = Transform3D(0, 198.86505, 4.9143914e-06, 5.3993954e-06, 0, 164.89961, 181.17365, 5.9266404e-06, 0, -5.3903685, 0.066538334, -14.186176)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Petrol_Can_01" index="0" unique_id=2081469551]
@@ -5036,7 +5065,7 @@ transform = Transform3D(0, 198.86505, 4.9143914e-06, 5.3993954e-06, 0, 164.89961
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Petrol_Can_01/StaticBody3D" index="0" unique_id=1047995681]
 shape = SubResource("ConcavePolygonShape3D_vwghn")
 
-[node name="Phone" parent="." index="750" unique_id=755128237]
+[node name="Phone" parent="." index="751" unique_id=755128237]
 transform = Transform3D(4.1996293, -58.98587, -0.00010560985, 0, -0.0001340351, 48.543545, -52.08983, -4.7556114, -1.1573683e-05, 5.3691096, 1.2899553, -4.9000187)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Phone" index="0" unique_id=109369304]
@@ -5044,7 +5073,7 @@ transform = Transform3D(4.1996293, -58.98587, -0.00010560985, 0, -0.0001340351, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Phone/StaticBody3D" index="0" unique_id=129551077]
 shape = SubResource("ConcavePolygonShape3D_e2ot7")
 
-[node name="Phone_01" parent="." index="751" unique_id=1040021858]
+[node name="Phone_01" parent="." index="752" unique_id=1040021858]
 transform = Transform3D(-2.6576955, -42.957836, 4.728069e-05, -2.3991358e-06, 6.1586084e-05, 36.056286, -40.16298, 2.842644, 0, -5.157254, 4.769294, -7.4460073)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Phone_01" index="0" unique_id=1708920482]
@@ -5052,7 +5081,7 @@ transform = Transform3D(-2.6576955, -42.957836, 4.728069e-05, -2.3991358e-06, 6.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Phone_01/StaticBody3D" index="0" unique_id=243320795]
 shape = SubResource("ConcavePolygonShape3D_ehytc")
 
-[node name="Pizza_001" parent="." index="752" unique_id=1283299293]
+[node name="Pizza_001" parent="." index="753" unique_id=1283299293]
 transform = Transform3D(110.484924, 0, 0, 0, -2.3998256e-05, 91.61449, 0, -100.65597, -2.1842598e-05, 10.373887, 1.532652, -9.560327)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Pizza_001" index="0" unique_id=1348929052]
@@ -5060,7 +5089,7 @@ transform = Transform3D(110.484924, 0, 0, 0, -2.3998256e-05, 91.61449, 0, -100.6
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pizza_001/StaticBody3D" index="0" unique_id=69232741]
 shape = SubResource("ConcavePolygonShape3D_fcyh7")
 
-[node name="Flowers" parent="." index="753" unique_id=489873587]
+[node name="Flowers" parent="." index="754" unique_id=489873587]
 transform = Transform3D(-2.771966, 2.9669302, 7.034693, 0.7162073, 13.107235, -1.0198765, -1.7709444, 0.65686375, -11.423496, 0.109353304, -0.0008854866, 1.1913738)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Flowers" index="0" unique_id=2108369501]
@@ -5068,7 +5097,7 @@ transform = Transform3D(-2.771966, 2.9669302, 7.034693, 0.7162073, 13.107235, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Flowers/StaticBody3D" index="0" unique_id=1780568302]
 shape = SubResource("ConcavePolygonShape3D_7p05a")
 
-[node name="Flowers_01" parent="." index="754" unique_id=137983958]
+[node name="Flowers_01" parent="." index="755" unique_id=137983958]
 transform = Transform3D(1.6413019, -0.58371085, 13.42449, 0.6949459, 13.367385, -1.1783913, -2.7373865, 3.04362, 7.749993, 6.9814076, 0.05084157, 2.7058792)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Flowers_01" index="0" unique_id=1946019342]
@@ -5076,7 +5105,7 @@ transform = Transform3D(1.6413019, -0.58371085, 13.42449, 0.6949459, 13.367385, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Flowers_01/StaticBody3D" index="0" unique_id=755197634]
 shape = SubResource("ConcavePolygonShape3D_smk4m")
 
-[node name="plants_flowers_032" parent="." index="755" unique_id=1403033394]
+[node name="plants_flowers_032" parent="." index="756" unique_id=1403033394]
 transform = Transform3D(-46.892998, 4.704315e-06, 134.89131, 4.099407e-13, 117.78751, -6.4532087e-06, -105.42984, -2.0923803e-06, -59.996845, 1.486943, -0.19762373, -19.67326)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="plants_flowers_032" index="0" unique_id=905763378]
@@ -5084,7 +5113,7 @@ transform = Transform3D(-46.892998, 4.704315e-06, 134.89131, 4.099407e-13, 117.7
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plants_flowers_032/StaticBody3D" index="0" unique_id=70545341]
 shape = SubResource("ConcavePolygonShape3D_1dk7h")
 
-[node name="plants_flowers_031" parent="." index="756" unique_id=72786778]
+[node name="plants_flowers_031" parent="." index="757" unique_id=72786778]
 transform = Transform3D(-45.78036, 4.5001216e-06, 121.55001, 4.00214e-13, 112.67488, -5.81496e-06, -102.9283, -2.0015593e-06, -54.06291, 9.7255945, -0.06478357, -18.890736)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="plants_flowers_031" index="0" unique_id=726212034]
@@ -5092,7 +5121,7 @@ transform = Transform3D(-45.78036, 4.5001216e-06, 121.55001, 4.00214e-13, 112.67
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plants_flowers_031/StaticBody3D" index="0" unique_id=70865370]
 shape = SubResource("ConcavePolygonShape3D_4i8bt")
 
-[node name="Flowers_02" parent="." index="757" unique_id=1567306945]
+[node name="Flowers_02" parent="." index="758" unique_id=1567306945]
 transform = Transform3D(1.3737218, -2.6905758, -14.638315, 0.5335275, 14.310867, -1.3592772, 2.0290928, -1.9413301, 10.267734, 0.27118754, -0.18041682, -18.583164)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Flowers_02" index="0" unique_id=801923913]
@@ -5100,7 +5129,7 @@ transform = Transform3D(1.3737218, -2.6905758, -14.638315, 0.5335275, 14.310867,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Flowers_02/StaticBody3D" index="0" unique_id=380592252]
 shape = SubResource("ConcavePolygonShape3D_nuli0")
 
-[node name="Tree_04_059" parent="." index="758" unique_id=582805027]
+[node name="Tree_04_059" parent="." index="759" unique_id=582805027]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_04_059" index="0" unique_id=1443802486]
@@ -5108,7 +5137,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_04_059/StaticBody3D" index="0" unique_id=1768364638]
 shape = SubResource("ConcavePolygonShape3D_g8hky")
 
-[node name="Tree_04_060" parent="." index="759" unique_id=1202253384]
+[node name="Tree_04_060" parent="." index="760" unique_id=1202253384]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_04_060" index="0" unique_id=436042013]
@@ -5116,7 +5145,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_04_060/StaticBody3D" index="0" unique_id=1793735035]
 shape = SubResource("ConcavePolygonShape3D_spgp4")
 
-[node name="NaturePlants_020" parent="." index="760" unique_id=10272867]
+[node name="NaturePlants_020" parent="." index="761" unique_id=10272867]
 transform = Transform3D(-5.416013, -2.012187e-06, -112.521614, 7.187695e-14, 46.45148, -4.9631353e-06, 40.099022, -2.717781e-07, -15.197841, 12.047171, 0.31779003, -26.869305)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_020" index="0" unique_id=44648829]
@@ -5124,7 +5153,7 @@ transform = Transform3D(-5.416013, -2.012187e-06, -112.521614, 7.187695e-14, 46.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_020/StaticBody3D" index="0" unique_id=1345236264]
 shape = SubResource("ConcavePolygonShape3D_2pgqk")
 
-[node name="plants_flowers_030" parent="." index="761" unique_id=1662250421]
+[node name="plants_flowers_030" parent="." index="762" unique_id=1662250421]
 transform = Transform3D(-116.57573, -2.1018996e-06, -51.35422, 1.1448962e-13, 112.67488, -5.2599357e-06, 55.01185, -4.4541407e-06, -108.82485, 9.7255945, -0.06478357, -27.035046)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="plants_flowers_030" index="0" unique_id=235764482]
@@ -5132,7 +5161,7 @@ transform = Transform3D(-116.57573, -2.1018996e-06, -51.35422, 1.1448962e-13, 11
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plants_flowers_030/StaticBody3D" index="0" unique_id=329882927]
 shape = SubResource("ConcavePolygonShape3D_pkbe5")
 
-[node name="plants_flowers_029" parent="." index="762" unique_id=1210158941]
+[node name="plants_flowers_029" parent="." index="763" unique_id=1210158941]
 transform = Transform3D(4.021986, -4.921996e-06, -130.52434, 1.9900638e-13, 112.67488, -5.7090756e-06, 111.95841, 1.7681681e-07, 4.688947, 3.7224593, -0.06478357, -27.035046)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="plants_flowers_029" index="0" unique_id=2094362346]
@@ -5140,7 +5169,7 @@ transform = Transform3D(4.021986, -4.921996e-06, -130.52434, 1.9900638e-13, 112.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plants_flowers_029/StaticBody3D" index="0" unique_id=524780061]
 shape = SubResource("ConcavePolygonShape3D_uk80j")
 
-[node name="NaturePlants_019" parent="." index="763" unique_id=1012572933]
+[node name="NaturePlants_019" parent="." index="764" unique_id=1012572933]
 transform = Transform3D(-12.911083, -1.9300817e-06, -107.32992, 1.4771448e-13, 46.45148, -4.93553e-06, 39.522507, -6.3051294e-07, -35.06219, 1.3249962, 0.31779003, -26.869305)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NaturePlants_019" index="0" unique_id=607102555]
@@ -5148,7 +5177,7 @@ transform = Transform3D(-12.911083, -1.9300817e-06, -107.32992, 1.4771448e-13, 4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePlants_019/StaticBody3D" index="0" unique_id=505815799]
 shape = SubResource("ConcavePolygonShape3D_ixxmf")
 
-[node name="Tree_048" parent="." index="764" unique_id=265003776]
+[node name="Tree_048" parent="." index="765" unique_id=265003776]
 transform = Transform3D(114.68183, 2.8496368e-06, 70.81721, -2.4236673e-13, 120.33186, -5.713721e-06, -73.919174, 4.421066e-06, 109.869286, -1.329222, 0.087222815, -26.578663)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_048" index="0" unique_id=1120596131]
@@ -5156,7 +5185,7 @@ transform = Transform3D(114.68183, 2.8496368e-06, 70.81721, -2.4236673e-13, 120.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_048/StaticBody3D" index="0" unique_id=2120390686]
 shape = SubResource("ConcavePolygonShape3D_iq4g3")
 
-[node name="Tree_04_058" parent="." index="765" unique_id=234954323]
+[node name="Tree_04_058" parent="." index="766" unique_id=234954323]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_04_058" index="0" unique_id=784692604]
@@ -5164,7 +5193,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_04_058/StaticBody3D" index="0" unique_id=261793242]
 shape = SubResource("ConcavePolygonShape3D_2ggq5")
 
-[node name="Plants" parent="." index="766" unique_id=784277343]
+[node name="Plants" parent="." index="767" unique_id=784277343]
 transform = Transform3D(54.4006, -108.865265, -1.5577303e-05, -2.8977677e-06, -3.1315492e-05, 104.53751, -80.590454, -73.4868, -1.2461843e-05, 3.5832055, 0.5690243, 1.2235813)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plants" index="0" unique_id=1667119779]
@@ -5172,7 +5201,7 @@ transform = Transform3D(54.4006, -108.865265, -1.5577303e-05, -2.8977677e-06, -3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plants/StaticBody3D" index="0" unique_id=1434227062]
 shape = SubResource("ConcavePolygonShape3D_lacj8")
 
-[node name="Plants_01" parent="." index="767" unique_id=1479008065]
+[node name="Plants_01" parent="." index="768" unique_id=1479008065]
 transform = Transform3D(54.58602, 104.3278, 4.0500992e-05, 3.7483026e-06, -5.5219058e-05, 104.53753, 113.30931, -50.25923, -2.492369e-05, 10.542147, 0.5690243, 1.2356014)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plants_01" index="0" unique_id=619323789]
@@ -5180,7 +5209,7 @@ transform = Transform3D(54.58602, 104.3278, 4.0500992e-05, 3.7483026e-06, -5.521
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plants_01/StaticBody3D" index="0" unique_id=625855727]
 shape = SubResource("ConcavePolygonShape3D_7qf63")
 
-[node name="Plants_03" parent="." index="768" unique_id=760036974]
+[node name="Plants_03" parent="." index="769" unique_id=760036974]
 transform = Transform3D(25.234303, 0, 0, 0, -5.481103e-06, 20.924372, 0, -22.98941, -4.9887594e-06, -0.03081727, 3.904789, -4.0802765)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plants_03" index="0" unique_id=820820369]
@@ -5188,7 +5217,7 @@ transform = Transform3D(25.234303, 0, 0, 0, -5.481103e-06, 20.924372, 0, -22.989
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plants_03/StaticBody3D" index="0" unique_id=431730561]
 shape = SubResource("ConcavePolygonShape3D_uobch")
 
-[node name="Plastic_Boat" parent="." index="769" unique_id=1639280468]
+[node name="Plastic_Boat" parent="." index="770" unique_id=1639280468]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -5.3046093, 0.105698824, -12.00383)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plastic_Boat" index="0" unique_id=443361669]
@@ -5196,7 +5225,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plastic_Boat/StaticBody3D" index="0" unique_id=1930398391]
 shape = SubResource("ConcavePolygonShape3D_ueq01")
 
-[node name="Plate" parent="." index="770" unique_id=1522632773]
+[node name="Plate" parent="." index="771" unique_id=1522632773]
 transform = Transform3D(46.89812, 13.585856, -114.37207, 36.062923, 81.71709, 43.72939, 81.977745, -43.720505, 46.193344, 9.870962, 1.2379018, -14.006136)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plate" index="0" unique_id=1001637983]
@@ -5204,7 +5233,7 @@ transform = Transform3D(46.89812, 13.585856, -114.37207, 36.062923, 81.71709, 43
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plate/StaticBody3D" index="0" unique_id=1634891580]
 shape = SubResource("ConcavePolygonShape3D_kwe3y")
 
-[node name="Plate_01" parent="." index="771" unique_id=174586897]
+[node name="Plate_01" parent="." index="772" unique_id=174586897]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 9.464961, 1.1200173, -13.951359)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plate_01" index="0" unique_id=1025178284]
@@ -5212,7 +5241,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plate_01/StaticBody3D" index="0" unique_id=1305499093]
 shape = SubResource("ConcavePolygonShape3D_sgej2")
 
-[node name="Plate_food_001" parent="." index="772" unique_id=752430830]
+[node name="Plate_food_001" parent="." index="773" unique_id=752430830]
 transform = Transform3D(18.607826, 92.13489, 4.8060778e-05, -5.5296355e-06, -6.7267e-05, 80.6326, 90.88659, -18.863405, -1.9224308e-05, 10.316143, 1.229754, -9.575745)
 script = ExtResource("3_ivtjr")
 
@@ -5236,7 +5265,7 @@ theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxEmpty_le6gi")
 text = "[G] to grab meal"
 
-[node name="Plate_rack" parent="." index="773" unique_id=1414551550]
+[node name="Plate_rack" parent="." index="774" unique_id=1414551550]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 10.408932, 1.3580394, -13.922903)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plate_rack" index="0" unique_id=867646295]
@@ -5244,7 +5273,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plate_rack/StaticBody3D" index="0" unique_id=1482933272]
 shape = SubResource("ConcavePolygonShape3D_01wqy")
 
-[node name="Radio_01_001" parent="." index="774" unique_id=1237181840]
+[node name="Radio_01_001" parent="." index="775" unique_id=1237181840]
 transform = Transform3D(-5.983125, -6.290839, -4.578521e-07, 0, 2.274315e-06, -7.6814837, -5.2488713, 7.1708517, 9.157042e-07, 8.175618, 1.4161035, -10.256143)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Radio_01_001" index="0" unique_id=482815872]
@@ -5252,7 +5281,7 @@ transform = Transform3D(-5.983125, -6.290839, -4.578521e-07, 0, 2.274315e-06, -7
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Radio_01_001/StaticBody3D" index="0" unique_id=1953567181]
 shape = SubResource("ConcavePolygonShape3D_v181b")
 
-[node name="Rake" parent="." index="775" unique_id=2143077895]
+[node name="Rake" parent="." index="776" unique_id=2143077895]
 transform = Transform3D(3.0561182, 0, 0, 0, -3.3190727e-07, 2.534144, 0, -2.7842398, -3.0209353e-07, -5.572447, 0.8451412, -6.559445)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rake" index="0" unique_id=1255024489]
@@ -5260,7 +5289,7 @@ transform = Transform3D(3.0561182, 0, 0, 0, -3.3190727e-07, 2.534144, 0, -2.7842
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rake/StaticBody3D" index="0" unique_id=1137689731]
 shape = SubResource("ConcavePolygonShape3D_ia2p5")
 
-[node name="Rake_01" parent="." index="776" unique_id=1823229541]
+[node name="Rake_01" parent="." index="777" unique_id=1823229541]
 transform = Transform3D(3.0561182, 0, 0, 0, -3.3190727e-07, 2.534144, 0, -2.7842398, -3.0209353e-07, -5.595169, 0.48826218, -7.282676)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rake_01" index="0" unique_id=751158582]
@@ -5268,7 +5297,7 @@ transform = Transform3D(3.0561182, 0, 0, 0, -3.3190727e-07, 2.534144, 0, -2.7842
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rake_01/StaticBody3D" index="0" unique_id=259554565]
 shape = SubResource("ConcavePolygonShape3D_fckj3")
 
-[node name="Refrigerator_001" parent="." index="777" unique_id=1485330481]
+[node name="Refrigerator_001" parent="." index="778" unique_id=1485330481]
 transform = Transform3D(-126.06978, 3.742431e-05, -7.427837e-12, -1.7915593e-12, 1.3691707e-05, 104.537506, -4.1078758e-05, -114.854355, 1.2461843e-05, 10.591755, 1.4193226, -9.423995)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Refrigerator_001" index="0" unique_id=287020609]
@@ -5276,7 +5305,7 @@ transform = Transform3D(-126.06978, 3.742431e-05, -7.427837e-12, -1.7915593e-12,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Refrigerator_001/StaticBody3D" index="0" unique_id=514735665]
 shape = SubResource("ConcavePolygonShape3D_grkm1")
 
-[node name="Refrigerator_Door_001" parent="." index="778" unique_id=25917264]
+[node name="Refrigerator_Door_001" parent="." index="779" unique_id=25917264]
 transform = Transform3D(-126.06975, 0, 0, 0, 5.020443e-06, 104.53749, 0, -114.85435, 4.5694787e-06, 10.090951, 1.1039762, -9.952976)
 script = ExtResource("2_a6v0c")
 
@@ -5292,7 +5321,7 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, -1.77
 transform = Transform3D(0.99998224, 0, 0, 0, 1.0000001, -1.8829382e-13, 0, -7.1054274e-15, 1.0001175, -0.009754434, -0.0033128634, -0.0025974335)
 shape = SubResource("BoxShape3D_vhg04")
 
-[node name="Refrigerator_Door_01_001" parent="." index="779" unique_id=1093830476]
+[node name="Refrigerator_Door_01_001" parent="." index="780" unique_id=1093830476]
 transform = Transform3D(-126.06978, 3.742431e-05, -7.427837e-12, -1.7915593e-12, 1.3691707e-05, 104.537506, -4.1078758e-05, -114.854355, 1.2461843e-05, 10.090951, 2.1351228, -9.952976)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Refrigerator_Door_01_001" index="0" unique_id=82050253]
@@ -5300,7 +5329,7 @@ transform = Transform3D(-126.06978, 3.742431e-05, -7.427837e-12, -1.7915593e-12,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Refrigerator_Door_01_001/StaticBody3D" index="0" unique_id=740179621]
 shape = SubResource("ConcavePolygonShape3D_c2ohc")
 
-[node name="Sarten" parent="." index="780" unique_id=796751919]
+[node name="Sarten" parent="." index="781" unique_id=796751919]
 transform = Transform3D(-5.027051, -7.408838, -1.2997078e-06, 2.9008666e-07, -2.0628045e-06, 10.90274, -8.335079, 4.4684153, 1.2997078e-06, 8.148831, 1.3601972, -10.871503)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sarten" index="0" unique_id=858266216]
@@ -5308,7 +5337,7 @@ transform = Transform3D(-5.027051, -7.408838, -1.2997078e-06, 2.9008666e-07, -2.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sarten/StaticBody3D" index="0" unique_id=1555322330]
 shape = SubResource("ConcavePolygonShape3D_rv5av")
 
-[node name="Sarten_01" parent="." index="781" unique_id=1512449013]
+[node name="Sarten_01" parent="." index="782" unique_id=1512449013]
 transform = Transform3D(7.799332e-06, -71.81428, -8.8734405e-06, -1.949833e-06, -8.560929e-06, 59.54865, -65.42554, -4.2804645e-06, 0, 10.702033, 1.3297453, -12.027197)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sarten_01" index="0" unique_id=635586565]
@@ -5316,7 +5345,7 @@ transform = Transform3D(7.799332e-06, -71.81428, -8.8734405e-06, -1.949833e-06, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sarten_01/StaticBody3D" index="0" unique_id=2062287763]
 shape = SubResource("ConcavePolygonShape3D_nxpde")
 
-[node name="Shampoo" parent="." index="782" unique_id=972841900]
+[node name="Shampoo" parent="." index="783" unique_id=972841900]
 transform = Transform3D(154.86478, 0, 0, 0, -3.363793e-05, 128.41441, 0, -141.08769, -3.0616386e-05, 10.842231, 4.553732, -7.7958217)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shampoo" index="0" unique_id=248845889]
@@ -5324,7 +5353,7 @@ transform = Transform3D(154.86478, 0, 0, 0, -3.363793e-05, 128.41441, 0, -141.08
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shampoo/StaticBody3D" index="0" unique_id=1484344597]
 shape = SubResource("ConcavePolygonShape3D_b8lqg")
 
-[node name="Shampoo_01" parent="." index="783" unique_id=223087163]
+[node name="Shampoo_01" parent="." index="784" unique_id=223087163]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 10.894616, 4.548173, -7.673849)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shampoo_01" index="0" unique_id=244306227]
@@ -5332,7 +5361,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shampoo_01/StaticBody3D" index="0" unique_id=2094428499]
 shape = SubResource("ConcavePolygonShape3D_jiglv")
 
-[node name="Shampoo_02" parent="." index="784" unique_id=1437314579]
+[node name="Shampoo_02" parent="." index="785" unique_id=1437314579]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 10.901544, 4.5457587, -6.9231944)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shampoo_02" index="0" unique_id=732137870]
@@ -5340,7 +5369,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shampoo_02/StaticBody3D" index="0" unique_id=1982862826]
 shape = SubResource("ConcavePolygonShape3D_256e4")
 
-[node name="Shampoo_03" parent="." index="785" unique_id=431818302]
+[node name="Shampoo_03" parent="." index="786" unique_id=431818302]
 transform = Transform3D(117.309456, 0, 0, 0, -2.54806e-05, 97.273415, 0, -106.873375, -2.3191791e-05, 7.7171984, 5.793909, -3.8263974)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shampoo_03" index="0" unique_id=639694136]
@@ -5348,7 +5377,7 @@ transform = Transform3D(117.309456, 0, 0, 0, -2.54806e-05, 97.273415, 0, -106.87
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shampoo_03/StaticBody3D" index="0" unique_id=909089994]
 shape = SubResource("ConcavePolygonShape3D_lfw0y")
 
-[node name="Shampoo_04" parent="." index="786" unique_id=434619291]
+[node name="Shampoo_04" parent="." index="787" unique_id=434619291]
 transform = Transform3D(89.10998, 0, 0, 0, -1.7309067e-05, 73.890305, 0, -72.59948, -1.7616823e-05, 7.8484125, 5.734153, -3.779265)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shampoo_04" index="0" unique_id=858446383]
@@ -5356,7 +5385,7 @@ transform = Transform3D(89.10998, 0, 0, 0, -1.7309067e-05, 73.890305, 0, -72.599
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shampoo_04/StaticBody3D" index="0" unique_id=924547348]
 shape = SubResource("ConcavePolygonShape3D_i03xn")
 
-[node name="Shelf_001" parent="." index="787" unique_id=1478070997]
+[node name="Shelf_001" parent="." index="788" unique_id=1478070997]
 transform = Transform3D(-1.1933817e-05, -109.88357, 1.357732e-05, -2.9834544e-06, 1.3099142e-05, 91.11584, 100.108116, -6.549571e-06, 0, 10.787376, 5.7441564, -7.2861857)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_001" index="0" unique_id=1427096418]
@@ -5364,7 +5393,7 @@ transform = Transform3D(-1.1933817e-05, -109.88357, 1.357732e-05, -2.9834544e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_001/StaticBody3D" index="0" unique_id=1733079188]
 shape = SubResource("ConcavePolygonShape3D_f7dwb")
 
-[node name="Shelf_01" parent="." index="788" unique_id=1637984631]
+[node name="Shelf_01" parent="." index="789" unique_id=1637984631]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 4.1680045, 1.9687064, -12.569082)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_01" index="0" unique_id=670029335]
@@ -5372,7 +5401,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_01/StaticBody3D" index="0" unique_id=339261842]
 shape = SubResource("ConcavePolygonShape3D_q5yq1")
 
-[node name="Shelf_01_001" parent="." index="789" unique_id=1906413124]
+[node name="Shelf_01_001" parent="." index="790" unique_id=1906413124]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 4.1680045, 2.53722, -12.569082)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_01_001" index="0" unique_id=1309538866]
@@ -5380,7 +5409,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_01_001/StaticBody3D" index="0" unique_id=1146305736]
 shape = SubResource("ConcavePolygonShape3D_4ql18")
 
-[node name="Shelf_01_002" parent="." index="790" unique_id=1618893238]
+[node name="Shelf_01_002" parent="." index="791" unique_id=1618893238]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 4.1680045, 1.9687064, -13.6898985)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_01_002" index="0" unique_id=760219832]
@@ -5388,7 +5417,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_01_002/StaticBody3D" index="0" unique_id=338328022]
 shape = SubResource("ConcavePolygonShape3D_dpkbv")
 
-[node name="Shelf_01_003" parent="." index="791" unique_id=1541493658]
+[node name="Shelf_01_003" parent="." index="792" unique_id=1541493658]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 4.1680045, 2.53722, -13.6898985)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_01_003" index="0" unique_id=522899099]
@@ -5396,7 +5425,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_01_003/StaticBody3D" index="0" unique_id=1275816644]
 shape = SubResource("ConcavePolygonShape3D_7pf33")
 
-[node name="Shelf_01_004" parent="." index="792" unique_id=261253877]
+[node name="Shelf_01_004" parent="." index="793" unique_id=261253877]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 4.397262, 1.6511503, -9.519553)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_01_004" index="0" unique_id=484113681]
@@ -5404,7 +5433,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_01_004/StaticBody3D" index="0" unique_id=936985041]
 shape = SubResource("ConcavePolygonShape3D_ekpfk")
 
-[node name="Shelf_01_005" parent="." index="793" unique_id=612558412]
+[node name="Shelf_01_005" parent="." index="794" unique_id=612558412]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 4.397262, 2.201516, -9.519553)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_01_005" index="0" unique_id=1438053685]
@@ -5412,7 +5441,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_01_005/StaticBody3D" index="0" unique_id=355568541]
 shape = SubResource("ConcavePolygonShape3D_b2l24")
 
-[node name="Shelf_01_006" parent="." index="794" unique_id=1678595832]
+[node name="Shelf_01_006" parent="." index="795" unique_id=1678595832]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 7.537931, 5.6741133, -3.7594166)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_01_006" index="0" unique_id=299968851]
@@ -5420,7 +5449,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_01_006/StaticBody3D" index="0" unique_id=1117180032]
 shape = SubResource("ConcavePolygonShape3D_brjut")
 
-[node name="Shelf_01_007" parent="." index="795" unique_id=1215401552]
+[node name="Shelf_01_007" parent="." index="796" unique_id=1215401552]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 10.317916, 5.6741133, -3.7594166)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_01_007" index="0" unique_id=1130036160]
@@ -5428,7 +5457,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_01_007/StaticBody3D" index="0" unique_id=1610972421]
 shape = SubResource("ConcavePolygonShape3D_eqbi2")
 
-[node name="Shelf_08_001" parent="." index="796" unique_id=1735634329]
+[node name="Shelf_08_001" parent="." index="797" unique_id=1735634329]
 transform = Transform3D(93.272964, -2.4151412e-12, -6.761477e-06, 8.154182e-06, 3.0389507e-05, 77.34227, 0, 84.97521, -2.7659753e-05, 8.414867, 5.7535944, -7.819052)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelf_08_001" index="0" unique_id=1931565]
@@ -5436,7 +5465,7 @@ transform = Transform3D(93.272964, -2.4151412e-12, -6.761477e-06, 8.154182e-06, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf_08_001/StaticBody3D" index="0" unique_id=1291352189]
 shape = SubResource("ConcavePolygonShape3D_ldhwe")
 
-[node name="Shelving" parent="." index="797" unique_id=39936229]
+[node name="Shelving" parent="." index="798" unique_id=39936229]
 transform = Transform3D(136.54955, 0, 0, 0, 7.4149275e-06, 113.22737, 0, -124.40184, 6.7488772e-06, -0.17699242, 0.9073621, -2.3855886)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelving" index="0" unique_id=1134409420]
@@ -5444,7 +5473,7 @@ transform = Transform3D(136.54955, 0, 0, 0, 7.4149275e-06, 113.22737, 0, -124.40
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelving/StaticBody3D" index="0" unique_id=1194273227]
 shape = SubResource("ConcavePolygonShape3D_ad65b")
 
-[node name="Shelving_001" parent="." index="798" unique_id=212346065]
+[node name="Shelving_001" parent="." index="799" unique_id=212346065]
 transform = Transform3D(136.54955, 0, 0, 0, 7.4149275e-06, 113.22737, 0, -124.40184, 6.7488772e-06, -0.17699242, 0.9073621, -4.210152)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelving_001" index="0" unique_id=351025601]
@@ -5452,7 +5481,7 @@ transform = Transform3D(136.54955, 0, 0, 0, 7.4149275e-06, 113.22737, 0, -124.40
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelving_001/StaticBody3D" index="0" unique_id=584321136]
 shape = SubResource("ConcavePolygonShape3D_1bn1j")
 
-[node name="Shelving_002" parent="." index="799" unique_id=885883752]
+[node name="Shelving_002" parent="." index="800" unique_id=885883752]
 transform = Transform3D(136.54955, 0, 0, 0, 7.4149275e-06, 113.22737, 0, -124.40184, 6.7488772e-06, -0.17699242, 0.9073621, -5.9993763)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelving_002" index="0" unique_id=1546117374]
@@ -5460,7 +5489,7 @@ transform = Transform3D(136.54955, 0, 0, 0, 7.4149275e-06, 113.22737, 0, -124.40
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelving_002/StaticBody3D" index="0" unique_id=201709606]
 shape = SubResource("ConcavePolygonShape3D_cfbq5")
 
-[node name="Shelving_003" parent="." index="800" unique_id=220554690]
+[node name="Shelving_003" parent="." index="801" unique_id=220554690]
 transform = Transform3D(136.54955, 0, 0, 0, 7.4149275e-06, 113.22737, 0, -124.40184, 6.7488772e-06, -0.17699242, 0.9073621, -10.152845)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shelving_003" index="0" unique_id=1761208099]
@@ -5468,7 +5497,7 @@ transform = Transform3D(136.54955, 0, 0, 0, 7.4149275e-06, 113.22737, 0, -124.40
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shelving_003/StaticBody3D" index="0" unique_id=1760701793]
 shape = SubResource("ConcavePolygonShape3D_nc11k")
 
-[node name="Shovel" parent="." index="801" unique_id=679809515]
+[node name="Shovel" parent="." index="802" unique_id=679809515]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, -5.594284, 0.934939, -5.90429)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Shovel" index="0" unique_id=910422479]
@@ -5476,7 +5505,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shovel/StaticBody3D" index="0" unique_id=1899393015]
 shape = SubResource("ConcavePolygonShape3D_1cohi")
 
-[node name="Soap" parent="." index="802" unique_id=2130637020]
+[node name="Soap" parent="." index="803" unique_id=2130637020]
 transform = Transform3D(42.52997, 0, 0, 0, -9.237867e-06, 37.888027, 0, -38.746418, -9.0332105e-06, 8.064988, 4.851899, -3.690936)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap" index="0" unique_id=1284701888]
@@ -5484,7 +5513,7 @@ transform = Transform3D(42.52997, 0, 0, 0, -9.237867e-06, 37.888027, 0, -38.7464
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap/StaticBody3D" index="0" unique_id=132434495]
 shape = SubResource("ConcavePolygonShape3D_w0lph")
 
-[node name="Soap_01" parent="." index="803" unique_id=198676601]
+[node name="Soap_01" parent="." index="804" unique_id=198676601]
 transform = Transform3D(67.93099, 0, 0, 0, -1.4755183e-05, 60.516647, 0, -61.88772, -1.4428294e-05, 0.774786, 1.5974568, -10.24276)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_01" index="0" unique_id=1360562255]
@@ -5492,7 +5521,7 @@ transform = Transform3D(67.93099, 0, 0, 0, -1.4755183e-05, 60.516647, 0, -61.887
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_01/StaticBody3D" index="0" unique_id=701682556]
 shape = SubResource("ConcavePolygonShape3D_feekm")
 
-[node name="Soap_01_001" parent="." index="804" unique_id=1007931144]
+[node name="Soap_01_001" parent="." index="805" unique_id=1007931144]
 transform = Transform3D(-67.93099, 0, 0, 0, -2.2132774e-05, 60.516647, 0, -61.88772, -2.1642441e-05, 2.4373708, 5.0728245, -9.780176)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_01_001" index="0" unique_id=642735096]
@@ -5500,7 +5529,7 @@ transform = Transform3D(-67.93099, 0, 0, 0, -2.2132774e-05, 60.516647, 0, -61.88
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_01_001/StaticBody3D" index="0" unique_id=2012402073]
 shape = SubResource("ConcavePolygonShape3D_up4oa")
 
-[node name="Soap_holder" parent="." index="805" unique_id=1024395004]
+[node name="Soap_holder" parent="." index="806" unique_id=1024395004]
 transform = Transform3D(201.36491, 0, 0, 0, -4.3738157e-05, 166.9725, 0, -183.45111, -3.980935e-05, 0.774786, 1.5703917, -10.241625)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_holder" index="0" unique_id=661775808]
@@ -5508,7 +5537,7 @@ transform = Transform3D(201.36491, 0, 0, 0, -4.3738157e-05, 166.9725, 0, -183.45
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_holder/StaticBody3D" index="0" unique_id=1024683474]
 shape = SubResource("ConcavePolygonShape3D_wtafr")
 
-[node name="Soap_holder_001" parent="." index="806" unique_id=1933656651]
+[node name="Soap_holder_001" parent="." index="807" unique_id=1933656651]
 transform = Transform3D(-201.36491, 0, 0, 0, -6.560723e-05, 166.9725, 0, -183.45111, -5.9714024e-05, 2.4373708, 5.045759, -9.779041)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_holder_001" index="0" unique_id=695552737]
@@ -5516,7 +5545,7 @@ transform = Transform3D(-201.36491, 0, 0, 0, -6.560723e-05, 166.9725, 0, -183.45
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_holder_001/StaticBody3D" index="0" unique_id=1113379254]
 shape = SubResource("ConcavePolygonShape3D_brsr7")
 
-[node name="Soap_powder" parent="." index="807" unique_id=584995723]
+[node name="Soap_powder" parent="." index="808" unique_id=584995723]
 transform = Transform3D(-1.2137067e-06, 5.342296, 1.3808561e-06, 3.0342667e-07, 6.368513e-07, -9.2667675, 10.18131, 3.1842566e-07, 0, 4.167543, 2.0750232, -13.569492)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_powder" index="0" unique_id=1306172040]
@@ -5524,7 +5553,7 @@ transform = Transform3D(-1.2137067e-06, 5.342296, 1.3808561e-06, 3.0342667e-07, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_powder/StaticBody3D" index="0" unique_id=1680715664]
 shape = SubResource("ConcavePolygonShape3D_rlnl6")
 
-[node name="Soap_powder_01" parent="." index="808" unique_id=1105630090]
+[node name="Soap_powder_01" parent="." index="809" unique_id=1105630090]
 transform = Transform3D(-1.2137065e-06, 7.196072, 1.3808558e-06, 3.0342662e-07, 8.5783864e-07, -9.266766, 10.181308, 4.2891932e-07, 0, 4.183721, 2.0742216, -13.321104)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_powder_01" index="0" unique_id=1644025023]
@@ -5532,7 +5561,7 @@ transform = Transform3D(-1.2137065e-06, 7.196072, 1.3808558e-06, 3.0342662e-07, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_powder_01/StaticBody3D" index="0" unique_id=914341910]
 shape = SubResource("ConcavePolygonShape3D_dikau")
 
-[node name="Soap_wrapper" parent="." index="809" unique_id=732048547]
+[node name="Soap_wrapper" parent="." index="810" unique_id=732048547]
 transform = Transform3D(-9.954384, 0, 0, 0, 2.1621759e-06, 8.25421, 0, -9.068823, 1.9679574e-06, 10.057803, 5.7643943, -3.7579331)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_wrapper" index="0" unique_id=406382836]
@@ -5540,7 +5569,7 @@ transform = Transform3D(-9.954384, 0, 0, 0, 2.1621759e-06, 8.25421, 0, -9.068823
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_wrapper/StaticBody3D" index="0" unique_id=1114157240]
 shape = SubResource("ConcavePolygonShape3D_trqvd")
 
-[node name="Soap_wrapper_01" parent="." index="810" unique_id=1098303919]
+[node name="Soap_wrapper_01" parent="." index="811" unique_id=1098303919]
 transform = Transform3D(-9.954384, 0, 0, 0, 2.1621759e-06, 8.25421, 0, -9.068823, 1.9679574e-06, 10.455942, 5.771432, -3.8446374)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_wrapper_01" index="0" unique_id=2080774942]
@@ -5548,7 +5577,7 @@ transform = Transform3D(-9.954384, 0, 0, 0, 2.1621759e-06, 8.25421, 0, -9.068823
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_wrapper_01/StaticBody3D" index="0" unique_id=1126355486]
 shape = SubResource("ConcavePolygonShape3D_tko3f")
 
-[node name="Soap_wrapper_02" parent="." index="811" unique_id=1043267286]
+[node name="Soap_wrapper_02" parent="." index="812" unique_id=1043267286]
 transform = Transform3D(-1.2458521e-06, -11.47149, 1.4174284e-06, -3.1146303e-07, 1.3675082e-06, 9.5122, 10.450965, -6.837541e-07, 0, 10.6767845, 5.863112, -7.386266)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_wrapper_02" index="0" unique_id=173349506]
@@ -5556,7 +5585,7 @@ transform = Transform3D(-1.2458521e-06, -11.47149, 1.4174284e-06, -3.1146303e-07
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_wrapper_02/StaticBody3D" index="0" unique_id=768183653]
 shape = SubResource("ConcavePolygonShape3D_srelm")
 
-[node name="Soap_wrapper_05" parent="." index="812" unique_id=397165185]
+[node name="Soap_wrapper_05" parent="." index="813" unique_id=397165185]
 transform = Transform3D(1.3062989e-06, 8.018712, 3.9631993e-07, -4.3543295e-07, -9.55905e-07, 6.649146, 7.3053527, -2.1507863e-06, 0, 10.766441, 5.8094873, -7.077668)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Soap_wrapper_05" index="0" unique_id=1852398672]
@@ -5564,7 +5593,7 @@ transform = Transform3D(1.3062989e-06, 8.018712, 3.9631993e-07, -4.3543295e-07, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Soap_wrapper_05/StaticBody3D" index="0" unique_id=1489471871]
 shape = SubResource("ConcavePolygonShape3D_1613v")
 
-[node name="Softener" parent="." index="813" unique_id=264684603]
+[node name="Softener" parent="." index="814" unique_id=264684603]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 4.1250463, 2.0554569, -13.867794)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Softener" index="0" unique_id=638837894]
@@ -5572,7 +5601,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Softener/StaticBody3D" index="0" unique_id=87173126]
 shape = SubResource("ConcavePolygonShape3D_1sywi")
 
-[node name="Softener_01" parent="." index="814" unique_id=2093397118]
+[node name="Softener_01" parent="." index="815" unique_id=2093397118]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 4.210526, 2.0310667, -13.95491)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Softener_01" index="0" unique_id=999058374]
@@ -5580,7 +5609,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Softener_01/StaticBody3D" index="0" unique_id=845780943]
 shape = SubResource("ConcavePolygonShape3D_hpun8")
 
-[node name="Softener_02" parent="." index="815" unique_id=1544081005]
+[node name="Softener_02" parent="." index="816" unique_id=1544081005]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 4.210526, 2.05784, -13.796463)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Softener_02" index="0" unique_id=1476308556]
@@ -5588,7 +5617,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Softener_02/StaticBody3D" index="0" unique_id=164147706]
 shape = SubResource("ConcavePolygonShape3D_feiju")
 
-[node name="Stove" parent="." index="816" unique_id=791477848]
+[node name="Stove" parent="." index="817" unique_id=791477848]
 transform = Transform3D(-49.62719, 1.4732026e-05, -2.9239577e-12, -7.052448e-13, 5.3897215e-06, 41.151043, -1.6170596e-05, -45.212254, 4.905587e-06, 10.571253, 0.833642, -12.295752)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Stove" index="0" unique_id=197075246]
@@ -5596,7 +5625,7 @@ transform = Transform3D(-49.62719, 1.4732026e-05, -2.9239577e-12, -7.052448e-13,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Stove/StaticBody3D" index="0" unique_id=1635630197]
 shape = SubResource("ConcavePolygonShape3D_qi1h6")
 
-[node name="Table_18" parent="." index="817" unique_id=1996667254]
+[node name="Table_18" parent="." index="818" unique_id=1996667254]
 transform = Transform3D(120.09129, 0, 0, 0, -2.6084837e-05, 99.580124, 0, -109.40773, -2.3741753e-05, 3.7919586, 4.2619133, -3.127077)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table_18" index="0" unique_id=920597123]
@@ -5604,7 +5633,7 @@ transform = Transform3D(120.09129, 0, 0, 0, -2.6084837e-05, 99.580124, 0, -109.4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Table_18/StaticBody3D" index="0" unique_id=484840350]
 shape = SubResource("ConcavePolygonShape3D_5fj4n")
 
-[node name="Table_35" parent="." index="818" unique_id=248282052]
+[node name="Table_35" parent="." index="819" unique_id=248282052]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 10.4731045, 0.7754295, -1.3739223)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table_35" index="0" unique_id=1331967250]
@@ -5612,7 +5641,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Table_35/StaticBody3D" index="0" unique_id=346779395]
 shape = SubResource("ConcavePolygonShape3D_826tw")
 
-[node name="Table_41" parent="." index="819" unique_id=502086414]
+[node name="Table_41" parent="." index="820" unique_id=502086414]
 transform = Transform3D(164.0421, 0, 0, 0, -3.5631325e-05, 136.02428, 0, -149.44858, -3.2430722e-05, 5.429616, 0.804791, -4.8859844)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table_41" index="0" unique_id=1632129441]
@@ -5620,7 +5649,7 @@ transform = Transform3D(164.0421, 0, 0, 0, -3.5631325e-05, 136.02428, 0, -149.44
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Table_41/StaticBody3D" index="0" unique_id=221055740]
 shape = SubResource("ConcavePolygonShape3D_rnvse")
 
-[node name="Toaster_02" parent="." index="820" unique_id=1155254835]
+[node name="Toaster_02" parent="." index="821" unique_id=1155254835]
 transform = Transform3D(9.864398e-06, -90.82887, -1.1222903e-05, -2.4660994e-06, -1.0827645e-05, 75.31562, -82.748566, -5.4138227e-06, 0, 10.585105, 1.465742, -11.244331)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toaster_02" index="0" unique_id=1910276580]
@@ -5628,7 +5657,7 @@ transform = Transform3D(9.864398e-06, -90.82887, -1.1222903e-05, -2.4660994e-06,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toaster_02/StaticBody3D" index="0" unique_id=1618435239]
 shape = SubResource("ConcavePolygonShape3D_u6env")
 
-[node name="Toilet_01" parent="." index="821" unique_id=480598631]
+[node name="Toilet_01" parent="." index="822" unique_id=480598631]
 transform = Transform3D(1.3691708e-05, 126.06978, 1.5577303e-05, 3.422927e-06, -1.5028689e-05, 104.537506, 114.85437, -7.5143444e-06, 0, 1.2180953, 0.783782, -11.177102)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toilet_01" index="2" unique_id=1568945790]
@@ -5636,7 +5665,7 @@ transform = Transform3D(1.3691708e-05, 126.06978, 1.5577303e-05, 3.422927e-06, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_01/StaticBody3D" index="0" unique_id=2332515]
 shape = SubResource("ConcavePolygonShape3D_1i01j")
 
-[node name="Toilet_01_001" parent="." index="822" unique_id=715833171]
+[node name="Toilet_01_001" parent="." index="823" unique_id=715833171]
 transform = Transform3D(1.2735192e-05, 117.26242, 1.4489058e-05, 3.183798e-06, -1.397877e-05, 97.23441, 106.830536, -6.989385e-06, 0, -0.7760508, 4.2263165, -11.179574)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toilet_01_001" index="2" unique_id=1628541184]
@@ -5644,7 +5673,7 @@ transform = Transform3D(1.2735192e-05, 117.26242, 1.4489058e-05, 3.183798e-06, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_01_001/StaticBody3D" index="0" unique_id=2105535446]
 shape = SubResource("ConcavePolygonShape3D_ia3eo")
 
-[node name="Toilet_01_003" parent="." index="823" unique_id=1615121982]
+[node name="Toilet_01_003" parent="." index="824" unique_id=1615121982]
 transform = Transform3D(-112.79562, -3.348382e-05, -8.176711e-06, -9.860909e-06, -3.675024e-05, 93.53053, -3.675348e-05, 102.76111, 3.3449127e-05, 7.370583, 4.211175, -7.4245763)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toilet_01_003" index="2" unique_id=831633626]
@@ -5652,7 +5681,7 @@ transform = Transform3D(-112.79562, -3.348382e-05, -8.176711e-06, -9.860909e-06,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_01_003/StaticBody3D" index="0" unique_id=1012763327]
 shape = SubResource("ConcavePolygonShape3D_1geug")
 
-[node name="Toilet_paper" parent="." index="824" unique_id=1703859816]
+[node name="Toilet_paper" parent="." index="825" unique_id=1703859816]
 transform = Transform3D(9.249615, 0, 0, 0, -2.0090943e-06, 7.669813, 0, -8.426751, -1.8286262e-06, 4.102392, 2.0696702, -12.961907)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toilet_paper" index="0" unique_id=408677891]
@@ -5660,7 +5689,7 @@ transform = Transform3D(9.249615, 0, 0, 0, -2.0090943e-06, 7.669813, 0, -8.42675
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_paper/StaticBody3D" index="0" unique_id=1728911157]
 shape = SubResource("ConcavePolygonShape3D_yu2pf")
 
-[node name="Toilet_paper_001" parent="." index="825" unique_id=778245990]
+[node name="Toilet_paper_001" parent="." index="826" unique_id=778245990]
 transform = Transform3D(6.28195, 5.92306, 1.1428913e-06, -4.793387e-07, -1.1309124e-06, 7.669813, 5.020994, -7.410558, -9.143131e-07, 4.102392, 2.2242396, -12.960274)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toilet_paper_001" index="0" unique_id=1637977054]
@@ -5668,7 +5697,7 @@ transform = Transform3D(6.28195, 5.92306, 1.1428913e-06, -4.793387e-07, -1.13091
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_paper_001/StaticBody3D" index="0" unique_id=311632070]
 shape = SubResource("ConcavePolygonShape3D_gshn5")
 
-[node name="Toilet_paper_01" parent="." index="826" unique_id=440961637]
+[node name="Toilet_paper_01" parent="." index="827" unique_id=440961637]
 transform = Transform3D(4.7143945e-07, 9.917104e-07, -9.249615, 5.19104, -6.276672, -5.5132e-07, -5.96761, -5.459883, -1.10264e-06, 1.9649893, 1.0802442, -11.70485)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toilet_paper_01" index="0" unique_id=1222493483]
@@ -5676,7 +5705,7 @@ transform = Transform3D(4.7143945e-07, 9.917104e-07, -9.249615, 5.19104, -6.2766
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_paper_01/StaticBody3D" index="0" unique_id=1349787780]
 shape = SubResource("ConcavePolygonShape3D_28kve")
 
-[node name="Toilet_paper_01_002" parent="." index="827" unique_id=578445707]
+[node name="Toilet_paper_01_002" parent="." index="828" unique_id=578445707]
 transform = Transform3D(4.7285135e-07, 1.2373584e-06, -9.249616, 5.0602903, -6.395114, 0, -6.1096654, -5.2967114, -2.20528e-06, -0.13147998, 4.5573945, -11.652237)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toilet_paper_01_002" index="0" unique_id=1529496064]
@@ -5684,7 +5713,7 @@ transform = Transform3D(4.7285135e-07, 1.2373584e-06, -9.249616, 5.0602903, -6.3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_paper_01_002/StaticBody3D" index="0" unique_id=961948185]
 shape = SubResource("ConcavePolygonShape3D_83vyq")
 
-[node name="Toilet_paper_01_003" parent="." index="828" unique_id=599433382]
+[node name="Toilet_paper_01_003" parent="." index="829" unique_id=599433382]
 transform = Transform3D(-6.372169, -5.862191, -4.2045767e-07, 5.611413, -6.656946, -4.774605e-07, 4.5247697e-14, -6.6968056e-07, 8.426752, 6.8359065, 4.6422553, -6.9986715)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toilet_paper_01_003" index="0" unique_id=1920555626]
@@ -5692,7 +5721,7 @@ transform = Transform3D(-6.372169, -5.862191, -4.2045767e-07, 5.611413, -6.65694
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_paper_01_003/StaticBody3D" index="0" unique_id=1889505614]
 shape = SubResource("ConcavePolygonShape3D_bj86u")
 
-[node name="Tool_Cabinet" parent="." index="829" unique_id=364518176]
+[node name="Tool_Cabinet" parent="." index="830" unique_id=364518176]
 transform = Transform3D(-345.31964, 0, 0, 0, 3.7503167e-05, 286.34027, 0, -314.59933, 3.4134424e-05, -5.4458694, 0.5726943, -9.027397)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tool_Cabinet" index="0" unique_id=198474489]
@@ -5700,7 +5729,7 @@ transform = Transform3D(-345.31964, 0, 0, 0, 3.7503167e-05, 286.34027, 0, -314.5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tool_Cabinet/StaticBody3D" index="0" unique_id=1500475838]
 shape = SubResource("ConcavePolygonShape3D_hrbjd")
 
-[node name="Toolbox" parent="." index="830" unique_id=467292762]
+[node name="Toolbox" parent="." index="831" unique_id=467292762]
 transform = Transform3D(116.77528, 0, 0, 0, -1.2682287e-05, 96.830475, 0, -106.38672, -1.1543093e-05, -0.19090986, 0.13243866, -2.7235012)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toolbox" index="0" unique_id=383343667]
@@ -5708,7 +5737,7 @@ transform = Transform3D(116.77528, 0, 0, 0, -1.2682287e-05, 96.830475, 0, -106.3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toolbox/StaticBody3D" index="0" unique_id=1831320641]
 shape = SubResource("ConcavePolygonShape3D_gsdc1")
 
-[node name="Toothbrush" parent="." index="831" unique_id=1471405983]
+[node name="Toothbrush" parent="." index="832" unique_id=1471405983]
 transform = Transform3D(127.82564, -41.71054, -1.4818345e-05, 2.0614366e-06, -3.9007246e-05, 110.49358, -52.90318, -100.78179, -2.6343723e-05, 0.78379226, 1.5687187, -9.8133745)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toothbrush" index="0" unique_id=1597215061]
@@ -5716,7 +5745,7 @@ transform = Transform3D(127.82564, -41.71054, -1.4818345e-05, 2.0614366e-06, -3.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toothbrush/StaticBody3D" index="0" unique_id=741102002]
 shape = SubResource("ConcavePolygonShape3D_eay46")
 
-[node name="Toothbrush_001" parent="." index="832" unique_id=193247032]
+[node name="Toothbrush_001" parent="." index="833" unique_id=193247032]
 transform = Transform3D(-114.54313, -50.3833, 1.6464827e-06, 1.8472302e-06, 0, 110.49358, 47.40595, -121.737076, 0, 2.4283643, 5.0440865, -9.350791)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toothbrush_001" index="0" unique_id=1382799515]
@@ -5724,7 +5753,7 @@ transform = Transform3D(-114.54313, -50.3833, 1.6464827e-06, 1.8472302e-06, 0, 1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toothbrush_001/StaticBody3D" index="0" unique_id=1749892729]
 shape = SubResource("ConcavePolygonShape3D_pd3r8")
 
-[node name="Toothbrush_01" parent="." index="833" unique_id=1733066776]
+[node name="Toothbrush_01" parent="." index="834" unique_id=1733066776]
 transform = Transform3D(101.42336, 0, 0, 0, -2.2030006e-05, 84.10061, 0, -92.400536, -2.005115e-05, 9.93331, 4.847802, -3.8329053)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toothbrush_01" index="0" unique_id=1055357841]
@@ -5732,7 +5761,7 @@ transform = Transform3D(101.42336, 0, 0, 0, -2.2030006e-05, 84.10061, 0, -92.400
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toothbrush_01/StaticBody3D" index="0" unique_id=694650056]
 shape = SubResource("ConcavePolygonShape3D_wr57o")
 
-[node name="Toothbrush_02" parent="." index="834" unique_id=325520503]
+[node name="Toothbrush_02" parent="." index="835" unique_id=325520503]
 transform = Transform3D(15.063233, 97.653694, 0.00012531973, -5.7134557e-06, -0.00015323987, 84.10065, 94.66492, -15.5388155, -2.0051157e-05, 7.3306613, 4.863671, -3.7571006)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Toothbrush_02" index="0" unique_id=784713773]
@@ -5740,7 +5769,7 @@ transform = Transform3D(15.063233, 97.653694, 0.00012531973, -5.7134557e-06, -0.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Toothbrush_02/StaticBody3D" index="0" unique_id=1149481075]
 shape = SubResource("ConcavePolygonShape3D_n15v4")
 
-[node name="toothpaste_01" parent="." index="835" unique_id=358276959]
+[node name="toothpaste_01" parent="." index="836" unique_id=358276959]
 transform = Transform3D(0.015939737, -3.3749242e-07, -2.5006804, 0, 2.0715504, -4.0742535e-07, 2.2719908, 2.3677829e-09, 0.017544169, 7.434658, 4.863671, -3.6813145)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="toothpaste_01" index="0" unique_id=860628020]
@@ -5748,7 +5777,7 @@ transform = Transform3D(0.015939737, -3.3749242e-07, -2.5006804, 0, 2.0715504, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="toothpaste_01/StaticBody3D" index="0" unique_id=32769060]
 shape = SubResource("ConcavePolygonShape3D_toll2")
 
-[node name="toothpaste_02" parent="." index="836" unique_id=833755991]
+[node name="toothpaste_02" parent="." index="837" unique_id=833755991]
 transform = Transform3D(1.7924498, 3.219825e-07, 2.0932972, 0, 2.454048, -4.2348137e-07, -2.4349515, 2.3702214e-07, 1.5409466, 0.8703563, 1.5674125, -9.540281)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="toothpaste_02" index="0" unique_id=1136270256]
@@ -5756,7 +5785,7 @@ transform = Transform3D(1.7924498, 3.219825e-07, 2.0932972, 0, 2.454048, -4.2348
 [node name="CollisionShape3D" type="CollisionShape3D" parent="toothpaste_02/StaticBody3D" index="0" unique_id=1307751008]
 shape = SubResource("ConcavePolygonShape3D_mufut")
 
-[node name="toothpaste_02_001" parent="." index="837" unique_id=100219988]
+[node name="toothpaste_02_001" parent="." index="838" unique_id=100219988]
 transform = Transform3D(1.3368957, 5.365221e-07, -2.4815567, -1.1687515e-07, 2.4540477, 7.1897233e-07, -1.8161036, 2.3702223e-07, -1.8267584, 2.3417997, 5.04278, -9.077698)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="toothpaste_02_001" index="0" unique_id=835441137]
@@ -5764,7 +5793,7 @@ transform = Transform3D(1.3368957, 5.365221e-07, -2.4815567, -1.1687515e-07, 2.4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="toothpaste_02_001/StaticBody3D" index="0" unique_id=1558042331]
 shape = SubResource("ConcavePolygonShape3D_4stfq")
 
-[node name="toothpaste_04" parent="." index="838" unique_id=1761091125]
+[node name="toothpaste_04" parent="." index="839" unique_id=1761091125]
 transform = Transform3D(2.498241, 0, 0, 0, 2.0715504, -3.7080628e-07, 0, 3.374984e-07, 2.2759926, 10.033024, 4.856275, -3.9064465)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="toothpaste_04" index="0" unique_id=259615583]
@@ -5772,7 +5801,7 @@ transform = Transform3D(2.498241, 0, 0, 0, 2.0715504, -3.7080628e-07, 0, 3.37498
 [node name="CollisionShape3D" type="CollisionShape3D" parent="toothpaste_04/StaticBody3D" index="0" unique_id=1698856873]
 shape = SubResource("ConcavePolygonShape3D_rl7q5")
 
-[node name="Trash_can_002" parent="." index="839" unique_id=3955830]
+[node name="Trash_can_002" parent="." index="840" unique_id=3955830]
 transform = Transform3D(6.654043e-06, -61.26874, -7.5704247e-06, -1.6635107e-06, -7.303803e-06, 50.804256, -55.818157, -3.6519016e-06, 0, 1.9607437, 4.129896, -10.51029)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Trash_can_002" index="0" unique_id=1095692992]
@@ -5780,7 +5809,7 @@ transform = Transform3D(6.654043e-06, -61.26874, -7.5704247e-06, -1.6635107e-06,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Trash_can_002/StaticBody3D" index="0" unique_id=1955862905]
 shape = SubResource("ConcavePolygonShape3D_v7k6p")
 
-[node name="Trash_can_005" parent="." index="840" unique_id=1393318963]
+[node name="Trash_can_005" parent="." index="841" unique_id=1393318963]
 transform = Transform3D(-57.20415, 1.6981272e-05, 4.146807e-06, 5.0009453e-06, -1.8637831e-05, 47.433884, 1.863948e-05, 52.115154, 1.6963679e-05, 8.079523, 4.0936923, -7.2155266)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Trash_can_005" index="0" unique_id=1765290501]
@@ -5788,7 +5817,7 @@ transform = Transform3D(-57.20415, 1.6981272e-05, 4.146807e-06, 5.0009453e-06, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Trash_can_005/StaticBody3D" index="0" unique_id=814944117]
 shape = SubResource("ConcavePolygonShape3D_rk2qf")
 
-[node name="Trash_can_01_002" parent="." index="841" unique_id=1060365241]
+[node name="Trash_can_01_002" parent="." index="842" unique_id=1060365241]
 transform = Transform3D(6.382378e-06, -58.76732, -7.2613466e-06, -1.5955945e-06, -7.0056103e-06, 48.73007, -53.53927, -3.5028052e-06, 0, 7.921995, 0.68613124, -9.761437)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Trash_can_01_002" index="0" unique_id=185845197]
@@ -5796,7 +5825,7 @@ transform = Transform3D(6.382378e-06, -58.76732, -7.2613466e-06, -1.5955945e-06,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Trash_can_01_002/StaticBody3D" index="0" unique_id=1833223675]
 shape = SubResource("ConcavePolygonShape3D_3r7rv")
 
-[node name="Tree_01_001" parent="." index="842" unique_id=2136871565]
+[node name="Tree_01_001" parent="." index="843" unique_id=2136871565]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_01_001" index="0" unique_id=1572575575]
@@ -5804,7 +5833,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_01_001/StaticBody3D" index="0" unique_id=979006349]
 shape = SubResource("ConcavePolygonShape3D_g1261")
 
-[node name="tumbler" parent="." index="843" unique_id=1996460831]
+[node name="tumbler" parent="." index="844" unique_id=1996460831]
 transform = Transform3D(-6.536188, 0, 0, 0, 1.4197151e-06, -5.4198303, 0, 5.954716, 1.2921884e-06, 10.189557, 1.3990433, -11.573891)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tumbler" index="0" unique_id=2002219344]
@@ -5812,7 +5841,7 @@ transform = Transform3D(-6.536188, 0, 0, 0, 1.4197151e-06, -5.4198303, 0, 5.9547
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tumbler/StaticBody3D" index="0" unique_id=603339384]
 shape = SubResource("ConcavePolygonShape3D_67v6g")
 
-[node name="TV_03" parent="." index="844" unique_id=694322580]
+[node name="TV_03" parent="." index="845" unique_id=694322580]
 transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06, -5.63856e-06, 39.221054, -43.091805, -2.81928e-06, 0, 10.666417, 1.4521918, -1.3721948)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TV_03" index="0" unique_id=362844487]
@@ -5820,7 +5849,7 @@ transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TV_03/StaticBody3D" index="0" unique_id=960222912]
 shape = SubResource("ConcavePolygonShape3D_xurgg")
 
-[node name="TV_03_001" parent="." index="845" unique_id=389761020]
+[node name="TV_03_001" parent="." index="846" unique_id=389761020]
 transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06, -5.63856e-06, 39.221054, -43.091805, -2.81928e-06, 0, 0.2344203, 5.2711678, -5.6792774)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TV_03_001" index="0" unique_id=369736795]
@@ -5828,7 +5857,7 @@ transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TV_03_001/StaticBody3D" index="0" unique_id=1567201562]
 shape = SubResource("ConcavePolygonShape3D_ml8lg")
 
-[node name="TV_04" parent="." index="846" unique_id=782182602]
+[node name="TV_04" parent="." index="847" unique_id=782182602]
 transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06, -5.63856e-06, 39.221054, -43.091805, -2.81928e-06, 0, 8.373046, 5.292837, -0.5784054)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TV_04" index="0" unique_id=520024147]
@@ -5836,7 +5865,7 @@ transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TV_04/StaticBody3D" index="0" unique_id=2105009799]
 shape = SubResource("ConcavePolygonShape3D_1r0pk")
 
-[node name="Vaso_001" parent="." index="847" unique_id=1907257126]
+[node name="Vaso_001" parent="." index="848" unique_id=1907257126]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, 9.460397, 1.227618, -6.2997026)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Vaso_001" index="0" unique_id=913245299]
@@ -5844,7 +5873,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Vaso_001/StaticBody3D" index="0" unique_id=595433186]
 shape = SubResource("ConcavePolygonShape3D_i4aak")
 
-[node name="Vaso_002" parent="." index="848" unique_id=608306285]
+[node name="Vaso_002" parent="." index="849" unique_id=608306285]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 8.630527, 1.227618, -7.103449)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Vaso_002" index="0" unique_id=1759842122]
@@ -5852,7 +5881,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Vaso_002/StaticBody3D" index="0" unique_id=1731967635]
 shape = SubResource("ConcavePolygonShape3D_5pwkx")
 
-[node name="Vaso_003" parent="." index="849" unique_id=1665167794]
+[node name="Vaso_003" parent="." index="850" unique_id=1665167794]
 transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06, -1.5028689e-05, 104.537506, -114.85437, -7.5143444e-06, 0, 8.630527, 1.227618, -6.1664243)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Vaso_003" index="0" unique_id=1908848806]
@@ -5860,7 +5889,7 @@ transform = Transform3D(1.3691708e-05, -126.06978, -1.5577303e-05, -3.422927e-06
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Vaso_003/StaticBody3D" index="0" unique_id=356592696]
 shape = SubResource("ConcavePolygonShape3D_f3107")
 
-[node name="Video_player_02" parent="." index="850" unique_id=237893363]
+[node name="Video_player_02" parent="." index="851" unique_id=237893363]
 transform = Transform3D(-36.05938, 1.2792834e-05, -8.4982526e-13, 0, 1.9581e-06, 29.900568, 1.40420425e-05, 32.851467, -3.5644255e-06, 10.569006, 0.6807306, -1.3721948)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Video_player_02" index="0" unique_id=438541769]
@@ -5868,7 +5897,7 @@ transform = Transform3D(-36.05938, 1.2792834e-05, -8.4982526e-13, 0, 1.9581e-06,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Video_player_02/StaticBody3D" index="0" unique_id=2103726011]
 shape = SubResource("ConcavePolygonShape3D_0jk7w")
 
-[node name="Wardrobe" parent="." index="851" unique_id=999947560]
+[node name="Wardrobe" parent="." index="852" unique_id=999947560]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, -3.168268, 4.7465296, -11.60343)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Wardrobe" index="0" unique_id=1881503517]
@@ -5876,7 +5905,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wardrobe/StaticBody3D" index="0" unique_id=257143595]
 shape = SubResource("ConcavePolygonShape3D_55ns8")
 
-[node name="Wardrobe_01" parent="." index="852" unique_id=560774683]
+[node name="Wardrobe_01" parent="." index="853" unique_id=560774683]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, -5.201168, 4.258802, -11.60343)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Wardrobe_01" index="0" unique_id=202975983]
@@ -5884,7 +5913,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wardrobe_01/StaticBody3D" index="0" unique_id=231422909]
 shape = SubResource("ConcavePolygonShape3D_0om10")
 
-[node name="Washbasin_02_001" parent="." index="853" unique_id=122483073]
+[node name="Washbasin_02_001" parent="." index="854" unique_id=122483073]
 transform = Transform3D(1.9237052e-05, -177.1299, -2.188634e-05, -4.809263e-06, -2.111553e-05, 146.87674, -161.37209, -1.0557765e-05, 0, 10.88431, 4.7105255, -7.3686285)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Washbasin_02_001" index="0" unique_id=1360197176]
@@ -5892,7 +5921,7 @@ transform = Transform3D(1.9237052e-05, -177.1299, -2.188634e-05, -4.809263e-06, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Washbasin_02_001/StaticBody3D" index="0" unique_id=68750787]
 shape = SubResource("ConcavePolygonShape3D_j2wkn")
 
-[node name="Washbasin_03" parent="." index="854" unique_id=837773364]
+[node name="Washbasin_03" parent="." index="855" unique_id=837773364]
 transform = Transform3D(1.853823e-05, 170.69534, 2.109128e-05, 4.6345576e-06, -2.034847e-05, 141.54117, 155.50995, -1.0174235e-05, 0, 1.103456, 1.0354542, -10.0096245)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Washbasin_03" index="3" unique_id=1134864507]
@@ -5934,7 +5963,7 @@ color = Color(0, 0, 0, 1)
 transform = Transform3D(0.006430456, -3.8328504e-10, -1.9164265e-10, 0, 0.0058583906, -1.7459366e-10, 1.3877788e-17, 2.5100223e-17, 0.007065082, 0, 0, 0)
 stream = ExtResource("5_f51cm")
 
-[node name="Washbasin_03_001" parent="." index="855" unique_id=636743817]
+[node name="Washbasin_03_001" parent="." index="856" unique_id=636743817]
 transform = Transform3D(-1.853823e-05, -170.69534, 2.109128e-05, -4.6345576e-06, 2.034847e-05, 141.54117, 155.50995, -1.0174235e-05, 0, 2.1087003, 4.510822, -9.547041)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Washbasin_03_001" index="3" unique_id=718161646]
@@ -5942,7 +5971,7 @@ transform = Transform3D(-1.853823e-05, -170.69534, 2.109128e-05, -4.6345576e-06,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Washbasin_03_001/StaticBody3D" index="0" unique_id=618693024]
 shape = SubResource("ConcavePolygonShape3D_e3j6r")
 
-[node name="Washbasin_07" parent="." index="856" unique_id=765107749]
+[node name="Washbasin_07" parent="." index="857" unique_id=765107749]
 transform = Transform3D(136.4999, 0, 0, 0, -2.9648927e-05, 113.186195, 0, -124.356606, -2.6985694e-05, 7.917348, 4.521947, -3.90618)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Washbasin_07" index="6" unique_id=71208728]
@@ -5950,7 +5979,7 @@ transform = Transform3D(136.4999, 0, 0, 0, -2.9648927e-05, 113.186195, 0, -124.3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Washbasin_07/StaticBody3D" index="0" unique_id=598092709]
 shape = SubResource("ConcavePolygonShape3D_ug787")
 
-[node name="Washbasin_07_001" parent="." index="857" unique_id=1926780804]
+[node name="Washbasin_07_001" parent="." index="858" unique_id=1926780804]
 transform = Transform3D(136.4999, 0, 0, 0, -2.9648927e-05, 113.186195, 0, -124.356606, -2.6985694e-05, 10.585605, 4.521947, -3.90618)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Washbasin_07_001" index="4" unique_id=1841863230]
@@ -5958,7 +5987,7 @@ transform = Transform3D(136.4999, 0, 0, 0, -2.9648927e-05, 113.186195, 0, -124.3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Washbasin_07_001/StaticBody3D" index="0" unique_id=2018179219]
 shape = SubResource("ConcavePolygonShape3D_3qd1b")
 
-[node name="Washing_machine" parent="." index="858" unique_id=367436841]
+[node name="Washing_machine" parent="." index="859" unique_id=367436841]
 transform = Transform3D(1.3691708e-05, 126.06978, 1.5577303e-05, 3.422927e-06, -1.5028689e-05, 104.537506, 114.85437, -7.5143444e-06, 0, 1.3544893, 0.87030256, -12.600135)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Washing_machine" index="1" unique_id=437175312]
@@ -5966,7 +5995,7 @@ transform = Transform3D(1.3691708e-05, 126.06978, 1.5577303e-05, 3.422927e-06, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Washing_machine/StaticBody3D" index="0" unique_id=537535340]
 shape = SubResource("ConcavePolygonShape3D_6k7ny")
 
-[node name="Washing_machine_02" parent="." index="859" unique_id=1785400950]
+[node name="Washing_machine_02" parent="." index="860" unique_id=1785400950]
 transform = Transform3D(1.3691708e-05, 126.06978, 1.5577303e-05, 3.422927e-06, -1.5028689e-05, 104.537506, 114.85437, -7.5143444e-06, 0, 1.3995728, 0.6867287, -13.710741)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Washing_machine_02" index="1" unique_id=1424984938]
@@ -5974,7 +6003,7 @@ transform = Transform3D(1.3691708e-05, 126.06978, 1.5577303e-05, 3.422927e-06, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Washing_machine_02/StaticBody3D" index="0" unique_id=1374382516]
 shape = SubResource("ConcavePolygonShape3D_hl6lc")
 
-[node name="Watering_can_06" parent="." index="860" unique_id=691317673]
+[node name="Watering_can_06" parent="." index="861" unique_id=691317673]
 transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.85436, -2.4923685e-05, -0.5498078, 6.245477, -8.982151)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Watering_can_06" index="1" unique_id=1424903767]
@@ -5982,7 +6011,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -2.7383416e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Watering_can_06/StaticBody3D" index="0" unique_id=442901158]
 shape = SubResource("ConcavePolygonShape3D_8xhtu")
 
-[node name="Floor" parent="." index="861" unique_id=1412775221]
+[node name="Floor" parent="." index="862" unique_id=1412775221]
 transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.85436, -1.2461843e-05, 3.0058374, 3.7702677, -7.020617)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor" index="0" unique_id=1092280941 groups=["House"]]
@@ -5990,7 +6019,7 @@ transform = Transform3D(126.06978, 0, 0, 0, -1.3691708e-05, 104.537506, 0, -114.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" index="0" unique_id=1233569536]
 shape = SubResource("ConcavePolygonShape3D_6645f")
 
-[node name="Alarm_clock_002" parent="." index="862" unique_id=169687673]
+[node name="Alarm_clock_002" parent="." index="863" unique_id=169687673]
 transform = Transform3D(25.935179, 17.87636, -1.6745497e-06, 0, 0, 28.094286, 15.854699, -29.242222, 0, 8.1256275, 4.772155, -13.579444)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Alarm_clock_002" index="0" unique_id=1826142370]
@@ -5998,7 +6027,7 @@ transform = Transform3D(25.935179, 17.87636, -1.6745497e-06, 0, 0, 28.094286, 15
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Alarm_clock_002/StaticBody3D" index="0" unique_id=1522118025]
 shape = SubResource("ConcavePolygonShape3D_0tt38")
 
-[node name="Focus_01_001" parent="." index="863" unique_id=1442846169]
+[node name="Focus_01_001" parent="." index="864" unique_id=1442846169]
 transform = Transform3D(120.7689, 1.5635502e-12, 8.754691e-06, 1.0557951e-05, -1.9674013e-05, -100.14199, 0, -110.025055, 1.19378565e-05, 2.0267658, 3.4386995, 1.0972109)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_01_001" index="0" unique_id=1341868802]
@@ -6006,7 +6035,7 @@ transform = Transform3D(120.7689, 1.5635502e-12, 8.754691e-06, 1.0557951e-05, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_01_001/StaticBody3D" index="0" unique_id=1150463633]
 shape = SubResource("ConcavePolygonShape3D_aeetd")
 
-[node name="Focus_01_005" parent="." index="864" unique_id=452722536]
+[node name="Focus_01_005" parent="." index="865" unique_id=452722536]
 transform = Transform3D(120.7689, 0, 0, 0, 15.476847, -101.11192, 0, 108.066986, 14.480777, 6.1320105, 3.5232215, -17.236498)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Focus_01_005" index="0" unique_id=1008620039]
@@ -6014,19 +6043,19 @@ transform = Transform3D(120.7689, 0, 0, 0, 15.476847, -101.11192, 0, 108.066986,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Focus_01_005/StaticBody3D" index="0" unique_id=1135191627]
 shape = SubResource("ConcavePolygonShape3D_lvj46")
 
-[node name="Garbage_bags_003" parent="." index="865" unique_id=991460158]
+[node name="Garbage_bags_003" parent="." index="866" unique_id=991460158]
 visible = false
 
-[node name="Garbage_bags_002" parent="." index="866" unique_id=800401921]
+[node name="Garbage_bags_002" parent="." index="867" unique_id=800401921]
 visible = false
 
-[node name="Garbage_bags_004" parent="." index="867" unique_id=825017059]
+[node name="Garbage_bags_004" parent="." index="868" unique_id=825017059]
 visible = false
 
-[node name="Garbage_bags_005" parent="." index="868" unique_id=2064998687]
+[node name="Garbage_bags_005" parent="." index="869" unique_id=2064998687]
 visible = false
 
-[node name="Light_switch" parent="." index="869" unique_id=1965233179 node_paths=PackedStringArray("target_lights")]
+[node name="Light_switch" parent="." index="870" unique_id=1965233179 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(6.965534, 0, 0, 0, -7.564863e-07, 5.7758455, 0, -6.3458667, -6.885345e-07, 2.6340752, 1.5961338, -0.9269295)
 script = ExtResource("3_vhg04")
 target_lights = [NodePath("SpotLight3D"), NodePath("SpotLight3D2"), NodePath("SpotLight3D3"), NodePath("SpotLight3D4")]
@@ -6078,7 +6107,7 @@ spot_range = 7.0
 spot_attenuation = 0.0
 spot_angle = 96.69
 
-[node name="Light_switch_001" parent="." index="870" unique_id=920572985]
+[node name="Light_switch_001" parent="." index="871" unique_id=920572985]
 transform = Transform3D(6.965534, 0, 0, 0, -7.564863e-07, 5.7758455, 0, -6.3458667, -6.885345e-07, 2.4375556, 1.5961338, -0.9269295)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_001" index="0" unique_id=220922257]
@@ -6086,7 +6115,7 @@ transform = Transform3D(6.965534, 0, 0, 0, -7.564863e-07, 5.7758455, 0, -6.34586
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_001/StaticBody3D" index="0" unique_id=671458925]
 shape = SubResource("ConcavePolygonShape3D_5t5xi")
 
-[node name="Light_switch_003" parent="." index="871" unique_id=1972217997]
+[node name="Light_switch_003" parent="." index="872" unique_id=1972217997]
 transform = Transform3D(0.002461842, 6.9651647, -0.0003275657, 0, 0.00039522874, 5.7757654, 6.346474, -0.0027018364, 3.4426245e-07, 5.0632486, 1.6245183, -5.4273643)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_003" index="0" unique_id=781501132]
@@ -6094,7 +6123,7 @@ transform = Transform3D(0.002461842, 6.9651647, -0.0003275657, 0, 0.00039522874,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_003/StaticBody3D" index="0" unique_id=1561143311]
 shape = SubResource("ConcavePolygonShape3D_ye4cx")
 
-[node name="Light_switch_004" parent="." index="872" unique_id=1668270843]
+[node name="Light_switch_004" parent="." index="873" unique_id=1668270843]
 transform = Transform3D(-6.9659214, 0.0024608162, -8.404962e-11, -1.01367505e-10, 0, 5.775846, 0.0027015212, 6.3452597, 0, 5.665751, 1.6245183, -14.392555)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_004" index="0" unique_id=1023652527]
@@ -6102,7 +6131,7 @@ transform = Transform3D(-6.9659214, 0.0024608162, -8.404962e-11, -1.01367505e-10
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_004/StaticBody3D" index="0" unique_id=1129418120]
 shape = SubResource("ConcavePolygonShape3D_aj778")
 
-[node name="Light_switch_005" parent="." index="873" unique_id=1965914944]
+[node name="Light_switch_005" parent="." index="874" unique_id=1965914944]
 transform = Transform3D(-6.9659214, 0.0024608162, -8.404962e-11, -1.01367505e-10, 0, 5.775846, 0.0027015212, 6.3452597, 0, 5.8455095, 1.6245183, -14.392555)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_005" index="0" unique_id=884035487]
@@ -6110,7 +6139,7 @@ transform = Transform3D(-6.9659214, 0.0024608162, -8.404962e-11, -1.01367505e-10
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_005/StaticBody3D" index="0" unique_id=1426914700]
 shape = SubResource("ConcavePolygonShape3D_pkf3v")
 
-[node name="Light_switch_006" parent="." index="874" unique_id=1475270270 node_paths=PackedStringArray("target_lights")]
+[node name="Light_switch_006" parent="." index="875" unique_id=1475270270 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(-6.9651465, -0.0024612877, 1.6809924e-10, 2.0271246e-10, 0, 5.775846, 0.0027012206, -6.346474, 0, 1.9496839, 1.7167975, -9.3974085)
 script = ExtResource("3_vhg04")
 target_lights = [NodePath("SpotLight3D"), NodePath("SpotLight3D2")]
@@ -6136,7 +6165,7 @@ transform = Transform3D(0.10103926, 0.056547914, -0.09334548, -0.03965333, 0.146
 visible = false
 spot_angle = 73.51
 
-[node name="Light_switch_007" parent="." index="875" unique_id=2019355368]
+[node name="Light_switch_007" parent="." index="876" unique_id=2019355368]
 transform = Transform3D(0.0024628835, -6.965744, -0.0032224404, 1.8910346e-07, -0.0038857704, 5.7766404, 6.345258, 0.00270393, 1.3772585e-06, 0.3377266, 1.3391787, -7.335333)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_007" index="0" unique_id=1274984189]
@@ -6144,7 +6173,7 @@ transform = Transform3D(0.0024628835, -6.965744, -0.0032224404, 1.8910346e-07, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_007/StaticBody3D" index="0" unique_id=448841822]
 shape = SubResource("ConcavePolygonShape3D_lemg0")
 
-[node name="Light_switch_008" parent="." index="876" unique_id=1183016808]
+[node name="Light_switch_008" parent="." index="877" unique_id=1183016808]
 transform = Transform3D(6.9651465, 0.0024612872, 8.404962e-11, -1.0135623e-10, 0, 5.775846, -0.0027012203, 6.346474, 0, -1.4215567, 1.274267, -14.389921)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_008" index="0" unique_id=1000818199]
@@ -6152,7 +6181,7 @@ transform = Transform3D(6.9651465, 0.0024612872, 8.404962e-11, -1.0135623e-10, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_008/StaticBody3D" index="0" unique_id=186988330]
 shape = SubResource("ConcavePolygonShape3D_wqsk7")
 
-[node name="Light_switch_009" parent="." index="877" unique_id=856777870 node_paths=PackedStringArray("target_lights")]
+[node name="Light_switch_009" parent="." index="878" unique_id=856777870 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(0.0024628835, -6.965744, -0.0032224404, 1.8910346e-07, -0.0038857704, 5.7766404, 6.345258, 0.00270393, 1.3772585e-06, 0.44259286, 5.2680845, -7.1668553)
 script = ExtResource("3_vhg04")
 target_lights = [NodePath("SpotLight3D"), NodePath("SpotLight3D2")]
@@ -6181,7 +6210,7 @@ transform = Transform3D(-0.0015233182, -0.12803589, 0.08252157, 0.1467423, -0.02
 visible = false
 spot_angle = 73.51
 
-[node name="Light_switch_010" parent="." index="878" unique_id=1412116098]
+[node name="Light_switch_010" parent="." index="879" unique_id=1412116098]
 transform = Transform3D(-6.9651465, -0.0024612877, 1.6809924e-10, 2.0271246e-10, 0, 5.775846, 0.0027012206, -6.346474, 0, 1.7313693, 5.2680845, -8.936307)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_010" index="0" unique_id=656591265]
@@ -6189,7 +6218,7 @@ transform = Transform3D(-6.9651465, -0.0024612877, 1.6809924e-10, 2.0271246e-10,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_010/StaticBody3D" index="0" unique_id=2015474070]
 shape = SubResource("ConcavePolygonShape3D_s5h7t")
 
-[node name="Light_switch_011" parent="." index="879" unique_id=2033056543 node_paths=PackedStringArray("target_lights")]
+[node name="Light_switch_011" parent="." index="880" unique_id=2033056543 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(-6.9651465, -0.0024612877, 1.6809924e-10, 2.0271246e-10, 0, 5.775846, 0.0027012206, -6.346474, 0, 4.736025, 5.2680845, -9.101054)
 script = ExtResource("3_vhg04")
 target_lights = [NodePath("SpotLight3D")]
@@ -6213,7 +6242,7 @@ light_energy = 1.5
 spot_range = 6.0
 spot_angle = 84.21
 
-[node name="Light_switch_012" parent="." index="880" unique_id=1579801130]
+[node name="Light_switch_012" parent="." index="881" unique_id=1579801130]
 transform = Transform3D(-0.002459858, 6.9659038, 0.0003284356, 0, -0.00039527062, 5.7759275, -6.3452606, -0.0027008774, 0, 6.708173, 5.2680845, -5.043457)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_012" index="0" unique_id=1879374824]
@@ -6221,7 +6250,7 @@ transform = Transform3D(-0.002459858, 6.9659038, 0.0003284356, 0, -0.00039527062
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_012/StaticBody3D" index="0" unique_id=2040151154]
 shape = SubResource("ConcavePolygonShape3D_udo08")
 
-[node name="Light_switch_013" parent="." index="881" unique_id=377461020 node_paths=PackedStringArray("target_lights")]
+[node name="Light_switch_013" parent="." index="882" unique_id=377461020 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(6.9651465, 0.002459774, 0, 0, 0, 5.775846, -0.00269956, 6.346473, 0, 4.854632, 5.2680845, -4.057218)
 script = ExtResource("3_vhg04")
 target_lights = [NodePath("SpotLight3D")]
@@ -6245,7 +6274,7 @@ light_energy = 1.5
 spot_range = 6.0
 spot_angle = 84.21
 
-[node name="Light_switch_014" parent="." index="882" unique_id=1291850185 node_paths=PackedStringArray("target_lights")]
+[node name="Light_switch_014" parent="." index="883" unique_id=1291850185 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(0.0024575891, -6.96589, -0.00055961974, 0, -0.0006751143, 5.775984, 6.3452606, 0.002697966, 0, 6.5201616, 5.2680845, -5.001356)
 script = ExtResource("3_vhg04")
 target_lights = [NodePath("SpotLight3D")]
@@ -6269,13 +6298,13 @@ light_energy = 2.109
 spot_range = 19.458
 spot_angle = 92.23
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." index="883" unique_id=620139925 groups=["House"]]
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="884" unique_id=620139925 groups=["House"]]
 transform = Transform3D(0.83621913, 0.54839534, 0, -0.54839534, 0.83621913, 0, 0, 0, 1, 3.5713449, 1.0068066, -6.431075)
 visible = false
 use_collision = true
 size = Vector3(3.3081818, 0.5051575, 1.521698)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="." index="884" unique_id=1407379306 groups=["House"]]
+[node name="CSGBox3D2" type="CSGBox3D" parent="." index="885" unique_id=1407379306 groups=["House"]]
 transform = Transform3D(-0.85464007, -0.5192208, -8.6972136e-08, -0.5192208, 0.85464007, 8.864982e-09, 6.9727e-08, 5.273412e-08, -1, 3.5398371, 2.7157109, -4.9984922)
 visible = false
 use_collision = true
@@ -6293,8 +6322,6 @@ size = Vector3(3.2595215, 0.5369873, 1.5270996)
 [connection signal="body_exited" from="Door_002/InteractArea" to="Door_002" method="_on_interact_area_body_exited"]
 [connection signal="body_entered" from="Door_003/InteractArea" to="Door_003" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="Door_003/InteractArea" to="Door_003" method="_on_interact_area_body_exited"]
-[connection signal="body_entered" from="Door_004/InteractArea" to="Door_004" method="_on_interact_area_body_entered"]
-[connection signal="body_exited" from="Door_004/InteractArea" to="Door_004" method="_on_interact_area_body_exited"]
 [connection signal="body_entered" from="Door_005/InteractArea" to="Door_005" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="Door_005/InteractArea" to="Door_005" method="_on_interact_area_body_exited"]
 [connection signal="body_entered" from="Door_006/InteractArea" to="Door_006" method="_on_interact_area_body_entered"]
