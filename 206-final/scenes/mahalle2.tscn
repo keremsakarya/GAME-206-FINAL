@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bxx1e8513nqkc" path="res://assets/House/House/Models/House.fbx" id="1_7xhfd"]
 [ext_resource type="Script" uid="uid://ca0edm617731n" path="res://scripts/door.gd" id="2_a6v0c"]
+[ext_resource type="Script" uid="uid://co26lg2bau0d7" path="res://scripts/light_switch.gd" id="3_vhg04"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7xhfd"]
 data = PackedVector3Array(-0.0053, 0.0025, -0.0023999999, -0.0053, 0.0025, 0.0026, -0.0053, -0.0021, 0.0026, -0.0053, -0.0021, 0.0026, -0.0053, -0.0029, -0.0023999999, -0.0053, 0.0025, -0.0023999999, 0.0053, 0.0025, 0.0026, -0.0053, 0.0025, 0.0026, -0.0053, 0.0025, -0.0023999999, -0.0053, 0.0025, -0.0023999999, 0.0053, 0.0025, -0.0023999999, 0.0053, 0.0025, 0.0026, 0.0053, -0.0021, 0.0026, 0.0053, 0.0025, 0.0026, 0.0053, 0.0025, -0.0023999999, 0.0053, 0.0025, -0.0023999999, 0.0053, -0.0029, -0.0023999999, 0.0053, -0.0021, 0.0026, -0.0053, -0.0021, 0.0026, 0.0053, -0.0021, 0.0026, 0.0053, -0.0029, -0.0023999999, 0.0053, -0.0029, -0.0023999999, -0.0053, -0.0029, -0.0023999999, -0.0053, -0.0021, 0.0026, 0.0053, -0.0029, -0.0023999999, 0.0053, 0.0025, -0.0023999999, -0.0053, 0.0025, -0.0023999999, -0.0053, 0.0025, -0.0023999999, -0.0053, -0.0029, -0.0023999999, 0.0053, -0.0029, -0.0023999999, -0.0053, -0.0021, 0.0026, -0.0053, 0.0025, 0.0026, 0.0053, 0.0025, 0.0026, 0.0053, 0.0025, 0.0026, 0.0053, -0.0021, 0.0026, -0.0053, -0.0021, 0.0026)
@@ -427,7 +428,7 @@ data = PackedVector3Array(0.0021, 0.0162, 0.0018, -0.0058999998, 0.0162, -0.0064
 data = PackedVector3Array(-0.0088, 0.0004, 0.012999999, -0.0088, 0.0004, -0.012999999, 0.0001, 0.0004, -0.012999999, 0.0001, 0.0004, -0.012999999, 0.0001, 0.0004, 0.012999999, -0.0088, 0.0004, 0.012999999, -0.0088, -0.0004, 0.012999999, 0.0001, -0.0004, 0.012999999, 0.0001, -0.0004, -0.012999999, 0.0001, -0.0004, -0.012999999, -0.0088, -0.0004, -0.012999999, -0.0088, -0.0004, 0.012999999, -0.0088, -0.0004, 0.012999999, -0.0088, 0.0004, 0.012999999, 0.0001, 0.0004, 0.012999999, 0.0001, 0.0004, 0.012999999, 0.0001, -0.0004, 0.012999999, -0.0088, -0.0004, 0.012999999, 0.0001, -0.0004, 0.012999999, 0.0001, 0.0004, 0.012999999, 0.0001, 0.0004, -0.012999999, 0.0001, 0.0004, -0.012999999, 0.0001, -0.0004, -0.012999999, 0.0001, -0.0004, 0.012999999, 0.0001, -0.0004, -0.012999999, 0.0001, 0.0004, -0.012999999, -0.0088, 0.0004, -0.012999999, -0.0088, 0.0004, -0.012999999, -0.0088, -0.0004, -0.012999999, 0.0001, -0.0004, -0.012999999, -0.0088, -0.0004, -0.012999999, -0.0088, 0.0004, -0.012999999, -0.0088, 0.0004, 0.012999999, -0.0088, 0.0004, 0.012999999, -0.0088, -0.0004, 0.012999999, -0.0088, -0.0004, -0.012999999)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vhg04"]
-size = Vector3(0.009780884, 0.015640259, 0.022018433)
+size = Vector3(0.008796692, 0.009342194, 0.022018433)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hnfnd"]
 data = PackedVector3Array(0.0001, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, 0.0004, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, -0.00029999999, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, -0.00029999999, 0.012499999, -0.0093, 0.0004, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, -0.00029999999, 0.012499999, 0.0001, 0.0004, 0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999, -0.0093, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, -0.00029999999, -0.012499999, 0.0001, 0.0004, -0.012499999, -0.0093, 0.0004, -0.012499999)
@@ -1175,6 +1176,9 @@ data = PackedVector3Array(0.00049999997, -0.00029999999, 0.0001, 0.00049999997, 
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hplbm"]
 data = PackedVector3Array(-0.01, 0.0007, 0.0174, -0.01, -0.003, 0.0174, -0.01, -0.003, -0.0174, -0.01, -0.003, -0.0174, -0.01, 0.0007, -0.0174, -0.01, 0.0007, 0.0174, 0.01, 0.0007, 0.0174, -0.01, 0.0007, 0.0174, -0.01, 0.0007, -0.0174, -0.01, 0.0007, -0.0174, 0.01, 0.0007, -0.0174, 0.01, 0.0007, 0.0174, 0.01, -0.003, 0.0174, 0.01, 0.0007, 0.0174, 0.01, 0.0007, -0.0174, 0.01, 0.0007, -0.0174, 0.01, -0.003, -0.0174, 0.01, -0.003, 0.0174, 0.01, -0.003, -0.0174, 0.01, 0.0007, -0.0174, -0.01, 0.0007, -0.0174, -0.01, 0.0007, -0.0174, -0.01, -0.003, -0.0174, 0.01, -0.003, -0.0174, -0.01, -0.003, 0.0174, -0.01, 0.0007, 0.0174, 0.01, 0.0007, 0.0174, 0.01, 0.0007, 0.0174, 0.01, -0.003, 0.0174, -0.01, -0.003, 0.0174)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pviol"]
+size = Vector3(0.046414748, 0.03403139, 0.13397217)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5t5xi"]
 data = PackedVector3Array(-0.01, 0.0007, 0.0174, -0.01, -0.003, 0.0174, -0.01, -0.003, -0.0174, -0.01, -0.003, -0.0174, -0.01, 0.0007, -0.0174, -0.01, 0.0007, 0.0174, 0.01, 0.0007, 0.0174, -0.01, 0.0007, 0.0174, -0.01, 0.0007, -0.0174, -0.01, 0.0007, -0.0174, 0.01, 0.0007, -0.0174, 0.01, 0.0007, 0.0174, 0.01, -0.003, 0.0174, 0.01, 0.0007, 0.0174, 0.01, 0.0007, -0.0174, 0.01, 0.0007, -0.0174, 0.01, -0.003, -0.0174, 0.01, -0.003, 0.0174, 0.01, -0.003, -0.0174, 0.01, 0.0007, -0.0174, -0.01, 0.0007, -0.0174, -0.01, 0.0007, -0.0174, -0.01, -0.003, -0.0174, 0.01, -0.003, -0.0174, -0.01, -0.003, 0.0174, -0.01, 0.0007, 0.0174, 0.01, 0.0007, 0.0174, 0.01, 0.0007, 0.0174, 0.01, -0.003, 0.0174, -0.01, -0.003, 0.0174)
@@ -3158,7 +3162,7 @@ transform = Transform3D(126.06978, -3.2643575e-12, -9.13896e-06, 1.1021371e-05, 
 shape = SubResource("ConcavePolygonShape3D_lrupl")
 
 [node name="Chair_11" parent="." index="540" unique_id=139866205]
-transform = Transform3D(-132.16061, 4.6886795e-05, -3.1146802e-12, 0, 7.176599e-06, 109.588066, 5.1465253e-05, 120.40335, -1.30639155e-05, 4.6442623, 4.2587986, -2.9631977)
+transform = Transform3D(-116.261505, -57.255615, 6.212308e-06, 0, 7.1765985e-06, 109.58806, -62.84656, 105.91865, -1.1492307e-05, 4.741439, 4.2587986, -2.7475069)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Chair_11" index="0" unique_id=716257023]
 
@@ -3796,7 +3800,7 @@ shape = SubResource("ConcavePolygonShape3D_hnfnd")
 transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door_001/InteractArea" index="0" unique_id=1100750068]
-transform = Transform3D(0.99998134, 0, 0, 0, 1.0000001, -1.9895197e-13, 0, -1.4210855e-14, 1.0001175, -0.005798339, 0.0011444688, -0.0025974344)
+transform = Transform3D(0.9999701, 0, 0, 0, 1.0000001, -1.9895197e-13, 0, -1.4210855e-14, 1.0001175, -0.005306229, -0.0020045452, -0.0025974438)
 shape = SubResource("BoxShape3D_vhg04")
 
 [node name="closet_door" parent="." index="618" unique_id=442509694]
@@ -5841,13 +5845,57 @@ visible = false
 [node name="Garbage_bags_005" parent="." index="868" unique_id=2064998687]
 visible = false
 
-[node name="Light_switch" parent="." index="869" unique_id=1965233179]
+[node name="Light_switch" parent="." index="869" unique_id=1965233179 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(6.965534, 0, 0, 0, -7.564863e-07, 5.7758455, 0, -6.3458667, -6.885345e-07, 2.6340752, 1.5961338, -0.9269295)
+script = ExtResource("3_vhg04")
+target_lights = [NodePath("SpotLight3D"), NodePath("SpotLight3D2"), NodePath("SpotLight3D3"), NodePath("SpotLight3D4")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch" index="0" unique_id=1430414863]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch/StaticBody3D" index="0" unique_id=444309693]
 shape = SubResource("ConcavePolygonShape3D_hplbm")
+
+[node name="InteractArea" type="Area3D" parent="Light_switch" index="1" unique_id=1698687317]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch/InteractArea" index="0" unique_id=2055064621]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1, -0.00055909157, 0.03561777, -0.028198168)
+shape = SubResource("BoxShape3D_pviol")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light_switch" index="2" unique_id=2042310023]
+transform = Transform3D(0.14356402, 0, 0, 0, 0.1575829, 0, 0, 0, 0.17313483, -0.114201486, 0.17958023, 0.30366576)
+visible = false
+light_color = Color(0.9536013, 0.7405192, 0, 1)
+light_energy = 1.5
+spot_range = 7.0
+spot_attenuation = 0.0
+spot_angle = 96.69
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Light_switch" index="3" unique_id=1453963364]
+transform = Transform3D(0.14356402, 0, 0, 0, 0.1575829, 0, 0, 0, 0.17313483, 0.79679084, 0.0682673, 0.30366576)
+visible = false
+light_color = Color(0.9536013, 0.7405192, 0, 1)
+light_energy = 1.5
+spot_range = 7.0
+spot_attenuation = 0.0
+spot_angle = 96.69
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Light_switch" index="4" unique_id=350018870]
+transform = Transform3D(0.14356402, 0, 0, 0, 0.1575829, 0, 0, 0, 0.17313483, 0.5019177, 0.8797612, 0.30366588)
+visible = false
+light_color = Color(0.9536013, 0.7405192, 0, 1)
+light_energy = 1.5
+spot_range = 7.0
+spot_attenuation = 0.0
+spot_angle = 96.69
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Light_switch" index="5" unique_id=179519342]
+transform = Transform3D(0.14356402, 0, 0, 0, 0.1575829, 0, 0, 0, 0.17313483, 0.7717893, 1.5493683, 0.303666)
+visible = false
+light_color = Color(0.9536013, 0.7405192, 0, 1)
+light_energy = 1.5
+spot_range = 7.0
+spot_attenuation = 0.0
+spot_angle = 96.69
 
 [node name="Light_switch_001" parent="." index="870" unique_id=920572985]
 transform = Transform3D(6.965534, 0, 0, 0, -7.564863e-07, 5.7758455, 0, -6.3458667, -6.885345e-07, 2.4375556, 1.5961338, -0.9269295)
@@ -5881,13 +5929,31 @@ transform = Transform3D(-6.9659214, 0.0024608162, -8.404962e-11, -1.01367505e-10
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_005/StaticBody3D" index="0" unique_id=1426914700]
 shape = SubResource("ConcavePolygonShape3D_pkf3v")
 
-[node name="Light_switch_006" parent="." index="874" unique_id=1475270270]
+[node name="Light_switch_006" parent="." index="874" unique_id=1475270270 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(-6.9651465, -0.0024612877, 1.6809924e-10, 2.0271246e-10, 0, 5.775846, 0.0027012206, -6.346474, 0, 1.9496839, 1.7167975, -9.3974085)
+script = ExtResource("3_vhg04")
+target_lights = [NodePath("SpotLight3D"), NodePath("SpotLight3D2")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_006" index="0" unique_id=1197818893]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_006/StaticBody3D" index="0" unique_id=1449490412]
 shape = SubResource("ConcavePolygonShape3D_kt4a7")
+
+[node name="InteractArea" type="Area3D" parent="Light_switch_006" index="1" unique_id=1158568901]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_006/InteractArea" index="0" unique_id=895607262]
+transform = Transform3D(1.0000001, 2.910383e-11, 0, 8.352799e-09, 0.9999998, 0, 1.5538115e-17, 1.414545e-19, 1, 0.0059797466, 0.018388271, -0.02899164)
+shape = SubResource("BoxShape3D_pviol")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light_switch_006" index="2" unique_id=1576820027]
+transform = Transform3D(0.065337084, -0.12761785, -0.037110247, 0.101482235, 0.08225243, -0.080237366, 0.096268274, 4.548933e-05, 0.14390303, -0.1406613, 0.33358407, 0.27724215)
+visible = false
+spot_angle = 73.51
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Light_switch_006" index="3" unique_id=1288692804]
+transform = Transform3D(0.10103926, 0.056547914, -0.09334548, -0.03965333, 0.14624989, 0.025040299, 0.09976786, 0.006897134, 0.14133108, -0.1406613, 0.33358407, 0.27724215)
+visible = false
+spot_angle = 73.51
 
 [node name="Light_switch_007" parent="." index="875" unique_id=2019355368]
 transform = Transform3D(0.0024628835, -6.965744, -0.0032224404, 1.8910346e-07, -0.0038857704, 5.7766404, 6.345258, 0.00270393, 1.3772585e-06, 0.3377266, 1.3391787, -7.335333)
@@ -5905,13 +5971,34 @@ transform = Transform3D(6.9651465, 0.0024612872, 8.404962e-11, -1.0135623e-10, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_008/StaticBody3D" index="0" unique_id=186988330]
 shape = SubResource("ConcavePolygonShape3D_wqsk7")
 
-[node name="Light_switch_009" parent="." index="877" unique_id=856777870]
+[node name="Light_switch_009" parent="." index="877" unique_id=856777870 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(0.0024628835, -6.965744, -0.0032224404, 1.8910346e-07, -0.0038857704, 5.7766404, 6.345258, 0.00270393, 1.3772585e-06, 0.44259286, 5.2680845, -7.1668553)
+script = ExtResource("3_vhg04")
+target_lights = [NodePath("SpotLight3D"), NodePath("SpotLight3D2")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_009" index="0" unique_id=35699814]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_009/StaticBody3D" index="0" unique_id=256608899]
 shape = SubResource("ConcavePolygonShape3D_i18ao")
+
+[node name="InteractArea" type="Area3D" parent="Light_switch_009" index="1" unique_id=596835923]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_009/InteractArea" index="0" unique_id=1406190299]
+transform = Transform3D(0.9999927, 8.731149e-11, 1.8900437e-12, 3.2887328e-09, 0.9999911, -8.450679e-09, -3.0695446e-12, -4.103552e-09, 0.9999999, -0.0046961308, 0.016099658, -0.033294678)
+shape = SubResource("BoxShape3D_pviol")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light_switch_009" index="2" unique_id=1203662207]
+transform = Transform3D(0.15759799, -4.598405e-09, -8.147476e-09, -8.367351e-11, 0.14355963, 1.040446e-11, -1.0658141e-14, -3.1109545e-11, 0.17311099, 0.11834335, 0.39887214, 0.2701618)
+visible = false
+light_color = Color(0.846841, 0.6527072, 0, 1)
+light_energy = 1.5
+spot_range = 6.0
+spot_angle = 84.21
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Light_switch_009" index="3" unique_id=434509316]
+transform = Transform3D(-0.0015233182, -0.12803589, 0.08252157, 0.1467423, -0.020922713, -0.013139787, 0.028405797, 0.09170197, 0.14405467, -0.37852192, -0.0929237, 0.2769552)
+visible = false
+spot_angle = 73.51
 
 [node name="Light_switch_010" parent="." index="878" unique_id=1412116098]
 transform = Transform3D(-6.9651465, -0.0024612877, 1.6809924e-10, 2.0271246e-10, 0, 5.775846, 0.0027012206, -6.346474, 0, 1.7313693, 5.2680845, -8.936307)
@@ -5921,13 +6008,29 @@ transform = Transform3D(-6.9651465, -0.0024612877, 1.6809924e-10, 2.0271246e-10,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_010/StaticBody3D" index="0" unique_id=2015474070]
 shape = SubResource("ConcavePolygonShape3D_s5h7t")
 
-[node name="Light_switch_011" parent="." index="879" unique_id=2033056543]
+[node name="Light_switch_011" parent="." index="879" unique_id=2033056543 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(-6.9651465, -0.0024612877, 1.6809924e-10, 2.0271246e-10, 0, 5.775846, 0.0027012206, -6.346474, 0, 4.736025, 5.2680845, -9.101054)
+script = ExtResource("3_vhg04")
+target_lights = [NodePath("SpotLight3D")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_011" index="0" unique_id=475533936]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_011/StaticBody3D" index="0" unique_id=150064756]
 shape = SubResource("ConcavePolygonShape3D_o5n0o")
+
+[node name="InteractArea" type="Area3D" parent="Light_switch_011" index="1" unique_id=785756113]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_011/InteractArea" index="0" unique_id=967346224]
+transform = Transform3D(0.9999927, 8.731149e-11, 3.4816768e-13, 3.1723175e-09, 0.9999998, 1.215085e-16, 4.551619e-13, -1.4012782e-09, 0.99999994, 0.0140885115, 0.031040072, -0.033294618)
+shape = SubResource("BoxShape3D_pviol")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light_switch_011" index="2" unique_id=169560478]
+transform = Transform3D(0.14357197, 7.6397555e-11, -1.0621435e-18, -8.731149e-11, 0.15756778, 1.7784732e-15, 1.844215e-18, 4.2351647e-22, 0.17313482, -0.16048527, 0.44800162, 0.27019513)
+visible = false
+light_color = Color(0.846841, 0.6527072, 0, 1)
+light_energy = 1.5
+spot_range = 6.0
+spot_angle = 84.21
 
 [node name="Light_switch_012" parent="." index="880" unique_id=1579801130]
 transform = Transform3D(-0.002459858, 6.9659038, 0.0003284356, 0, -0.00039527062, 5.7759275, -6.3452606, -0.0027008774, 0, 6.708173, 5.2680845, -5.043457)
@@ -5937,21 +6040,53 @@ transform = Transform3D(-0.002459858, 6.9659038, 0.0003284356, 0, -0.00039527062
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_012/StaticBody3D" index="0" unique_id=2040151154]
 shape = SubResource("ConcavePolygonShape3D_udo08")
 
-[node name="Light_switch_013" parent="." index="881" unique_id=377461020]
+[node name="Light_switch_013" parent="." index="881" unique_id=377461020 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(6.9651465, 0.002459774, 0, 0, 0, 5.775846, -0.00269956, 6.346473, 0, 4.854632, 5.2680845, -4.057218)
+script = ExtResource("3_vhg04")
+target_lights = [NodePath("SpotLight3D")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_013" index="0" unique_id=662364283]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_013/StaticBody3D" index="0" unique_id=2051231112]
 shape = SubResource("ConcavePolygonShape3D_bpdg6")
 
-[node name="Light_switch_014" parent="." index="882" unique_id=1291850185]
+[node name="InteractArea" type="Area3D" parent="Light_switch_013" index="1" unique_id=891537093]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_013/InteractArea" index="0" unique_id=1519605720]
+transform = Transform3D(0.9999927, 1.1641532e-10, 3.4816377e-13, 2.8521754e-09, 0.9999998, 1.2157771e-16, 4.547473e-13, -1.4012781e-09, 0.9999999, -0.0147560835, 0.031039894, -0.033294618)
+shape = SubResource("BoxShape3D_pviol")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light_switch_013" index="2" unique_id=84457291]
+transform = Transform3D(0.14357197, 6.91216e-11, 0, -8.731149e-11, 0.15756781, 0, 0, 0, 0.1731348, 0.15994781, 0.44642413, 0.27019513)
+visible = false
+light_color = Color(0.846841, 0.6527072, 0, 1)
+light_energy = 1.5
+spot_range = 6.0
+spot_angle = 84.21
+
+[node name="Light_switch_014" parent="." index="882" unique_id=1291850185 node_paths=PackedStringArray("target_lights")]
 transform = Transform3D(0.0024575891, -6.96589, -0.00055961974, 0, -0.0006751143, 5.775984, 6.3452606, 0.002697966, 0, 6.5201616, 5.2680845, -5.001356)
+script = ExtResource("3_vhg04")
+target_lights = [NodePath("SpotLight3D")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Light_switch_014" index="0" unique_id=1768724490]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_014/StaticBody3D" index="0" unique_id=1092426188]
 shape = SubResource("ConcavePolygonShape3D_b2q2b")
+
+[node name="InteractArea" type="Area3D" parent="Light_switch_014" index="1" unique_id=1810260855]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch_014/InteractArea" index="0" unique_id=136611957]
+transform = Transform3D(0.9999927, 8.731149e-11, 3.4816402e-13, 7.014023e-09, 0.9999998, 1.2158003e-16, 4.5474735e-13, -1.4012781e-09, 1, -0.011295676, 0.025764644, -0.0289917)
+shape = SubResource("BoxShape3D_pviol")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light_switch_014" index="2" unique_id=171918397]
+transform = Transform3D(0.15759791, 5.0931703e-11, 5.913943e-09, -5.4569682e-11, 0.14355665, 4.296721e-09, 3.1086245e-15, -2.1129796e-11, 0.17313068, -0.14036638, 0.4426269, 0.27227938)
+visible = false
+light_color = Color(0.9031508, 0.7397539, 0, 1)
+light_energy = 2.109
+spot_range = 19.458
+spot_angle = 92.23
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="883" unique_id=620139925 groups=["House"]]
 transform = Transform3D(0.8239581, 0.5666507, 0, -0.5666507, 0.8239581, 0, 0, 0, 1, 3.5313675, 1.0231116, -6.60382)
@@ -5981,3 +6116,15 @@ size = Vector3(2.8295898, 0.5369873, 1.5270996)
 [connection signal="body_exited" from="Door_006/InteractArea" to="Door_006" method="_on_interact_area_body_exited"]
 [connection signal="body_entered" from="Door_008/InteractArea" to="Door_008" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="Door_008/InteractArea" to="Door_008" method="_on_interact_area_body_exited"]
+[connection signal="body_entered" from="Light_switch/InteractArea" to="Light_switch" method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Light_switch/InteractArea" to="Light_switch" method="_on_interact_area_body_exited"]
+[connection signal="body_entered" from="Light_switch_006/InteractArea" to="Light_switch_006" method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Light_switch_006/InteractArea" to="Light_switch_006" method="_on_interact_area_body_exited"]
+[connection signal="body_entered" from="Light_switch_009/InteractArea" to="Light_switch_009" method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Light_switch_009/InteractArea" to="Light_switch_009" method="_on_interact_area_body_exited"]
+[connection signal="body_entered" from="Light_switch_011/InteractArea" to="Light_switch_011" method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Light_switch_011/InteractArea" to="Light_switch_011" method="_on_interact_area_body_exited"]
+[connection signal="body_entered" from="Light_switch_013/InteractArea" to="Light_switch_013" method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Light_switch_013/InteractArea" to="Light_switch_013" method="_on_interact_area_body_exited"]
+[connection signal="body_entered" from="Light_switch_014/InteractArea" to="Light_switch_014" method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Light_switch_014/InteractArea" to="Light_switch_014" method="_on_interact_area_body_exited"]
