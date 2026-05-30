@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjf2c6rxqo7ex"
+path="res://.godot/imported/hand washing.mp3-84d5052165cf05f73a74e13dbe9afd7f.mp3str"
+
+[deps]
+
+source_file="res://sounds/hand washing.mp3"
+dest_files=["res://.godot/imported/hand washing.mp3-84d5052165cf05f73a74e13dbe9afd7f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
