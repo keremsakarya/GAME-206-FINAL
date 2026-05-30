@@ -905,7 +905,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_5vjxp")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v17sk")
 text = "Continue"
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=330097324]
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=330097324 groups=["Sidewalk"]]
 transform = Transform3D(1, 0, 0, 0, 0.9129197, -0.4081393, 0, 0.4081393, 0.9129197, 1.6820893, -0.06715116, 3.303669)
 visible = false
 use_collision = true
