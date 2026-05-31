@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b35lupl2eor2o" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="AudioStream" uid="uid://up60vnixtq0e" path="res://sounds/woodwalking.wav" id="2_fjrip"]
 [ext_resource type="AudioStream" uid="uid://caaoyot1cr64o" path="res://sounds/Landingsound.wav" id="3_d2wvv"]
-[ext_resource type="Texture2D" uid="uid://dpffsn5qlu5ic" path="res://images/nuri.png" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://cdhkv0luia7h3" path="res://images/menu resim.png" id="3_dqkch"]
 [ext_resource type="Shader" uid="uid://w56ev18f83lq" path="res://shaders/fears-to-fathom.gdshader" id="3_qlg0r"]
 [ext_resource type="Script" uid="uid://c5vsa531ve3b" path="res://scripts/Flashlight.gd" id="3_tuyoq"]
 [ext_resource type="AudioStream" uid="uid://gnrrtebo08sg" path="res://sounds/sidwalkwalking-o1vdsso4_BXNqllox.wav" id="4_d2wvv"]

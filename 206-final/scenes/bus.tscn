@@ -7,7 +7,7 @@
 [ext_resource type="VideoStream" uid="uid://b1iueuudobqs3" path="res://videos/bus-intro.ogv" id="4_6x00d"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="5_uur5s"]
 [ext_resource type="PackedScene" uid="uid://c820p75ltdwg5" path="res://assets/hooded+figure+3d+model/tripo_convert_3052095d-77c5-4e57-9f0e-501304fba070.fbx" id="7_uqllh"]
-[ext_resource type="Script" uid="uid://cuvqg8g5dwjek" path="res://scripts/stalkerscript.gd" id="8_uqllh"]
+[ext_resource type="Script" uid="uid://dvj0vq62d1qhu" path="res://scripts/stalkerbusscene.gd" id="8_ymqks"]
 [ext_resource type="Texture2D" uid="uid://c2jkujscy2q3c" path="res://assets/smilerface.jpg" id="9_83o2r"]
 [ext_resource type="Script" uid="uid://c4k2k5gd31hcn" path="res://scripts/stalkerflickerlight.gd" id="9_ymqks"]
 
@@ -206,7 +206,7 @@ text = "Continue"
 
 [node name="Stalker" parent="." unique_id=1303804270 instance=ExtResource("7_uqllh")]
 transform = Transform3D(3.18, 0, 0, 0, 3.18, 0, 0, 0, 3.18, -73.57957, 5.026092, -35.469334)
-script = ExtResource("8_uqllh")
+script = ExtResource("8_ymqks")
 
 [node name="Area3D" type="Area3D" parent="Stalker" unique_id=863065478]
 
