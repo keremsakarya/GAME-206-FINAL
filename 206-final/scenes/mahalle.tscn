@@ -10,6 +10,10 @@
 [ext_resource type="Script" uid="uid://bw322jxuij70q" path="res://scripts/intro_cinematic.gd" id="7_yg0c1"]
 [ext_resource type="VideoStream" uid="uid://bvmwibfyt0sgf" path="res://videos/mahalle-intr.ogv" id="8_rfy44"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="9_1qokc"]
+[ext_resource type="PackedScene" uid="uid://c820p75ltdwg5" path="res://assets/hooded+figure+3d+model/tripo_convert_3052095d-77c5-4e57-9f0e-501304fba070.fbx" id="11_v17sk"]
+[ext_resource type="Script" uid="uid://cuvqg8g5dwjek" path="res://scripts/stalkerscript.gd" id="12_h6hwy"]
+[ext_resource type="Script" uid="uid://c4k2k5gd31hcn" path="res://scripts/stalkerflickerlight.gd" id="13_qv8fo"]
+[ext_resource type="Texture2D" uid="uid://c2jkujscy2q3c" path="res://assets/smilerface.jpg" id="14_wthoi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -43,6 +47,14 @@ size = Vector3(232.34761, 51.89209, 265.7973)
 bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v17sk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uwkn7"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+albedo_texture = ExtResource("14_wthoi")
+uv1_scale = Vector3(-2.265, -2.265, -2.265)
+uv1_offset = Vector3(0.09, 0.4, -0.015)
 
 [node name="Mahalle" type="Node3D" unique_id=434452024]
 script = ExtResource("1_rfy44")
@@ -910,6 +922,36 @@ transform = Transform3D(1, 0, 0, 0, 0.9129197, -0.4081393, 0, 0.4081393, 0.91291
 visible = false
 use_collision = true
 size = Vector3(2.3447266, 0.33544922, 1)
+
+[node name="Stalker" parent="." unique_id=1303804270 instance=ExtResource("11_v17sk")]
+transform = Transform3D(-2.9882226, 0, -1.0876243, 0, 3.18, 0, 1.0876243, 0, -2.9882226, 1.3498319, 5.3345113, -8.157557)
+script = ExtResource("12_h6hwy")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Stalker" unique_id=551570713]
+transform = Transform3D(0.17103052, 5.820766e-11, 0, 0, -0.15153915, 0.0024625403, -7.450581e-09, -0.0026028135, -0.1433723, 0, 0.38654208, 0)
+material = SubResource("StandardMaterial3D_uwkn7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Stalker" unique_id=1622817262]
+transform = Transform3D(0.3144654, 0, 1.4901161e-08, 0, 0.31446537, 0, -1.4901161e-08, 0, 0.3144654, 0, -0.054125547, 0)
+light_color = Color(0.44313726, 0, 0, 1)
+light_energy = 2.718
+light_volumetric_fog_energy = 4.841
+omni_range = 1.686
+script = ExtResource("13_qv8fo")
+
+[node name="JumpscareLayer" type="CanvasLayer" parent="Stalker" unique_id=198202469]
+layer = 100
+visible = false
+
+[node name="ScareFace" type="TextureRect" parent="Stalker/JumpscareLayer" unique_id=1650058703]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_wthoi")
+expand_mode = 1
+stretch_mode = 6
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]

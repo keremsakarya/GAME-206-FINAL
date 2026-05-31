@@ -1,5 +1,7 @@
 extends Area3D
 
+var stalker: Node3D 
+
 @onready var ui_label = $CanvasLayer/Label
 @onready var screen_darkener = $CanvasLayer/ColorRect
 @onready var sleep_audio = $"../SleepAudio"
@@ -13,6 +15,13 @@ func _ready():
 	ui_label.hide()
 	screen_darkener.hide()
 	screen_darkener.modulate.a = 0.0
+	
+	# --- AUTO-FIND THE STALKER ---
+	# We use call_deferred to make sure the Stalker has finished loading into the scene first
+	call_deferred("_find_stalker")
+
+func _find_stalker():
+	stalker = get_tree().get_first_node_in_group("Stalker")
 
 func _unhandled_input(event):
 	if is_player_near and not is_sleeping and event is InputEventKey:
@@ -46,15 +55,17 @@ func start_sleeping():
 	if player_node and "can_move" in player_node:
 		player_node.can_move = true
 		
+	# --- THE STALKER APPEARS ---
+	if stalker:
+		stalker.activate()
+		
 	queue_free()
 	
-
 func _on_body_entered(body: Node3D) -> void:
 	if body.name == "Player" and not is_sleeping:
 		player_node = body
 		is_player_near = true
 		ui_label.show()
-
 
 func _on_body_exited(body: Node3D) -> void:
 	if body.name == "Player" and not is_sleeping:

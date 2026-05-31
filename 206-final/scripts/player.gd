@@ -27,9 +27,8 @@ var can_exit = false
 
 # --- AUDIO VARIABLES ---
 @onready var footstep_audio = $FootstepAudio
-@onready var landing_audio = $LandingAudio # (House Landing)
+@onready var landing_audio = $LandingAudio 
 
-# THE 3 NEW LANDING NODES (Assassination Fix):
 @onready var grass_landing = $GrassLanding
 @onready var carpet_landing = $CarpetLanding
 @onready var sidewalk_landing = $SidewalkLanding
@@ -39,16 +38,26 @@ var can_exit = false
 @onready var sidewalk_audio = $SidewalkAudio 
 @onready var floor_detector = $FloorDetector
 var step_timer: float = 0.0
-# -----------------------
+
+# --- JUMPSCARE VARIABLES ---
+@onready var scream_audio = $ScreamAudio
+@onready var heartbeat_audio = $HeartbeatAudio
+@onready var breath_audio = $BreathAudio
+
+var shake_intensity: float = 0.0
+var shake_duration: float = 0.0
 
 func _ready() -> void:
+	# --- AUTO-CONNECT GROUP ---
+	add_to_group("Player")
+	# --------------------------
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pistol_model.visible = false
 	pickup_ui.hide()
 	
 	camera_base_y = camera.position.y
 
-# ----------- Fare Kontrolü (Etrafa Bakma) ----------
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -63,25 +72,20 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
-# ----------- Fizik - Hareket -----------
 func _physics_process(delta):
 	if not can_move: return
 	
-	# Yerçekimi
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	
-	# Zıplama
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
-	# Sprint
 	if Input.is_action_pressed("sprint"):
 		current_speed = SPRINT_SPEED
 	else:
 		current_speed = WALK_SPEED
 	
-	# Kameranın baktığı yöne göre yön hesaplama
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
@@ -101,19 +105,13 @@ func _physics_process(delta):
 		if is_on_floor():
 			anim_player.play("Pistol_IDLE")
 	
-	# --------------------------------------
-	# 1. Check if we are in the air BEFORE we move
 	var was_in_air = not is_on_floor()
-	
 	move_and_slide() 
 	
-	# 2. Check if we hit the ground AFTER we move
 	if was_in_air and is_on_floor():
 		if floor_detector.is_colliding():
 			var ground = floor_detector.get_collider()
-			print("Walking on: ", ground.name, " | Tags: ", ground.get_groups())
 			
-			# DELAY BUG FIXED: All .play() parentheses are empty!
 			if ground.is_in_group("House"):
 				landing_audio.pitch_scale = randf_range(0.9, 1.1)
 				landing_audio.volume_db = -8.0 
@@ -128,17 +126,13 @@ func _physics_process(delta):
 				sidewalk_landing.pitch_scale = randf_range(0.8, 0.9)
 				sidewalk_landing.play()
 				
-			# --- CAMERA DIP TWEEN (Happens on all floors) ---
 			if dip_tween and dip_tween.is_valid():
 				dip_tween.kill() 
 			
 			dip_tween = create_tween()
 			dip_tween.tween_property(camera, "position:y", camera_base_y - 0.2, 0.1).set_trans(Tween.TRANS_SINE)
 			dip_tween.tween_property(camera, "position:y", camera_base_y, 0.25).set_trans(Tween.TRANS_SINE)
-			# ------------------------
-	# --------------------------------------
 	
-	# --- SPRINT EFFECTS (FOV & HEADBOB) ---
 	var target_fov = NORMAL_FOV
 	
 	if direction and current_speed == SPRINT_SPEED and is_on_floor():
@@ -156,22 +150,23 @@ func _physics_process(delta):
 		bob_time = 0.0
 		camera.v_offset = lerp(camera.v_offset, 0.0, delta * 5.0)
 		camera.h_offset = lerp(camera.h_offset, 0.0, delta * 5.0)
+		
+	# JUMPSCARE CAMERA SHAKE
+	if shake_duration > 0:
+		shake_duration -= delta
+		camera.h_offset = randf_range(-shake_intensity, shake_intensity)
+		camera.v_offset = randf_range(-shake_intensity, shake_intensity)
 	
-	# --------------------------------------
-	# --- FOOTSTEP AUDIO ---
 	if direction and is_on_floor():
 		step_timer -= delta
 		if step_timer <= 0:
 			if floor_detector.is_colliding():
 				var ground = floor_detector.get_collider()
 				
-				# THE HACK: Calculate the pitch BEFORE playing the sound
 				var current_pitch = 1.0
 				if current_speed == SPRINT_SPEED:
-					# Fast, snappy, and light for sprinting
 					current_pitch = randf_range(0.95, 1.15) 
 				else:
-					# Deep, heavy, and STRETCHED OUT for walking!
 					current_pitch = randf_range(0.5, 0.7) 
 				
 				if ground.is_in_group("House"):
@@ -193,16 +188,11 @@ func _physics_process(delta):
 				step_timer = 0.6 
 	else:
 		step_timer = 0.0
-		
-		# Force the WALKING audio players to shut up when you stop moving!
-		# (Notice how the new Landing nodes are NOT in this list, so they survive!)
 		footstep_audio.stop()
 		grass_audio.stop()
 		carpet_audio.stop()
 		sidewalk_audio.stop()
-	# ----------------------
-	
-# Silah tetiklenmesi
+
 func show_weapon_pickup_ui():
 	can_move = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -219,3 +209,23 @@ func _on_button_pressed() -> void:
 	pistol_model.visible = true
 	can_move = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func apply_shake(intensity: float = 0.5, duration: float = 1.0) -> void:
+	shake_intensity = intensity
+	shake_duration = duration
+	
+	# Hard-reset: Instantly snap the camera back to center when the scare is over
+	if duration <= 0.0:
+		if camera:
+			camera.h_offset = 0.0
+			camera.v_offset = 0.0
+
+func play_scream() -> void:
+	if scream_audio:
+		scream_audio.play()
+
+func play_panic_audio() -> void:
+	if heartbeat_audio:
+		heartbeat_audio.play()
+	if breath_audio:
+		breath_audio.play()
