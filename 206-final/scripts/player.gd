@@ -10,6 +10,7 @@ const SPRINT_FOV = 90.0
 var bob_time: float = 0.0
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.06 
+var has_key: bool = false
 
 var camera_base_y: float = 0.0
 var dip_tween: Tween
@@ -229,3 +230,14 @@ func play_panic_audio() -> void:
 		heartbeat_audio.play()
 	if breath_audio:
 		breath_audio.play()
+
+func force_look_at(target_pos: Vector3) -> void:
+	# 1. Rotate the player's body left/right (Y-axis)
+	var flat_target = target_pos
+	flat_target.y = global_position.y 
+	look_at(flat_target, Vector3.UP)
+	
+	# 2. Tilt the camera up/down (X-axis) to look directly at the face
+	var height_diff = target_pos.y - camera.global_position.y
+	var distance = global_position.distance_to(flat_target)
+	camera.rotation.x = atan2(height_diff, distance)

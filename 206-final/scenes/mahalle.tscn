@@ -22,7 +22,11 @@
 [ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="20_hxgal"]
 [ext_resource type="PackedScene" uid="uid://dsho47bffbads" path="res://assets/ali/tripo_convert_310fd483-1701-4cee-a83e-19bf7df0b7a2.fbx" id="21_hxgal"]
 [ext_resource type="PackedScene" uid="uid://ba3hu47qgauxr" path="res://assets/industrial+device+3d+model/tripo_convert_68bf59ae-63e3-4bc7-a082-256b0ab73ee1.fbx" id="22_0f4nc"]
+[ext_resource type="PackedScene" uid="uid://dd43ngw3agvw3" path="res://assets/key1/tripo_convert_b4ed003a-bb60-4cb2-b6f1-9563d130484a.fbx" id="23_ayuf1"]
 [ext_resource type="PackedScene" uid="uid://xauaplb4qlfj" path="res://assets/monster+3d+model/tripo_convert_ad9402be-63d5-478b-b8ca-b6efe58f7d95.fbx" id="23_wfqbq"]
+[ext_resource type="Script" uid="uid://b5wlx06564xvm" path="res://scripts/key_interact_area.gd" id="25_iefcp"]
+[ext_resource type="PackedScene" uid="uid://f5m4gdab0lwk" path="res://assets/door attic/tripo_convert_27a3a87d-2ed9-43c3-943b-b649ca28cc20.fbx" id="26_xn325"]
+[ext_resource type="Script" uid="uid://dv86wqffuuem3" path="res://scripts/locked_door_area.gd" id="27_w2u34"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -75,6 +79,12 @@ uv1_offset = Vector3(0.09, 0.4, -0.015)
 size = Vector3(2.455017, 1.4707031, 0.6375122)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfqbq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ik3cy"]
+size = Vector3(3.4958801, 2.748169, 2.480896)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ww5m"]
+size = Vector3(4.541565, 1, 2.7489624)
 
 [node name="Mahalle" type="Node3D" unique_id=434452024]
 script = ExtResource("1_rfy44")
@@ -1036,9 +1046,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.003273, 0, 39.89142)
 visible = false
 omni_range = 78.094
 
-[node name="tripo_convert_ad9402be-63d5-478b-b8ca-b6efe58f7d95" parent="." unique_id=599351561 instance=ExtResource("23_wfqbq")]
+[node name="Key" parent="." unique_id=1593338604 instance=ExtResource("23_ayuf1")]
+transform = Transform3D(9.553427e-16, 2.1855694e-08, 0.5, 0.49882847, 0.034207877, -1.4952732e-09, -0.034207877, 0.49882847, -2.1804482e-08, 32.865734, 0.48034835, 4.0676174)
+
+[node name="Monster" parent="." unique_id=599351561 instance=ExtResource("23_wfqbq")]
 transform = Transform3D(-1.7160237, 0, 2.212524, 0, 2.8000002, 0, -2.212524, 0, -1.7160237, 34.789288, 1.7195355, 13.4342985)
+
+[node name="KeyInteractArea" type="Area3D" parent="." unique_id=1962719418 node_paths=PackedStringArray("monster", "key_mesh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.855213, 0, 3.0616846)
+script = ExtResource("25_iefcp")
+monster = NodePath("../Monster")
+key_mesh = NodePath("../Key")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KeyInteractArea" unique_id=722672188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27516174, 0.8740845, 0.70064735)
+shape = SubResource("BoxShape3D_ik3cy")
+
+[node name="AtticDoorSystem" type="Node3D" parent="." unique_id=1750702789]
+
+[node name="AtticDoorHinge" type="Node3D" parent="AtticDoorSystem" unique_id=1620375326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.125618, 4.105235, 25.410107)
+
+[node name="Door" parent="AtticDoorSystem/AtticDoorHinge" unique_id=701739044 instance=ExtResource("26_xn325")]
+transform = Transform3D(1.09278496e-07, -1.288888e-14, 2.5, 0.1710393, -2.4941425, -7.476364e-09, 2.4941425, 0.1710393, -1.0902238e-07, -1.3628769, 0.5924139, 3.2373486)
+
+[node name="LockedDoorArea" type="Area3D" parent="AtticDoorSystem" unique_id=2018763990 node_paths=PackedStringArray("door_hinge")]
+transform = Transform3D(9.553427e-16, 2.1855694e-08, 0.5, 0.49882847, 0.034207877, -1.4952732e-09, -0.034207877, 0.49882847, -2.1804482e-08, 30.827782, 4.048678, 28.647455)
+script = ExtResource("27_w2u34")
+door_hinge = NodePath("../AtticDoorHinge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AtticDoorSystem/LockedDoorArea" unique_id=142145275]
+transform = Transform3D(0.99998724, 8.493662e-07, 0, -8.493662e-07, 0.99998724, 0, 4.685141e-14, -2.7355895e-13, 1, 1.7707701, 0, 0.015045166)
+shape = SubResource("BoxShape3D_2ww5m")
+
+[node name="UnlockAudio" type="AudioStreamPlayer" parent="AtticDoorSystem/LockedDoorArea" unique_id=1193248689]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="AtticDoorSystem/LockedDoorArea" unique_id=547418010]
+
+[node name="ColorRect" type="ColorRect" parent="AtticDoorSystem/LockedDoorArea/CanvasLayer" unique_id=228121163]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
 [connection signal="body_entered" from="LookAtHome/CinematicArea" to="LookAtHome/CinematicArea" method="_on_body_entered"]
+[connection signal="body_entered" from="KeyInteractArea" to="KeyInteractArea" method="_on_body_entered"]
+[connection signal="body_exited" from="KeyInteractArea" to="KeyInteractArea" method="_on_body_exited"]
