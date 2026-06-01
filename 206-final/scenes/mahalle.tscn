@@ -18,6 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://dqoqol2hoovx" path="res://images/image-removebg-preview.png" id="16_qv8fo"]
 [ext_resource type="PackedScene" uid="uid://dise8y83h8mta" path="res://assets/handgun+3d+model/tripo_convert_562ab9fc-3139-4f8f-b7d7-ef955e569122.fbx" id="17_wthoi"]
 [ext_resource type="PackedScene" uid="uid://68ueo2jgw61j" path="res://scenes/weapon_trigger.tscn" id="18_giuwt"]
+[ext_resource type="Script" uid="uid://bdoen0fcbe3yf" path="res://scripts/cinematic_area.gd" id="19_6a01a"]
+[ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="20_hxgal"]
+[ext_resource type="PackedScene" uid="uid://dsho47bffbads" path="res://assets/ali/tripo_convert_310fd483-1701-4cee-a83e-19bf7df0b7a2.fbx" id="21_hxgal"]
+[ext_resource type="PackedScene" uid="uid://ba3hu47qgauxr" path="res://assets/industrial+device+3d+model/tripo_convert_68bf59ae-63e3-4bc7-a082-256b0ab73ee1.fbx" id="22_0f4nc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -66,6 +70,11 @@ albedo_texture = ExtResource("15_h6hwy")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wthoi"]
 albedo_texture = ExtResource("16_qv8fo")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0f4nc"]
+size = Vector3(0.6699219, 1.4707031, 0.6375122)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfqbq"]
+
 [node name="Mahalle" type="Node3D" unique_id=434452024]
 script = ExtResource("1_rfy44")
 
@@ -74,6 +83,7 @@ environment = SubResource("Environment_uccnb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=43332181]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="House" parent="." unique_id=402678545 instance=ExtResource("1_bfg2u")]
@@ -969,10 +979,57 @@ size = Vector3(0.9863281, 0.040527344, 1)
 material = SubResource("StandardMaterial3D_wthoi")
 
 [node name="tripo_convert_562ab9fc-3139-4f8f-b7d7-ef955e569122" parent="." unique_id=991656179 instance=ExtResource("17_wthoi")]
-transform = Transform3D(9.776184e-05, 0.36528075, 0.575608, 0.8057958, -0.00013213787, -9.642439e-13, 0.0001376202, 0.51420903, -0.4088971, 24.535316, -0.16861308, 41.153755)
+transform = Transform3D(5.385588e-05, 0.1840399, 0.23330131, 0.44390345, -6.6575194e-05, -7.98243e-12, 7.58134e-05, 0.2590747, -0.16573118, 24.535316, -0.20529458, 41.153755)
 
 [node name="WeaponTrigger" parent="." unique_id=1731345302 instance=ExtResource("18_giuwt")]
-transform = Transform3D(-0.12254488, 0, 0.992463, 0, 1, 0, -0.992463, 0, -0.12254488, 24.714859, -2.702265, 41.248875)
+transform = Transform3D(-0.12254488, 0, 0.992463, 0, 1, 0, -0.992463, 0, -0.12254488, 24.308788, -2.702265, 41.248875)
+
+[node name="LookAtHome" type="Node" parent="." unique_id=1833425169]
+
+[node name="CinematicArea" type="Area3D" parent="LookAtHome" unique_id=522307528 node_paths=PackedStringArray("look_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.624608, 1.1808016, 1.0865979)
+script = ExtResource("19_6a01a")
+look_target = NodePath("LookTarget")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LookAtHome/CinematicArea" unique_id=803991478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16503906, 0.23535156, 0.26083374)
+shape = SubResource("BoxShape3D_0f4nc")
+
+[node name="LookTarget" type="Marker3D" parent="LookAtHome/CinematicArea" unique_id=1433489085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.479812, 0, 39.71732)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="LookAtHome/CinematicArea" unique_id=2130823190]
+
+[node name="Label" type="Label" parent="LookAtHome/CinematicArea/CanvasLayer" unique_id=1136191946]
+visible = false
+offset_left = 227.0
+offset_top = 520.0
+offset_right = 947.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_fonts/font = ExtResource("20_hxgal")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wfqbq")
+text = "Huh, WHO DID THIS! I SHOULD INVESTIGATE
+WHATS GOING ON WITH THAT OLD HOUSE."
+
+[node name="tripo_convert_310fd483-1701-4cee-a83e-19bf7df0b7a2" parent="." unique_id=1688121582 instance=ExtResource("21_hxgal")]
+transform = Transform3D(0.392362, -0.5827982, 2.3992496, 2.4689264, 0.07162012, -0.38635945, 0.02133403, 2.4300652, 0.58679473, 24.284197, -0.19008467, 39.57919)
+
+[node name="tripo_convert_68bf59ae-63e3-4bc7-a082-256b0ab73ee1" parent="tripo_convert_310fd483-1701-4cee-a83e-19bf7df0b7a2" unique_id=2017959448 instance=ExtResource("22_0f4nc")]
+transform = Transform3D(-0.05443433, -2.910383e-10, 6.6065695e-09, -1.0768417e-09, 0.06502603, -7.450581e-09, -1.5643309e-08, -3.7252903e-09, -0.14717335, -0.09001386, 0.5927448, -0.35546398)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="tripo_convert_310fd483-1701-4cee-a83e-19bf7df0b7a2/tripo_convert_68bf59ae-63e3-4bc7-a082-256b0ab73ee1" unique_id=1887666596]
+transform = Transform3D(-7.327644, 0.5343551, -0.066664614, 0.5122892, 6.025986, -1.0689803, -0.0025128014, -0.15028366, -2.7385015, -0.03878784, 0.19049072, 0.12736511)
+light_energy = 13.0
+spot_range = 13.608
+spot_angle = 20.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=106490015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.003273, 0, 39.89142)
+visible = false
+omni_range = 78.094
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
+[connection signal="body_entered" from="LookAtHome/CinematicArea" to="LookAtHome/CinematicArea" method="_on_body_entered"]
