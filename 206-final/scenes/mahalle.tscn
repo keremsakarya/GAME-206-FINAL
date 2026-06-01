@@ -14,6 +14,10 @@
 [ext_resource type="Script" uid="uid://cuvqg8g5dwjek" path="res://scripts/stalkerscript.gd" id="12_h6hwy"]
 [ext_resource type="Script" uid="uid://c4k2k5gd31hcn" path="res://scripts/stalkerflickerlight.gd" id="13_qv8fo"]
 [ext_resource type="Texture2D" uid="uid://c2jkujscy2q3c" path="res://assets/smilerface.jpg" id="14_wthoi"]
+[ext_resource type="Texture2D" uid="uid://cvnglskbw3wmo" path="res://images/cam.jpg" id="15_h6hwy"]
+[ext_resource type="Texture2D" uid="uid://dqoqol2hoovx" path="res://images/image-removebg-preview.png" id="16_qv8fo"]
+[ext_resource type="PackedScene" uid="uid://dise8y83h8mta" path="res://assets/handgun+3d+model/tripo_convert_562ab9fc-3139-4f8f-b7d7-ef955e569122.fbx" id="17_wthoi"]
+[ext_resource type="PackedScene" uid="uid://68ueo2jgw61j" path="res://scenes/weapon_trigger.tscn" id="18_giuwt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -56,6 +60,12 @@ albedo_texture = ExtResource("14_wthoi")
 uv1_scale = Vector3(-2.265, -2.265, -2.265)
 uv1_offset = Vector3(0.09, 0.4, -0.015)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qv8fo"]
+albedo_texture = ExtResource("15_h6hwy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wthoi"]
+albedo_texture = ExtResource("16_qv8fo")
+
 [node name="Mahalle" type="Node3D" unique_id=434452024]
 script = ExtResource("1_rfy44")
 
@@ -64,7 +74,6 @@ environment = SubResource("Environment_uccnb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=43332181]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-visible = false
 shadow_enabled = true
 
 [node name="House" parent="." unique_id=402678545 instance=ExtResource("1_bfg2u")]
@@ -952,6 +961,18 @@ grow_vertical = 2
 texture = ExtResource("14_wthoi")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=155332203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.566439, 0.27780777, 0.8505231)
+material_override = SubResource("StandardMaterial3D_qv8fo")
+size = Vector3(0.9863281, 0.040527344, 1)
+material = SubResource("StandardMaterial3D_wthoi")
+
+[node name="tripo_convert_562ab9fc-3139-4f8f-b7d7-ef955e569122" parent="." unique_id=991656179 instance=ExtResource("17_wthoi")]
+transform = Transform3D(9.776184e-05, 0.36528075, 0.575608, 0.8057958, -0.00013213787, -9.642439e-13, 0.0001376202, 0.51420903, -0.4088971, 24.535316, -0.16861308, 41.153755)
+
+[node name="WeaponTrigger" parent="." unique_id=1731345302 instance=ExtResource("18_giuwt")]
+transform = Transform3D(-0.12254488, 0, 0.992463, 0, 1, 0, -0.992463, 0, -0.12254488, 24.714859, -2.702265, 41.248875)
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]

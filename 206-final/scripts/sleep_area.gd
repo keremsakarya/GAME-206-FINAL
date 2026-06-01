@@ -5,7 +5,7 @@ var stalker: Node3D
 @onready var ui_label = $CanvasLayer/Label
 @onready var screen_darkener = $CanvasLayer/ColorRect
 @onready var sleep_audio = $"../SleepAudio"
-@onready var wake_audio = $"../ManAudio"
+@onready var wake_audio = $"../GlassAudio"
 
 var is_player_near = false
 var is_sleeping = false
