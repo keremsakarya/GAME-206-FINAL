@@ -2742,6 +2742,12 @@ script = ExtResource("2_5idic")
 transform = Transform3D(1, -2.9956482e-11, -7.010208e-12, 0, 1, -1.1368684e-13, -1.26347365e-14, 0, 1, -0.0019227564, 0.008108864, 0.0026320573)
 shape = SubResource("BoxShape3D_3e7tq")
 
+[node name="CSGBox3D" type="CSGBox3D" parent="Armchair_15_001/EatArea" index="1" unique_id=316727271]
+transform = Transform3D(-0.07639855, 0.02359545, -6.460385e-08, -0.0013255313, -1.359954, 3.7222645e-08, -2.882587e-08, 3.0762368e-07, 0.16951087, 0.042063303, -0.018753722, 0.013166973)
+visible = false
+use_collision = true
+size = Vector3(0.07696533, 0.0036315918, 0.07047272)
+
 [node name="EatAudio" type="AudioStreamPlayer3D" parent="Armchair_15_001" index="2" unique_id=692522272]
 stream = ExtResource("3_q0pxe")
 volume_db = -20.0
@@ -2862,6 +2868,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="bed_01/SleepArea" index="2" unique_id=486525561]
+transform = Transform3D(1, 0, 2.240639e-19, 0, 1, -5.684342e-14, 0, -3.8306316e-22, 1, -0.06048467, -0.07735885, -0.037963852)
+visible = false
+use_collision = true
+size = Vector3(0.0119018555, 0.018981934, 0.044189453)
 
 [node name="SleepAudio" type="AudioStreamPlayer3D" parent="bed_01" index="2" unique_id=2132040334]
 stream = ExtResource("6_j7qix")
@@ -5962,6 +5974,18 @@ color = Color(0, 0, 0, 1)
 [node name="WashAudio" type="AudioStreamPlayer3D" parent="Washbasin_03/WashHandArea" index="2" unique_id=1924843422]
 transform = Transform3D(0.006430456, -3.8328504e-10, -1.9164265e-10, 0, 0.0058583906, -1.7459366e-10, 1.3877788e-17, 2.5100223e-17, 0.007065082, 0, 0, 0)
 stream = ExtResource("5_f51cm")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Washbasin_03/WashHandArea" index="3" unique_id=259524834]
+transform = Transform3D(0.9999258, 0, -6.677803e-19, -5.9969807e-12, 1, 2.842171e-14, 1.0658141e-14, 2.1422456e-15, 0.99999976, 0.023195125, 0.022201147, 0.004272089)
+visible = false
+use_collision = true
+size = Vector3(0.009399414, 0.0036315918, 0.01399231)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Washbasin_03/WashHandArea" index="4" unique_id=1712547502]
+transform = Transform3D(0.999905, 0, -8.540528e-19, -6.217249e-12, 1, 2.842171e-14, 1.4210855e-14, 2.1422456e-15, 0.99999976, 0.00475109, 0.050940912, 0.0042720917)
+visible = false
+use_collision = true
+size = Vector3(0.02017212, 0.013412476, 0.01399231)
 
 [node name="Washbasin_03_001" parent="." index="856" unique_id=636743817]
 transform = Transform3D(-1.853823e-05, -170.69534, 2.109128e-05, -4.6345576e-06, 2.034847e-05, 141.54117, 155.50995, -1.0174235e-05, 0, 2.1087003, 4.510822, -9.547041)

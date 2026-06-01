@@ -58,7 +58,17 @@ func start_sleeping():
 	# --- THE STALKER APPEARS ---
 	if stalker:
 		stalker.activate()
-		
+	
+	# Gizli objeler görünür oluyor
+	var hidden_object = get_tree().get_nodes_in_group("HiddenObjectsBeforeJumpscare")
+	
+	for obj in hidden_object:
+		if obj:
+			obj.process_mode = Node.PROCESS_MODE_INHERIT
+			
+			if not obj is Area3D:
+				obj.show()
+	
 	queue_free()
 	
 func _on_body_entered(body: Node3D) -> void:
