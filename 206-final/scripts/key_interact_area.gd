@@ -2,15 +2,15 @@ extends Area3D
 
 @export var monster: Node3D
 @export var key_mesh: Node3D
+@onready var ui_label = $CanvasLayer/InteractLabel
 
 var is_player_near = false
 var triggered = false
 var player_node: Node3D = null
 
 func _ready():
-	# Hide the 3D monster at the start
-	if monster:
-		monster.hide()
+	if monster: monster.hide()
+	if ui_label: ui_label.hide() 
 
 func _unhandled_input(event):
 	if is_player_near and not triggered and event is InputEventKey:
@@ -19,61 +19,65 @@ func _unhandled_input(event):
 
 func trigger_jumpscare():
 	triggered = true
-	
-	if key_mesh:
-		key_mesh.hide() # The key disappears from the table!
+	if ui_label: ui_label.hide() 
+	if key_mesh: key_mesh.hide() 
 		
 	if player_node:
-		# Give the player the key so the Attic Door script will allow them in!
-		player_node.has_key = true 
-		
-		# Freeze the player
-		if "can_move" in player_node:
-			player_node.can_move = false
+		player_node.has_key = true
+		if "can_move" in player_node: player_node.can_move = false
 			
-		# 1. Reveal the 3D monster on the wall
 		if monster:
 			monster.show()
+			if player_node.has_method("force_look_at"):
+				var wall_pos = monster.global_position
+				wall_pos.y += 1.0
+				player_node.force_look_at(wall_pos)
+		
+		await get_tree().create_timer(0.5).timeout
+		
+		if monster and player_node.has_node("Camera3D"):
+			var cam = player_node.get_node("Camera3D")
+			var forward_dir = -cam.global_transform.basis.z.normalized()
+			var face_to_face_pos = cam.global_position + (forward_dir * 1.2) 
 			
-		# 2. Force the camera to instantly snap to look at the monster
-		if monster and player_node.has_method("force_look_at"):
-			player_node.force_look_at(monster.global_position)
+			# Adjusted Y offset to 0.0 so he is perfectly eye-level with camera
+			face_to_face_pos.y -= 0.0 
+			monster.global_position = face_to_face_pos
 			
-		# 3. Play the scream and shake the camera
-		if player_node.has_method("play_scream"):
-			player_node.play_scream()
+			# Clean Slate Rotation: Wipes wall angle, then rotates to face camera
+			# Aim him at the camera
+			monster.look_at(cam.global_position, Vector3.UP)
 			
-		if player_node.has_method("apply_shake"):
-			player_node.apply_shake(1.0, 1.5) # Intense shake for 1.5 seconds
+			# ADD the rotation to his current angle instead of overwriting it
+			# If 90 makes him face left, change to -90, 180, or 270 until he faces you!
+			monster.rotate_y(deg_to_rad(90))
 			
-		# 4. Hold the scare (staring at the 3D monster) for 1.5 seconds
+			if player_node.has_method("force_look_at"):
+				var monster_face = monster.global_position
+				monster_face.y += 1.4 
+				player_node.force_look_at(monster_face)
+			
+		if player_node.has_method("play_scream"): player_node.play_scream()
+		if player_node.has_method("apply_shake"): player_node.apply_shake(1.0, 1.5) 
+			
 		await get_tree().create_timer(1.5).timeout
 		
-		# 5. The monster vanishes!
-		if monster:
-			monster.hide() 
-		
-		if player_node.has_method("apply_shake"):
-			player_node.apply_shake(0.0, 0.0)
+		if monster: monster.hide() 
+		if player_node.has_method("apply_shake"): player_node.apply_shake(0.0, 0.0)
+		if player_node.has_method("play_panic_audio"): player_node.play_panic_audio()
 			
-		if player_node.has_method("play_panic_audio"):
-			player_node.play_panic_audio()
-			
-		# Wait 2 seconds in the dark, breathing heavy
 		await get_tree().create_timer(2.0).timeout
-		
-		# Unfreeze the player so they can run to the attic!
-		if "can_move" in player_node:
-			player_node.can_move = true
-			
-		queue_free() # Delete the trigger so it doesn't happen again
+		if "can_move" in player_node: player_node.can_move = true
+		queue_free()
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player") and not triggered:
 		player_node = body
 		is_player_near = true
+		if ui_label: ui_label.show() 
 
 func _on_body_exited(body: Node3D) -> void:
 	if body.is_in_group("Player"):
 		is_player_near = false
 		player_node = null
+		if ui_label: ui_label.hide()

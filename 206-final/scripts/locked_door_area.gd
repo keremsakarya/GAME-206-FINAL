@@ -1,7 +1,6 @@
 extends Area3D
 
-@export var door_hinge: Node3D # The node that rotates to open the door
-
+@export var door_hinge: Node3D 
 @onready var unlock_audio = $UnlockAudio
 @onready var black_screen = $CanvasLayer/ColorRect
 
@@ -19,41 +18,31 @@ func _unhandled_input(event):
 			try_open_door()
 
 func try_open_door():
-	if not player_node: return
+	if not player_node or not player_node.has_key: return
 	
-	# Check if the player picked up the key from the table!
-	if player_node.has_key:
-		is_opened = true
-		if "can_move" in player_node:
-			player_node.can_move = false
+	is_opened = true
+	if "can_move" in player_node: player_node.can_move = false
 			
-		# 1. Fade the screen to black
-		black_screen.show()
-		var tween_in = create_tween()
-		tween_in.tween_property(black_screen, "modulate:a", 1.0, 0.5)
-		await tween_in.finished
+	black_screen.show()
+	var tween_in = create_tween()
+	tween_in.tween_property(black_screen, "modulate:a", 1.0, 0.5)
+	await tween_in.finished
 		
-		# 2. Play the unlocking sound and wait 1 second
-		unlock_audio.play()
-		await get_tree().create_timer(1.0).timeout
+	unlock_audio.play()
+	await unlock_audio.finished
 		
-		# 3. Physically open the door (rotates it 90 degrees)
-		if door_hinge:
-			door_hinge.rotation_degrees.y -= 90
+	if door_hinge:
+		door_hinge.rotation_degrees.y -= 90
 			
-		# 4. Fade the screen back in
-		var tween_out = create_tween()
-		tween_out.tween_property(black_screen, "modulate:a", 0.0, 0.5)
-		await tween_out.finished
+	var tween_out = create_tween()
+	tween_out.tween_property(black_screen, "modulate:a", 0.0, 0.5)
+	await tween_out.finished
+	black_screen.hide()
 		
-		black_screen.hide()
+	# VANISH THE DOOR: Removes the entire door and hinge from the scene
+	door_hinge.queue_free() 
 		
-		if "can_move" in player_node:
-			player_node.can_move = true
-	else:
-		# If they don't have the key yet!
-		print("The door is locked.")
-		# You can add a rattling sound effect here later!
+	if "can_move" in player_node: player_node.can_move = true
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player") and not is_opened:
