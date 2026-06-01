@@ -22,6 +22,7 @@
 [ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="20_hxgal"]
 [ext_resource type="PackedScene" uid="uid://dsho47bffbads" path="res://assets/ali/tripo_convert_310fd483-1701-4cee-a83e-19bf7df0b7a2.fbx" id="21_hxgal"]
 [ext_resource type="PackedScene" uid="uid://ba3hu47qgauxr" path="res://assets/industrial+device+3d+model/tripo_convert_68bf59ae-63e3-4bc7-a082-256b0ab73ee1.fbx" id="22_0f4nc"]
+[ext_resource type="PackedScene" uid="uid://xauaplb4qlfj" path="res://assets/monster+3d+model/tripo_convert_ad9402be-63d5-478b-b8ca-b6efe58f7d95.fbx" id="23_wfqbq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -1034,6 +1035,9 @@ spot_angle = 20.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.003273, 0, 39.89142)
 visible = false
 omni_range = 78.094
+
+[node name="tripo_convert_ad9402be-63d5-478b-b8ca-b6efe58f7d95" parent="." unique_id=599351561 instance=ExtResource("23_wfqbq")]
+transform = Transform3D(-1.7160237, 0, 2.212524, 0, 2.8000002, 0, -2.212524, 0, -1.7160237, 34.789288, 1.7195355, 13.4342985)
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
