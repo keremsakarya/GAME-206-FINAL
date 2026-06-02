@@ -2875,6 +2875,12 @@ visible = false
 use_collision = true
 size = Vector3(0.0119018555, 0.018981934, 0.044189453)
 
+[node name="CSGBox3D2" type="CSGBox3D" parent="bed_01/SleepArea" index="3" unique_id=1379705408]
+transform = Transform3D(1, 0, 2.6405223e-19, 0, 1, -5.684342e-14, 0, -3.8306316e-22, 1, -0.41860285, -0.21434334, -0.02944839)
+visible = false
+use_collision = true
+size = Vector3(0.014297485, 0.00970459, 0.026350021)
+
 [node name="SleepAudio" type="AudioStreamPlayer3D" parent="bed_01" index="2" unique_id=2132040334]
 stream = ExtResource("6_j7qix")
 
