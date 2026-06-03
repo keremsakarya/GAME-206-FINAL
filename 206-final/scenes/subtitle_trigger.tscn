@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ckgib1gecsibd"]
+
+[ext_resource type="Script" uid="uid://fle3dkekryok" path="res://scripts/subtitle_trigger.gd" id="1_mdwfd"]
+[ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="1_tt2bu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mdwfd"]
+size = Vector3(4.4483643, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_coq56"]
+
+[node name="SubtitleTrigger" type="Area3D" unique_id=104498822]
+script = ExtResource("1_mdwfd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1223399835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4055786, 0, 0)
+shape = SubResource("BoxShape3D_mdwfd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2008761659]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1452814218]
+offset_left = 140.0
+offset_top = 518.0
+offset_right = 841.0
+offset_bottom = 628.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_fonts/font = ExtResource("1_tt2bu")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_coq56")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

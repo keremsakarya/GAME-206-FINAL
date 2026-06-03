@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ceahl0lj3of1e" path="res://scenes/bus_transition_trigger.tscn" id="10_t2d2l"]
 [ext_resource type="Script" uid="uid://c20dgw67alq4e" path="res://scripts/music_trigger.gd" id="12_v8jcj"]
 [ext_resource type="AudioStream" uid="uid://dst6k0aa5tlxl" path="res://sounds/metromusic.MP3" id="13_wyfj1"]
+[ext_resource type="PackedScene" uid="uid://ckgib1gecsibd" path="res://scenes/subtitle_trigger.tscn" id="14_wyfj1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dp0y2"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -475,6 +476,18 @@ stream = ExtResource("13_wyfj1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MusicTrigger" unique_id=663124356]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.656609, 10.349365, 26.19754)
 shape = SubResource("BoxShape3D_nobsb")
+
+[node name="Subtitles" type="Node" parent="." unique_id=1895857005]
+
+[node name="SubtitleTrigger" parent="Subtitles" unique_id=104498822 instance=ExtResource("14_wyfj1")]
+transform = Transform3D(3.4308927, 0, 0, 0, 2.8251562, 0, 0, 0, 1, -23.5946, 0.7334094, -6.4881544)
+string = "My head is splitting from working."
+screen_time = 4.0
+
+[node name="SubtitleTrigger2" parent="Subtitles" unique_id=2015522554 instance=ExtResource("14_wyfj1")]
+transform = Transform3D(3.4308927, 0, 0, 0, 2.8251562, 0, 0, 0, 1, -23.5946, 0.7334094, 36.56511)
+string = "I'm out of money, I need to withdraw it from the ATM."
+screen_time = 4.0
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]

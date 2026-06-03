@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://f5m4gdab0lwk" path="res://assets/door attic/tripo_convert_27a3a87d-2ed9-43c3-943b-b649ca28cc20.fbx" id="26_xn325"]
 [ext_resource type="Script" uid="uid://dv86wqffuuem3" path="res://scripts/locked_door_area.gd" id="27_w2u34"]
 [ext_resource type="AudioStream" uid="uid://21eonppiru4r" path="res://sounds/unlocking door.mp3" id="28_xn325"]
+[ext_resource type="PackedScene" uid="uid://ckgib1gecsibd" path="res://scenes/subtitle_trigger.tscn" id="29_w2u34"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -203,6 +204,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -95.
 transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, -8.616323, 0.5599618, 7.900058)
 
 [node name="House2" parent="." unique_id=1272214129 instance=ExtResource("4_ve28u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011973381, -0.001060009, -0.0002709031)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=508886136 groups=["House"]]
 transform = Transform3D(1, 0, 0, 0, 0.8527223, -0.52236474, 0, 0.52236474, 0.8527223, 31.014389, 1.4279358, 35.611904)
@@ -1018,15 +1020,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.479812, 0, 39.71732)
 [node name="CanvasLayer" type="CanvasLayer" parent="LookAtHome/CinematicArea" unique_id=2130823190]
 
 [node name="Label" type="Label" parent="LookAtHome/CinematicArea/CanvasLayer" unique_id=1136191946]
-offset_left = 227.0
+offset_left = 130.0
 offset_top = 520.0
-offset_right = 947.0
-offset_bottom = 589.0
+offset_right = 1112.0
+offset_bottom = 625.0
 theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
 theme_override_fonts/font = ExtResource("20_hxgal")
 theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wfqbq")
-text = "Huh, WHO DID THIS! I SHOULD INVESTIGATE
+text = "Huh, WHO DID THIS! A LIGHT? I SHOULD INVESTIGATE
 WHATS GOING ON WITH THAT OLD HOUSE."
 
 [node name="tripo_convert_310fd483-1701-4cee-a83e-19bf7df0b7a2" parent="." unique_id=1688121582 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("21_hxgal")]
@@ -1121,8 +1123,33 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=721892285]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4183197, 29.228233)
+[node name="Subtitles" type="Node" parent="." unique_id=258408879]
+
+[node name="SubtitleTrigger" parent="Subtitles" unique_id=104498822 instance=ExtResource("29_w2u34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6785171, 0.8501993, -1.4787855)
+string = "I should turn on the lights."
+
+[node name="SubtitleTrigger2" parent="Subtitles" unique_id=528986908 instance=ExtResource("29_w2u34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.583346, 0.8501993, -3.6064095)
+string = "First, I need to wash my hands."
+
+[node name="SubtitleTrigger3" parent="Subtitles" unique_id=1172432133 instance=ExtResource("29_w2u34")]
+transform = Transform3D(-0.0024758384, 0, -0.9998723, 0, 1, 0, 0.35199434, 0, -0.007032849, 9.41899, 0.8501993, -9.66956)
+string = "Now, ramen goes to the microwave and will be eaten 
+on the sofa."
+screen_time = 5.0
+
+[node name="SubtitleTrigger4" parent="Subtitles" unique_id=958067116 instance=ExtResource("29_w2u34")]
+transform = Transform3D(-0.002743873, 0, -0.9974666, 0, 1, 0, 0.39010125, 0, -0.007015927, 2.9997625, 1.7516365, -6.2285953)
+string = "I deserve a good sleep now."
+
+[node name="SubtitleTrigger5" parent="Subtitles" unique_id=505081137 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("29_w2u34")]
+process_mode = 4
+transform = Transform3D(-0.002743873, 0, -0.9974666, 0, 1, 0, 0.39010125, 0, -0.007015927, 0.6855321, 4.655601, -7.8287787)
+visible = false
+string = "WHAT THE HELL WAS THAT?? I should also check the
+sound coming from downstairs."
+screen_time = 5.0
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]

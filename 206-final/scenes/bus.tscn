@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://dvj0vq62d1qhu" path="res://scripts/stalkerbusscene.gd" id="8_ymqks"]
 [ext_resource type="Texture2D" uid="uid://c2jkujscy2q3c" path="res://assets/smilerface.jpg" id="9_83o2r"]
 [ext_resource type="Script" uid="uid://c4k2k5gd31hcn" path="res://scripts/stalkerflickerlight.gd" id="9_ymqks"]
+[ext_resource type="PackedScene" uid="uid://ckgib1gecsibd" path="res://scenes/subtitle_trigger.tscn" id="11_2ce38"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_stnsb"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -225,6 +226,12 @@ script = ExtResource("9_ymqks")
 [node name="CSGSphere3D" type="CSGSphere3D" parent="Stalker" unique_id=2099770920]
 transform = Transform3D(0.17103055, 0, 0, 0, -0.15153918, 0.0024625408, 0, -0.0026028138, -0.14337231, 0, 0.3865422, 0)
 material = SubResource("StandardMaterial3D_83o2r")
+
+[node name="Subtitles" type="Node" parent="." unique_id=1846919786]
+
+[node name="SubtitleTrigger" parent="Subtitles" unique_id=104498822 instance=ExtResource("11_2ce38")]
+transform = Transform3D(-0.016372493, 0, -0.98504025, 0, 3.913767, 0, 11.580916, 0, -0.0013925983, -53.07946, 4.588024, -31.077755)
+string = "What was that thing?!"
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
