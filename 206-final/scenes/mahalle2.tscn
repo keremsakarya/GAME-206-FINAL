@@ -5861,6 +5861,7 @@ shape = SubResource("ConcavePolygonShape3D_67v6g")
 
 [node name="TV_03" parent="." index="845" unique_id=694322580]
 transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06, -5.63856e-06, 39.221054, -43.091805, -2.81928e-06, 0, 10.666417, 1.4521918, -1.3721948)
+visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TV_03" index="0" unique_id=362844487]
 
@@ -5869,6 +5870,7 @@ shape = SubResource("ConcavePolygonShape3D_xurgg")
 
 [node name="TV_03_001" parent="." index="846" unique_id=389761020]
 transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06, -5.63856e-06, 39.221054, -43.091805, -2.81928e-06, 0, 0.2344203, 5.2711678, -5.6792774)
+visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TV_03_001" index="0" unique_id=369736795]
 
@@ -5877,6 +5879,7 @@ shape = SubResource("ConcavePolygonShape3D_ml8lg")
 
 [node name="TV_04" parent="." index="847" unique_id=782182602]
 transform = Transform3D(5.1369434e-06, -47.29967, -5.8443934e-06, -1.2842359e-06, -5.63856e-06, 39.221054, -43.091805, -2.81928e-06, 0, 8.373046, 5.292837, -0.5784054)
+visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TV_04" index="0" unique_id=520024147]
 
