@@ -99,6 +99,7 @@ environment = SubResource("Environment_uccnb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=43332181]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="House" parent="." unique_id=402678545 instance=ExtResource("1_bfg2u")]
@@ -107,16 +108,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018550873, -0.04726219, 0.
 [node name="Node" type="Node" parent="." unique_id=584116684]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Node" unique_id=1437832415]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.957214, 3.2938275, -9.086332)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.248245, 3.2938275, -9.086332)
 visible = false
 use_collision = true
-size = Vector3(51.80536, 8.244629, 200.48334)
+size = Vector3(34.985565, 8.244629, 200.48334)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Node" unique_id=2011209471]
-transform = Transform3D(0.091293074, 0, 0.99582404, 0, 1, 0, -0.99582404, 0, 0.091293074, 4.378768, 3.6223145, 73.47408)
+transform = Transform3D(0.0058643017, 0, 0.9999829, 0, 1, 0, -0.9999829, 0, 0.0058643017, -16.690163, 3.6223145, 74.373634)
 visible = false
 use_collision = true
-size = Vector3(36.874947, 8.244629, 25.694511)
+size = Vector3(36.874947, 8.244629, 68.00908)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Node" unique_id=1827522027]
 transform = Transform3D(-0.0072779357, 0, 0.9999736, 0, 1, 0, -0.9999736, 0, -0.0072779357, 41.287956, 3.6223145, 73.57659)
@@ -129,6 +130,12 @@ transform = Transform3D(-0.0072779357, 0, 0.9999736, 0, 1, 0, -0.9999736, 0, -0.
 visible = false
 use_collision = true
 size = Vector3(110.32622, 8.244629, 54.08901)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Node" unique_id=596676296]
+transform = Transform3D(0.009616642, 0, 0.99995387, 0, 1, 0, -0.99995387, 0, 0.009616642, -43.1524, 3.6223145, -51.28888)
+visible = false
+use_collision = true
+size = Vector3(116.306175, 8.244629, 72.41441)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Node" unique_id=292192837]
 transform = Transform3D(-0.0072779357, 0, 0.9999736, 0, 1, 0, -0.9999736, 0, -0.0072779357, 7.809078, 3.6223145, -68.50573)
@@ -172,6 +179,18 @@ visible = false
 use_collision = true
 size = Vector3(42.415833, 2.9465027, 0.24339437)
 
+[node name="CSGBox3D17" type="CSGBox3D" parent="Node" unique_id=401588212]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.9006076, 0.97325134, -0.82064676)
+visible = false
+use_collision = true
+size = Vector3(1.9403381, 2.9465027, 1.7571987)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Node" unique_id=1870299875]
+transform = Transform3D(0.13863726, 0, 0.9903432, 0, 1, 0, -0.9903432, 0, 0.13863726, -45.68732, 0.97325134, 15.214066)
+visible = false
+use_collision = true
+size = Vector3(23.179554, 2.9465027, 3.9019148)
+
 [node name="CSGBox3D10" type="CSGBox3D" parent="Node" unique_id=1289941328]
 transform = Transform3D(-0.008534577, 0, 0.9999637, 0, 1, 0, -0.9999637, 0, -0.008534577, 18.49268, 0.98484015, 67.83403)
 visible = false
@@ -201,7 +220,7 @@ material = SubResource("StandardMaterial3D_wthoi")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -95.6679, 0.13583565, 66.501785)
 
 [node name="Player" parent="." unique_id=1581314821 instance=ExtResource("3_echme")]
-transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, -8.616323, 0.5599618, 7.900058)
+transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, -28.421766, 0.5510124, 8.196928)
 
 [node name="House2" parent="." unique_id=1272214129 instance=ExtResource("4_ve28u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011973381, -0.001060009, -0.0002709031)
@@ -216,6 +235,12 @@ size = Vector3(2.2954102, 0.43948364, 7.7380447)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="StreetLights" unique_id=721930169]
 transform = Transform3D(1, 0, 0, 0, -0.0017104577, 0.9999985, 0, -0.9999985, -0.0017104577, -14.252274, 7.9911795, 51.125725)
+light_energy = 7.0
+spot_range = 24.912
+spot_angle = 60.14
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="StreetLights" unique_id=1609207184]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, -14.151007, 7.9911795, 11.725048)
 light_energy = 7.0
 spot_range = 24.912
 spot_angle = 60.14
@@ -1142,6 +1167,10 @@ screen_time = 5.0
 [node name="SubtitleTrigger4" parent="Subtitles" unique_id=958067116 instance=ExtResource("29_w2u34")]
 transform = Transform3D(-0.002743873, 0, -0.9974666, 0, 1, 0, 0.39010125, 0, -0.007015927, 2.9997625, 1.7516365, -6.2285953)
 string = "I deserve a good sleep now."
+
+[node name="SubtitleTrigger6" parent="Subtitles" unique_id=956996132 instance=ExtResource("29_w2u34")]
+transform = Transform3D(-0.015042571, 0, -10.276509, 0, 1, 0, 2.138629, 0, -0.07228236, -2.5974975, 0.25699317, 7.360914)
+string = "I finally made it home."
 
 [node name="SubtitleTrigger5" parent="Subtitles" unique_id=505081137 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("29_w2u34")]
 process_mode = 4
