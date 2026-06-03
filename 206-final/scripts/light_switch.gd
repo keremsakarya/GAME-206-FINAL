@@ -2,6 +2,8 @@ extends MeshInstance3D
 
 @export var target_lights: Array[Light3D] = []
 
+@onready var ui_label = $CanvasLayer/Label
+
 var is_player_near = false
 var is_lights_on = false
 
@@ -20,8 +22,10 @@ func toggle_lights():
 func _on_interact_area_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		is_player_near = true
+		ui_label.show()
 
 
 func _on_interact_area_body_exited(body: Node3D) -> void:
 	if body.name == "Player":
 		is_player_near = false
+		ui_label.hide()
