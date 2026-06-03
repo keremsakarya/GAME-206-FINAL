@@ -1121,6 +1121,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=721892285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4183197, 29.228233)
+
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
 [connection signal="body_entered" from="LookAtHome/CinematicArea" to="LookAtHome/CinematicArea" method="_on_body_entered"]
