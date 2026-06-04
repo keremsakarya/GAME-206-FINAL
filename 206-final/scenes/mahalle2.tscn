@@ -4869,6 +4869,7 @@ shape = SubResource("BoxShape3D_5idic")
 
 [node name="MicrowaveAudio" type="AudioStreamPlayer3D" parent="Microwave_02" index="3" unique_id=1680736585]
 stream = ExtResource("4_le6gi")
+volume_db = 20.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Microwave_02" index="4" unique_id=1136331549]
 

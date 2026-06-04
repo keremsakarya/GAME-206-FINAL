@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://c2jkujscy2q3c" path="res://assets/smilerface.jpg" id="14_wthoi"]
 [ext_resource type="Texture2D" uid="uid://cvnglskbw3wmo" path="res://images/cam.jpg" id="15_h6hwy"]
 [ext_resource type="Texture2D" uid="uid://dqoqol2hoovx" path="res://images/image-removebg-preview.png" id="16_qv8fo"]
-[ext_resource type="PackedScene" uid="uid://dise8y83h8mta" path="res://assets/handgun+3d+model/tripo_convert_562ab9fc-3139-4f8f-b7d7-ef955e569122.fbx" id="17_wthoi"]
 [ext_resource type="PackedScene" uid="uid://68ueo2jgw61j" path="res://scenes/weapon_trigger.tscn" id="18_giuwt"]
 [ext_resource type="Script" uid="uid://bdoen0fcbe3yf" path="res://scripts/cinematic_area.gd" id="19_6a01a"]
 [ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="20_hxgal"]
@@ -29,6 +28,7 @@
 [ext_resource type="Script" uid="uid://dv86wqffuuem3" path="res://scripts/locked_door_area.gd" id="27_w2u34"]
 [ext_resource type="AudioStream" uid="uid://21eonppiru4r" path="res://sounds/unlocking door.mp3" id="28_xn325"]
 [ext_resource type="PackedScene" uid="uid://ckgib1gecsibd" path="res://scenes/subtitle_trigger.tscn" id="29_w2u34"]
+[ext_resource type="PackedScene" uid="uid://3edwolqtjpci" path="res://assets/re7 masa/tripo_convert_f0b7eae3-4d06-46b3-9479-a39de28ae1b2.fbx" id="30_ik3cy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -1020,10 +1020,6 @@ texture = ExtResource("14_wthoi")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="tripo_convert_562ab9fc-3139-4f8f-b7d7-ef955e569122" parent="." unique_id=991656179 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("17_wthoi")]
-transform = Transform3D(5.385588e-05, 0.1840399, 0.23330131, 0.44390345, -6.6575194e-05, -7.98243e-12, 7.58134e-05, 0.2590747, -0.16573118, 24.535316, -0.20529458, 41.153755)
-visible = false
-
 [node name="WeaponTrigger" parent="." unique_id=1731345302 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("18_giuwt")]
 transform = Transform3D(-0.12254488, 0, 0.992463, 0, 1, 0, -0.992463, 0, -0.12254488, 24.308788, -2.702265, 41.248875)
 visible = false
@@ -1179,6 +1175,16 @@ visible = false
 string = "WHAT THE HELL WAS THAT?? I should also check the
 sound coming from downstairs."
 screen_time = 5.0
+
+[node name="SubtitleTrigger7" parent="Subtitles" unique_id=552892282 groups=["EvKilitAltyazi"] instance=ExtResource("29_w2u34")]
+process_mode = 4
+transform = Transform3D(-0.002743873, 0, -0.9974666, 0, 1, 0, 0.39010125, 0, -0.007015927, 21.850834, 0.8685074, 39.86915)
+visible = false
+string = "REALY?! A red padlock? When did this happened?"
+screen_time = 5.0
+
+[node name="tripo_convert_f0b7eae3-4d06-46b3-9479-a39de28ae1b2" parent="." unique_id=836048293 instance=ExtResource("30_ik3cy")]
+transform = Transform3D(2.6520615, 0, 0, 0, 3, 0, 0, 0, 3, 41.31834, 0.9013827, 33.885532)
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]
