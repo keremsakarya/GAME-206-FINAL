@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjwf3nv1kbelk"
+path="res://.godot/imported/mutfak jumpscare.mp3-d4b0b5239e0aaed65f03c1539dcf221f.mp3str"
+
+[deps]
+
+source_file="res://sounds/mutfak jumpscare.mp3"
+dest_files=["res://.godot/imported/mutfak jumpscare.mp3-d4b0b5239e0aaed65f03c1539dcf221f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1183,6 +1183,13 @@ visible = false
 string = "REALY?! A red padlock? When did this happened?"
 screen_time = 5.0
 
+[node name="SubtitleTrigger8" parent="Subtitles" unique_id=573532160 groups=["EvKilitAltyazi"] instance=ExtResource("29_w2u34")]
+process_mode = 4
+transform = Transform3D(-0.05323092, 0, -1.439361, 0, 1, 0, 7.5679336, 0, -0.010124099, 34.88674, 0.8685074, 49.071327)
+visible = false
+string = "What the hell is that smell!"
+screen_time = 5.0
+
 [node name="tripo_convert_f0b7eae3-4d06-46b3-9479-a39de28ae1b2" parent="." unique_id=836048293 instance=ExtResource("30_ik3cy")]
 transform = Transform3D(2.6520615, 0, 0, 0, 3, 0, 0, 0, 3, 41.31834, 0.9013827, 33.885532)
 

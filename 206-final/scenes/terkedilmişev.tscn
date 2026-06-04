@@ -1,9 +1,12 @@
-[gd_scene format=3 uid="uid://cjjkq7jyabap"]
+[gd_scene format=4 uid="uid://cjjkq7jyabap"]
 
 [ext_resource type="PackedScene" uid="uid://dcmgk74dy23do" path="res://assets/Abandoned_House/Models/Abandoned_House.fbx" id="1_k8fo5"]
 [ext_resource type="PackedScene" uid="uid://23rda1kylb8p" path="res://assets/red-padlock/tripo_convert_21564285-670d-4d14-8e09-a159afbe22f2.fbx" id="2_8lkyg"]
 [ext_resource type="Script" uid="uid://c20dgw67alq4e" path="res://scripts/music_trigger.gd" id="2_ljtai"]
 [ext_resource type="AudioStream" uid="uid://cp0uwsudm5o1n" path="res://sounds/terkedilmişev müzik.mp3" id="3_8lkyg"]
+[ext_resource type="Texture2D" uid="uid://b3jc27u6rgos0" path="res://assets/Abandoned_House/Textures/Puerta.jpg" id="3_64taa"]
+[ext_resource type="Script" uid="uid://bv78ew0f7j6ty" path="res://scripts/mutfak_trigger.gd" id="6_8008v"]
+[ext_resource type="AudioStream" uid="uid://cjwf3nv1kbelk" path="res://sounds/mutfak jumpscare.mp3" id="7_lggd6"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k8fo5"]
 data = PackedVector3Array(0.0916, 0.055299997, 0, 0.0916, 0.0656, 0, 0.0936, 0.0656, 0, 0.0936, 0.0656, 0, 0.0936, 0.055299997, 0, 0.0916, 0.055299997, 0, -0.064399995, -0.0033, 0, 0.0155, 0.0455, 0, 0.0155, 0.015299999, 0, -0.064399995, -0.0033, 0, 0.0139999995, 0.0484, 0, 0.0155, 0.0455, 0, -0.064399995, -0.0033, 0, -0.064399995, 0.0484, 0, 0.0139999995, 0.0484, 0, -0.064399995, -0.0033, 0, 0.0155, 0.015299999, 0, 0.0295, 0.015299999, 0, -0.064399995, -0.0033, 0, 0.0295, 0.015299999, 0, 0.0295, -0.0061999997, 0, -0.064399995, -0.0033, 0, 0.0295, -0.0061999997, 0, 0.033099998, -0.040999997, 0, -0.064399995, -0.0033, 0, 0.033099998, -0.040999997, 0, -0.0969, -0.040999997, 0, -0.094299994, -0.0033, 0, -0.064399995, -0.0033, 0, -0.0969, -0.040999997, 0, -0.094299994, 0.0484, 0, -0.094299994, -0.0033, 0, -0.0969, -0.040999997, 0, -0.1854, 0.0484, 0, -0.094299994, 0.0484, 0, -0.0969, -0.040999997, 0, -0.1854, -0.0411, 0, -0.1854, 0.0484, 0, -0.0969, -0.040999997, 0, -0.1854, -0.0411, 0, -0.0969, -0.040999997, 0, -0.0969, -0.0783, 0, -0.1854, -0.042999998, 0, -0.1854, -0.0411, 0, -0.0969, -0.0783, 0, -0.1854, -0.042999998, 0, -0.0969, -0.0783, 0, -0.1854, -0.0783, 0, 0.0346, 0.0128999995, 0, 0.0295, 0.015299999, 0, 0.049399998, 0.015299999, 0, 0.0346, 0.0128999995, 0, 0.0295, -0.00029999999, 0, 0.0295, 0.015299999, 0, 0.0346, 0.0128999995, 0, 0.0346, -0.0015, 0, 0.0295, -0.00029999999, 0, 0.0791, 0.0128999995, 0, 0.0346, 0.0128999995, 0, 0.049399998, 0.015299999, 0, 0.0791, 0.0128999995, 0, 0.049399998, 0.015299999, 0, 0.049399998, 0.0709, 0, 0.1677, 0.0503, 0, 0.168, 0.0503, 0, 0.0791, 0.0128999995, 0, 0.0916, 0.0503, 0, 0.1677, 0.0503, 0, 0.0791, 0.0128999995, 0, 0.0916, 0.0503, 0, 0.0791, 0.0128999995, 0, 0.049399998, 0.0709, 0, 0.0916, 0.055299997, 0, 0.0916, 0.0503, 0, 0.049399998, 0.0709, 0, 0.0916, 0.0656, 0, 0.0916, 0.055299997, 0, 0.049399998, 0.0709, 0, 0.0916, 0.1205, 0, 0.0916, 0.0656, 0, 0.049399998, 0.0709, 0, 0.0142, 0.1205, 0, 0.0916, 0.1205, 0, 0.049399998, 0.0709, 0, 0.0142, 0.1205, 0, 0.049399998, 0.0709, 0, 0.0155, 0.0709, 0, 0.0142, 0.1205, 0, 0.0155, 0.0709, 0, 0.0155, 0.0455, 0, 0.0142, 0.1205, 0, 0.0155, 0.0455, 0, 0.0139999995, 0.0484, 0, 0.0142, 0.1205, 0, 0.0139999995, 0.0484, 0, 0.0139999995, 0.0523, 0, 0.0142, 0.1205, 0, 0.0139999995, 0.0523, 0, 0.0139999995, 0.1205, 0, 0.033099998, -0.040999997, 0, 0.0346, -0.0029, 0, 0.0791, -0.0029, 0, 0.033099998, -0.040999997, 0, 0.0295, -0.0061999997, 0, 0.0346, -0.0029, 0, 0.0295, -0.0061999997, 0, 0.0346, -0.0015, 0, 0.0346, -0.0029, 0, 0.0295, -0.0061999997, 0, 0.0295, -0.00029999999, 0, 0.0346, -0.0015, 0, 0.033099998, -0.0797, 0, 0.033099998, -0.040999997, 0, 0.0791, -0.0029, 0, 0.096, -0.0797, 0, 0.033099998, -0.0797, 0, 0.0791, -0.0029, 0, 0.096, -0.0797, 0, 0.0791, -0.0029, 0, 0.0791, 0.0128999995, 0, 0.096, -0.0797, 0, 0.0791, 0.0128999995, 0, 0.168, 0.0503, 0, 0.096, -0.0817, 0, 0.096, -0.0797, 0, 0.168, 0.0503, 0, 0.1055, -0.0797, 0, 0.096, -0.0817, 0, 0.168, 0.0503, 0, 0.1055, -0.0797, 0, 0.1055, -0.0817, 0, 0.096, -0.0817, 0, 0.1055, -0.0797, 0, 0.168, 0.0503, 0, 0.168, -0.0797, 0)
@@ -1220,6 +1223,44 @@ data = PackedVector3Array(0.0093, -0.0859, 0.010199999, 0.0093, -0.047199998, 0.
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oud8w"]
 data = PackedVector3Array(-0.0001, 0.0002, -0.0098, -0.0088, 0.0002, -0.0098, -0.0088, -0.0002, -0.0098, -0.0088, -0.0002, -0.0098, -0.0001, -0.0002, -0.0098, -0.0001, 0.0002, -0.0098, -0.0001, 0.0002, 0.0115, -0.0001, -0.0002, 0.0115, -0.0088, -0.0002, 0.0115, -0.0088, -0.0002, 0.0115, -0.0088, 0.0002, 0.0115, -0.0001, 0.0002, 0.0115, -0.0001, 0.0002, 0.0115, -0.0001, 0.0002, -0.0098, -0.0001, -0.0002, -0.0098, -0.0001, -0.0002, -0.0098, -0.0001, -0.0002, 0.0115, -0.0001, 0.0002, 0.0115, -0.0088, -0.0002, 0.0115, -0.0088, -0.0002, -0.0098, -0.0088, 0.0002, -0.0098, -0.0088, 0.0002, -0.0098, -0.0088, 0.0002, 0.0115, -0.0088, -0.0002, 0.0115, -0.0088, 0.0002, 0.0115, -0.0088, 0.0002, -0.0098, -0.0001, 0.0002, -0.0098, -0.0001, 0.0002, -0.0098, -0.0001, 0.0002, 0.0115, -0.0088, 0.0002, 0.0115, -0.0001, -0.0002, 0.0115, -0.0001, -0.0002, -0.0098, -0.0088, -0.0002, -0.0098, -0.0088, -0.0002, -0.0098, -0.0088, -0.0002, 0.0115, -0.0001, -0.0002, 0.0115)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knt2w"]
+resource_name = "Puerta"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_64taa")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ykl4f"]
+_surfaces = [{
+"aabb": AABB(-0.00879903, -0.00022534259, -0.009787757, 0.00874354, 0.00045068518, 0.02131014),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgAEAAAAAQADAAUABQACAAEABgAEAAIAAgAFAAYABwAAAAQAAAAHAAMABAAGAAcABQADAAcABwAGAAUA"),
+"name": "Puerta",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("w71ouPFJbDnUXCC8zykQvPFJbDnUXCC8zykQvPFJbLnUXCC8zykQvPFJbDlfyDw8w71ouPFJbLnUXCC8zykQvPFJbLlfyDw8w71ouPFJbLlfyDw8w71ouPFJbDlfyDw8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bh12l"]
+resource_name = "Plane_066"
+_surfaces = [{
+"aabb": AABB(-0.00879903, -0.00022534259, -0.009787757, 0.00874354, 0.00045068518, 0.02131014),
+"attribute_data": PackedByteArray("AOyYuzR8+j7smIA/NHz6PuyYgD/kwQI/AOyYu+TBAj8A7Ji7NHz6PgDsmLvkwQI/7JiAP+TBAj/smIA/NHz6Pm6u8j6AShi8bq7yPpQwgT/MqAY/lDCBP8yoBj+AShi8zKgGP4BKGLzMqAY/lDCBP26u8j6UMIE/bq7yPoBKGLzsmIA/AEsYvOyYgD+UMIE/AOuYu5QwgT8A65i7AEsYvADrmLsASxi8AOqYu5QwgT/smIA/lDCBP+yYgD8ASxi8"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_knt2w"),
+"name": "Puerta",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("w71ouPFJbDnUXCC8zykQvPFJbDnUXCC8zykQvPFJbLnUXCC8w71ouPFJbLnUXCC8w71ouPFJbDlfyDw8w71ouPFJbLlfyDw8zykQvPFJbLlfyDw8zykQvPFJbDlfyDw8w71ouPFJbDlfyDw8w71ouPFJbDnUXCC8w71ouPFJbLnUXCC8w71ouPFJbLlfyDw8zykQvPFJbLlfyDw8zykQvPFJbLnUXCC8zykQvPFJbDnUXCC8zykQvPFJbDlfyDw8zykQvPFJbDlfyDw8zykQvPFJbDnUXCC8w71ouPFJbDnUXCC8w71ouPFJbDlfyDw8w71ouPFJbLlfyDw8w71ouPFJbLnUXCC8zykQvPFJbLnUXCC8zykQvPFJbLlfyDw8/////wAA/7//////AAD/v/////8AAP+//////wAA/7//f/9/AAD/P/9//38AAP8//3//fwAA/z//f/9/AAD/P////3//f/5/////f/9//n////9//3/+f////3//f/5/AAD/f/9/AIAAAP9//38AgAAA/3//fwCAAAD/f/9/AID/f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9/AAAAAP8//38AAAAA/z//fwAAAAD/P/9/AAAAAP8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ykl4f")
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8wk5v"]
 data = PackedVector3Array(0.017099999, 0.01, 0, 0.017099999, -0.044999998, 0, -0.0094, -0.044999998, 0, -0.0094, -0.044999998, 0, -0.0094, 0.01, 0, 0.017099999, 0.01, 0)
 
@@ -1330,6 +1371,9 @@ data = PackedVector3Array(0.0359, 0.035099998, 0, 0.0359, -0.035099998, 0, -0.03
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_64taa"]
 size = Vector3(46.372494, 21.138786, 23.182205)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_46b6b"]
+size = Vector3(5.296509, 1.5864258, 2.8989258)
 
 [node name="Abandoned_House" unique_id=1304806814 instance=ExtResource("1_k8fo5")]
 
@@ -2041,66 +2085,66 @@ transform = Transform3D(-5.2516017, 0, 0, 0, 4.6285925, -6.652174e-07, 0, 6.9889
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_005/StaticBody3D" index="0" unique_id=110087304]
 shape = SubResource("ConcavePolygonShape3D_tah0w")
 
-[node name="Silla_006" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="6" unique_id=2021384725]
+[node name="Silla_006" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="6" unique_id=2021384725 groups=["UcanEsya"]]
 transform = Transform3D(4.2588177, 0, 0, 0, 3.7535844, 0, 0, 0, 3.572696, -0.09416747, 0.16213512, -0.31187278)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sillas/Silla_006" index="0" unique_id=1958001203]
+[node name="StaticBody3D" type="RigidBody3D" parent="Sillas/Silla_006" index="0" unique_id=1778655646]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_006/StaticBody3D" index="0" unique_id=662577728]
 shape = SubResource("ConcavePolygonShape3D_40btk")
 
-[node name="Silla_007" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="7" unique_id=1121760038]
+[node name="Silla_007" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="7" unique_id=1121760038 groups=["UcanEsya"]]
 transform = Transform3D(1.98748, -1.1597774e-06, 3.4026716, -3.7235215, -5.134958e-07, 1.8162216, -1.1000712e-07, -3.5726955, -1.3656254e-06, -0.057775497, 0.25662374, -0.3305108)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sillas/Silla_007" index="0" unique_id=413755258]
+[node name="StaticBody3D" type="RigidBody3D" parent="Sillas/Silla_007" index="0" unique_id=1378598548]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_007/StaticBody3D" index="0" unique_id=1320358281]
 shape = SubResource("ConcavePolygonShape3D_7p71u")
 
-[node name="Silla_008" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="8" unique_id=1803459222]
+[node name="Silla_008" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="8" unique_id=1803459222 groups=["UcanEsya"]]
 transform = Transform3D(3.2542217, -6.848195e-07, 3.6330733, 7.768571e-07, 4.6285915, 3.1761346e-07, 3.9849663, -3.4308937e-07, -2.9668567, -0.2171526, 0.4475789, -0.33079237)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sillas/Silla_008" index="0" unique_id=820733512]
+[node name="StaticBody3D" type="RigidBody3D" parent="Sillas/Silla_008" index="0" unique_id=1269857375]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_008/StaticBody3D" index="0" unique_id=670985139]
 shape = SubResource("ConcavePolygonShape3D_d276r")
 
-[node name="Silla_009" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="9" unique_id=1470043750]
+[node name="Silla_009" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="9" unique_id=1470043750 groups=["UcanEsya"]]
 transform = Transform3D(-0.04437091, 5.258697, 0, -4.614965, -0.050560117, 0, 0, 0, 4.4055367, -0.1464665, 0.5340247, -0.3228854)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sillas/Silla_009" index="0" unique_id=894367436]
+[node name="StaticBody3D" type="RigidBody3D" parent="Sillas/Silla_009" index="0" unique_id=806061177]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_009/StaticBody3D" index="0" unique_id=289904512]
 shape = SubResource("ConcavePolygonShape3D_xxi7i")
 
-[node name="Silla_010" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="10" unique_id=1590540847]
+[node name="Silla_010" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="10" unique_id=1590540847 groups=["UcanEsya"]]
 transform = Transform3D(1.7207574, -4.9195485, 0, 3.5835, 2.3623137, 0, 0, 0, 4.4055367, -0.039395332, 0.48179817, -0.3228854)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sillas/Silla_010" index="0" unique_id=1058043980]
+[node name="StaticBody3D" type="RigidBody3D" parent="Sillas/Silla_010" index="0" unique_id=1802693127]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_010/StaticBody3D" index="0" unique_id=316785092]
 shape = SubResource("ConcavePolygonShape3D_t8dcf")
 
-[node name="Silla_011" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="11" unique_id=628849712]
+[node name="Silla_011" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="11" unique_id=628849712 groups=["UcanEsya"]]
 transform = Transform3D(3.4944898e-07, -5.251601, 6.6521744e-07, -4.6285906, -3.964848e-07, 2.842171e-14, 0, 7.929698e-07, 4.4055357, -0.1464665, 0.40892982, -0.32288533)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sillas/Silla_011" index="0" unique_id=1927093806]
+[node name="StaticBody3D" type="RigidBody3D" parent="Sillas/Silla_011" index="0" unique_id=573803943]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_011/StaticBody3D" index="0" unique_id=95347549]
 shape = SubResource("ConcavePolygonShape3D_uuksh")
 
-[node name="Silla_012" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="12" unique_id=1972765271]
+[node name="Silla_012" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="12" unique_id=1972765271 groups=["UcanEsya"]]
 transform = Transform3D(-1.932572, -9.628604e-08, 4.7299, -3.347313, -7.4286754e-07, -2.7308087, -6.066662e-07, 4.4055367, -3.570976e-07, -0.088879585, 0.40893173, -0.330388)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sillas/Silla_012" index="0" unique_id=1752021823]
+[node name="StaticBody3D" type="RigidBody3D" parent="Sillas/Silla_012" index="0" unique_id=2112325133]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_012/StaticBody3D" index="0" unique_id=2036980478]
 shape = SubResource("ConcavePolygonShape3D_2ax0j")
 
-[node name="Silla_013" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="13" unique_id=448593695]
+[node name="Silla_013" parent="Sillas" parent_id_path=PackedInt32Array(865427856) index="13" unique_id=448593695 groups=["UcanEsya"]]
 transform = Transform3D(3.326088e-07, -1.764266, 4.8852134, 0, 3.5379822, 2.4360824, -4.4055367, -1.331984e-07, 3.6882338e-07, 0.0074009895, 0.4475789, -0.32706133)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sillas/Silla_013" index="0" unique_id=597390722]
+[node name="StaticBody3D" type="RigidBody3D" parent="Sillas/Silla_013" index="0" unique_id=485817008]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sillas/Silla_013/StaticBody3D" index="0" unique_id=158595352]
 shape = SubResource("ConcavePolygonShape3D_8pybk")
@@ -3313,7 +3357,7 @@ transform = Transform3D(-3.555327, 4.731529e-07, 0, -5.3683937e-07, -3.1335495, 
 shape = SubResource("ConcavePolygonShape3D_jx1m8")
 
 [node name="p_037" parent="Cajones_Puertas" parent_id_path=PackedInt32Array(934053683) index="38" unique_id=392397603]
-transform = Transform3D(-0.2711122, 3.5662928, 1.3633401e-07, -2.5819745, -0.30267662, -1.3779398, -1.2574673, -0.14740902, 2.8293424, -0.22304374, 0.2673335, -0.17253101)
+transform = Transform3D(-0.79045224, 3.4302464, -0.28018203, -2.4729095, -1.0215027, -1.349154, -1.2574672, -0.14740911, 2.8293426, -0.22304374, 0.2673335, -0.17253098)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cajones_Puertas/p_037" index="0" unique_id=1062722991]
 
@@ -5083,22 +5127,31 @@ transform = Transform3D(0.8195203, 0.66224074, -1.509958e-07, 0.72431105, -0.749
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Puerta/StaticBody3D" index="0" unique_id=2094287242]
 shape = SubResource("ConcavePolygonShape3D_oud8w")
 
-[node name="Refrigerador" parent="Casa" index="63" unique_id=1423526990]
+[node name="Puerta2" type="MeshInstance3D" parent="Casa" index="63" unique_id=268351329]
+transform = Transform3D(-0.017466115, -0.9998726, 1.5994043e-07, -1.0935884, 0.015969092, 1.2531096e-08, 1.6497335e-08, 1.5971987e-07, 1, 0.06540908, 0.054010272, -0.023289174)
+mesh = SubResource("ArrayMesh_bh12l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Casa/Puerta2" index="0" unique_id=1366023900]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Puerta2/StaticBody3D" index="0" unique_id=2006597650]
+shape = SubResource("ConcavePolygonShape3D_oud8w")
+
+[node name="Refrigerador" parent="Casa" index="64" unique_id=1423526990]
 transform = Transform3D(-1.9392652e-07, -1.1903125, 0, 1.1903125, -1.9392652e-07, 0, 0, 0, 1.1903126, 0.01173027, 0.0666182, -0.022106614)
 
-[node name="Palanca" parent="Casa" index="64" unique_id=902125992]
+[node name="Palanca" parent="Casa" index="65" unique_id=902125992]
 transform = Transform3D(-0.0035714821, 0, 0.014911581, 0, -0.005486033, 0, -0.063067414, 0, -0.0008444368, -0.010512008, 0.042329863, -0.05636017)
 
-[node name="Puerta_R" parent="Casa" index="65" unique_id=1904435252]
+[node name="Puerta_R" parent="Casa" index="66" unique_id=1904435252]
 transform = Transform3D(-1.9392652e-07, -1.1903125, 0, 1.1903125, -1.9392652e-07, 0, 0, 0, 1.1903126, 0.016443023, 0.062556, -0.01444525)
 
-[node name="Puerta_R_001" parent="Casa" index="66" unique_id=967606713]
+[node name="Puerta_R_001" parent="Casa" index="67" unique_id=967606713]
 transform = Transform3D(-1.9392652e-07, -1.1903125, 0, 1.1903125, -1.9392652e-07, 0, 0, 0, 1.1903126, 0.016443023, 0.062556, -0.022316365)
 
-[node name="Tapa_004" parent="Casa" index="67" unique_id=178779166]
+[node name="Tapa_004" parent="Casa" index="68" unique_id=178779166]
 transform = Transform3D(0.01406676, 0.19667567, 1.7864997e-08, 0.038721982, -0.071447514, -1.679135e-08, 1.9519861e-09, -2.3064695e-08, 0.20435174, -0.0100393295, 0.040426787, -0.056366064)
 
-[node name="Piso_Baño_002" parent="Casa" index="68" unique_id=1733460958 groups=["House"]]
+[node name="Piso_Baño_002" parent="Casa" index="69" unique_id=1733460958 groups=["House"]]
 transform = Transform3D(-1.6292073e-07, 0.99999994, 0, -0.99999994, -1.6292067e-07, 0, 0, 0, 1, 0.054534644, 0.10953379, 0.0027569998)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Casa/Piso_Baño_002" index="0" unique_id=1512108244 groups=["House"]]
@@ -5111,7 +5164,7 @@ shape = SubResource("ConcavePolygonShape3D_8wk5v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Barandal_003/StaticBody3D" index="0" unique_id=1814084566]
 shape = SubResource("ConcavePolygonShape3D_xa4s2")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Casa" index="70" unique_id=2062562492]
+[node name="StaticBody3D" type="StaticBody3D" parent="Casa" index="71" unique_id=2062562492]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/StaticBody3D" index="0" unique_id=1120698941]
 shape = SubResource("ConcavePolygonShape3D_demi1")
@@ -5419,3 +5472,27 @@ shape = SubResource("BoxShape3D_64taa")
 
 [node name="AmbientPlayer" type="AudioStreamPlayer" parent="MusicTrigger" index="1" unique_id=421711805]
 stream = ExtResource("3_8lkyg")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="36" unique_id=1420490401 groups=["MutfakIsik"]]
+transform = Transform3D(1, 0, 0, 0, -0.00015704235, 1, 0, -1, -0.00015704235, -32.47952, 3.130241, -137.21758)
+visible = false
+light_color = Color(1, 0.7481477, 0.39759907, 1)
+light_energy = 3.519
+spot_range = 12.123
+spot_angle = 67.5
+
+[node name="MutfakTrigger" type="Area3D" parent="." index="37" unique_id=976524354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.267286, 0, -133.29094)
+script = ExtResource("6_8008v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MutfakTrigger" index="0" unique_id=247863029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14983559, 0.2932129, -1.1118774)
+shape = SubResource("BoxShape3D_46b6b")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="MutfakTrigger" index="1" unique_id=90725111]
+stream = ExtResource("7_lggd6")
+volume_db = 80.0
+
+[node name="UcanSandalye_1" type="RigidBody3D" parent="." index="38" unique_id=1015682016]
+
+[connection signal="body_entered" from="MutfakTrigger" to="MutfakTrigger" method="_on_body_entered"]
