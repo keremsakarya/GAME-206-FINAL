@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cjjkq7jyabap" path="res://scenes/terkedilmişev.tscn" id="2_wbvp5"]
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="3_echme"]
 [ext_resource type="PackedScene" uid="uid://cjwh5imer6epw" path="res://scenes/mahalle2.tscn" id="4_ve28u"]
+[ext_resource type="PackedScene" uid="uid://bjyd0k8t7mqjy" path="res://assets/broken+glass+shard+3d+model/tripo_convert_5ecb406f-5d45-45eb-9ee4-0bf4f082f45e.fbx" id="5_ik3cy"]
 [ext_resource type="Script" uid="uid://c20dgw67alq4e" path="res://scripts/music_trigger.gd" id="5_uccnb"]
 [ext_resource type="AudioStream" uid="uid://c30a3wlkgik6f" path="res://sounds/mahalleses.mp3" id="6_cina8"]
 [ext_resource type="Script" uid="uid://bw322jxuij70q" path="res://scripts/intro_cinematic.gd" id="7_yg0c1"]
@@ -209,12 +210,32 @@ visible = false
 use_collision = true
 size = Vector3(2.3447266, 0.33544922, 1)
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="Node" unique_id=155332203 groups=["HiddenObjectsBeforeJumpscare"]]
+[node name="CSGBox3D15" type="CSGBox3D" parent="Node" unique_id=155332203]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.566439, 0.27780777, 0.8505231)
 visible = false
 material_override = SubResource("StandardMaterial3D_qv8fo")
 size = Vector3(0.9863281, 0.040527344, 1)
 material = SubResource("StandardMaterial3D_wthoi")
+
+[node name="tripo_convert_5ecb406f-5d45-45eb-9ee4-0bf4f082f45e" parent="Node" unique_id=787832756 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("5_ik3cy")]
+transform = Transform3D(-0.00061477197, 0.3226711, 0, -0.37874103, -0.0005237593, 0, 0, 0, 0.31691885, 4.5737925, 0.3126682, 1.1644244)
+visible = false
+
+[node name="tripo_convert_5ecb406f-5d45-45eb-9ee4-0bf4f082f45e2" parent="Node" unique_id=438185207 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("5_ik3cy")]
+transform = Transform3D(-0.00043772612, 0.22974625, -0.22252947, -0.37874103, -0.00052375934, 0, -0.00043167168, 0.2265685, 0.2256506, 4.156804, 0.3126682, 0.8357508)
+visible = false
+
+[node name="tripo_convert_5ecb406f-5d45-45eb-9ee4-0bf4f082f45e3" parent="Node" unique_id=258259387 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("5_ik3cy")]
+transform = Transform3D(-0.00023914337, 0.12551753, 0.29195824, -0.37874103, -0.00052375934, 0, 0.00056635245, -0.29725742, 0.12327994, 4.447743, 0.3126682, 0.6254393)
+visible = false
+
+[node name="tripo_convert_5ecb406f-5d45-45eb-9ee4-0bf4f082f45e4" parent="Node" unique_id=59990973 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("5_ik3cy")]
+transform = Transform3D(0.0002683598, -0.14085212, -0.2851303, -0.37874103, -0.00052375934, 0, -0.0005531073, 0.29030555, -0.13834116, 3.7052956, 0.3126682, 0.6254393)
+visible = false
+
+[node name="tripo_convert_5ecb406f-5d45-45eb-9ee4-0bf4f082f45e5" parent="Node" unique_id=2114513857 groups=["HiddenObjectsBeforeJumpscare"] instance=ExtResource("5_ik3cy")]
+transform = Transform3D(-0.0005522756, 0.28986904, -0.13922134, -0.37874097, -0.0005237592, -4.929857e-11, -0.00027006728, 0.14174828, 0.28470156, 4.0745025, 0.3126682, 0.2388398)
+visible = false
 
 [node name="Abandoned_House" parent="." unique_id=1304806814 instance=ExtResource("2_wbvp5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -95.6679, 0.13583565, 66.501785)
