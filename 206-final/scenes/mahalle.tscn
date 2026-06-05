@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dgu1nkagjw0ri" path="res://scenes/mahalle3.tscn" id="1_bfg2u"]
 [ext_resource type="Script" uid="uid://1h84bnfihis4" path="res://scripts/mahalle.gd" id="1_rfy44"]
-[ext_resource type="PackedScene" uid="uid://cjjkq7jyabap" path="res://scenes/terkedilmişev.tscn" id="2_wbvp5"]
+[ext_resource type="PackedScene" uid="uid://b3s8aiqc20gnu" path="res://scenes/atm_interact.tscn" id="2_wbvp5"]
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="3_echme"]
 [ext_resource type="PackedScene" uid="uid://cjwh5imer6epw" path="res://scenes/mahalle2.tscn" id="4_ve28u"]
 [ext_resource type="PackedScene" uid="uid://bjyd0k8t7mqjy" path="res://assets/broken+glass+shard+3d+model/tripo_convert_5ecb406f-5d45-45eb-9ee4-0bf4f082f45e.fbx" id="5_ik3cy"]
@@ -32,6 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://21eonppiru4r" path="res://sounds/unlocking door.mp3" id="28_xn325"]
 [ext_resource type="PackedScene" uid="uid://ckgib1gecsibd" path="res://scenes/subtitle_trigger.tscn" id="29_w2u34"]
 [ext_resource type="PackedScene" uid="uid://3edwolqtjpci" path="res://assets/re7 masa/tripo_convert_f0b7eae3-4d06-46b3-9479-a39de28ae1b2.fbx" id="30_ik3cy"]
+[ext_resource type="PackedScene" uid="uid://cjjkq7jyabap" path="res://scenes/terkedilmişev.tscn" id="33_qgft1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve28u"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -243,16 +244,16 @@ visible = false
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -95.6679, 0.13583565, 66.501785)
 
 [node name="Player" parent="." unique_id=1581314821 instance=ExtResource("3_echme")]
-transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, 30.25551, 0.5510124, 5.217759)
+transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, -19.308165, 0.5510124, 8.418026)
 
 [node name="House2" parent="." unique_id=1272214129 instance=ExtResource("4_ve28u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011973381, -0.001060009, -0.0002709031)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=508886136 groups=["House"]]
-transform = Transform3D(1, 0, 0, 0, 0.8527223, -0.52236474, 0, 0.52236474, 0.8527223, 31.014389, 1.4279358, 35.611904)
+transform = Transform3D(1, 0, 0, 0, 0.8527223, -0.52236474, 0, 0.52236474, 0.8527223, 30.843592, 1.4890149, 35.72706)
 visible = false
 use_collision = true
-size = Vector3(2.2954102, 0.43948364, 7.7380447)
+size = Vector3(2.2954102, 0.43948364, 7.4679585)
 
 [node name="StreetLights" type="Node" parent="." unique_id=622537533]
 
@@ -1254,6 +1255,9 @@ screen_time = 5.0
 
 [node name="tripo_convert_f0b7eae3-4d06-46b3-9479-a39de28ae1b2" parent="." unique_id=836048293 instance=ExtResource("30_ik3cy")]
 transform = Transform3D(2.6520615, 0, 0, 0, 3, 0, 0, 0, 3, 41.31834, 0.9013827, 33.885532)
+
+[node name="Abandoned_House2" parent="." unique_id=1021310361 instance=ExtResource("33_qgft1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -95.8, 0.13162231, 66.729)
 
 [connection signal="finished" from="IntroCinematic/IntroVideo" to="IntroCinematic" method="_on_intro_video_finished"]
 [connection signal="pressed" from="IntroCinematic/ContinueButton" to="IntroCinematic" method="_on_continue_button_pressed"]

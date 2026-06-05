@@ -5124,16 +5124,12 @@ transform = Transform3D(-1.6292067e-07, -0.99999994, 0, 0.99999994, -1.6292067e-
 [node name="Cama_001" parent="Casa" index="16" unique_id=362637881]
 transform = Transform3D(-1.6292067e-07, 0.99999994, 0, -0.99999994, -1.6292067e-07, 0, 0, 0, 1, 0.04291744, 0.031336363, 0.005551498)
 
-<<<<<<< HEAD
-[node name="Cesta" parent="Casa" index="20" unique_id=908676813]
-=======
 [node name="StaticBody3D" type="StaticBody3D" parent="Casa/Cama_001" index="0" unique_id=1676319394]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Cama_001/StaticBody3D" index="0" unique_id=1091806254]
 shape = SubResource("ConcavePolygonShape3D_pve7w")
 
 [node name="Cesta" parent="Casa" index="20" unique_id=2030359861]
->>>>>>> d5704af3676fcee9f3ccbeeb748c829b17197e27
 transform = Transform3D(-0.05678924, -0.35179746, -1.0966058, -0.22001934, -1.0744011, 0.35606807, -1.1304414, 0.22678515, -0.014212546, 0.13178362, 0.028987732, 0.005674851)
 
 [node name="Closet" parent="Casa" index="22" unique_id=1561018984]
@@ -5142,24 +5138,17 @@ transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, 
 [node name="Closet_001" parent="Casa" index="23" unique_id=78756429]
 transform = Transform3D(-4.3711385e-08, -1, 0, 0.86533177, -3.7824854e-08, 0.50119936, -0.50119936, 2.1908123e-08, 0.86533177, 0.045156747, 0.08211334, 0.013610742)
 
-<<<<<<< HEAD
-[node name="Cofre" parent="Casa" index="26" unique_id=761195577]
-=======
 [node name="StaticBody3D" type="StaticBody3D" parent="Casa/Closet_001" index="0" unique_id=648674153]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Closet_001/StaticBody3D" index="0" unique_id=392670943]
 shape = SubResource("ConcavePolygonShape3D_etvs2")
 
 [node name="Cofre" parent="Casa" index="26" unique_id=1210602272]
->>>>>>> d5704af3676fcee9f3ccbeeb748c829b17197e27
 transform = Transform3D(-1.6292067e-07, -0.99999994, 0, 0.99999994, -1.6292067e-07, 0, 0, 0, 1, -0.044516716, 0.018935699, -0.029653575)
 
 [node name="Colchon" parent="Casa" index="28" unique_id=1826247708]
 transform = Transform3D(0.9990041, -0.04461854, 0, 0.04461854, 0.9990041, 0, 0, 0, 1, -0.028425941, 0.019263458, -0.028556323)
 
-<<<<<<< HEAD
-[node name="E" parent="Casa" index="31" unique_id=1594269568]
-=======
 [node name="StaticBody3D" type="StaticBody3D" parent="Casa/Colchon" index="0" unique_id=2051650224]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Colchon/StaticBody3D" index="0" unique_id=352735724]
@@ -5171,7 +5160,6 @@ shape = SubResource("ConcavePolygonShape3D_mtutj")
 shape = SubResource("ConcavePolygonShape3D_c8pot")
 
 [node name="E" parent="Casa" index="31" unique_id=271777769]
->>>>>>> d5704af3676fcee9f3ccbeeb748c829b17197e27
 visible = false
 
 [node name="Escalera" parent="Casa" index="33" unique_id=1249842771]
