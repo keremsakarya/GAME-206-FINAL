@@ -837,17 +837,17 @@ size = Vector3(83.97266, 18.803223, 104.007324)
 [node name="Props" unique_id=809721206 instance=ExtResource("1_ivfko")]
 script = ExtResource("2_wcn1u")
 
-[node name="Concrete" parent="." index="0" unique_id=1302105108]
+[node name="Concrete" parent="." index="0" unique_id=1313024935]
 transform = Transform3D(-1.1355361e-05, -263.9084, -1.1535802e-05, 0, -1.1535802e-05, 263.9084, -259.78036, 1.1535802e-05, 5.042459e-13, -10.924973, 0.5427666, -66.47521)
 visible = false
 material_override = SubResource("StandardMaterial3D_c1wke")
 
-[node name="Bus_stop" parent="." index="1" unique_id=667144951]
+[node name="Bus_stop" parent="." index="1" unique_id=1018527494]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -10.924969, 2.8689392, -66.475204)
 visible = false
 material_override = SubResource("StandardMaterial3D_4xr3x")
 
-[node name="Bus_stop_sign" parent="." index="2" unique_id=1158639706]
+[node name="Bus_stop_sign" parent="." index="2" unique_id=506482418]
 transform = Transform3D(-4.524114e-06, -103.499664, -4.5241154e-06, 0, -4.524114e-06, 103.499695, -103.499664, 4.524114e-06, 1.9775536e-13, -14.488899, 0.5427666, -69.68466)
 visible = false
 material_override = SubResource("StandardMaterial3D_p0laa")
@@ -857,12 +857,12 @@ transform = Transform3D(-4.524114e-06, -103.499664, -4.5241154e-06, 0, -4.524114
 material_override = SubResource("StandardMaterial3D_p0laa")
 mesh = SubResource("ArrayMesh_yn7qe")
 
-[node name="Tree" parent="." index="4" unique_id=1061075711]
+[node name="Tree" parent="." index="4" unique_id=1756394618]
 transform = Transform3D(-1.4153078, 14.9780855, 387.88947, -36.48942, 386.1692, -15.044811, -386.45963, -36.516846, -1.6955188e-05, 3.5741997, 0.5427666, -59.55587)
 visible = false
 material_override = SubResource("StandardMaterial3D_rgm3b")
 
-[node name="Bus_stop_01" parent="." index="5" unique_id=1355142480]
+[node name="Bus_stop_01" parent="." index="5" unique_id=402491170]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -14.128334, 2.7459404, -67.127045)
 visible = false
 material_override = SubResource("StandardMaterial3D_2biln")
@@ -872,7 +872,7 @@ transform = Transform3D(-0.69114894, 99.997604, 4.3710347e-06, -1.4826131e-16, -
 material_override = SubResource("StandardMaterial3D_2biln")
 mesh = SubResource("ArrayMesh_jq23a")
 
-[node name="Bus_stop_01_" parent="." index="7" unique_id=2120350913]
+[node name="Bus_stop_01_" parent="." index="7" unique_id=606479141]
 transform = Transform3D(-4.418535e-06, -101.08428, -4.4185344e-06, 0, -4.4185344e-06, 101.08429, -101.0843, 4.4185344e-06, 1.9314028e-13, -14.033167, 2.1876354, -64.205505)
 visible = false
 material_override = SubResource("StandardMaterial3D_gfqrb")
@@ -882,30 +882,30 @@ transform = Transform3D(101.08431, 0, 0, 0, -4.4185344e-06, 101.08428, 0, -101.0
 material_override = SubResource("StandardMaterial3D_gfqrb")
 mesh = SubResource("ArrayMesh_mt0ae")
 
-[node name="Tree_03" parent="." index="9" unique_id=1169990209]
+[node name="Tree_03" parent="." index="9" unique_id=818956781]
 transform = Transform3D(-0.7278635, 18.761194, 113.38904, -4.39573, 113.303825, -18.775305, -114.84658, -4.455585, -4.9563923e-06, -14.620316, 0.5427666, -59.640343)
 visible = false
 
-[node name="Tree_02" parent="." index="10" unique_id=1030934521]
+[node name="Tree_02" parent="." index="10" unique_id=1566818389]
 transform = Transform3D(-1.7779676e-05, 1.925846e-05, 440.58215, 1.7779685e-05, 440.58218, -1.9258456e-05, -406.7516, 1.9258467e-05, -1.9258458e-05, -9.4218025, 0.5427666, -59.616203)
 visible = false
 
-[node name="Bus_stop_sign_01" parent="." index="11" unique_id=1636908044]
+[node name="Bus_stop_sign_01" parent="." index="11" unique_id=225583101]
 transform = Transform3D(-4.713908e-06, -107.84164, -4.713908e-06, 0, -4.713908e-06, 107.84164, -107.84164, 4.713908e-06, 2.0605144e-13, -13.489374, 0.5427666, -69.680016)
 visible = false
 material_override = SubResource("StandardMaterial3D_l7xno")
 
-[node name="Bus_stop_sign_02" parent="." index="12" unique_id=282314618]
+[node name="Bus_stop_sign_02" parent="." index="12" unique_id=1568912877]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -12.506617, 0.5427666, -69.67545)
 visible = false
 material_override = SubResource("StandardMaterial3D_gowrw")
 
-[node name="Tree_01" parent="." index="13" unique_id=1492384884]
+[node name="Tree_01" parent="." index="13" unique_id=732544548]
 transform = Transform3D(1.2208934e-12, -1.2847284e-05, 293.9116, -293.91147, -1.2847284e-05, 6.593214e-13, 1.2847278e-05, -293.9116, -1.2847284e-05, -26.276867, 0.5427666, -59.694458)
 visible = false
 material_override = SubResource("StandardMaterial3D_26slm")
 
-[node name="Lamppost" parent="." index="14" unique_id=711240748]
+[node name="Lamppost" parent="." index="14" unique_id=1991896293]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -7.109993, 0.5427666, -69.01792)
 visible = false
 material_override = SubResource("StandardMaterial3D_h258n")
@@ -940,7 +940,7 @@ transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393
 material_override = SubResource("StandardMaterial3D_h258n")
 mesh = SubResource("ArrayMesh_dfd6k")
 
-[node name="Lamppost_01" parent="." index="19" unique_id=1632378530]
+[node name="Lamppost_01" parent="." index="19" unique_id=2047109513]
 transform = Transform3D(-4.3711393e-06, -100.000015, -4.3711393e-06, 0, -4.3711393e-06, 100.00001, -100.000015, 4.3711393e-06, 1.9106856e-13, -8.646263, 0.5427666, -69.02504)
 visible = false
 material_override = SubResource("StandardMaterial3D_wubtn")
@@ -975,69 +975,69 @@ transform = Transform3D(-4.3711393e-06, -100.000015, -4.3711393e-06, 0, -4.37113
 material_override = SubResource("StandardMaterial3D_wubtn")
 mesh = SubResource("ArrayMesh_df12c")
 
-[node name="House" parent="." index="25" unique_id=1840680686]
+[node name="House" parent="." index="25" unique_id=1216293580]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -23.463972, 3.767227, -80.27508)
 visible = false
 
-[node name="Asphalt" parent="." index="26" unique_id=2112125619]
+[node name="Asphalt" parent="." index="26" unique_id=651741351]
 transform = Transform3D(4.3711384e-06, -80.9818, 4.3711384e-06, 0, 3.5398268e-06, 99.99999, 99.99999, 3.5398268e-06, -1.9106853e-13, -13.4971695, 0.7180605, -75.910255)
 visible = false
 material_override = SubResource("StandardMaterial3D_jypl7")
 
-[node name="Brick" parent="." index="27" unique_id=251015336]
+[node name="Brick" parent="." index="27" unique_id=1451839827]
 transform = Transform3D(-4.3711398e-06, -100.00002, -4.3711393e-06, 0, -4.3711398e-06, 100.00001, -100.00002, 4.3711398e-06, 1.9106856e-13, -21.212008, 2.0122573, -82.95759)
 visible = false
 
-[node name="Cube_036" parent="." index="28" unique_id=362234068]
+[node name="Cube_036" parent="." index="28" unique_id=28783860]
 transform = Transform3D(-4.3711398e-06, -100.00002, -4.3711393e-06, 0, -4.3711398e-06, 100.00001, -100.00002, 4.3711398e-06, 1.9106856e-13, -9.435719, 1.94285, -83.09421)
 visible = false
 
-[node name="Plants" parent="." index="29" unique_id=992369214]
+[node name="Plants" parent="." index="29" unique_id=1580255392]
 transform = Transform3D(-6.269815e-06, 8.519779e-06, 143.43666, 6.2698173e-06, 194.90977, -6.2698164e-06, -143.43666, 8.519778e-06, -6.2698155e-06, -23.290861, 0.6203542, -65.715706)
 visible = false
 
-[node name="Plants_01" parent="." index="30" unique_id=1353903370]
+[node name="Plants_01" parent="." index="30" unique_id=619701278]
 transform = Transform3D(-5.2144196e-06, 7.0856445e-06, 119.29203, 5.2144196e-06, 162.10068, -5.214419e-06, -119.29203, 7.085644e-06, -5.21442e-06, -20.727488, 0.6203542, -65.703804)
 visible = false
 
-[node name="Plants_02" parent="." index="31" unique_id=281485299]
+[node name="Plants_02" parent="." index="31" unique_id=2074218539]
 transform = Transform3D(-6.0783254e-06, 8.2595725e-06, 139.0559, 6.0783273e-06, 188.95695, -6.0783273e-06, -139.0559, 8.259572e-06, -6.0783264e-06, -18.05246, 0.6203542, -65.69138)
 visible = false
 
-[node name="Tire_01" parent="." index="32" unique_id=63924249]
+[node name="Tire_01" parent="." index="32" unique_id=1535100691]
 transform = Transform3D(-4.645399e-06, 4.6453993e-06, 106.27434, -2.0238035e-13, 106.27434, -4.6453993e-06, -106.27434, -4.054372e-13, -4.645399e-06, -3.830944, 0.8317449, -69.16505)
 visible = false
 
-[node name="Bus" parent="." index="33" unique_id=1983872433]
+[node name="Bus" parent="." index="33" unique_id=1823644809]
 transform = Transform3D(-4.3711393e-06, -100.00001, -4.371139e-06, 0, -4.3711393e-06, 100, -100.00001, 4.3711393e-06, 1.9106854e-13, -2.3993073, 2.1522672, -65.79245)
 visible = false
 material_override = SubResource("StandardMaterial3D_shr20")
 
-[node name="Tire_03" parent="." index="34" unique_id=2003962934]
+[node name="Tire_03" parent="." index="34" unique_id=930077768]
 transform = Transform3D(-4.645399e-06, 4.6453993e-06, 106.27434, -2.0238035e-13, 106.27434, -4.6453993e-06, -106.27434, -4.054372e-13, -4.645399e-06, -1.0895042, 0.8317449, -69.15232)
 visible = false
 
-[node name="Tire" parent="." index="35" unique_id=94688826]
+[node name="Tire" parent="." index="35" unique_id=1728042294]
 transform = Transform3D(-4.645399e-06, 4.6453993e-06, 106.27434, -2.0238035e-13, 106.27434, -4.6453993e-06, -106.27434, -4.054372e-13, -4.645399e-06, -3.8589668, 0.8317449, -63.128555)
 visible = false
 
-[node name="Tire_02" parent="." index="36" unique_id=723712398]
+[node name="Tire_02" parent="." index="36" unique_id=329915257]
 transform = Transform3D(-4.645399e-06, 4.6453993e-06, 106.27434, -2.0238035e-13, 106.27434, -4.6453993e-06, -106.27434, -4.054372e-13, -4.645399e-06, -1.1175308, 0.8317449, -63.11583)
 visible = false
 
-[node name="Cube_038" parent="." index="37" unique_id=1739460047]
+[node name="Cube_038" parent="." index="37" unique_id=1138213362]
 transform = Transform3D(-4.478049e-06, -99.99999, -4.371139e-06, 0, -4.3711384e-06, 100, -102.44582, 4.3711384e-06, 1.9106854e-13, -4.0567436, 1.9666439, -61.145706)
 visible = false
 
-[node name="Cube_039" parent="." index="38" unique_id=1858337313]
+[node name="Cube_039" parent="." index="38" unique_id=2080232285]
 transform = Transform3D(4.478049e-06, -99.99999, 4.371139e-06, 0, 4.3711384e-06, 100, 102.44582, 4.3711384e-06, -1.9106854e-13, -4.0508842, 1.9666439, -62.40754)
 visible = false
 
-[node name="Cube_040" parent="." index="39" unique_id=371238035]
+[node name="Cube_040" parent="." index="39" unique_id=562536184]
 transform = Transform3D(-4.478049e-06, -99.99999, -4.371139e-06, 0, -4.3711384e-06, 100, -102.44582, 4.3711384e-06, 1.9106854e-13, -4.028942, 1.9666439, -67.13387)
 visible = false
 
-[node name="Cube_041" parent="." index="40" unique_id=638061140]
+[node name="Cube_041" parent="." index="40" unique_id=793726850]
 transform = Transform3D(4.478049e-06, -99.99999, 4.371139e-06, 0, 4.3711384e-06, 100, 102.44582, 4.3711384e-06, -1.9106854e-13, -4.0230865, 1.9666439, -68.3957)
 visible = false
 
@@ -2054,7 +2054,7 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_ltb8r")
 
 [node name="ATMInteract" parent="." index="301" unique_id=432739233 instance=ExtResource("18_qk77w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.617615, 4.6479483, -34.333706)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.031975, 4.6479483, -33.02785)
 
 [node name="MusicTrigger" type="Area3D" parent="." index="302" unique_id=1669967735]
 script = ExtResource("19_c1wke")
