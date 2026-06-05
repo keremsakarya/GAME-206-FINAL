@@ -6,6 +6,19 @@ extends Area3D
 func _on_body_entered(body):
 	if body.name == "Player":
 		
+		var kamera = body.get_node_or_null("Camera3D")
+		if kamera:
+			# Titreme için bir Tween motoru kuruyoruz. Toplam 15 kere tekrarlayacak.
+			var shake_tween = create_tween().set_loops(15)
+			
+			# Lensi 0.05 saniyede hafifçe yukarı, sonra 0.05 saniyede aşağı çekiyoruz.
+			# (0.1 sn x 15 tekrar = tam 1.5 saniyelik sarsıntı)
+			shake_tween.tween_property(kamera, "v_offset", 0.2, 0.05)
+			shake_tween.tween_property(kamera, "v_offset", -0.2, 0.05)
+			
+			# Sarsıntı tamamen bittiğinde lensin yamuk kalmaması için sıfırlıyoruz:
+			shake_tween.finished.connect(func(): kamera.v_offset = 0.0)
+		
 		# --- 1. SESİ ÇAL ---
 		if korku_sesi:
 			korku_sesi.play()
