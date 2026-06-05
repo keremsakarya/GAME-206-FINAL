@@ -90,11 +90,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7974055, 0)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.014355361, -0.63213766, -0.22994953)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=1667011876]
-transform = Transform3D(1, 0, 0, 0, 0.99619466, 0.08715573, 0, -0.08715573, 0.99619466, 0, -0.2225666, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9961947, 0.087155744, 0, -0.08715574, 0.9961947, 0, -0.2225666, 0.09300375)
 visible = false
 light_energy = 6.0
 light_volumetric_fog_energy = 0.1
-spot_range = 100.0
+spot_range = 6.0
 spot_angle = 22.5
 spot_angle_attenuation = 2.0
 

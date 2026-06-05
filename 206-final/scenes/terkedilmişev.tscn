@@ -5198,22 +5198,31 @@ mesh = SubResource("ArrayMesh_bh12l")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Puerta2/StaticBody3D" index="0" unique_id=2006597650]
 shape = SubResource("ConcavePolygonShape3D_oud8w")
 
-[node name="Refrigerador" parent="Casa" index="64" unique_id=1423526990]
+[node name="Puerta3" type="MeshInstance3D" parent="Casa" index="64" unique_id=669955374]
+transform = Transform3D(-0.017466115, -0.9998726, 1.5994043e-07, -1.0935884, 0.015969092, 1.2531096e-08, 1.6497335e-08, 1.5971987e-07, 1, 0.005010605, -0.0012950897, -0.023289176)
+mesh = SubResource("ArrayMesh_bh12l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Casa/Puerta3" index="0" unique_id=2009408766]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Puerta3/StaticBody3D" index="0" unique_id=887207907]
+shape = SubResource("ConcavePolygonShape3D_oud8w")
+
+[node name="Refrigerador" parent="Casa" index="65" unique_id=1423526990]
 transform = Transform3D(-1.9392652e-07, -1.1903125, 0, 1.1903125, -1.9392652e-07, 0, 0, 0, 1.1903126, 0.01173027, 0.0666182, -0.022106614)
 
-[node name="Palanca" parent="Casa" index="65" unique_id=902125992]
+[node name="Palanca" parent="Casa" index="66" unique_id=902125992]
 transform = Transform3D(-0.0035714821, 0, 0.014911581, 0, -0.005486033, 0, -0.063067414, 0, -0.0008444368, -0.010512008, 0.042329863, -0.05636017)
 
-[node name="Puerta_R" parent="Casa" index="66" unique_id=1904435252]
+[node name="Puerta_R" parent="Casa" index="67" unique_id=1904435252]
 transform = Transform3D(-1.9392652e-07, -1.1903125, 0, 1.1903125, -1.9392652e-07, 0, 0, 0, 1.1903126, 0.016443023, 0.062556, -0.01444525)
 
-[node name="Puerta_R_001" parent="Casa" index="67" unique_id=967606713]
+[node name="Puerta_R_001" parent="Casa" index="68" unique_id=967606713]
 transform = Transform3D(-1.9392652e-07, -1.1903125, 0, 1.1903125, -1.9392652e-07, 0, 0, 0, 1.1903126, 0.016443023, 0.062556, -0.022316365)
 
-[node name="Tapa_004" parent="Casa" index="68" unique_id=178779166]
+[node name="Tapa_004" parent="Casa" index="69" unique_id=178779166]
 transform = Transform3D(0.01406676, 0.19667567, 1.7864997e-08, 0.038721982, -0.071447514, -1.679135e-08, 1.9519861e-09, -2.3064695e-08, 0.20435174, -0.0100393295, 0.040426787, -0.056366064)
 
-[node name="Piso_Baño_002" parent="Casa" index="69" unique_id=1733460958 groups=["House"]]
+[node name="Piso_Baño_002" parent="Casa" index="70" unique_id=1733460958 groups=["House"]]
 transform = Transform3D(-1.6292073e-07, 0.99999994, 0, -0.99999994, -1.6292067e-07, 0, 0, 0, 1, 0.054534644, 0.10953379, 0.0027569998)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Casa/Piso_Baño_002" index="0" unique_id=1512108244 groups=["House"]]
@@ -5226,7 +5235,7 @@ shape = SubResource("ConcavePolygonShape3D_8wk5v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/Barandal_003/StaticBody3D" index="0" unique_id=1814084566]
 shape = SubResource("ConcavePolygonShape3D_xa4s2")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Casa" index="71" unique_id=2062562492]
+[node name="StaticBody3D" type="StaticBody3D" parent="Casa" index="72" unique_id=2062562492]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/StaticBody3D" index="0" unique_id=1120698941]
 shape = SubResource("ConcavePolygonShape3D_demi1")
