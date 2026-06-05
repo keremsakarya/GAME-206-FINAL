@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5kfncf6b5moa"
-path.s3tc="res://.godot/imported/MetalFloorsBare.png-be8621c69f57191c4ea57924f5d6c059.s3tc.ctex"
+path.s3tc="res://.godot/imported/MetalFloorsBare.png-a9b485191e2b4e95497133a5ab8300f1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/textures/MetalFloorsBare.png"
-dest_files=["res://.godot/imported/MetalFloorsBare.png-be8621c69f57191c4ea57924f5d6c059.s3tc.ctex"]
+source_file="res://assets/Mine/Textures/MetalFloorsBare.png"
+dest_files=["res://.godot/imported/MetalFloorsBare.png-a9b485191e2b4e95497133a5ab8300f1.s3tc.ctex"]
 
 [params]
 

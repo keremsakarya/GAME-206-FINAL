@@ -21,7 +21,7 @@ func activate() -> void:
 	is_active = true
 	show() 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not is_active or has_triggered or not player_camera:
 		return
 		

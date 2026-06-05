@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bf1cqn61dulpi"
-path.s3tc="res://.godot/imported/WoodRough.jpg-2e3475cd293c58484a837d7ff2a56ecd.s3tc.ctex"
+path.s3tc="res://.godot/imported/WoodRough.jpg-3ef8d3c302406fe161f9592525994ef9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/textures/WoodRough.jpg"
-dest_files=["res://.godot/imported/WoodRough.jpg-2e3475cd293c58484a837d7ff2a56ecd.s3tc.ctex"]
+source_file="res://assets/Mine/Textures/WoodRough.jpg"
+dest_files=["res://.godot/imported/WoodRough.jpg-3ef8d3c302406fe161f9592525994ef9.s3tc.ctex"]
 
 [params]
 

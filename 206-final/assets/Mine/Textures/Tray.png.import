@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci8aqjv6bdw2p"
-path.s3tc="res://.godot/imported/Tray.png-a98c3efa1c1d5e65abb22b3c5d825801.s3tc.ctex"
+path.s3tc="res://.godot/imported/Tray.png-24eea8255b0e87078b2e707875b3f24d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/textures/Tray.png"
-dest_files=["res://.godot/imported/Tray.png-a98c3efa1c1d5e65abb22b3c5d825801.s3tc.ctex"]
+source_file="res://assets/Mine/Textures/Tray.png"
+dest_files=["res://.godot/imported/Tray.png-24eea8255b0e87078b2e707875b3f24d.s3tc.ctex"]
 
 [params]
 

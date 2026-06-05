@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db77jt5tcf751"
-path.s3tc="res://.godot/imported/Elevator.png-2ff2d7caaf12deb3a77f143ba0b51e2f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Elevator.png-c8004a0fb6167b96106ac430f6b67709.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/textures/Elevator.png"
-dest_files=["res://.godot/imported/Elevator.png-2ff2d7caaf12deb3a77f143ba0b51e2f.s3tc.ctex"]
+source_file="res://assets/Mine/Textures/Elevator.png"
+dest_files=["res://.godot/imported/Elevator.png-c8004a0fb6167b96106ac430f6b67709.s3tc.ctex"]
 
 [params]
 

@@ -23,7 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://ba3hu47qgauxr" path="res://assets/industrial+device+3d+model/tripo_convert_68bf59ae-63e3-4bc7-a082-256b0ab73ee1.fbx" id="22_0f4nc"]
 [ext_resource type="PackedScene" uid="uid://dd43ngw3agvw3" path="res://assets/key1/tripo_convert_b4ed003a-bb60-4cb2-b6f1-9563d130484a.fbx" id="23_ayuf1"]
 [ext_resource type="PackedScene" uid="uid://xauaplb4qlfj" path="res://assets/monster+3d+model/tripo_convert_ad9402be-63d5-478b-b8ca-b6efe58f7d95.fbx" id="23_wfqbq"]
-[ext_resource type="Script" uid="uid://b5wlx06564xvm" path="res://scripts/key_interact_area.gd" id="25_iefcp"]
+[ext_resource type="Script" uid="uid://eobtc3ion481" path="res://scenes/key_interact_area.gd" id="24_ik3cy"]
+[ext_resource type="Script" uid="uid://cw362ci6qb5ku" path="res://scripts/mineopencode.gd" id="25_ik3cy"]
+[ext_resource type="AudioStream" uid="uid://cxpctpk7bt1t3" path="res://sounds/elevatorsound.mp3" id="26_2ww5m"]
 [ext_resource type="PackedScene" uid="uid://f5m4gdab0lwk" path="res://assets/door attic/tripo_convert_27a3a87d-2ed9-43c3-943b-b649ca28cc20.fbx" id="26_xn325"]
 [ext_resource type="Script" uid="uid://dv86wqffuuem3" path="res://scripts/locked_door_area.gd" id="27_w2u34"]
 [ext_resource type="AudioStream" uid="uid://21eonppiru4r" path="res://sounds/unlocking door.mp3" id="28_xn325"]
@@ -83,7 +85,7 @@ size = Vector3(2.455017, 1.4707031, 0.6375122)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfqbq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ik3cy"]
-size = Vector3(3.4958801, 2.748169, 2.480896)
+size = Vector3(2.4592829, 2.3977356, 1.9678802)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn325"]
 size = Vector3(0.1293335, 1, 0.5054321)
@@ -220,7 +222,7 @@ material = SubResource("StandardMaterial3D_wthoi")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -95.6679, 0.13583565, 66.501785)
 
 [node name="Player" parent="." unique_id=1581314821 instance=ExtResource("3_echme")]
-transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, -28.421766, 0.5510124, 8.196928)
+transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, 30.25551, 0.5510124, 5.217759)
 
 [node name="House2" parent="." unique_id=1272214129 instance=ExtResource("4_ve28u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011973381, -0.001060009, -0.0002709031)
@@ -1086,7 +1088,7 @@ transform = Transform3D(-0.612907, 0, 0.79015505, 0, 1, 0, -0.79015505, 0, -0.61
 
 [node name="KeyInteractArea" type="Area3D" parent="." unique_id=1962719418 node_paths=PackedStringArray("monster", "key_mesh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.855213, 0, 3.0616846)
-script = ExtResource("25_iefcp")
+script = ExtResource("24_ik3cy")
 monster = NodePath("../Monster")
 key_mesh = NodePath("../Key")
 
@@ -1108,6 +1110,45 @@ theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wfqbq")
 text = "Press [E] to grab the key"
 
+[node name="MineDoorArea" type="Area3D" parent="." unique_id=244098660 node_paths=PackedStringArray("color_rect", "interact_label", "audio_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.131071, 0.4821584, 30.647951)
+script = ExtResource("25_ik3cy")
+next_scene_path = "uid://n2g1uqmrfrnl"
+color_rect = NodePath("CanvasLayer/ColorRect")
+interact_label = NodePath("CanvasLayer/InteractLabel")
+audio_player = NodePath("TransitionAudio")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MineDoorArea" unique_id=1604507702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2601757, 0.44160464, 0.90138626)
+shape = SubResource("BoxShape3D_ik3cy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="MineDoorArea" unique_id=179126980]
+layer = 102
+
+[node name="InteractLabel" type="Label" parent="MineDoorArea/CanvasLayer" unique_id=2126043026]
+visible = false
+offset_left = 227.0
+offset_top = 520.0
+offset_right = 947.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_fonts/font = ExtResource("20_hxgal")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wfqbq")
+text = "Press [E] to go inside"
+
+[node name="ColorRect" type="ColorRect" parent="MineDoorArea/CanvasLayer" unique_id=106696653]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TransitionAudio" type="AudioStreamPlayer" parent="MineDoorArea" unique_id=1113116607]
+stream = ExtResource("26_2ww5m")
+
 [node name="AtticDoorSystem" type="Node3D" parent="." unique_id=1750702789]
 
 [node name="AtticDoorHinge" type="Node3D" parent="AtticDoorSystem" unique_id=1620375326]
@@ -1128,7 +1169,7 @@ script = ExtResource("27_w2u34")
 door_hinge = NodePath("../AtticDoorHinge")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AtticDoorSystem/LockedDoorArea" unique_id=142145275]
-transform = Transform3D(0.9957522, -0.091933995, 4.018655e-09, 0.091933995, 0.9957522, 1.8512125e-10, -4.018487e-09, 1.8372504e-10, 1, 1.5441713, 0.46256256, -0.07385254)
+transform = Transform3D(0.995765, -0.09193517, 4.018411e-09, 0.09193517, 0.995765, 1.8649574e-10, -4.0185384e-09, 1.837274e-10, 1, 1.5441713, 0.46256256, -0.07385254)
 shape = SubResource("BoxShape3D_2ww5m")
 
 [node name="UnlockAudio" type="AudioStreamPlayer" parent="AtticDoorSystem/LockedDoorArea" unique_id=1193248689]
@@ -1198,5 +1239,7 @@ transform = Transform3D(2.6520615, 0, 0, 0, 3, 0, 0, 0, 3, 41.31834, 0.9013827, 
 [connection signal="body_entered" from="LookAtHome/CinematicArea" to="LookAtHome/CinematicArea" method="_on_body_entered"]
 [connection signal="body_entered" from="KeyInteractArea" to="KeyInteractArea" method="_on_body_entered"]
 [connection signal="body_exited" from="KeyInteractArea" to="KeyInteractArea" method="_on_body_exited"]
+[connection signal="body_entered" from="MineDoorArea" to="MineDoorArea" method="_on_body_entered"]
+[connection signal="body_exited" from="MineDoorArea" to="MineDoorArea" method="_on_body_exited"]
 [connection signal="body_entered" from="AtticDoorSystem/LockedDoorArea" to="AtticDoorSystem/LockedDoorArea" method="_on_body_entered"]
 [connection signal="body_exited" from="AtticDoorSystem/LockedDoorArea" to="AtticDoorSystem/LockedDoorArea" method="_on_body_exited"]

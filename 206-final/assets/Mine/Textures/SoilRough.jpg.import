@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3atrnv0uo3y0"
-path.s3tc="res://.godot/imported/SoilRough.jpg-24b8e2695ec7748b4bb52f4a8a06c64e.s3tc.ctex"
+path.s3tc="res://.godot/imported/SoilRough.jpg-00064b33db8144a877d207f793aead2e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/textures/SoilRough.jpg"
-dest_files=["res://.godot/imported/SoilRough.jpg-24b8e2695ec7748b4bb52f4a8a06c64e.s3tc.ctex"]
+source_file="res://assets/Mine/Textures/SoilRough.jpg"
+dest_files=["res://.godot/imported/SoilRough.jpg-00064b33db8144a877d207f793aead2e.s3tc.ctex"]
 
 [params]
 

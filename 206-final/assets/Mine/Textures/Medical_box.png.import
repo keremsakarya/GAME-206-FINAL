@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc5anjkxamdnv"
-path.s3tc="res://.godot/imported/Medical_box.png-0242104fba45182ab036b8e409447f35.s3tc.ctex"
+path.s3tc="res://.godot/imported/Medical_box.png-343822468bfb01d7e5d4f49fb60c0b6e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/textures/Medical_box.png"
-dest_files=["res://.godot/imported/Medical_box.png-0242104fba45182ab036b8e409447f35.s3tc.ctex"]
+source_file="res://assets/Mine/Textures/Medical_box.png"
+dest_files=["res://.godot/imported/Medical_box.png-343822468bfb01d7e5d4f49fb60c0b6e.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy514debfwtia"
-path.s3tc="res://.godot/imported/Locker.png-07e0693a6a0a25a0e4ee56aefb216c61.s3tc.ctex"
+path.s3tc="res://.godot/imported/Locker.png-39380ea4c45e4e7fcc2a4eddc09d41f1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Mine/textures/Locker.png"
-dest_files=["res://.godot/imported/Locker.png-07e0693a6a0a25a0e4ee56aefb216c61.s3tc.ctex"]
+source_file="res://assets/Mine/Textures/Locker.png"
+dest_files=["res://.godot/imported/Locker.png-39380ea4c45e4e7fcc2a4eddc09d41f1.s3tc.ctex"]
 
 [params]
 
