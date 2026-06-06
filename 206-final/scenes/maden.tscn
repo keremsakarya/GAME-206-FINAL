@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dxogt5plmf4pt" path="res://scenes/player.tscn" id="9_8uprw"]
 [ext_resource type="Material" uid="uid://nbbdrx8vma80" path="res://demo/assets/materials/M_rock23_tp.tres" id="10_ne3ck"]
 [ext_resource type="PackedScene" uid="uid://cun1lovvpjadc" path="res://scenes/bug_enemy.tscn" id="11_beiek"]
+[ext_resource type="PackedScene" uid="uid://c63kaiampmcjv" path="res://assets/generator/tripo_convert_e0bd56e1-74c5-405d-9af0-83bff9491917.fbx" id="12_vqh3b"]
+[ext_resource type="PackedScene" uid="uid://bwja3rq0x0gnd" path="res://assets/final door/tripo_convert_0ccafed3-f5e8-4849-9d2b-88872180a600.fbx" id="13_0nnex"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ne3ck"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -3150,3 +3152,11 @@ patrol_distance = 10.0
 [node name="BugEnemy8" parent="." index="317" unique_id=843358645 instance=ExtResource("11_beiek")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.271212, 3.3224487, 40.314945)
 patrol_distance = 10.0
+
+[node name="Task" type="Node" parent="." index="318" unique_id=106312650]
+
+[node name="tripo_convert_e0bd56e1-74c5-405d-9af0-83bff9491917" parent="Task" index="0" unique_id=218748374 instance=ExtResource("12_vqh3b")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14.288043, 3.2066727, 33.87778)
+
+[node name="tripo_convert_0ccafed3-f5e8-4849-9d2b-88872180a600" parent="Task" index="1" unique_id=1234924541 instance=ExtResource("13_0nnex")]
+transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, -13.585163, 4.5101714, 36.501328)
