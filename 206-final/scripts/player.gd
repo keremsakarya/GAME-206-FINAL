@@ -4,6 +4,7 @@ const WALK_SPEED = 3.0
 const SPRINT_SPEED = 5.5
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.002
+
 # --- CAMERA SHAKE & FOV VARIABLES ---
 const NORMAL_FOV = 75.0
 const SPRINT_FOV = 90.0 
@@ -33,12 +34,12 @@ var can_exit = false
 @onready var grass_landing = $GrassLanding
 @onready var carpet_landing = $CarpetLanding
 @onready var sidewalk_landing = $SidewalkLanding
-@onready var mine_landing = $MineLanding # NEW: Mine landing audio
+@onready var mine_landing = $MineLanding
 
 @onready var grass_audio = $GrassAudio 
 @onready var carpet_audio = $CarpetAudio 
 @onready var sidewalk_audio = $SidewalkAudio 
-@onready var mine_footstep_audio = $MineFootstepAudio # NEW: Mine footstep audio
+@onready var mine_footstep_audio = $MineFootstepAudio
 @onready var floor_detector = $FloorDetector
 var step_timer: float = 0.0
 
@@ -51,14 +52,10 @@ var shake_intensity: float = 0.0
 var shake_duration: float = 0.0
 
 func _ready() -> void:
-	# --- AUTO-CONNECT GROUP ---
 	add_to_group("Player")
-	# --------------------------
-	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pistol_model.visible = false
 	pickup_ui.hide()
-	
 	camera_base_y = camera.position.y
 
 func _unhandled_input(event):
@@ -76,6 +73,14 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _physics_process(delta):
+	# --- MOVED: JUMPSCARE CAMERA SHAKE ---
+	# Placed ABOVE 'can_move' so the camera shakes even when the player is frozen!
+	if shake_duration > 0:
+		shake_duration -= delta
+		camera.h_offset = randf_range(-shake_intensity, shake_intensity)
+		camera.v_offset = randf_range(-shake_intensity, shake_intensity)
+	
+	# -------------------------------------
 	if not can_move: return
 	
 	if not is_on_floor():
@@ -128,7 +133,7 @@ func _physics_process(delta):
 			elif ground.is_in_group("Sidewalk"):
 				sidewalk_landing.pitch_scale = randf_range(0.8, 0.9)
 				sidewalk_landing.play()
-			elif ground.is_in_group("MineFloor"): # NEW: Mine landing check
+			elif ground.is_in_group("MineFloor"):
 				mine_landing.pitch_scale = randf_range(0.8, 1.0)
 				mine_landing.play()
 				
@@ -156,24 +161,24 @@ func _physics_process(delta):
 		bob_time = 0.0
 		camera.v_offset = lerp(camera.v_offset, 0.0, delta * 5.0)
 		camera.h_offset = lerp(camera.h_offset, 0.0, delta * 5.0)
-		
-	# JUMPSCARE CAMERA SHAKE
-	if shake_duration > 0:
-		shake_duration -= delta
-		camera.h_offset = randf_range(-shake_intensity, shake_intensity)
-		camera.v_offset = randf_range(-shake_intensity, shake_intensity)
 	
 	if direction and is_on_floor():
 		step_timer -= delta
+		
+		# Prevent sprinting delay by instantly dropping the timer
+		if current_speed == SPRINT_SPEED and step_timer > 0.3:
+			step_timer = 0.3
+			
 		if step_timer <= 0:
 			if floor_detector.is_colliding():
 				var ground = floor_detector.get_collider()
 				
+				# Kept near 1.0 so audio playback speed remains normal
 				var current_pitch = 1.0
 				if current_speed == SPRINT_SPEED:
 					current_pitch = randf_range(0.95, 1.15) 
 				else:
-					current_pitch = randf_range(0.5, 0.7) 
+					current_pitch = randf_range(0.85, 0.95) 
 				
 				if ground.is_in_group("House"):
 					footstep_audio.pitch_scale = current_pitch
@@ -187,7 +192,7 @@ func _physics_process(delta):
 				elif ground.is_in_group("Sidewalk"):
 					sidewalk_audio.pitch_scale = current_pitch
 					sidewalk_audio.play()
-				elif ground.is_in_group("MineFloor"): # NEW: Mine footstep check
+				elif ground.is_in_group("MineFloor"):
 					mine_footstep_audio.pitch_scale = current_pitch
 					mine_footstep_audio.play()
 			
@@ -201,7 +206,7 @@ func _physics_process(delta):
 		grass_audio.stop()
 		carpet_audio.stop()
 		sidewalk_audio.stop()
-		mine_footstep_audio.stop() # NEW: Stop mine footsteps
+		mine_footstep_audio.stop() 
 
 func show_weapon_pickup_ui():
 	can_move = false
@@ -239,14 +244,3 @@ func play_panic_audio() -> void:
 		heartbeat_audio.play()
 	if breath_audio:
 		breath_audio.play()
-
-func force_look_at(target_pos: Vector3) -> void:
-	# 1. Rotate the player's body left/right (Y-axis)
-	var flat_target = target_pos
-	flat_target.y = global_position.y 
-	look_at(flat_target, Vector3.UP)
-	
-	# 2. Tilt the camera up/down (X-axis) to look directly at the face
-	var height_diff = target_pos.y - camera.global_position.y
-	var distance = global_position.distance_to(flat_target)
-	camera.rotation.x = atan2(height_diff, distance)

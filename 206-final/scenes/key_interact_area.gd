@@ -26,51 +26,47 @@ func trigger_jumpscare():
 		player_node.has_key = true
 		if "can_move" in player_node: player_node.can_move = false
 			
-		if monster:
-			monster.show()
-			if player_node.has_method("force_look_at"):
-				var wall_pos = monster.global_position
-				wall_pos.y += 1.0
-				player_node.force_look_at(wall_pos)
-		
-		await get_tree().create_timer(0.5).timeout
-		
 		if monster and player_node.has_node("Camera3D"):
 			var cam = player_node.get_node("Camera3D")
-			var forward_dir = -cam.global_transform.basis.z.normalized()
-			var face_to_face_pos = cam.global_position + (forward_dir * 1.2) 
 			
-			# Adjusted Y offset to 0.0 so he is perfectly eye-level with camera
-			face_to_face_pos.y -= 0.0 
-			monster.global_position = face_to_face_pos
+			# 1. BRUTE FORCE SPIN: Manually turn the player around exactly 180 degrees
+			player_node.rotate_y(deg_to_rad(180))
 			
-			# Clean Slate Rotation: Wipes wall angle, then rotates to face camera
-			# Aim him at the camera
-			monster.look_at(cam.global_position, Vector3.UP)
+			# 2. SNAP HEAD UP: Force the camera to look straight ahead/slightly up
+			cam.rotation.x = deg_to_rad(15) 
 			
-			# ADD the rotation to his current angle instead of overwriting it
-			# If 90 makes him face left, change to -90, 180, or 270 until he faces you!
-			monster.rotate_y(deg_to_rad(90))
+			# 3. Get the player's NEW forward direction facing the room
+			var new_forward = -player_node.global_transform.basis.z.normalized()
 			
-			if player_node.has_method("force_look_at"):
-				var monster_face = monster.global_position
-				monster_face.y += 1.4 
-				player_node.force_look_at(monster_face)
+			# 4. Spawn the monster exactly 1.5 meters in front of the player's new view
+			var spawn_pos = player_node.global_position + (new_forward * 1.2)
+			
+			# --- THE FIX: RAISE THE MONSTER ---
+			# Adding 0.7 raises him up. 
+			# If he is still too low, make it 1.0! If he is too high, drop it to 0.4!
+			spawn_pos.y = player_node.global_position.y + 0.3 
+			# ----------------------------------
+			
+			monster.global_position = spawn_pos
+			
+			# 5. Make the monster look perfectly at the player
+			var flat_player_pos = player_node.global_position
+			flat_player_pos.y = monster.global_position.y
+			monster.look_at(flat_player_pos, Vector3.UP)
+			
+			monster.rotate_y(deg_to_rad(90)) 
+			
+			monster.show()
 			
 		if player_node.has_method("play_scream"): 
 			player_node.play_scream()
 			
-		# --- TRIGGER THE VIOLENT SHAKE ---
 		if player_node.has_method("apply_shake"): 
-			player_node.apply_shake(1.2, 2.5) 
+			player_node.apply_shake(0.4, 2.5) 
 			
-		# Wait exactly 2.5 seconds so the monster stays for the whole shake
 		await get_tree().create_timer(2.5).timeout
-		# ---------------------------------
 		
 		if monster: monster.hide() 
-		
-		# Hard reset the shake to center the camera perfectly
 		if player_node.has_method("apply_shake"): player_node.apply_shake(0.0, 0.0)
 		if player_node.has_method("play_panic_audio"): player_node.play_panic_audio()
 			
