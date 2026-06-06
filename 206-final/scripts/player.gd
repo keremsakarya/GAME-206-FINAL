@@ -33,10 +33,12 @@ var can_exit = false
 @onready var grass_landing = $GrassLanding
 @onready var carpet_landing = $CarpetLanding
 @onready var sidewalk_landing = $SidewalkLanding
+@onready var mine_landing = $MineLanding # NEW: Mine landing audio
 
 @onready var grass_audio = $GrassAudio 
 @onready var carpet_audio = $CarpetAudio 
 @onready var sidewalk_audio = $SidewalkAudio 
+@onready var mine_footstep_audio = $MineFootstepAudio # NEW: Mine footstep audio
 @onready var floor_detector = $FloorDetector
 var step_timer: float = 0.0
 
@@ -126,6 +128,9 @@ func _physics_process(delta):
 			elif ground.is_in_group("Sidewalk"):
 				sidewalk_landing.pitch_scale = randf_range(0.8, 0.9)
 				sidewalk_landing.play()
+			elif ground.is_in_group("MineFloor"): # NEW: Mine landing check
+				mine_landing.pitch_scale = randf_range(0.8, 1.0)
+				mine_landing.play()
 				
 			if dip_tween and dip_tween.is_valid():
 				dip_tween.kill() 
@@ -182,6 +187,9 @@ func _physics_process(delta):
 				elif ground.is_in_group("Sidewalk"):
 					sidewalk_audio.pitch_scale = current_pitch
 					sidewalk_audio.play()
+				elif ground.is_in_group("MineFloor"): # NEW: Mine footstep check
+					mine_footstep_audio.pitch_scale = current_pitch
+					mine_footstep_audio.play()
 			
 			if current_speed == SPRINT_SPEED:
 				step_timer = 0.3 
@@ -193,6 +201,7 @@ func _physics_process(delta):
 		grass_audio.stop()
 		carpet_audio.stop()
 		sidewalk_audio.stop()
+		mine_footstep_audio.stop() # NEW: Stop mine footsteps
 
 func show_weapon_pickup_ui():
 	can_move = false

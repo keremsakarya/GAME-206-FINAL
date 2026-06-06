@@ -57,12 +57,20 @@ func trigger_jumpscare():
 				monster_face.y += 1.4 
 				player_node.force_look_at(monster_face)
 			
-		if player_node.has_method("play_scream"): player_node.play_scream()
-		if player_node.has_method("apply_shake"): player_node.apply_shake(1.0, 1.5) 
+		if player_node.has_method("play_scream"): 
+			player_node.play_scream()
 			
-		await get_tree().create_timer(1.5).timeout
+		# --- TRIGGER THE VIOLENT SHAKE ---
+		if player_node.has_method("apply_shake"): 
+			player_node.apply_shake(1.2, 2.5) 
+			
+		# Wait exactly 2.5 seconds so the monster stays for the whole shake
+		await get_tree().create_timer(2.5).timeout
+		# ---------------------------------
 		
 		if monster: monster.hide() 
+		
+		# Hard reset the shake to center the camera perfectly
 		if player_node.has_method("apply_shake"): player_node.apply_shake(0.0, 0.0)
 		if player_node.has_method("play_panic_audio"): player_node.play_panic_audio()
 			

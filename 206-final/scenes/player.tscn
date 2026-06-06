@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://gnrrtebo08sg" path="res://sounds/sidwalkwalking-o1vdsso4_BXNqllox.wav" id="4_d2wvv"]
 [ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="4_qlg0r"]
 [ext_resource type="AudioStream" uid="uid://m0d0phl0w3lj" path="res://sounds/grasswalking.wav" id="4_ur7pv"]
+[ext_resource type="AudioStream" uid="uid://cylmui8rscgbp" path="res://sounds/Gravelsound.mp3" id="5_oprun"]
 [ext_resource type="AudioStream" uid="uid://ckg24gcyt4cca" path="res://sounds/carpet-walking-durobln2_DqGRpGq7.wav" id="6_d2wvv"]
 [ext_resource type="AudioStream" uid="uid://d02tciki1in5n" path="res://sounds/stalkerscream.mp3" id="7_f1ej7"]
 [ext_resource type="AudioStream" uid="uid://mpjkuprwi2f0" path="res://sounds/heartbeat.mp3" id="8_oprun"]
@@ -39,7 +40,7 @@ bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 script = ExtResource("1_g2els")
 
 [node name="FloorDetector" type="RayCast3D" parent="." unique_id=505521655]
-target_position = Vector3(0, -1.5, 0)
+target_position = Vector3(0, -2, 0)
 
 [node name="FootstepAudio" type="AudioStreamPlayer" parent="." unique_id=2136557157]
 stream = ExtResource("2_fjrip")
@@ -50,6 +51,9 @@ volume_db = -12.0
 
 [node name="SidewalkAudio" type="AudioStreamPlayer" parent="." unique_id=825799012]
 stream = ExtResource("4_d2wvv")
+
+[node name="MineFootstepAudio" type="AudioStreamPlayer" parent="." unique_id=1265219167]
+stream = ExtResource("5_oprun")
 
 [node name="GrassAudio" type="AudioStreamPlayer" parent="." unique_id=1603807133]
 stream = ExtResource("4_ur7pv")
@@ -63,6 +67,9 @@ volume_db = 3.0
 stream = ExtResource("3_d2wvv")
 
 [node name="GrassLanding" type="AudioStreamPlayer" parent="." unique_id=822194104]
+stream = ExtResource("3_d2wvv")
+
+[node name="MineLanding" type="AudioStreamPlayer" parent="." unique_id=1914292598]
 stream = ExtResource("3_d2wvv")
 
 [node name="SidewalkLanding" type="AudioStreamPlayer" parent="." unique_id=521697201]
@@ -85,9 +92,10 @@ script = ExtResource("3_tuyoq")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=923466672]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7974055, 0)
+near = 0.001
 
 [node name="Pistol" parent="Camera3D" unique_id=1070852897 instance=ExtResource("1_3vyb7")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.014355361, -0.63213766, -0.22994953)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.014355361, -0.63213766, -0.10772094)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=1667011876]
 transform = Transform3D(1, 0, 0, 0, 0.9961947, 0.08715574, 0, -0.08715574, 0.9961947, 0.10255778, -0.2225666, 0.09300375)
