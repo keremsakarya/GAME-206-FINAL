@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cun1lovvpjadc"]
+
+[ext_resource type="Script" uid="uid://b57pkwjn11ul7" path="res://scripts/bug_enemy.gd" id="1_55id3"]
+[ext_resource type="PackedScene" uid="uid://x66mste3qbrs" path="res://assets/bug/tripo_convert_49cb8828-7b19-4f53-881e-834a259cb0c9.fbx" id="2_ti465"]
+[ext_resource type="AudioStream" uid="uid://cpe6okl562dmf" path="res://sounds/bug sound.mp3" id="3_2dpvv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_egd1w"]
+size = Vector3(0.5319977, 0.32702637, 0.9346924)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2vpou"]
+size = Vector3(10.787253, 1.5291748, 14.472639)
+
+[node name="BugEnemy" type="CharacterBody3D" unique_id=871817745]
+script = ExtResource("1_55id3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1652099601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008522034, 0.09124756, -0.03265381)
+shape = SubResource("BoxShape3D_egd1w")
+
+[node name="tripo_convert_49cb8828-7b19-4f53-881e-834a259cb0c9" parent="." unique_id=972686595 instance=ExtResource("2_ti465")]
+transform = Transform3D(-1, -2.9038448e-08, -8.2459145e-08, 0, 0.94322264, -0.33216113, 8.742278e-08, -0.33216113, -0.94322264, 0, 0, 0)
+
+[node name="SeeArea" type="Area3D" parent="." unique_id=792665437]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SeeArea" unique_id=972532832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29643106, 0.2645874, -0.3961897)
+shape = SubResource("BoxShape3D_2vpou")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=833521610]
+stream = ExtResource("3_2dpvv")
+
+[connection signal="body_entered" from="SeeArea" to="." method="_on_see_area_body_entered"]
+[connection signal="body_exited" from="SeeArea" to="." method="_on_see_area_body_exited"]
