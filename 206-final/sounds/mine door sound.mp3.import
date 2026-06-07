@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpbhcwqffhve6"
+path="res://.godot/imported/mine door sound.mp3-69f1ee74a42f53b5169e2898ade28df1.mp3str"
+
+[deps]
+
+source_file="res://sounds/mine door sound.mp3"
+dest_files=["res://.godot/imported/mine door sound.mp3-69f1ee74a42f53b5169e2898ade28df1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

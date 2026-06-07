@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qrtqngu11ahc"
+path="res://.godot/imported/generator sound.mp3-a6b4b97b65c1935399afc45a19171360.mp3str"
+
+[deps]
+
+source_file="res://sounds/generator sound.mp3"
+dest_files=["res://.godot/imported/generator sound.mp3-a6b4b97b65c1935399afc45a19171360.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
