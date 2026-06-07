@@ -154,10 +154,10 @@ use_collision = true
 size = Vector3(110.32622, 8.244629, 4.9206047)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Node" unique_id=344108834]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.559204, 0.97325134, 0.99121475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.559204, 0.97325134, 1.3592262)
 visible = false
 use_collision = true
-size = Vector3(1, 2.9465027, 2.185913)
+size = Vector3(1, 2.9465027, 2.921936)
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Node" unique_id=106791089]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30.23142, 0.97325134, -0.014858723)
@@ -244,7 +244,7 @@ visible = false
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -95.6679, 0.13583565, 66.501785)
 
 [node name="Player" parent="." unique_id=1581314821 instance=ExtResource("3_echme")]
-transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, -20.995098, 0.5510124, 8.340048)
+transform = Transform3D(-0.0002618273, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -0.0002618273, 28.862564, 0.5510124, 6.4699907)
 
 [node name="House2" parent="." unique_id=1272214129 instance=ExtResource("4_ve28u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011973381, -0.001060009, -0.0002709031)

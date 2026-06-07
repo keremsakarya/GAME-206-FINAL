@@ -2,10 +2,10 @@ extends CharacterBody3D
 
 @export var speed: float = 2.0
 @export var patrol_distance: float = 5.0
-@export var max_hp: int = 100 # NEW: The bug's starting health
+@export var max_hp: int = 100 
 
-var current_hp: int # NEW: Tracks health during gameplay
-var is_dead: bool = false # NEW: Stops the bug from moving when killed
+var current_hp: int 
+var is_dead: bool = false 
 
 var start_position: Vector3
 var target_position: Vector3
@@ -15,9 +15,9 @@ var player_node: Node3D = null
 @onready var audio_player = $AudioStreamPlayer3D
 
 func _ready():
-	# IMPORTANT: This automatically connects the bug to the player's laser!
+	# Connects bug to the player's laser
 	add_to_group("Monster") 
-	current_hp = max_hp # Initialize health
+	current_hp = max_hp 
 	
 	start_position = global_position
 	target_position = start_position + Vector3(patrol_distance, 0, 0)
@@ -26,7 +26,8 @@ func _ready():
 		audio_player.play()
 
 func _physics_process(delta):
-	if is_dead: return # NEW: If the bug is dead, stop running the physics code!
+	# Stop moving if dead
+	if is_dead: return 
 	
 	if not is_on_floor():
 		velocity.y -= 9.8 * delta
@@ -70,9 +71,9 @@ func _on_see_area_body_exited(body: Node3D) -> void:
 		player_node = null
 		target_position = start_position
 
-# --- NEW: HEALTH AND DAMAGE SYSTEM ---
+# --- HEALTH AND DAMAGE SYSTEM ---
 func take_damage(amount: int) -> void:
-	if is_dead: return # Don't take damage if it is already dead
+	if is_dead: return 
 	
 	current_hp -= amount
 	print("Bug hit! Took ", amount, " damage. HP left: ", current_hp)
@@ -84,15 +85,10 @@ func die() -> void:
 	is_dead = true
 	print("Bug killed!")
 	
-	# Stop the crawling sound so a dead bug doesn't make noise
+	# Stop the crawling sound
 	if audio_player:
 		audio_player.stop()
 		
-	# ----------------------------------------------------
-	# TODO NEXT: Add Fallout 4 Green Blood Explosion here
-	# TODO NEXT: Hide alive mesh, Show dead corpse mesh here
-	# ----------------------------------------------------
-	
-	# For right now, we will just delete the bug so you can test if the gun works!
+	# Placeholder for green blood & corpse swap
 	queue_free()
-# -------------------------------------
+# --------------------------------

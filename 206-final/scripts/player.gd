@@ -27,8 +27,10 @@ var can_move = true
 var can_exit = false
 @onready var anim_player = $Camera3D/Pistol/AnimationPlayer
 
-# --- WEAPON VARIABLES (NEW) ---
-@onready var aim_ray = $Camera3D/AimRay # The invisible laser
+# --- WEAPON & HUD VARIABLES ---
+@onready var aim_ray = $Camera3D/AimRay 
+@onready var gunshot_audio = $GunshotAudio
+@onready var reticle = $HUD/CenterContainer/Reticle 
 var is_shooting: bool = false
 var gun_damage: int = 35
 # ------------------------------
@@ -60,8 +62,15 @@ var shake_duration: float = 0.0
 func _ready() -> void:
 	add_to_group("Player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	pistol_model.visible = false
 	pickup_ui.hide()
+	
+	# Automatically sync the reticle to whether the gun is visible or not at startup!
+	if reticle:
+		if pistol_model.visible:
+			reticle.show()
+		else:
+			reticle.hide()
+			
 	camera_base_y = camera.position.y
 
 func _unhandled_input(event):
@@ -71,13 +80,20 @@ func _unhandled_input(event):
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			
-	# --- NEW: LEFT CLICK TO SHOOT ---
+	# --- LEFT CLICK TO SHOOT ---
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			# Only shoot if we have the gun, aren't frozen, and aren't already shooting
 			if pistol_model.visible and can_move and not is_shooting:
-				shoot()
-	# --------------------------------
+				
+				# Check if the player is actively moving AND holding sprint
+				var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+				var is_moving = input_dir != Vector2.ZERO
+				var is_sprinting = Input.is_action_pressed("sprint") and is_moving and is_on_floor()
+				
+				# Only shoot if they are NOT sprinting
+				if not is_sprinting:
+					shoot()
+	# ---------------------------
 	
 	if not can_move: return
 	
@@ -87,12 +103,10 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _physics_process(delta):
-	# --- MOVED: JUMPSCARE CAMERA SHAKE ---
 	if shake_duration > 0:
 		shake_duration -= delta
 		camera.h_offset = randf_range(-shake_intensity, shake_intensity)
 		camera.v_offset = randf_range(-shake_intensity, shake_intensity)
-	# -------------------------------------
 	
 	if not can_move: return
 	
@@ -110,12 +124,10 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	# --- UPDATED: ANIMATION PROTECTION ---
 	if direction:
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
 		
-		# Only play movement animations if we ARE NOT shooting
 		if is_on_floor() and not is_shooting:
 			if current_speed == SPRINT_SPEED:
 				anim_player.play("Pistol_RUN")
@@ -125,10 +137,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, current_speed)
 		velocity.z = move_toward(velocity.z, 0, current_speed)
 		
-		# Only play idle animation if we ARE NOT shooting
 		if is_on_floor() and not is_shooting:
 			anim_player.play("Pistol_IDLE")
-	# -------------------------------------
 	
 	var was_in_air = not is_on_floor()
 	move_and_slide() 
@@ -223,26 +233,23 @@ func _physics_process(delta):
 		sidewalk_audio.stop()
 		mine_footstep_audio.stop() 
 
-# --- NEW: THE SHOOTING FUNCTION ---
 func shoot():
 	is_shooting = true
 	anim_player.play("Pistol_FIRE")
 	
-	# The Raycast checks if the laser hit a physics body
+	if gunshot_audio:
+		gunshot_audio.pitch_scale = randf_range(0.95, 1.05)
+		gunshot_audio.play()
+	
 	if aim_ray.is_colliding():
 		var target = aim_ray.get_collider()
 		
-		# If the thing we hit is in the Monster group, tell it to take damage!
 		if target.is_in_group("Monster"):
 			if target.has_method("take_damage"):
 				target.take_damage(gun_damage)
 				
-	# Wait exactly until the firing animation finishes
 	await anim_player.animation_finished
-	
-	# Allow the player to return to idle/walking animations
 	is_shooting = false
-# ----------------------------------
 
 func show_weapon_pickup_ui():
 	can_move = false
@@ -260,6 +267,9 @@ func _on_button_pressed() -> void:
 	pistol_model.visible = true
 	can_move = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	if reticle:
+		reticle.show()
 
 func apply_shake(intensity: float = 0.5, duration: float = 1.0) -> void:
 	shake_intensity = intensity

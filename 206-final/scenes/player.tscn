@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://d02tciki1in5n" path="res://sounds/stalkerscream.mp3" id="7_f1ej7"]
 [ext_resource type="AudioStream" uid="uid://mpjkuprwi2f0" path="res://sounds/heartbeat.mp3" id="8_oprun"]
 [ext_resource type="AudioStream" uid="uid://btub21ktnu102" path="res://sounds/Breathingsound.mp3" id="9_a8ls1"]
+[ext_resource type="AudioStream" uid="uid://d0834t70hrrfv" path="res://sounds/gunshotsound2.mp3" id="11_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://rmmjquhptha6" path="res://images/ali ceset.png" id="13_f1ej7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
@@ -83,6 +84,26 @@ stream = ExtResource("8_oprun")
 
 [node name="BreathAudio" type="AudioStreamPlayer" parent="." unique_id=763085135]
 stream = ExtResource("9_a8ls1")
+
+[node name="GunshotAudio" type="AudioStreamPlayer" parent="." unique_id=1627472832]
+stream = ExtResource("11_a8ls1")
+max_polyphony = 3
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=697961975]
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD" unique_id=788208270]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Reticle" type="ColorRect" parent="HUD/CenterContainer" unique_id=429233022]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+mouse_filter = 2
+color = Color(0, 0.6579622, 0, 1)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1319999342]
 shape = SubResource("CapsuleShape3D_g2els")

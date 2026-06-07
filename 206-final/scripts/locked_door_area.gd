@@ -21,6 +21,13 @@ func try_open_door():
 	if not player_node or not player_node.has_key: return
 	
 	is_opened = true
+	
+	# --- THE MAGIC GLOBAL UNLOCK ---
+	# The exact second the player uses the key, the Mine Door is globally unlocked!
+	if "can_exit" in player_node: 
+		player_node.can_exit = true
+	# -------------------------------
+	
 	if "can_move" in player_node: player_node.can_move = false
 			
 	black_screen.show()
