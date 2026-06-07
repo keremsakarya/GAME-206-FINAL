@@ -109,6 +109,9 @@ spot_angle_attenuation = 2.0
 [node name="HandPosition" type="Marker3D" parent="Camera3D" unique_id=1410525603]
 transform = Transform3D(1, 0, 0, 0, -0.0004886826, 0.9999999, 0, -0.9999999, -0.0004886826, 0.18259257, -0.14539713, -0.34402394)
 
+[node name="AimRay" type="RayCast3D" parent="Camera3D" unique_id=1625046635]
+target_position = Vector3(0, 0, -50)
+
 [node name="Shader" type="CanvasLayer" parent="." unique_id=967931211]
 
 [node name="VHSShader" type="ColorRect" parent="Shader" unique_id=160484197]
