@@ -117,6 +117,7 @@ near = 0.001
 
 [node name="Pistol" parent="Camera3D" unique_id=1070852897 instance=ExtResource("1_3vyb7")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.014355361, -0.63213766, -0.10772094)
+visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=1667011876]
 transform = Transform3D(1, 0, 0, 0, 0.9961947, 0.08715574, 0, -0.08715574, 0.9961947, 0.10255778, -0.2225666, 0.09300375)
