@@ -1,11 +1,11 @@
 extends CharacterBody3D
 
 @export var speed: float = 5.3
+@export var waypoints: Array[Node3D] # Haritadaki noktaları buraya ekleyeceğiz
 
 var is_chasing: bool = false
-var player_node: Node3D = null
+var current_point_index: int = 0
 
-# Düğüm yollarını yeni hiyerarşiye göre güncelledik
 @onready var visual_model = $VisualModel
 @onready var anim_player = $VisualModel/AnimationPlayer 
 @onready var idle_sound = $IdleSound
@@ -22,30 +22,38 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= 9.8 * delta
 
-	# 2. Kovalama Mantığı
-	if is_chasing and player_node:
-		var direction = global_position.direction_to(player_node.global_position)
-		direction.y = 0 
-		direction = direction.normalized()
+	# 2. Nokta (Waypoint) Takip Mantığı
+	if is_chasing and waypoints.size() > 0 and current_point_index < waypoints.size():
+		var target_pos = waypoints[current_point_index].global_position
 		
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
+		# Sadece X ve Z eksenindeki mesafeye bakıyoruz (Yüksekliği yoksay)
+		var flat_target = Vector3(target_pos.x, global_position.y, target_pos.z)
+		var direction = global_position.direction_to(flat_target)
 		
-		# --- GÜVENLİ DÖNÜŞ SİSTEMİ ---
-		# Bütün fiziksel bedeni değil, SADECE görsel modeli oyuncuya çeviriyoruz!
-		if direction != Vector3.ZERO and visual_model:
-			var look_target = visual_model.global_position + direction
-			visual_model.look_at(look_target, Vector3.UP)
+		# Noktaya ulaştı mı? (1 metre yaklaştıysa sıradaki noktaya geç)
+		if global_position.distance_to(flat_target) < 1.0:
+			current_point_index += 1
+		else:
+			# Noktaya doğru yürü
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+			
+			# Noktaya doğru yüzünü güvenli şekilde dön
+			if direction != Vector3.ZERO:
+				var target_angle = atan2(-direction.x, -direction.z)
+				rotation.y = target_angle
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
+		# Noktalar bittiyse (veya başlamadıysa) tamamen dur
+		velocity.x = 0
+		velocity.z = 0
 
 	move_and_slide()
 
-func start_chase(target_player):
+# Trigger artık oyuncuyu (target_player) istemiyor, sadece koşuyu başlatıyor
+func start_chase():
 	if not is_chasing:
 		is_chasing = true
-		player_node = target_player
+		current_point_index = 0
 		
 		if anim_player:
 			anim_player.play("NlaTrack_001")

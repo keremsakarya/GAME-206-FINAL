@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cbf7ui7ia8o6p"]
+
+[ext_resource type="Script" uid="uid://b5jdnvpnwbr10" path="res://scripts/scripted_monster.gd" id="1_a0xps"]
+[ext_resource type="PackedScene" uid="uid://b40uia7p72uwk" path="res://scenes/monster.tscn" id="1_mxukn"]
+[ext_resource type="AudioStream" uid="uid://c0tbye4q64ho3" path="res://sounds/monster idle sound.mp3" id="2_a0xps"]
+[ext_resource type="AudioStream" uid="uid://cpgtnxqpxa0hw" path="res://sounds/ChaseMusic (online-video-cutter.com).mp3" id="3_8e5xy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6pns3"]
+
+[node name="ScriptedMonster" type="CharacterBody3D" unique_id=1153408668]
+script = ExtResource("1_a0xps")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2001492556]
+shape = SubResource("CapsuleShape3D_6pns3")
+
+[node name="VisualModel" parent="." unique_id=1424717623 instance=ExtResource("1_mxukn")]
+transform = Transform3D(-1.3113416e-07, 0, 3, 0, 3, 0, -3, 0, -1.3113416e-07, 0, -1.1535804, 0.120882034)
+
+[node name="AudioIdle" type="AudioStreamPlayer3D" parent="." unique_id=85498072]
+stream = ExtResource("2_a0xps")
+
+[node name="AudioChase" type="AudioStreamPlayer" parent="." unique_id=1286143704]
+stream = ExtResource("3_8e5xy")

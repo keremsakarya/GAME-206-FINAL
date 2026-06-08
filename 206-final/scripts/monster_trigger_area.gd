@@ -1,17 +1,12 @@
 extends Area3D
 
-
 @export var target_monster: CharacterBody3D
 
-
-
-func _on_body_entered(body: Node3D) -> void:
+func _on_body_entered(body):
 	if body.name == "Player":
-		
-		# Eğer canavarı seçtiysek ve canavarın "start_chase" diye bir yeteneği varsa
+		# Canavar Inspector'dan seçilmişse ve start_chase yeteneği varsa
 		if target_monster and target_monster.has_method("start_chase"):
-			# Canavara "Saldır!" komutunu gönder ve oyuncunun hedefini ver
-			target_monster.start_chase(body)
+			target_monster.start_chase()
 			
-			# Canavar peşine düştükten sonra bu trigger'ı silebiliriz (iki kere çalışmasın)
+			# Kovalamaca başladıktan sonra tetikleyiciyi sil (iki kez çalışmasın)
 			queue_free()
