@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export var speed: float = 2.0
 @export var patrol_distance: float = 5.0
-@export var max_hp: int = 100 
+@export var max_hp: int = 70 
 
 var current_hp: int 
 var is_dead: bool = false 
