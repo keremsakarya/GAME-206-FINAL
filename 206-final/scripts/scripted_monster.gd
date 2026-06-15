@@ -1,17 +1,21 @@
 extends CharacterBody3D
 
-@export var speed: float = 5.0
+@export var speed: float = 5.2
 # Haritadaki görünmez noktaları (rayları) bu listeye atacağız
 @export var waypoints: Array[Node3D] 
 
 var is_chasing: bool = false
 var current_point_index: int = 0
+var is_caught: bool = false
 
 @onready var visual_model = $VisualModel
 # Eğer AnimationPlayer'ın ismi veya yeri farklıysa burayı ona göre güncelle
 @onready var anim_player = $VisualModel/AnimationPlayer 
 @onready var audio_idle = $AudioIdle
 @onready var audio_chase = $AudioChase
+@onready var catch_area = $CatchArea
+@onready var face_target = $FaceTarget
+@onready var jumpscare_sound = $JumpscareSound
 
 func _ready():
 	# Başlangıç: Bekleme animasyonu ve bekleme sesi
@@ -74,3 +78,48 @@ func start_chase():
 			
 		if audio_chase and not audio_chase.playing:
 			audio_chase.play()
+
+
+func _on_catch_area_body_entered(body: Node3D) -> void:
+	if body.name == "Player" and is_chasing and not is_caught:
+		is_caught = true
+		is_chasing = false # Stop the chasing logic
+		
+		# 1. FREEZE PLAYER
+		body.process_mode = Node.PROCESS_MODE_DISABLED
+		
+		# 2. FREEZE MONSTER ANIMATION
+		# Bu komut canavarın animasyonunu tam o karede dondurur
+		if anim_player:
+			anim_player.pause()
+		
+		# 3. LOCK CAMERA TO MONSTER'S FACE
+		var player_camera = get_viewport().get_camera_3d()
+		if player_camera:
+			player_camera.look_at(face_target.global_position, Vector3.UP)
+			
+		# 4. MANAGE AUDIO (Jumpscare sesini başlat)
+		if audio_chase:
+			audio_chase.stop()
+		if jumpscare_sound:
+			jumpscare_sound.play()
+			
+		# 5. FADE-OUT SCREEN (Ses ile aynı anda başlar)
+		var canvas = CanvasLayer.new()
+		canvas.layer = 100 
+		add_child(canvas)
+		
+		var dark_screen = ColorRect.new()
+		dark_screen.color = Color(0, 0, 0, 0) # Transparent black
+		dark_screen.set_anchors_preset(Control.PRESET_FULL_RECT) 
+		canvas.add_child(dark_screen)
+		
+		var tween = create_tween()
+		# Şeffaflığı 0'dan 1'e 2 saniye içinde çıkarır
+		tween.tween_property(dark_screen, "color:a", 1.0, 2.0) 
+		
+		# Tween animasyonunun (ve aynı uzunluktaki sesin) bitmesini bekle
+		await tween.finished
+		
+		# 6. RESET SCENE
+		get_tree().reload_current_scene()
