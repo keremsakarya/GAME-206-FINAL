@@ -2,6 +2,7 @@ extends Area3D
 
 @export var monster: Node3D
 @export var key_mesh: Node3D
+@export var blocker_wall: StaticBody3D # <--- NEW: The link to your invisible wall
 @onready var ui_label = $CanvasLayer/InteractLabel
 
 var is_player_near = false
@@ -21,6 +22,11 @@ func trigger_jumpscare():
 	triggered = true
 	if ui_label: ui_label.hide() 
 	if key_mesh: key_mesh.hide() 
+	
+	# --- NEW: Destroy the invisible wall immediately! ---
+	if blocker_wall: 
+		blocker_wall.queue_free()
+	# ----------------------------------------------------
 		
 	if player_node:
 		player_node.has_key = true
@@ -41,11 +47,7 @@ func trigger_jumpscare():
 			# 4. Spawn the monster exactly 1.5 meters in front of the player's new view
 			var spawn_pos = player_node.global_position + (new_forward * 1.2)
 			
-			# --- THE FIX: RAISE THE MONSTER ---
-			# Adding 0.7 raises him up. 
-			# If he is still too low, make it 1.0! If he is too high, drop it to 0.4!
 			spawn_pos.y = player_node.global_position.y + 0.3 
-			# ----------------------------------
 			
 			monster.global_position = spawn_pos
 			

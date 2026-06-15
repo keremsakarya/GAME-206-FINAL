@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+
+
 const WALK_SPEED = 3.0
 const SPRINT_SPEED = 5.5
 const JUMP_VELOCITY = 4.5
@@ -33,6 +35,7 @@ var can_exit = false
 @onready var reticle = $HUD/CenterContainer/Reticle 
 var is_shooting: bool = false
 var gun_damage: int = 35
+@export var start_armed: bool = false
 # ------------------------------
 
 # --- AUDIO VARIABLES ---
@@ -64,12 +67,14 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pickup_ui.hide()
 	
-	# Automatically sync the reticle to whether the gun is visible or not at startup!
-	if reticle:
-		if pistol_model.visible:
-			reticle.show()
-		else:
-			reticle.hide()
+	# If this level says we start with a gun, turn everything on!
+	if start_armed:
+		pistol_model.show()
+		$HUD.show() # Make sure the main UI layer is on
+		if reticle: reticle.show()
+	else:
+		pistol_model.hide()
+		if reticle: reticle.hide()
 			
 	camera_base_y = camera.position.y
 
