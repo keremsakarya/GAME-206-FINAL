@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed: float = 5.3
+@export var speed: float = 5.0
 # Haritadaki görünmez noktaları (rayları) bu listeye atacağız
 @export var waypoints: Array[Node3D] 
 

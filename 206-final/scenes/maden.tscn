@@ -24,6 +24,7 @@
 [ext_resource type="Script" uid="uid://cvb68ty4onvq" path="res://scripts/key_area.gd" id="22_0nccs"]
 [ext_resource type="Script" uid="uid://bpa4frg4jhwie" path="res://scripts/monster_trigger_area.gd" id="23_lvsx0"]
 [ext_resource type="PackedScene" uid="uid://cbf7ui7ia8o6p" path="res://scenes/scripted_monster.tscn" id="24_llgj6"]
+[ext_resource type="PackedScene" uid="uid://dbbg6eu5dmk2o" path="res://assets/bone+3d+model/tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded.fbx" id="25_mst8y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ne3ck"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -2191,6 +2192,9 @@ size = Vector3(0.3401184, 0.4633789, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0nccs"]
 size = Vector3(1, 1.9716797, 3.9406586)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tyk3x"]
+size = Vector3(1.1824951, 0.2805786, 1)
+
 [node name="Mines_Modu" unique_id=194057148 instance=ExtResource("1_rdbsp")]
 script = ExtResource("2_0nnex")
 
@@ -3404,6 +3408,1493 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.86944, 3.5926218, 19.7058
 [node name="ScriptedMonster" parent="." index="324" unique_id=1153408668 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_llgj6")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.19042826, 4.0925994, 37.06855)
 waypoints = [NodePath("../Markers/Point1"), NodePath("../Markers/Point2"), NodePath("../Markers/Point3"), NodePath("../Markers/Point4"), NodePath("../Markers/Point5"), NodePath("../Markers/Point6"), NodePath("../Markers/Point7")]
+
+[node name="Bones" type="Node" parent="." index="325" unique_id=1923272233]
+
+[node name="Bone" type="StaticBody3D" parent="Bones" index="0" unique_id=638567248 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -15.0968895, 3.6238387, 37.96518)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone" index="0" unique_id=1547021007]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone" index="1" unique_id=341532264 instance=ExtResource("25_mst8y")]
+
+[node name="Bone159" type="StaticBody3D" parent="Bones" index="1" unique_id=1716661393 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -15.0968895, 3.6238387, 37.96518)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone159" index="0" unique_id=2017602596]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone159" index="1" unique_id=2121915300 instance=ExtResource("25_mst8y")]
+
+[node name="Bone160" type="StaticBody3D" parent="Bones" index="2" unique_id=719172212 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -23.881798, 3.6238387, 3.0783005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone160" index="0" unique_id=604614406]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone160" index="1" unique_id=1431351059 instance=ExtResource("25_mst8y")]
+
+[node name="Bone161" type="StaticBody3D" parent="Bones" index="3" unique_id=514040434 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -23.936075, 4.694183, 3.0783005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone161" index="0" unique_id=167335425]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone161" index="1" unique_id=952973482 instance=ExtResource("25_mst8y")]
+
+[node name="Bone162" type="StaticBody3D" parent="Bones" index="4" unique_id=1151192460 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -24.832212, 3.6238387, 3.0783005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone162" index="0" unique_id=1591414748]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone162" index="1" unique_id=1162620813 instance=ExtResource("25_mst8y")]
+
+[node name="Bone163" type="StaticBody3D" parent="Bones" index="5" unique_id=1777278389 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -24.88649, 4.694183, 3.0783005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone163" index="0" unique_id=1988504367]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone163" index="1" unique_id=1697941241 instance=ExtResource("25_mst8y")]
+
+[node name="Bone164" type="StaticBody3D" parent="Bones" index="6" unique_id=856683833 groups=["Barricades"]]
+transform = Transform3D(-0.502495, 0.6661486, -0.5511305, 0.24646193, -0.50063753, -0.82983047, -0.82870704, -0.55281836, 0.08738763, -25.232496, 4.114511, 3.0783005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone164" index="0" unique_id=1412710853]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone164" index="1" unique_id=368661078 instance=ExtResource("25_mst8y")]
+
+[node name="Bone165" type="StaticBody3D" parent="Bones" index="7" unique_id=1129949169 groups=["Barricades"]]
+transform = Transform3D(-0.502495, 0.6661486, -0.5511305, 0.24646193, -0.50063753, -0.82983047, -0.82870704, -0.55281836, 0.08738763, -23.96031, 4.114511, 3.0783005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone165" index="0" unique_id=1492740169]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone165" index="1" unique_id=1488200790 instance=ExtResource("25_mst8y")]
+
+[node name="Bone2" type="StaticBody3D" parent="Bones" index="8" unique_id=1366166921 groups=["Barricades"]]
+transform = Transform3D(-0.32991794, 0.44077507, 0.8347882, -0.49363235, 0.67321545, -0.5505525, -0.8046623, -0.5937158, -0.004524999, -15.109479, 4.891939, 38.01556)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone2" index="0" unique_id=521558842]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone2" index="1" unique_id=363536343 instance=ExtResource("25_mst8y")]
+
+[node name="Bone3" type="StaticBody3D" parent="Bones" index="9" unique_id=390966486 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -16.617878, 3.6238387, 37.96518)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone3" index="0" unique_id=248293607]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone3" index="1" unique_id=647491129 instance=ExtResource("25_mst8y")]
+
+[node name="Bone4" type="StaticBody3D" parent="Bones" index="10" unique_id=218129234 groups=["Barricades"]]
+transform = Transform3D(-0.32991794, 0.44077507, 0.8347882, -0.49363235, 0.67321545, -0.5505525, -0.8046623, -0.5937158, -0.004524999, -16.630466, 4.891939, 38.01556)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone4" index="0" unique_id=406202676]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone4" index="1" unique_id=1818444640 instance=ExtResource("25_mst8y")]
+
+[node name="Bone5" type="StaticBody3D" parent="Bones" index="11" unique_id=1252936439 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -17.999382, 3.6238387, 37.96518)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone5" index="0" unique_id=2108298987]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone5" index="1" unique_id=759628652 instance=ExtResource("25_mst8y")]
+
+[node name="Bone6" type="StaticBody3D" parent="Bones" index="12" unique_id=24714981 groups=["Barricades"]]
+transform = Transform3D(-0.32991794, 0.44077507, 0.8347882, -0.49363235, 0.67321545, -0.5505525, -0.8046623, -0.5937158, -0.004524999, -18.01197, 4.891939, 38.01556)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone6" index="0" unique_id=1648436315]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone6" index="1" unique_id=1037537405 instance=ExtResource("25_mst8y")]
+
+[node name="Bone7" type="StaticBody3D" parent="Bones" index="13" unique_id=976486221 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -19.286469, 3.6238387, 37.96518)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone7" index="0" unique_id=1603376026]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone7" index="1" unique_id=502007560 instance=ExtResource("25_mst8y")]
+
+[node name="Bone8" type="StaticBody3D" parent="Bones" index="14" unique_id=1731621086 groups=["Barricades"]]
+transform = Transform3D(-0.32991794, 0.44077507, 0.8347882, -0.49363235, 0.67321545, -0.5505525, -0.8046623, -0.5937158, -0.004524999, -19.299057, 4.891939, 38.01556)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone8" index="0" unique_id=254055417]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone8" index="1" unique_id=1413058613 instance=ExtResource("25_mst8y")]
+
+[node name="Bone9" type="StaticBody3D" parent="Bones" index="15" unique_id=1780123876 groups=["Barricades"]]
+transform = Transform3D(-0.24583025, 0.49980003, 0.83052236, -0.5028044, 0.6667772, -0.5500872, -0.8287071, -0.5528184, 0.08738765, -20.802711, 3.6238387, 37.96518)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone9" index="0" unique_id=1368619957]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone9" index="1" unique_id=1483304597 instance=ExtResource("25_mst8y")]
+
+[node name="Bone10" type="StaticBody3D" parent="Bones" index="16" unique_id=1468444492 groups=["Barricades"]]
+transform = Transform3D(-0.32991794, 0.44077507, 0.8347882, -0.49363235, 0.67321545, -0.5505525, -0.8046623, -0.5937158, -0.004524999, -20.8153, 4.891939, 38.01556)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone10" index="0" unique_id=1045346809]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone10" index="1" unique_id=1240743490 instance=ExtResource("25_mst8y")]
+
+[node name="Bone11" type="StaticBody3D" parent="Bones" index="17" unique_id=910550071 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -20.834204, 3.6238387, 36.619637)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone11" index="0" unique_id=61873832]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone11" index="1" unique_id=1072962478 instance=ExtResource("25_mst8y")]
+
+[node name="Bone12" type="StaticBody3D" parent="Bones" index="18" unique_id=1389333403 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.783804, 4.891939, 36.63214)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone12" index="0" unique_id=284543557]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone12" index="1" unique_id=1561209379 instance=ExtResource("25_mst8y")]
+
+[node name="Bone13" type="StaticBody3D" parent="Bones" index="19" unique_id=1695006021 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -20.834204, 3.6238387, 34.994095)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone13" index="0" unique_id=1396054334]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone13" index="1" unique_id=471586694 instance=ExtResource("25_mst8y")]
+
+[node name="Bone14" type="StaticBody3D" parent="Bones" index="20" unique_id=733835079 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.783804, 4.891939, 35.0066)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone14" index="0" unique_id=1483838581]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone14" index="1" unique_id=59992431 instance=ExtResource("25_mst8y")]
+
+[node name="Bone15" type="StaticBody3D" parent="Bones" index="21" unique_id=1210797662 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -20.834204, 3.6238387, 33.43632)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone15" index="0" unique_id=1733432685]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone15" index="1" unique_id=1770963497 instance=ExtResource("25_mst8y")]
+
+[node name="Bone16" type="StaticBody3D" parent="Bones" index="22" unique_id=680496431 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.783804, 4.891939, 33.448826)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone16" index="0" unique_id=1449868161]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone16" index="1" unique_id=882489535 instance=ExtResource("25_mst8y")]
+
+[node name="Bone17" type="StaticBody3D" parent="Bones" index="23" unique_id=288401097 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -20.834204, 3.6238387, 32.042213)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone17" index="0" unique_id=475692436]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone17" index="1" unique_id=378009518 instance=ExtResource("25_mst8y")]
+
+[node name="Bone18" type="StaticBody3D" parent="Bones" index="24" unique_id=851248152 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.783804, 4.891939, 32.054718)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone18" index="0" unique_id=398329754]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone18" index="1" unique_id=480414541 instance=ExtResource("25_mst8y")]
+
+[node name="Bone19" type="StaticBody3D" parent="Bones" index="25" unique_id=1358096968 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -20.834204, 3.6238387, 30.849705)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone19" index="0" unique_id=1735180468]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone19" index="1" unique_id=1548905207 instance=ExtResource("25_mst8y")]
+
+[node name="Bone20" type="StaticBody3D" parent="Bones" index="26" unique_id=1959020876 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.783804, 4.891939, 30.86221)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone20" index="0" unique_id=1949954127]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone20" index="1" unique_id=1196659375 instance=ExtResource("25_mst8y")]
+
+[node name="Bone21" type="StaticBody3D" parent="Bones" index="27" unique_id=76077399 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -16.97882, 3.6238387, 30.849705)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone21" index="0" unique_id=86430594]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone21" index="1" unique_id=1809709626 instance=ExtResource("25_mst8y")]
+
+[node name="Bone22" type="StaticBody3D" parent="Bones" index="28" unique_id=550731996 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.928421, 4.891939, 30.86221)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone22" index="0" unique_id=2072415513]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone22" index="1" unique_id=132360944 instance=ExtResource("25_mst8y")]
+
+[node name="Bone23" type="StaticBody3D" parent="Bones" index="29" unique_id=1627208830 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -16.97882, 3.6238387, 32.334175)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone23" index="0" unique_id=202797901]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone23" index="1" unique_id=1754824551 instance=ExtResource("25_mst8y")]
+
+[node name="Bone24" type="StaticBody3D" parent="Bones" index="30" unique_id=1364226379 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.928421, 4.891939, 32.34668)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone24" index="0" unique_id=849831164]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone24" index="1" unique_id=166928326 instance=ExtResource("25_mst8y")]
+
+[node name="Bone25" type="StaticBody3D" parent="Bones" index="31" unique_id=2083962417 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -16.97882, 3.6238387, 33.519863)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone25" index="0" unique_id=281054491]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone25" index="1" unique_id=1431652839 instance=ExtResource("25_mst8y")]
+
+[node name="Bone26" type="StaticBody3D" parent="Bones" index="32" unique_id=275075018 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.928421, 4.891939, 33.532368)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone26" index="0" unique_id=1815451204]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone26" index="1" unique_id=386891808 instance=ExtResource("25_mst8y")]
+
+[node name="Bone27" type="StaticBody3D" parent="Bones" index="33" unique_id=1463446379 groups=["Barricades"]]
+transform = Transform3D(-0.8283027, -0.5536376, 0.08602499, -0.5028044, 0.6667772, -0.5500872, 0.2471895, -0.49889234, -0.8306645, -16.97882, 3.6238387, 34.125)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone27" index="0" unique_id=1355355930]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone27" index="1" unique_id=1736163691 instance=ExtResource("25_mst8y")]
+
+[node name="Bone28" type="StaticBody3D" parent="Bones" index="34" unique_id=38281266 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.928421, 4.891939, 34.137505)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone28" index="0" unique_id=1883861228]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone28" index="1" unique_id=449288526 instance=ExtResource("25_mst8y")]
+
+[node name="Bone29" type="StaticBody3D" parent="Bones" index="35" unique_id=445769632 groups=["Barricades"]]
+transform = Transform3D(0.24724726, -0.49885365, -0.83067054, -0.5028044, 0.6667772, -0.5500872, 0.82828546, 0.55367243, -0.08596701, -16.228836, 3.6238387, 34.461)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone29" index="0" unique_id=475980102]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone29" index="1" unique_id=1893935901 instance=ExtResource("25_mst8y")]
+
+[node name="Bone30" type="StaticBody3D" parent="Bones" index="36" unique_id=1025684556 groups=["Barricades"]]
+transform = Transform3D(0.33129376, -0.43975905, -0.83477914, -0.49363223, 0.6732154, -0.5505524, 0.8040967, 0.5944688, 0.005952801, -16.216335, 4.891939, 34.4106)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone30" index="0" unique_id=1607964115]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone30" index="1" unique_id=1237433298 instance=ExtResource("25_mst8y")]
+
+[node name="Bone31" type="StaticBody3D" parent="Bones" index="37" unique_id=715723711 groups=["Barricades"]]
+transform = Transform3D(0.24724726, -0.49885365, -0.83067054, -0.5028044, 0.6667772, -0.5500872, 0.82828546, 0.55367243, -0.08596701, -14.647949, 3.6238387, 34.461)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone31" index="0" unique_id=2028864130]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone31" index="1" unique_id=1277672033 instance=ExtResource("25_mst8y")]
+
+[node name="Bone32" type="StaticBody3D" parent="Bones" index="38" unique_id=1903475159 groups=["Barricades"]]
+transform = Transform3D(0.33129376, -0.43975905, -0.83477914, -0.49363223, 0.6732154, -0.5505524, 0.8040967, 0.5944688, 0.005952801, -14.635448, 4.891939, 34.4106)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone32" index="0" unique_id=1015369173]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone32" index="1" unique_id=229127393 instance=ExtResource("25_mst8y")]
+
+[node name="Bone33" type="StaticBody3D" parent="Bones" index="39" unique_id=718857264 groups=["Barricades"]]
+transform = Transform3D(0.49362645, -0.6732077, 0.550567, 0.33130237, -0.4397708, -0.83476955, 0.8040967, 0.5944688, 0.0059528067, -15.425444, 4.193934, 34.4106)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone33" index="0" unique_id=116322320]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone33" index="1" unique_id=789556852 instance=ExtResource("25_mst8y")]
+
+[node name="Bone34" type="StaticBody3D" parent="Bones" index="40" unique_id=1752769016 groups=["Barricades"]]
+transform = Transform3D(0.49362645, -0.6732077, 0.550567, 0.33130237, -0.4397708, -0.83476955, 0.8040967, 0.5944688, 0.0059528067, -13.900851, 4.193934, 34.4106)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone34" index="0" unique_id=357729290]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone34" index="1" unique_id=2078891452 instance=ExtResource("25_mst8y")]
+
+[node name="Bone35" type="StaticBody3D" parent="Bones" index="41" unique_id=1160743643 groups=["Barricades"]]
+transform = Transform3D(0.49362645, -0.6732077, 0.550567, 0.33130237, -0.4397708, -0.83476955, 0.8040967, 0.5944688, 0.0059528067, -16.329323, 4.193934, 34.4106)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone35" index="0" unique_id=2016492393]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone35" index="1" unique_id=2043386220 instance=ExtResource("25_mst8y")]
+
+[node name="Bone36" type="StaticBody3D" parent="Bones" index="42" unique_id=975604632 groups=["Barricades"]]
+transform = Transform3D(0.80346715, 0.59532595, 0.0052512623, 0.33130237, -0.43977082, -0.83476955, -0.49465048, 0.67244977, -0.55057406, -16.987099, 4.193934, 32.850407)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone36" index="0" unique_id=1801128100]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone36" index="1" unique_id=802303344 instance=ExtResource("25_mst8y")]
+
+[node name="Bone37" type="StaticBody3D" parent="Bones" index="43" unique_id=828357539 groups=["Barricades"]]
+transform = Transform3D(0.80346715, 0.59532595, 0.0052512623, 0.33130237, -0.43977082, -0.83476955, -0.49465048, 0.67244977, -0.55057406, -16.987099, 4.193934, 31.549644)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone37" index="0" unique_id=202672864]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone37" index="1" unique_id=1101225670 instance=ExtResource("25_mst8y")]
+
+[node name="Bone38" type="StaticBody3D" parent="Bones" index="44" unique_id=1147141993 groups=["Barricades"]]
+transform = Transform3D(0.80346715, 0.59532595, 0.0052512623, 0.33130237, -0.43977082, -0.83476955, -0.49465048, 0.67244977, -0.55057406, -16.987099, 4.193934, 30.414536)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone38" index="0" unique_id=554318570]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone38" index="1" unique_id=1618147342 instance=ExtResource("25_mst8y")]
+
+[node name="Bone39" type="StaticBody3D" parent="Bones" index="45" unique_id=221217152 groups=["Barricades"]]
+transform = Transform3D(0.80346715, 0.59532595, 0.0052512623, 0.33130237, -0.43977082, -0.83476955, -0.49465048, 0.67244977, -0.55057406, -20.7957, 4.193934, 31.470276)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone39" index="0" unique_id=687659085]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone39" index="1" unique_id=1164355940 instance=ExtResource("25_mst8y")]
+
+[node name="Bone40" type="StaticBody3D" parent="Bones" index="46" unique_id=806745568 groups=["Barricades"]]
+transform = Transform3D(0.80346715, 0.59532595, 0.0052512623, 0.33130237, -0.43977082, -0.83476955, -0.49465048, 0.67244977, -0.55057406, -20.7957, 4.193934, 32.787865)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone40" index="0" unique_id=419771842]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone40" index="1" unique_id=2103669752 instance=ExtResource("25_mst8y")]
+
+[node name="Bone41" type="StaticBody3D" parent="Bones" index="47" unique_id=336746689 groups=["Barricades"]]
+transform = Transform3D(0.80346715, 0.59532595, 0.0052512623, 0.33130237, -0.43977082, -0.83476955, -0.49465048, 0.67244977, -0.55057406, -20.7957, 4.193934, 34.25523)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone41" index="0" unique_id=1902939373]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone41" index="1" unique_id=1251256003 instance=ExtResource("25_mst8y")]
+
+[node name="Bone42" type="StaticBody3D" parent="Bones" index="48" unique_id=1040973920 groups=["Barricades"]]
+transform = Transform3D(0.80346715, 0.59532595, 0.0052512623, 0.33130237, -0.43977082, -0.83476955, -0.49465048, 0.67244977, -0.55057406, -20.7957, 4.193934, 35.824623)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone42" index="0" unique_id=1549917052]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone42" index="1" unique_id=852472456 instance=ExtResource("25_mst8y")]
+
+[node name="Bone43" type="StaticBody3D" parent="Bones" index="49" unique_id=1157242464 groups=["Barricades"]]
+transform = Transform3D(0.80346715, 0.59532595, 0.0052512623, 0.33130237, -0.43977082, -0.83476955, -0.49465048, 0.67244977, -0.55057406, -20.7957, 4.193934, 37.308056)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone43" index="0" unique_id=676275426]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone43" index="1" unique_id=949947246 instance=ExtResource("25_mst8y")]
+
+[node name="Bone44" type="StaticBody3D" parent="Bones" index="50" unique_id=609117192 groups=["Barricades"]]
+transform = Transform3D(0.4946084, -0.67248094, 0.5505738, 0.33130237, -0.43977094, -0.83476967, 0.8034931, 0.5952907, 0.005280107, -20.083279, 4.193934, 38.048573)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone44" index="0" unique_id=1082257858]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone44" index="1" unique_id=747835963 instance=ExtResource("25_mst8y")]
+
+[node name="Bone45" type="StaticBody3D" parent="Bones" index="51" unique_id=1333449494 groups=["Barricades"]]
+transform = Transform3D(0.4946084, -0.67248094, 0.5505738, 0.33130237, -0.43977094, -0.83476967, 0.8034931, 0.5952907, 0.005280107, -18.73426, 4.193934, 38.048573)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone45" index="0" unique_id=208344040]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone45" index="1" unique_id=27068044 instance=ExtResource("25_mst8y")]
+
+[node name="Bone46" type="StaticBody3D" parent="Bones" index="52" unique_id=116635924 groups=["Barricades"]]
+transform = Transform3D(0.4946084, -0.67248094, 0.5505738, 0.33130237, -0.43977094, -0.83476967, 0.8034931, 0.5952907, 0.005280107, -17.30232, 4.193934, 38.048573)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone46" index="0" unique_id=593998881]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone46" index="1" unique_id=177394341 instance=ExtResource("25_mst8y")]
+
+[node name="Bone47" type="StaticBody3D" parent="Bones" index="53" unique_id=1941667123 groups=["Barricades"]]
+transform = Transform3D(0.4946084, -0.67248094, 0.5505738, 0.33130237, -0.43977094, -0.83476967, 0.8034931, 0.5952907, 0.005280107, -15.889967, 4.193934, 38.048573)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone47" index="0" unique_id=996025066]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone47" index="1" unique_id=125801938 instance=ExtResource("25_mst8y")]
+
+[node name="Bone48" type="StaticBody3D" parent="Bones" index="54" unique_id=119642336 groups=["Barricades"]]
+transform = Transform3D(0.4946084, -0.67248094, 0.5505738, 0.33130237, -0.43977094, -0.83476967, 0.8034931, 0.5952907, 0.005280107, -14.343424, 4.193934, 38.048573)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone48" index="0" unique_id=261086015]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone48" index="1" unique_id=1109500791 instance=ExtResource("25_mst8y")]
+
+[node name="Bone49" type="StaticBody3D" parent="Bones" index="55" unique_id=909551134 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.69799, 3.497498, 24.154846)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone49" index="0" unique_id=1499813082]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone49" index="1" unique_id=1442986304 instance=ExtResource("25_mst8y")]
+
+[node name="Bone50" type="StaticBody3D" parent="Bones" index="56" unique_id=436839644 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.69799, 4.752191, 24.199568)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone50" index="0" unique_id=958745491]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone50" index="1" unique_id=83907265 instance=ExtResource("25_mst8y")]
+
+[node name="Bone51" type="StaticBody3D" parent="Bones" index="57" unique_id=1664728521 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.69799, 3.497498, 23.326193)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone51" index="0" unique_id=497218478]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone51" index="1" unique_id=2142591484 instance=ExtResource("25_mst8y")]
+
+[node name="Bone52" type="StaticBody3D" parent="Bones" index="58" unique_id=1911729647 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.69799, 4.752191, 23.370914)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone52" index="0" unique_id=1875933843]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone52" index="1" unique_id=1041396733 instance=ExtResource("25_mst8y")]
+
+[node name="Bone53" type="StaticBody3D" parent="Bones" index="59" unique_id=523048154 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.10719, 3.497498, 22.59934)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone53" index="0" unique_id=547959617]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone53" index="1" unique_id=2142816880 instance=ExtResource("25_mst8y")]
+
+[node name="Bone54" type="StaticBody3D" parent="Bones" index="60" unique_id=2093532804 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -16.10719, 4.752191, 22.644062)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone54" index="0" unique_id=580772946]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone54" index="1" unique_id=388084868 instance=ExtResource("25_mst8y")]
+
+[node name="Bone55" type="StaticBody3D" parent="Bones" index="61" unique_id=1574004541 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -15.503034, 3.497498, 21.748457)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone55" index="0" unique_id=1660132048]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone55" index="1" unique_id=9761230 instance=ExtResource("25_mst8y")]
+
+[node name="Bone56" type="StaticBody3D" parent="Bones" index="62" unique_id=504684457 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -15.503034, 4.752191, 21.793179)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone56" index="0" unique_id=1867289355]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone56" index="1" unique_id=249899815 instance=ExtResource("25_mst8y")]
+
+[node name="Bone57" type="StaticBody3D" parent="Bones" index="63" unique_id=1026912907 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -14.704849, 3.497498, 21.044863)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone57" index="0" unique_id=1395710311]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone57" index="1" unique_id=642098928 instance=ExtResource("25_mst8y")]
+
+[node name="Bone58" type="StaticBody3D" parent="Bones" index="64" unique_id=769303128 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -14.704849, 4.752191, 21.089584)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone58" index="0" unique_id=2058535202]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone58" index="1" unique_id=757089232 instance=ExtResource("25_mst8y")]
+
+[node name="Bone59" type="StaticBody3D" parent="Bones" index="65" unique_id=1698907587 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -14.704849, 3.497498, 19.836786)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone59" index="0" unique_id=355407898]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone59" index="1" unique_id=597380777 instance=ExtResource("25_mst8y")]
+
+[node name="Bone60" type="StaticBody3D" parent="Bones" index="66" unique_id=855616268 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -14.704849, 4.752191, 19.881508)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone60" index="0" unique_id=181502043]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone60" index="1" unique_id=865866041 instance=ExtResource("25_mst8y")]
+
+[node name="Bone61" type="StaticBody3D" parent="Bones" index="67" unique_id=1226846864 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -14.704849, 3.497498, 18.634733)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone61" index="0" unique_id=74402541]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone61" index="1" unique_id=1510412487 instance=ExtResource("25_mst8y")]
+
+[node name="Bone62" type="StaticBody3D" parent="Bones" index="68" unique_id=1720160468 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -14.704849, 4.752191, 18.679455)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone62" index="0" unique_id=938829759]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone62" index="1" unique_id=1724109819 instance=ExtResource("25_mst8y")]
+
+[node name="Bone63" type="StaticBody3D" parent="Bones" index="69" unique_id=508115105 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -14.704849, 3.497498, 17.305067)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone63" index="0" unique_id=1728406263]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone63" index="1" unique_id=1117644690 instance=ExtResource("25_mst8y")]
+
+[node name="Bone64" type="StaticBody3D" parent="Bones" index="70" unique_id=1126645236 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -14.704849, 4.752191, 17.349789)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone64" index="0" unique_id=107576036]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone64" index="1" unique_id=1368158161 instance=ExtResource("25_mst8y")]
+
+[node name="Bone96" type="StaticBody3D" parent="Bones" index="71" unique_id=475242844 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -40.583965, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone96" index="0" unique_id=1710070914]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone96" index="1" unique_id=112638953 instance=ExtResource("25_mst8y")]
+
+[node name="Bone97" type="StaticBody3D" parent="Bones" index="72" unique_id=1097857547 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -40.583965, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone97" index="0" unique_id=1623134178]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone97" index="1" unique_id=249263518 instance=ExtResource("25_mst8y")]
+
+[node name="Bone98" type="StaticBody3D" parent="Bones" index="73" unique_id=984260670 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -41.732468, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone98" index="0" unique_id=1176936147]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone98" index="1" unique_id=479995183 instance=ExtResource("25_mst8y")]
+
+[node name="Bone99" type="StaticBody3D" parent="Bones" index="74" unique_id=997669826 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -41.732468, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone99" index="0" unique_id=757706740]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone99" index="1" unique_id=1763512333 instance=ExtResource("25_mst8y")]
+
+[node name="Bone100" type="StaticBody3D" parent="Bones" index="75" unique_id=1926396532 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -42.854412, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone100" index="0" unique_id=1025271194]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone100" index="1" unique_id=140242896 instance=ExtResource("25_mst8y")]
+
+[node name="Bone101" type="StaticBody3D" parent="Bones" index="76" unique_id=1623785313 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -42.854412, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone101" index="0" unique_id=1546894594]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone101" index="1" unique_id=232969253 instance=ExtResource("25_mst8y")]
+
+[node name="Bone102" type="StaticBody3D" parent="Bones" index="77" unique_id=2070166938 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -44.02461, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone102" index="0" unique_id=82565849]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone102" index="1" unique_id=719990243 instance=ExtResource("25_mst8y")]
+
+[node name="Bone103" type="StaticBody3D" parent="Bones" index="78" unique_id=1914470858 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -44.02461, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone103" index="0" unique_id=793815368]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone103" index="1" unique_id=1248149511 instance=ExtResource("25_mst8y")]
+
+[node name="Bone104" type="StaticBody3D" parent="Bones" index="79" unique_id=357648337 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -45.11676, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone104" index="0" unique_id=990571988]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone104" index="1" unique_id=1089435980 instance=ExtResource("25_mst8y")]
+
+[node name="Bone105" type="StaticBody3D" parent="Bones" index="80" unique_id=1624181203 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -45.11676, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone105" index="0" unique_id=1861914327]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone105" index="1" unique_id=1144506354 instance=ExtResource("25_mst8y")]
+
+[node name="Bone106" type="StaticBody3D" parent="Bones" index="81" unique_id=1583881272 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -46.42902, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone106" index="0" unique_id=624022539]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone106" index="1" unique_id=1861976513 instance=ExtResource("25_mst8y")]
+
+[node name="Bone107" type="StaticBody3D" parent="Bones" index="82" unique_id=669893873 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -46.42902, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone107" index="0" unique_id=122337806]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone107" index="1" unique_id=594552247 instance=ExtResource("25_mst8y")]
+
+[node name="Bone108" type="StaticBody3D" parent="Bones" index="83" unique_id=595324788 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -47.735535, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone108" index="0" unique_id=411048749]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone108" index="1" unique_id=1983791445 instance=ExtResource("25_mst8y")]
+
+[node name="Bone109" type="StaticBody3D" parent="Bones" index="84" unique_id=1819487953 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -47.735535, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone109" index="0" unique_id=1676292011]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone109" index="1" unique_id=919591792 instance=ExtResource("25_mst8y")]
+
+[node name="Bone110" type="StaticBody3D" parent="Bones" index="85" unique_id=891881053 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -48.8658, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone110" index="0" unique_id=533119014]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone110" index="1" unique_id=1886486175 instance=ExtResource("25_mst8y")]
+
+[node name="Bone111" type="StaticBody3D" parent="Bones" index="86" unique_id=877257489 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -48.8658, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone111" index="0" unique_id=2135899511]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone111" index="1" unique_id=730334884 instance=ExtResource("25_mst8y")]
+
+[node name="Bone112" type="StaticBody3D" parent="Bones" index="87" unique_id=684732008 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -49.62303, 3.5895557, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone112" index="0" unique_id=2039373864]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone112" index="1" unique_id=147951245 instance=ExtResource("25_mst8y")]
+
+[node name="Bone113" type="StaticBody3D" parent="Bones" index="88" unique_id=1962587340 groups=["Barricades"]]
+transform = Transform3D(0.36590123, -0.41352794, -0.83373314, -0.49363232, 0.67321545, -0.5505524, 0.7889509, 0.6130057, 0.042199586, -49.62303, 4.8764033, 2.9041739)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone113" index="0" unique_id=1609631974]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone113" index="1" unique_id=912622943 instance=ExtResource("25_mst8y")]
+
+[node name="Bone114" type="StaticBody3D" parent="Bones" index="89" unique_id=1552438992 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 3.5895557, 3.8129287)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone114" index="0" unique_id=877784019]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone114" index="1" unique_id=728633625 instance=ExtResource("25_mst8y")]
+
+[node name="Bone115" type="StaticBody3D" parent="Bones" index="90" unique_id=1366123621 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 4.8764033, 3.8129287)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone115" index="0" unique_id=820512453]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone115" index="1" unique_id=1589306921 instance=ExtResource("25_mst8y")]
+
+[node name="Bone116" type="StaticBody3D" parent="Bones" index="91" unique_id=1389799069 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 3.5895557, 4.8860955)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone116" index="0" unique_id=1192393508]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone116" index="1" unique_id=1018118886 instance=ExtResource("25_mst8y")]
+
+[node name="Bone117" type="StaticBody3D" parent="Bones" index="92" unique_id=802415428 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 4.8764033, 4.8860955)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone117" index="0" unique_id=749944727]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone117" index="1" unique_id=1029142369 instance=ExtResource("25_mst8y")]
+
+[node name="Bone118" type="StaticBody3D" parent="Bones" index="93" unique_id=1530570026 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 3.5895557, 6.059234)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone118" index="0" unique_id=2071740395]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone118" index="1" unique_id=848013564 instance=ExtResource("25_mst8y")]
+
+[node name="Bone119" type="StaticBody3D" parent="Bones" index="94" unique_id=1030732770 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 4.8764033, 6.059234)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone119" index="0" unique_id=1733014117]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone119" index="1" unique_id=365570277 instance=ExtResource("25_mst8y")]
+
+[node name="Bone120" type="StaticBody3D" parent="Bones" index="95" unique_id=153039812 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 3.5895557, 7.114874)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone120" index="0" unique_id=1448672426]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone120" index="1" unique_id=722577686 instance=ExtResource("25_mst8y")]
+
+[node name="Bone121" type="StaticBody3D" parent="Bones" index="96" unique_id=579530163 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 4.8764033, 7.114874)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone121" index="0" unique_id=1499158679]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone121" index="1" unique_id=1001812414 instance=ExtResource("25_mst8y")]
+
+[node name="Bone122" type="StaticBody3D" parent="Bones" index="97" unique_id=906707732 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 3.5895557, 8.390322)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone122" index="0" unique_id=1736246749]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone122" index="1" unique_id=182350798 instance=ExtResource("25_mst8y")]
+
+[node name="Bone123" type="StaticBody3D" parent="Bones" index="98" unique_id=1756675480 groups=["Barricades"]]
+transform = Transform3D(0.7883303, 0.6137049, 0.043610983, -0.49363232, 0.67321545, -0.5505524, -0.3672363, 0.41248956, 0.8336605, -49.62303, 4.8764033, 8.390322)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone123" index="0" unique_id=1006384566]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone123" index="1" unique_id=1314922220 instance=ExtResource("25_mst8y")]
+
+[node name="Bone124" type="StaticBody3D" parent="Bones" index="99" unique_id=1685163109 groups=["Barricades"]]
+transform = Transform3D(-0.78808665, -0.6139783, -0.044163898, -0.4936323, 0.67321545, -0.5505524, 0.367759, -0.4120825, -0.8336314, -45.363712, 3.5895557, 8.390322)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone124" index="0" unique_id=209123263]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone124" index="1" unique_id=1748526437 instance=ExtResource("25_mst8y")]
+
+[node name="Bone125" type="StaticBody3D" parent="Bones" index="100" unique_id=591270030 groups=["Barricades"]]
+transform = Transform3D(-0.78808665, -0.6139783, -0.044163898, -0.4936323, 0.67321545, -0.5505524, 0.367759, -0.4120825, -0.8336314, -45.363712, 4.8764033, 8.390322)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone125" index="0" unique_id=228471404]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone125" index="1" unique_id=1421699808 instance=ExtResource("25_mst8y")]
+
+[node name="Bone126" type="StaticBody3D" parent="Bones" index="101" unique_id=84020137 groups=["Barricades"]]
+transform = Transform3D(-0.78808665, -0.6139783, -0.044163898, -0.4936323, 0.67321545, -0.5505524, 0.367759, -0.4120825, -0.8336314, -45.363712, 3.5895557, 7.4448814)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone126" index="0" unique_id=514406896]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone126" index="1" unique_id=28157309 instance=ExtResource("25_mst8y")]
+
+[node name="Bone127" type="StaticBody3D" parent="Bones" index="102" unique_id=1317732017 groups=["Barricades"]]
+transform = Transform3D(-0.78808665, -0.6139783, -0.044163898, -0.4936323, 0.67321545, -0.5505524, 0.367759, -0.4120825, -0.8336314, -45.363712, 4.8764033, 7.4448814)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone127" index="0" unique_id=538507949]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone127" index="1" unique_id=1073896543 instance=ExtResource("25_mst8y")]
+
+[node name="Bone128" type="StaticBody3D" parent="Bones" index="103" unique_id=1099702538 groups=["Barricades"]]
+transform = Transform3D(-0.78808665, -0.6139783, -0.044163898, -0.4936323, 0.67321545, -0.5505524, 0.367759, -0.4120825, -0.8336314, -45.363712, 3.5895557, 6.8135076)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone128" index="0" unique_id=410395605]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone128" index="1" unique_id=423566338 instance=ExtResource("25_mst8y")]
+
+[node name="Bone129" type="StaticBody3D" parent="Bones" index="104" unique_id=1522297397 groups=["Barricades"]]
+transform = Transform3D(-0.78808665, -0.6139783, -0.044163898, -0.4936323, 0.67321545, -0.5505524, 0.367759, -0.4120825, -0.8336314, -45.363712, 4.8764033, 6.8135076)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone129" index="0" unique_id=411115341]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone129" index="1" unique_id=646946647 instance=ExtResource("25_mst8y")]
+
+[node name="Bone130" type="StaticBody3D" parent="Bones" index="105" unique_id=174985014 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -44.44378, 3.5895557, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone130" index="0" unique_id=1208362988]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone130" index="1" unique_id=574903912 instance=ExtResource("25_mst8y")]
+
+[node name="Bone131" type="StaticBody3D" parent="Bones" index="106" unique_id=605883557 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -44.44378, 4.8764033, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone131" index="0" unique_id=1265333314]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone131" index="1" unique_id=1209364411 instance=ExtResource("25_mst8y")]
+
+[node name="Bone132" type="StaticBody3D" parent="Bones" index="107" unique_id=724163933 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -43.40594, 3.5895557, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone132" index="0" unique_id=1133868306]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone132" index="1" unique_id=37207716 instance=ExtResource("25_mst8y")]
+
+[node name="Bone133" type="StaticBody3D" parent="Bones" index="108" unique_id=1566628811 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -43.40594, 4.8764033, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone133" index="0" unique_id=833497917]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone133" index="1" unique_id=893168687 instance=ExtResource("25_mst8y")]
+
+[node name="Bone134" type="StaticBody3D" parent="Bones" index="109" unique_id=1248920534 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -42.309406, 3.5895557, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone134" index="0" unique_id=582420134]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone134" index="1" unique_id=1491277648 instance=ExtResource("25_mst8y")]
+
+[node name="Bone135" type="StaticBody3D" parent="Bones" index="110" unique_id=580162867 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -42.309406, 4.8764033, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone135" index="0" unique_id=1854546583]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone135" index="1" unique_id=1158904872 instance=ExtResource("25_mst8y")]
+
+[node name="Bone136" type="StaticBody3D" parent="Bones" index="111" unique_id=85683999 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -41.25115, 3.5895557, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone136" index="0" unique_id=645597239]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone136" index="1" unique_id=970385907 instance=ExtResource("25_mst8y")]
+
+[node name="Bone137" type="StaticBody3D" parent="Bones" index="112" unique_id=2027068384 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -41.25115, 4.8764033, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone137" index="0" unique_id=381394303]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone137" index="1" unique_id=266688933 instance=ExtResource("25_mst8y")]
+
+[node name="Bone138" type="StaticBody3D" parent="Bones" index="113" unique_id=1446766838 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -40.150898, 3.5895557, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone138" index="0" unique_id=36914283]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone138" index="1" unique_id=2003855348 instance=ExtResource("25_mst8y")]
+
+[node name="Bone140" type="StaticBody3D" parent="Bones" index="114" unique_id=802778138 groups=["Barricades"]]
+transform = Transform3D(0.4942278, -0.6736721, 0.54945856, -0.4485849, 0.34377193, 0.82498026, -0.74465466, -0.65420735, -0.1322975, -40.150898, 4.291212, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone140" index="0" unique_id=533884501]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone140" index="1" unique_id=2203086 instance=ExtResource("25_mst8y")]
+
+[node name="Bone141" type="StaticBody3D" parent="Bones" index="115" unique_id=101231970 groups=["Barricades"]]
+transform = Transform3D(0.4942278, -0.6736721, 0.54945856, -0.4485849, 0.34377193, 0.82498026, -0.74465466, -0.65420735, -0.1322975, -41.389835, 4.291212, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone141" index="0" unique_id=232804042]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone141" index="1" unique_id=1255201088 instance=ExtResource("25_mst8y")]
+
+[node name="Bone142" type="StaticBody3D" parent="Bones" index="116" unique_id=555167131 groups=["Barricades"]]
+transform = Transform3D(0.4942278, -0.6736721, 0.54945856, -0.4485849, 0.34377193, 0.82498026, -0.74465466, -0.65420735, -0.1322975, -42.692818, 4.291212, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone142" index="0" unique_id=935325250]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone142" index="1" unique_id=212198103 instance=ExtResource("25_mst8y")]
+
+[node name="Bone143" type="StaticBody3D" parent="Bones" index="117" unique_id=540316946 groups=["Barricades"]]
+transform = Transform3D(0.4942278, -0.6736721, 0.54945856, -0.4485849, 0.34377193, 0.82498026, -0.74465466, -0.65420735, -0.1322975, -44.050354, 4.291212, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone143" index="0" unique_id=1874825040]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone143" index="1" unique_id=5409625 instance=ExtResource("25_mst8y")]
+
+[node name="Bone144" type="StaticBody3D" parent="Bones" index="118" unique_id=555133709 groups=["Barricades"]]
+transform = Transform3D(0.4942278, -0.6736721, 0.54945856, -0.4485849, 0.34377193, 0.82498026, -0.74465466, -0.65420735, -0.1322975, -44.782494, 4.291212, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone144" index="0" unique_id=1724314367]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone144" index="1" unique_id=272102345 instance=ExtResource("25_mst8y")]
+
+[node name="Bone145" type="StaticBody3D" parent="Bones" index="119" unique_id=374109425 groups=["Barricades"]]
+transform = Transform3D(-0.74511147, -0.65358394, -0.13280568, -0.44858485, 0.3437719, 0.82498014, -0.49353868, 0.6742768, -0.5493359, -45.418755, 4.291212, 7.1394043)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone145" index="0" unique_id=730015759]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone145" index="1" unique_id=967450989 instance=ExtResource("25_mst8y")]
+
+[node name="Bone146" type="StaticBody3D" parent="Bones" index="120" unique_id=1010854667 groups=["Barricades"]]
+transform = Transform3D(-0.74511147, -0.65358394, -0.13280568, -0.44858485, 0.3437719, 0.82498014, -0.49353868, 0.6742768, -0.5493359, -45.418755, 4.291212, 8.46082)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone146" index="0" unique_id=164535851]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone146" index="1" unique_id=2059450443 instance=ExtResource("25_mst8y")]
+
+[node name="Bone147" type="StaticBody3D" parent="Bones" index="121" unique_id=464840167 groups=["Barricades"]]
+transform = Transform3D(0.74518037, 0.65348977, 0.13288236, -0.44858485, 0.34377187, 0.82498014, 0.49343464, -0.674368, 0.54931724, -49.594963, 4.291212, 8.46082)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone147" index="0" unique_id=876546359]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone147" index="1" unique_id=878061678 instance=ExtResource("25_mst8y")]
+
+[node name="Bone148" type="StaticBody3D" parent="Bones" index="122" unique_id=700018663 groups=["Barricades"]]
+transform = Transform3D(0.74518037, 0.65348977, 0.13288236, -0.44858485, 0.34377187, 0.82498014, 0.49343464, -0.674368, 0.54931724, -49.594963, 4.291212, 7.175454)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone148" index="0" unique_id=1567733410]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone148" index="1" unique_id=1288758007 instance=ExtResource("25_mst8y")]
+
+[node name="Bone149" type="StaticBody3D" parent="Bones" index="123" unique_id=1275746247 groups=["Barricades"]]
+transform = Transform3D(0.74518037, 0.65348977, 0.13288236, -0.44858485, 0.34377187, 0.82498014, 0.49343464, -0.674368, 0.54931724, -49.594963, 4.291212, 5.898675)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone149" index="0" unique_id=1804922090]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone149" index="1" unique_id=1894516665 instance=ExtResource("25_mst8y")]
+
+[node name="Bone150" type="StaticBody3D" parent="Bones" index="124" unique_id=403721172 groups=["Barricades"]]
+transform = Transform3D(0.74518037, 0.65348977, 0.13288236, -0.44858485, 0.34377187, 0.82498014, 0.49343464, -0.674368, 0.54931724, -49.594963, 4.291212, 4.5660934)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone150" index="0" unique_id=1344031348]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone150" index="1" unique_id=81497317 instance=ExtResource("25_mst8y")]
+
+[node name="Bone151" type="StaticBody3D" parent="Bones" index="125" unique_id=284120397 groups=["Barricades"]]
+transform = Transform3D(0.74518037, 0.65348977, 0.13288236, -0.44858485, 0.34377187, 0.82498014, 0.49343464, -0.674368, 0.54931724, -49.594963, 4.291212, 3.3079228)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone151" index="0" unique_id=193852510]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone151" index="1" unique_id=1583380133 instance=ExtResource("25_mst8y")]
+
+[node name="Bone152" type="StaticBody3D" parent="Bones" index="126" unique_id=75102208 groups=["Barricades"]]
+transform = Transform3D(-0.4949553, 0.6730323, -0.5495875, -0.4485849, 0.34377187, 0.82498026, 0.7441713, 0.65486544, 0.13176046, -48.884354, 4.291212, 2.8708415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone152" index="0" unique_id=1659532362]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone152" index="1" unique_id=1570358428 instance=ExtResource("25_mst8y")]
+
+[node name="Bone153" type="StaticBody3D" parent="Bones" index="127" unique_id=773483080 groups=["Barricades"]]
+transform = Transform3D(-0.4949553, 0.6730323, -0.5495875, -0.4485849, 0.34377187, 0.82498026, 0.7441713, 0.65486544, 0.13176046, -47.630993, 4.291212, 2.8708415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone153" index="0" unique_id=1226318393]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone153" index="1" unique_id=620440773 instance=ExtResource("25_mst8y")]
+
+[node name="Bone154" type="StaticBody3D" parent="Bones" index="128" unique_id=1888459730 groups=["Barricades"]]
+transform = Transform3D(-0.4949553, 0.6730323, -0.5495875, -0.4485849, 0.34377187, 0.82498026, 0.7441713, 0.65486544, 0.13176046, -46.388367, 4.291212, 2.8708415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone154" index="0" unique_id=1187263352]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone154" index="1" unique_id=1977065211 instance=ExtResource("25_mst8y")]
+
+[node name="Bone155" type="StaticBody3D" parent="Bones" index="129" unique_id=1744416192 groups=["Barricades"]]
+transform = Transform3D(-0.4949553, 0.6730323, -0.5495875, -0.4485849, 0.34377187, 0.82498026, 0.7441713, 0.65486544, 0.13176046, -45.113014, 4.291212, 2.8708415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone155" index="0" unique_id=459201664]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone155" index="1" unique_id=2006039947 instance=ExtResource("25_mst8y")]
+
+[node name="Bone156" type="StaticBody3D" parent="Bones" index="130" unique_id=895336024 groups=["Barricades"]]
+transform = Transform3D(-0.4949553, 0.6730323, -0.5495875, -0.4485849, 0.34377187, 0.82498026, 0.7441713, 0.65486544, 0.13176046, -43.794933, 4.291212, 2.8708415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone156" index="0" unique_id=860691088]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone156" index="1" unique_id=1817783831 instance=ExtResource("25_mst8y")]
+
+[node name="Bone157" type="StaticBody3D" parent="Bones" index="131" unique_id=923139765 groups=["Barricades"]]
+transform = Transform3D(-0.4949553, 0.6730323, -0.5495875, -0.4485849, 0.34377187, 0.82498026, 0.7441713, 0.65486544, 0.13176046, -42.4985, 4.291212, 2.8708415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone157" index="0" unique_id=2022174037]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone157" index="1" unique_id=784750365 instance=ExtResource("25_mst8y")]
+
+[node name="Bone158" type="StaticBody3D" parent="Bones" index="132" unique_id=1179390239 groups=["Barricades"]]
+transform = Transform3D(-0.4949553, 0.6730323, -0.5495875, -0.4485849, 0.34377187, 0.82498026, 0.7441713, 0.65486544, 0.13176046, -41.002754, 4.291212, 2.8708415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone158" index="0" unique_id=1252164288]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone158" index="1" unique_id=209159620 instance=ExtResource("25_mst8y")]
+
+[node name="Bone139" type="StaticBody3D" parent="Bones" index="133" unique_id=93392194 groups=["Barricades"]]
+transform = Transform3D(-0.44924006, 0.3446652, 0.82425064, -0.4936323, 0.6732154, -0.55055237, -0.74465466, -0.65420735, -0.13229749, -40.150898, 4.8764033, 6.5113983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone139" index="0" unique_id=1815624903]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone139" index="1" unique_id=511803057 instance=ExtResource("25_mst8y")]
+
+[node name="Bone65" type="StaticBody3D" parent="Bones" index="134" unique_id=2033491853 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -18.178986, 3.497498, 17.305067)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone65" index="0" unique_id=521346139]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone65" index="1" unique_id=1494189513 instance=ExtResource("25_mst8y")]
+
+[node name="Bone66" type="StaticBody3D" parent="Bones" index="135" unique_id=1947614936 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -18.178986, 4.752191, 17.349789)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone66" index="0" unique_id=344926243]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone66" index="1" unique_id=844883470 instance=ExtResource("25_mst8y")]
+
+[node name="Bone67" type="StaticBody3D" parent="Bones" index="136" unique_id=1503203218 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -18.178986, 3.497498, 18.488323)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone67" index="0" unique_id=1793284620]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone67" index="1" unique_id=1773548330 instance=ExtResource("25_mst8y")]
+
+[node name="Bone68" type="StaticBody3D" parent="Bones" index="137" unique_id=138569590 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -18.178986, 4.752191, 18.533045)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone68" index="0" unique_id=601877235]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone68" index="1" unique_id=1161618296 instance=ExtResource("25_mst8y")]
+
+[node name="Bone69" type="StaticBody3D" parent="Bones" index="138" unique_id=1262883243 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -18.889902, 3.497498, 19.165983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone69" index="0" unique_id=467429527]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone69" index="1" unique_id=740046981 instance=ExtResource("25_mst8y")]
+
+[node name="Bone70" type="StaticBody3D" parent="Bones" index="139" unique_id=510197861 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -18.889902, 4.752191, 19.210705)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone70" index="0" unique_id=1542423184]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone70" index="1" unique_id=51798487 instance=ExtResource("25_mst8y")]
+
+[node name="Bone71" type="StaticBody3D" parent="Bones" index="140" unique_id=132952251 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -19.556824, 3.497498, 19.789808)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone71" index="0" unique_id=169089038]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone71" index="1" unique_id=1669617551 instance=ExtResource("25_mst8y")]
+
+[node name="Bone72" type="StaticBody3D" parent="Bones" index="141" unique_id=51639843 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -19.556824, 4.752191, 19.83453)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone72" index="0" unique_id=187408237]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone72" index="1" unique_id=348526566 instance=ExtResource("25_mst8y")]
+
+[node name="Bone73" type="StaticBody3D" parent="Bones" index="142" unique_id=1786407176 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.149961, 3.497498, 20.557598)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone73" index="0" unique_id=1730769300]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone73" index="1" unique_id=901412849 instance=ExtResource("25_mst8y")]
+
+[node name="Bone74" type="StaticBody3D" parent="Bones" index="143" unique_id=1100604217 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.149961, 4.752191, 20.60232)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone74" index="0" unique_id=1312588712]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone74" index="1" unique_id=1876033550 instance=ExtResource("25_mst8y")]
+
+[node name="Bone75" type="StaticBody3D" parent="Bones" index="144" unique_id=1307542074 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.482367, 3.497498, 21.29909)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone75" index="0" unique_id=1068973536]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone75" index="1" unique_id=1345321266 instance=ExtResource("25_mst8y")]
+
+[node name="Bone76" type="StaticBody3D" parent="Bones" index="145" unique_id=99011423 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.482367, 4.752191, 21.343811)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone76" index="0" unique_id=499215838]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone76" index="1" unique_id=1057045549 instance=ExtResource("25_mst8y")]
+
+[node name="Bone77" type="StaticBody3D" parent="Bones" index="146" unique_id=66758799 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.482367, 3.497498, 22.273663)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone77" index="0" unique_id=1042943003]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone77" index="1" unique_id=247721172 instance=ExtResource("25_mst8y")]
+
+[node name="Bone78" type="StaticBody3D" parent="Bones" index="147" unique_id=1701159187 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.482367, 4.752191, 22.318384)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone78" index="0" unique_id=784371975]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone78" index="1" unique_id=1839450642 instance=ExtResource("25_mst8y")]
+
+[node name="Bone79" type="StaticBody3D" parent="Bones" index="148" unique_id=1306302980 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.482367, 3.497498, 23.069904)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone79" index="0" unique_id=348974081]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone79" index="1" unique_id=1937609421 instance=ExtResource("25_mst8y")]
+
+[node name="Bone80" type="StaticBody3D" parent="Bones" index="149" unique_id=2105418810 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.482367, 4.752191, 23.114626)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone80" index="0" unique_id=1485538019]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone80" index="1" unique_id=965260403 instance=ExtResource("25_mst8y")]
+
+[node name="Bone81" type="StaticBody3D" parent="Bones" index="150" unique_id=174352923 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.482367, 3.497498, 23.987535)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone81" index="0" unique_id=1152784468]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone81" index="1" unique_id=1799058676 instance=ExtResource("25_mst8y")]
+
+[node name="Bone83" type="StaticBody3D" parent="Bones" index="151" unique_id=74752843 groups=["Barricades"]]
+transform = Transform3D(-0.8041198, -0.5944381, -0.005894497, 0.33153054, -0.44019994, -0.8344526, 0.49343565, -0.6729542, 0.5510478, -20.482367, 4.1509733, 23.777525)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone83" index="0" unique_id=1025589403]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone83" index="1" unique_id=1536248996 instance=ExtResource("25_mst8y")]
+
+[node name="Bone84" type="StaticBody3D" parent="Bones" index="152" unique_id=183040061 groups=["Barricades"]]
+transform = Transform3D(-0.8041198, -0.5944381, -0.005894497, 0.33153054, -0.44019994, -0.8344526, 0.49343565, -0.6729542, 0.5510478, -20.482367, 4.1509733, 22.225056)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone84" index="0" unique_id=1946970735]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone84" index="1" unique_id=1542096463 instance=ExtResource("25_mst8y")]
+
+[node name="Bone85" type="StaticBody3D" parent="Bones" index="153" unique_id=1423555424 groups=["Barricades"]]
+transform = Transform3D(-0.9363705, -0.2616362, -0.23400146, 0.33153057, -0.4401999, -0.8344526, 0.1153155, -0.85893565, 0.4989305, -20.252522, 4.1509733, 20.898146)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone85" index="0" unique_id=611351962]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone85" index="1" unique_id=1669723977 instance=ExtResource("25_mst8y")]
+
+[node name="Bone86" type="StaticBody3D" parent="Bones" index="154" unique_id=700566973 groups=["Barricades"]]
+transform = Transform3D(-0.9363705, -0.2616362, -0.23400146, 0.33153057, -0.4401999, -0.8344526, 0.1153155, -0.85893565, 0.4989305, -19.645096, 4.1509733, 19.768494)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone86" index="0" unique_id=382546455]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone86" index="1" unique_id=1875264749 instance=ExtResource("25_mst8y")]
+
+[node name="Bone87" type="StaticBody3D" parent="Bones" index="155" unique_id=1317640449 groups=["Barricades"]]
+transform = Transform3D(-0.9116109, 0.078350745, -0.4035181, 0.33153066, -0.4402, -0.8344528, -0.24300876, -0.894475, 0.3753154, -18.790447, 4.1509733, 18.879503)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone87" index="0" unique_id=1352694828]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone87" index="1" unique_id=721843502 instance=ExtResource("25_mst8y")]
+
+[node name="Bone88" type="StaticBody3D" parent="Bones" index="156" unique_id=335061501 groups=["Barricades"]]
+transform = Transform3D(-0.7977064, -0.6030451, 0.0011940151, 0.33153063, -0.44020003, -0.8344529, 0.50373816, -0.66525275, 0.55107826, -18.171627, 4.1509733, 17.796463)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone88" index="0" unique_id=591164018]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone88" index="1" unique_id=558852015 instance=ExtResource("25_mst8y")]
+
+[node name="Bone89" type="StaticBody3D" parent="Bones" index="157" unique_id=1480015610 groups=["Barricades"]]
+transform = Transform3D(-0.7977064, -0.6030451, 0.0011940151, 0.33153063, -0.44020003, -0.8344529, 0.50373816, -0.66525275, 0.55107826, -14.7589035, 4.1509733, 17.465483)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone89" index="0" unique_id=148677666]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone89" index="1" unique_id=1059899369 instance=ExtResource("25_mst8y")]
+
+[node name="Bone90" type="StaticBody3D" parent="Bones" index="158" unique_id=497105591 groups=["Barricades"]]
+transform = Transform3D(-0.7573675, -0.6515833, 0.042826224, 0.33153066, -0.44020006, -0.83445287, 0.5625676, -0.6177894, 0.54941297, -14.835397, 4.1509733, 18.758642)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone90" index="0" unique_id=1802259506]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone90" index="1" unique_id=480926600 instance=ExtResource("25_mst8y")]
+
+[node name="Bone91" type="StaticBody3D" parent="Bones" index="159" unique_id=337000046 groups=["Barricades"]]
+transform = Transform3D(-0.7573675, -0.6515833, 0.042826224, 0.33153066, -0.44020006, -0.83445287, 0.5625676, -0.6177894, 0.54941297, -14.835397, 4.1509733, 20.055237)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone91" index="0" unique_id=693114732]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone91" index="1" unique_id=1761112764 instance=ExtResource("25_mst8y")]
+
+[node name="Bone92" type="StaticBody3D" parent="Bones" index="160" unique_id=549536689 groups=["Barricades"]]
+transform = Transform3D(-0.924453, -0.32814816, -0.19417949, 0.33153066, -0.44020003, -0.8344529, 0.18834633, -0.8357892, 0.5157355, -15.114519, 4.1509733, 21.267696)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone92" index="0" unique_id=341181038]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone92" index="1" unique_id=1063432130 instance=ExtResource("25_mst8y")]
+
+[node name="Bone93" type="StaticBody3D" parent="Bones" index="161" unique_id=693812791 groups=["Barricades"]]
+transform = Transform3D(-0.94270957, -0.18947287, -0.27458844, 0.33153063, -0.44020003, -0.83445287, 0.037232384, -0.8776815, 0.47779703, -15.813549, 4.1509733, 22.213558)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone93" index="0" unique_id=27649336]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone93" index="1" unique_id=1366459699 instance=ExtResource("25_mst8y")]
+
+[node name="Bone94" type="StaticBody3D" parent="Bones" index="162" unique_id=662170393 groups=["Barricades"]]
+transform = Transform3D(-0.94270957, -0.18947287, -0.27458844, 0.33153063, -0.44020003, -0.83445287, 0.037232384, -0.8776815, 0.47779703, -16.378258, 4.1509733, 22.925592)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone94" index="0" unique_id=272461923]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone94" index="1" unique_id=1757304643 instance=ExtResource("25_mst8y")]
+
+[node name="Bone95" type="StaticBody3D" parent="Bones" index="163" unique_id=316919964 groups=["Barricades"]]
+transform = Transform3D(-0.7795289, -0.6260296, 0.020541087, 0.33153063, -0.44020003, -0.83445287, 0.5314341, -0.64367044, 0.5506967, -16.742176, 4.1509733, 23.975397)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone95" index="0" unique_id=807235552]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone95" index="1" unique_id=1197246305 instance=ExtResource("25_mst8y")]
+
+[node name="Bone82" type="StaticBody3D" parent="Bones" index="164" unique_id=2034342150 groups=["Barricades"]]
+transform = Transform3D(-0.8041199, -0.59443814, -0.0058945417, -0.49363232, 0.67321545, -0.5505525, 0.33123767, -0.4398005, -0.8347796, -20.482367, 4.752191, 24.032257)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bones/Bone82" index="0" unique_id=1931772637]
+transform = Transform3D(0.71872115, 0.69529843, 0, -0.69529843, 0.71872115, 0, 0, 0, 1, -0.015750213, -0.0295301, 0)
+shape = SubResource("BoxShape3D_tyk3x")
+
+[node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone82" index="1" unique_id=59853256 instance=ExtResource("25_mst8y")]
 
 [connection signal="body_entered" from="Task/GeneratorTrigger" to="Task/GeneratorTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="Task/GeneratorTrigger" to="Task/GeneratorTrigger" method="_on_body_exited"]
