@@ -3,6 +3,7 @@ extends Area3D
 @onready var korku_sesi = $AudioStreamPlayer3D
 # Reference the CSGBox3D (Update the name if you named it differently in the scene tree)
 @onready var csg_box = $CSGBox3D
+@onready var table_light = $ATMLight
 
 func _on_body_entered(body):
 	if body.name == "Player":
@@ -53,6 +54,8 @@ func _on_body_entered(body):
 		# Destroy the box to clear the path
 		if csg_box:
 			csg_box.queue_free()
+		if table_light:
+			table_light.queue_free()
 				
 		# --- 5. DISABLE THE TRIGGER ---
 		# Disable the physical area instead of immediately freeing the node,

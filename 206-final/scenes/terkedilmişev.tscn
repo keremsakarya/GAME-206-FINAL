@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cp0uwsudm5o1n" path="res://sounds/terkedilmişev müzik.mp3" id="3_8lkyg"]
 [ext_resource type="Texture2D" uid="uid://b3jc27u6rgos0" path="res://assets/Abandoned_House/Textures/Puerta.jpg" id="3_64taa"]
 [ext_resource type="Script" uid="uid://bv78ew0f7j6ty" path="res://scripts/mutfak_trigger.gd" id="6_8008v"]
+[ext_resource type="Script" uid="uid://0b38x77j4y06" path="res://scripts/atm_light.gd" id="8_46b6b"]
 [ext_resource type="PackedScene" uid="uid://3v6kx68dw7at" path="res://assets/wooden+chair+3d+model/tripo_convert_c4aa3f3c-8fdc-4d34-a9f9-fb0162484177.fbx" id="8_lggd6"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k8fo5"]
@@ -5614,6 +5615,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1734257, 0.76464844, 4.331
 visible = false
 use_collision = true
 size = Vector3(2.0272217, 2.5292969, 2.303772)
+
+[node name="ATMLight" type="OmniLight3D" parent="MutfakTrigger" index="3" unique_id=315073438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2621021, 0.8840064, -3.6549835)
+light_color = Color(0.5450326, 0, 0.049397543, 1)
+omni_range = 0.354
+script = ExtResource("8_46b6b")
 
 [node name="UcanSandalye_1" type="RigidBody3D" parent="." index="38" unique_id=1015682016 groups=["UcanEsya"]]
 transform = Transform3D(0.10562192, 0, -0.99440634, 0, 1, 0, 0.99440634, 0, 0.10562192, -32.639343, 0.41975373, -130.19263)
