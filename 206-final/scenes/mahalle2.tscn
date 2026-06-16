@@ -6527,6 +6527,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1383576, 5.1575136, -12.188
 [node name="tripo_convert_0867bda3-034f-4638-bde0-8e15fdd126f12" parent="." index="889" unique_id=1345634527 instance=ExtResource("16_kxtbb")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.19619751, 5.1575136, -5.6218834)
 
+[node name="DoorBlock" type="CSGBox3D" parent="." index="890" unique_id=1805482750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8301783, 4.77682, -3.647812)
+visible = false
+use_collision = true
+size = Vector3(1, 2.6704712, 1)
+
+[node name="DoorBlock2" type="CSGBox3D" parent="." index="891" unique_id=447960134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8301783, 4.77682, -9.6098585)
+visible = false
+use_collision = true
+size = Vector3(1, 2.6704712, 1)
+
 [connection signal="body_entered" from="Armchair_15_001/EatArea" to="Armchair_15_001/EatArea" method="_on_body_entered"]
 [connection signal="body_exited" from="Armchair_15_001/EatArea" to="Armchair_15_001/EatArea" method="_on_body_exited"]
 [connection signal="body_entered" from="bed_01/SleepArea" to="bed_01/SleepArea" method="_on_body_entered"]

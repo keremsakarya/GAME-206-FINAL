@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://bncpk6lr7m7kk"]
 
 [ext_resource type="Script" uid="uid://cjnbqet6x2cix" path="res://scripts/controls.gd" id="1_i2gav"]
+[ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="2_5tddo"]
+[ext_resource type="FontFile" uid="uid://pi7mxqnj1e5b" path="res://fonts/texts/PixeloidSans-Bold.ttf" id="3_cywyo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlg0r"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihl6s"]
 
 [node name="Controls" type="Control" unique_id=113384763]
 layout_mode = 3
@@ -13,12 +24,49 @@ script = ExtResource("1_i2gav")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=560520001]
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1740026815]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.066755, 0.066755, 0.066755, 1)
+
 [node name="BackButton" type="Button" parent="CanvasLayer" unique_id=2093049993]
-offset_left = 626.0
-offset_top = 348.0
-offset_right = 726.0
-offset_bottom = 411.0
+offset_left = 925.0
+offset_top = 546.0
+offset_right = 1034.0
+offset_bottom = 609.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("2_5tddo")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
 text = "Back"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=282388288]
+offset_left = 83.0
+offset_top = 71.0
+offset_right = 784.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_fonts/font = ExtResource("3_cywyo")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ihl6s")
+text = "Move                W,A,S,D
+
+Jump                 Space
+
+Sprint                Shift
+
+Shoot                Left Click
+
+Interact            E
+
+Flashlight          F
+
+Pause Game      ESC"
 
 [connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]

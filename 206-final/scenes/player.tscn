@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://btub21ktnu102" path="res://sounds/Breathingsound.mp3" id="9_a8ls1"]
 [ext_resource type="AudioStream" uid="uid://d0834t70hrrfv" path="res://sounds/gunshotsound2.mp3" id="11_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://rmmjquhptha6" path="res://images/ali ceset.png" id="13_f1ej7"]
+[ext_resource type="Script" uid="uid://bm0ujtqqkeuts" path="res://scripts/pause_menu.gd" id="17_qfm1y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
 
@@ -36,6 +37,15 @@ shader_parameter/flicker_strength = 0.005
 bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fulsm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4r5pv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60mlk"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4ail"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1581314821 groups=["Player"]]
 script = ExtResource("1_g2els")
@@ -190,4 +200,72 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
 text = "Continue"
 
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=2082024759]
+process_mode = 3
+script = ExtResource("17_qfm1y")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=606430484]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7058824)
+
+[node name="Label" type="Label" parent="PauseMenu" unique_id=533756869]
+offset_left = 83.0
+offset_top = 71.0
+offset_right = 784.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0.7156723, 0, 0.027011843, 1)
+theme_override_fonts/font = ExtResource("4_qlg0r")
+theme_override_font_sizes/font_size = 81
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fulsm")
+text = "RUN BERKE RUN"
+
+[node name="BtnContinue" type="Button" parent="PauseMenu" unique_id=1669900914]
+offset_left = 174.0
+offset_top = 306.0
+offset_right = 359.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("4_qlg0r")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4r5pv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_60mlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4ail")
+text = "Continue"
+
+[node name="BtnRestart" type="Button" parent="PauseMenu" unique_id=2142353459]
+offset_left = 158.0
+offset_top = 370.0
+offset_right = 343.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("4_qlg0r")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4r5pv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_60mlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4ail")
+text = "Restart"
+
+[node name="BtnMenu" type="Button" parent="PauseMenu" unique_id=2126404766]
+offset_left = 177.0
+offset_top = 436.0
+offset_right = 457.0
+offset_bottom = 476.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("4_qlg0r")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4r5pv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_60mlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4ail")
+text = "Back To Menu"
+
 [connection signal="pressed" from="PickupUI/FadeTarget/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PauseMenu/BtnContinue" to="PauseMenu" method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseMenu/BtnRestart" to="PauseMenu" method="_on_restart_pressed"]
+[connection signal="pressed" from="PauseMenu/BtnMenu" to="PauseMenu" method="_on_menu_pressed"]
