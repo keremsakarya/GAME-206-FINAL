@@ -2980,7 +2980,7 @@ mesh = SubResource("ArrayMesh_2uowd")
 shape = SubResource("ConcavePolygonShape3D_4obhx")
 
 [node name="Librero_008" type="MeshInstance3D" parent="Libreros" parent_id_path=PackedInt32Array(1690394010) index="4" unique_id=1373844616]
-transform = Transform3D(2.449492, 1.7089711, -1.2013041, -2.7350293e-07, 1.7994219, 2.319073, 2.4104729, -1.7366344, 1.2207499, -0.19046503, -0.078086376, -0.069115415)
+transform = Transform3D(2.449493, 1.708972, -1.2013046, -2.7350293e-07, 1.7994226, 2.319073, 2.4104729, -1.7366344, 1.2207499, -0.18631351, -0.08270311, -0.080201894)
 mesh = SubResource("ArrayMesh_2uowd")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Libreros/Librero_008" index="0" unique_id=1265470818]
