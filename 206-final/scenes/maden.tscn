@@ -23,7 +23,9 @@
 [ext_resource type="Script" uid="uid://cvb68ty4onvq" path="res://scripts/key_area.gd" id="22_0nccs"]
 [ext_resource type="Script" uid="uid://bpa4frg4jhwie" path="res://scripts/monster_trigger_area.gd" id="23_lvsx0"]
 [ext_resource type="PackedScene" uid="uid://cbf7ui7ia8o6p" path="res://scenes/scripted_monster.tscn" id="24_llgj6"]
+[ext_resource type="Script" uid="uid://or5u2rxgwgep" path="res://scripts/end_game_area.gd" id="25_lvsx0"]
 [ext_resource type="PackedScene" uid="uid://dbbg6eu5dmk2o" path="res://assets/bone+3d+model/tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded.fbx" id="25_mst8y"]
+[ext_resource type="FontFile" uid="uid://bdm5krx7felvt" path="res://fonts/title1/Gotham Black.otf" id="25_tyk3x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ne3ck"]
 sky_top_color = Color(0.023244144, 0.1320852, 0.25504333, 1)
@@ -2194,6 +2196,18 @@ size = Vector3(1, 1.9716797, 3.9406586)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tyk3x"]
 size = Vector3(1.1824951, 0.2805786, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lvsx0"]
+size = Vector3(2.5112915, 2.9902954, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiqmc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlg0r"]
+bg_color = Color(0.023529412, 0.023529412, 0.023529412, 0.6666667)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuyoq"]
+
 [node name="Mines_Modu" unique_id=194057148 instance=ExtResource("1_rdbsp")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0" unique_id=1240986357]
@@ -2204,19 +2218,19 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 visible = false
 shadow_enabled = true
 
-[node name="Mine_04" parent="." index="4" unique_id=749404517]
+[node name="Mine_04" parent="." index="4" unique_id=1778657153]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -10.619093, 4.3988996, -30.340488)
 
-[node name="Mine_06" parent="." index="6" unique_id=1387822089]
+[node name="Mine_06" parent="." index="6" unique_id=161139928]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -10.619093, 4.3988996, -12.0161)
 
-[node name="Mine_05" parent="." index="7" unique_id=421482926]
+[node name="Mine_05" parent="." index="7" unique_id=1411091388]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -10.619093, 4.3988996, -19.39781)
 
-[node name="Mine_09" parent="." index="9" unique_id=1337548660]
+[node name="Mine_09" parent="." index="9" unique_id=1461699156]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 28.621752, 4.417217, 16.815071)
 
-[node name="Mine_10" parent="." index="10" unique_id=990727811 groups=["MineFloor"]]
+[node name="Mine_10" parent="." index="10" unique_id=1498398867 groups=["MineFloor"]]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -45.874767, 4.4212127, 4.908307)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mine_10" index="0" unique_id=1967470858 groups=["MineFloor"]]
@@ -2224,25 +2238,25 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mine_10/StaticBody3D" index="0" unique_id=946638777]
 shape = SubResource("ConcavePolygonShape3D_8uprw")
 
-[node name="Wood_M_03" parent="." index="29" unique_id=1827070805]
+[node name="Wood_M_03" parent="." index="29" unique_id=1657963677]
 transform = Transform3D(0.5263091, -6.6358816e-06, 99.998634, -99.998634, 0, 0.52631503, -5.960465e-06, -111.33162, -1.192093e-05, -10.595553, 4.6668954, -30.352037)
 
-[node name="Wood_T_06" parent="." index="30" unique_id=587053328]
+[node name="Wood_T_06" parent="." index="30" unique_id=846509324]
 transform = Transform3D(0.5263091, -6.6358816e-06, 99.998634, -99.998634, 0, 0.52631503, -5.960465e-06, -111.33162, -1.192093e-05, 14.744373, 6.841551, -86.542145)
 
-[node name="Wood_T_07" parent="." index="31" unique_id=1450232148]
+[node name="Wood_T_07" parent="." index="31" unique_id=77643408]
 transform = Transform3D(-0.52635676, 2.3225586e-05, -99.99863, -99.99863, -1.3271763e-05, 0.5263508, -2.9802325e-06, 111.33162, 1.192093e-05, 14.711254, 6.803801, -83.1624)
 
-[node name="Wood_M_04" parent="." index="32" unique_id=479026921]
+[node name="Wood_M_04" parent="." index="32" unique_id=1691154898]
 transform = Transform3D(0, -100, -0.0004798174, -1.2338072, -0.00047683716, 99.992386, 99.992386, -5.9604645e-06, 1.2338161, -10.57883, 4.585417, -20.044065)
 
-[node name="Wood_M_05" parent="." index="33" unique_id=36797127]
+[node name="Wood_M_05" parent="." index="33" unique_id=1704491099]
 transform = Transform3D(96.28167, 0, 0, 0, -1.2086866e-05, 99.99999, 0, -101.391975, -1.1920929e-05, -11.413855, 4.5789347, -12.828123)
 
-[node name="Wood_M_09" parent="." index="40" unique_id=741526082]
+[node name="Wood_M_09" parent="." index="40" unique_id=1830954675]
 transform = Transform3D(38.9216, 1.4511782e-07, -1.6071632, 1.6071632, -4.6437704e-06, 38.921604, 0, -38.95477, -4.6437704e-06, 28.564455, 4.202178, 16.802986)
 
-[node name="Wood_M_10" parent="." index="41" unique_id=1674526869]
+[node name="Wood_M_10" parent="." index="41" unique_id=130709636]
 transform = Transform3D(38.9301, 0, 1.3861294, -1.3861294, 0, 38.9301, 0, 38.95477, 0, -45.976997, 4.201637, 4.8580294)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Wood_M_10" index="0" unique_id=1264983294]
@@ -2250,7 +2264,7 @@ transform = Transform3D(38.9301, 0, 1.3861294, -1.3861294, 0, 38.9301, 0, 38.954
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wood_M_10/StaticBody3D" index="0" unique_id=1817637490]
 shape = SubResource("ConcavePolygonShape3D_ne3ck")
 
-[node name="Mine_11" parent="." index="45" unique_id=843131830 groups=["MineFloor"]]
+[node name="Mine_11" parent="." index="45" unique_id=1823309740 groups=["MineFloor"]]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -47.420307, 4.3988996, 16.77608)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mine_11" index="0" unique_id=378241299 groups=["MineFloor"]]
@@ -2258,7 +2272,7 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mine_11/StaticBody3D" index="0" unique_id=113666310]
 shape = SubResource("ConcavePolygonShape3D_beiek")
 
-[node name="Mine_12" parent="." index="46" unique_id=1360004614]
+[node name="Mine_12" parent="." index="46" unique_id=675945545]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -47.396477, 12.655215, 22.567276)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mine_12" index="0" unique_id=314094897]
@@ -2266,130 +2280,130 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mine_12/StaticBody3D" index="0" unique_id=1260132439]
 shape = SubResource("ConcavePolygonShape3D_4ml6r")
 
-[node name="Rails_M_04" parent="." index="53" unique_id=1994667117]
+[node name="Rails_M_04" parent="." index="53" unique_id=1049613190]
 transform = Transform3D(-100, -1.4210855e-12, -8.742278e-06, -8.742278e-06, 1.7881393e-05, 99.99999, 0, 99.99999, -1.1920929e-05, -10.625986, 2.8704734, -30.310791)
 
-[node name="Rails_M_05" parent="." index="55" unique_id=1488088356]
+[node name="Rails_M_05" parent="." index="55" unique_id=2129115864]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -10.61365, 2.8653224, -19.948915)
 
-[node name="Rails_M_06" parent="." index="56" unique_id=1525386273]
+[node name="Rails_M_06" parent="." index="56" unique_id=925164427]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -11.7793, 2.8605464, -13.191654)
 
-[node name="Rails_M_08" parent="." index="58" unique_id=1136497133]
+[node name="Rails_M_08" parent="." index="58" unique_id=1338105460]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, 27.205318, 2.859317, 16.867134)
 
-[node name="Rails_M_09" parent="." index="59" unique_id=1056272849]
+[node name="Rails_M_09" parent="." index="59" unique_id=518551688]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, -47.805077, 2.859317, 4.969804)
 
-[node name="Rails" parent="." index="61" unique_id=2057266358]
+[node name="Rails" parent="." index="61" unique_id=254397920]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, 9.62722, 12.548382, -91.00917)
 
-[node name="Rails_01" parent="." index="62" unique_id=1295963938]
+[node name="Rails_01" parent="." index="62" unique_id=434892017]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, 9.62722, 13.318916, -75.218666)
 
-[node name="Rails_04" parent="." index="63" unique_id=824039717]
+[node name="Rails_04" parent="." index="63" unique_id=1395195836]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, -10.625986, 12.524622, -34.9281)
 
-[node name="Rails_05" parent="." index="64" unique_id=80976981]
+[node name="Rails_05" parent="." index="64" unique_id=453494539]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, -10.615237, 12.521862, -41.534924)
 
-[node name="Rails_06" parent="." index="65" unique_id=948921000]
+[node name="Rails_06" parent="." index="65" unique_id=1876951880]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -11.7793, 12.514695, -72.40547)
 
-[node name="Rails_02" parent="." index="66" unique_id=439810745]
+[node name="Rails_02" parent="." index="66" unique_id=342437970]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, 8.418805, 12.51171, -53.287735)
 
-[node name="Rails_07" parent="." index="67" unique_id=361966842]
+[node name="Rails_07" parent="." index="67" unique_id=36701400]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, -9.554779, 12.513466, -42.60859)
 
-[node name="Rails_08" parent="." index="68" unique_id=462924948]
+[node name="Rails_08" parent="." index="68" unique_id=1608836234]
 transform = Transform3D(0, 100, 2.9802322e-06, 2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, -73.97354, 12.513466, -10.875265)
 
-[node name="Rails_03" parent="." index="69" unique_id=464230108]
+[node name="Rails_03" parent="." index="69" unique_id=1712527969]
 transform = Transform3D(0, -100, 2.9802322e-06, -2.9802322e-06, 0, 100, 100, 2.9802322e-06, 0, 1.841818, 12.548382, -81.177025)
 
-[node name="Rails_09" parent="." index="70" unique_id=1612815550]
+[node name="Rails_09" parent="." index="70" unique_id=1447623649]
 transform = Transform3D(100, 1.4210855e-12, -8.742278e-06, 8.742278e-06, -1.7881393e-05, 99.99999, 0, 99.99999, 1.1920929e-05, -8.554504, 14.074172, -28.81431)
 
-[node name="Rails_10" parent="." index="71" unique_id=1280267681]
+[node name="Rails_10" parent="." index="71" unique_id=786053502]
 transform = Transform3D(-100, -1.4210855e-12, -8.742278e-06, -8.742278e-06, 1.7881393e-05, 99.99999, 0, 99.99999, -1.1920929e-05, -11.6735935, 14.076595, -24.51254)
 
-[node name="Rails_11" parent="." index="72" unique_id=2111060307]
+[node name="Rails_11" parent="." index="72" unique_id=1942552156]
 transform = Transform3D(-100, -1.4210855e-12, -8.742278e-06, -8.742278e-06, 1.7881393e-05, 99.99999, 0, 99.99999, -1.1920929e-05, -10.967951, 14.963458, -29.09915)
 
-[node name="Cables_M_08" parent="." index="85" unique_id=1300104841]
+[node name="Cables_M_08" parent="." index="85" unique_id=2114894115]
 transform = Transform3D(45.305656, 3.896793e-06, 89.14818, 5.3290705e-13, 100, -4.3711416e-06, -89.14818, 1.980375e-06, 45.305656, 29.001974, 5.2954617, 16.760372)
 
-[node name="Cables_M_09" parent="." index="86" unique_id=1978025745]
+[node name="Cables_M_09" parent="." index="86" unique_id=1789346478]
 transform = Transform3D(45.305656, 3.896793e-06, 89.14818, 5.3290705e-13, 100, -4.3711416e-06, -89.14818, 1.980375e-06, 45.305656, -45.628998, 5.271206, 4.8230906)
 
-[node name="Lamp_012" parent="." index="89" unique_id=2004884298]
+[node name="Lamp_012" parent="." index="89" unique_id=1036642482]
 transform = Transform3D(10.8113, -0.1539052, 2.2401607, -2.238236, -1.6204386, 10.690682, 0.17973977, -10.921388, -1.6177771, 14.583904, 5.286775, -46.544846)
 
-[node name="Lamp_013" parent="." index="90" unique_id=269565520]
+[node name="Lamp_013" parent="." index="90" unique_id=766294117]
 transform = Transform3D(10.322088, 0.049072914, 3.921515, -3.920041, -0.20362023, 10.320757, 0.11818238, -11.040034, -0.17292382, 14.778332, 5.3144546, -44.593323)
 
-[node name="Lamp_014" parent="." index="91" unique_id=1371995668]
+[node name="Lamp_014" parent="." index="91" unique_id=1123052772]
 transform = Transform3D(10.322088, 0.049072914, 3.921515, -3.920041, -0.20362023, 10.320757, 0.11818238, -11.040034, -0.17292382, 14.778332, 5.3144546, -42.423042)
 
-[node name="Lamp_015" parent="." index="92" unique_id=268745881]
+[node name="Lamp_015" parent="." index="92" unique_id=2099316198]
 transform = Transform3D(10.322088, 0.049072914, 3.921515, -3.920041, -0.20362023, 10.320757, 0.11818238, -11.040034, -0.17292382, 14.778332, 5.3144546, -40.29101)
 
-[node name="Lamp_016" parent="." index="93" unique_id=1631120514]
+[node name="Lamp_016" parent="." index="93" unique_id=262380649]
 transform = Transform3D(10.055604, 0.19994457, 4.5575275, -4.267809, 4.3090987, 9.227334, -1.6114695, -10.164541, 4.0014343, 14.4953785, 5.310241, -38.66418)
 
-[node name="Lamp_027" parent="." index="104" unique_id=393919536]
+[node name="Lamp_027" parent="." index="104" unique_id=1605400621]
 transform = Transform3D(10.394436, -0.638551, 3.6707177, -3.6578417, 0.3200157, 10.413646, -0.70859605, -11.018895, 0.08971781, 31.08586, 5.318103, 8.835793)
 
-[node name="Lamp_028" parent="." index="105" unique_id=419991029]
+[node name="Lamp_028" parent="." index="105" unique_id=1163066502]
 transform = Transform3D(10.727276, -0.13629524, 2.6140373, -2.5915768, -2.1036909, 10.525418, 0.36809933, -10.838918, -2.0757153, 31.113256, 5.2924404, 12.311031)
 
-[node name="Lamp_029" parent="." index="106" unique_id=1593964134]
+[node name="Lamp_029" parent="." index="106" unique_id=2022336924]
 transform = Transform3D(11.020975, 0.45437297, -0.50780034, 0.6196937, -3.2614222, 10.531158, 0.28336498, -10.539587, -3.280706, 31.98264, 5.314567, 12.994587)
 
-[node name="Lamp_030" parent="." index="107" unique_id=72492263]
+[node name="Lamp_030" parent="." index="107" unique_id=1754041608]
 transform = Transform3D(10.8113, -0.1539052, 2.2401607, -2.238236, -1.6204386, 10.690682, 0.17973977, -10.921388, -1.6177771, 34.843964, 5.2979345, 12.943031)
 
-[node name="Lamp_031" parent="." index="108" unique_id=639286877]
+[node name="Lamp_031" parent="." index="108" unique_id=545283522]
 transform = Transform3D(10.322088, 0.049072914, 3.921515, -3.920041, -0.20362023, 10.320757, 0.11818238, -11.040034, -0.17292382, 35.032707, 5.3144546, 14.8824005)
 
-[node name="Lamp_032" parent="." index="109" unique_id=386304217]
+[node name="Lamp_032" parent="." index="109" unique_id=768051360]
 transform = Transform3D(10.322088, 0.049072914, 3.921515, -3.920041, -0.20362023, 10.320757, 0.11818238, -11.040034, -0.17292382, 35.01407, 5.3144546, 17.052677)
 
-[node name="Lamp_033" parent="." index="110" unique_id=1765558006]
+[node name="Lamp_033" parent="." index="110" unique_id=1965311121]
 transform = Transform3D(10.322088, 0.049072914, 3.921515, -3.920041, -0.20362023, 10.320757, 0.11818238, -11.040034, -0.17292382, 35.040565, 5.3144546, 19.184708)
 
-[node name="Lamp_034" parent="." index="111" unique_id=1787938205]
+[node name="Lamp_034" parent="." index="111" unique_id=87789268]
 transform = Transform3D(10.055604, 0.19994457, 4.5575275, -4.267809, 4.3090987, 9.227334, -1.6114695, -10.164541, 4.0014343, 34.766045, 5.310241, 20.811539)
 
-[node name="Lamp_035" parent="." index="112" unique_id=1530802702]
+[node name="Lamp_035" parent="." index="112" unique_id=1373668695]
 transform = Transform3D(10.9647255, -1.264688, -0.31871003, 0.8444844, 4.8280993, 9.894569, -0.99391055, -9.849683, 4.891024, 32.187622, 5.315449, 20.735329)
 
-[node name="Lamp_036" parent="." index="113" unique_id=47447167]
+[node name="Lamp_036" parent="." index="113" unique_id=1556503048]
 transform = Transform3D(10.983294, -1.1029729, 0.2773854, 0.2350393, 4.8362236, 9.923805, -1.1127661, -9.865121, 4.83398, 29.43736, 5.318655, 20.924057)
 
-[node name="Lamp_037" parent="." index="114" unique_id=1907639914]
+[node name="Lamp_037" parent="." index="114" unique_id=1012189544]
 transform = Transform3D(10.3417, -2.7841892, -2.6877058, 3.5145373, 3.5474877, 9.848329, -1.6197226, -10.079179, 4.208667, 25.80158, 5.1855035, 20.939388)
 
-[node name="Lamp_038" parent="." index="115" unique_id=713207540]
+[node name="Lamp_038" parent="." index="115" unique_id=1739927178]
 transform = Transform3D(9.028659, -3.4514506, -5.3382607, 6.006787, 1.59749, 9.126488, -2.0803983, -10.366374, 3.1837764, 23.456535, 5.252631, 20.640255)
 
-[node name="Lamp_040" parent="." index="116" unique_id=168420594]
+[node name="Lamp_040" parent="." index="116" unique_id=1091716164]
 transform = Transform3D(10.015238, -4.648438, -0.11509005, -0.008386713, -0.2913616, 11.038174, -4.649854, -10.011661, -0.26779962, 23.177965, 5.2927327, 17.100529)
 
-[node name="Lamp_041" parent="." index="117" unique_id=800699966]
+[node name="Lamp_041" parent="." index="117" unique_id=1706758003]
 transform = Transform3D(9.083217, -3.8172433, -4.9849815, 4.3190293, -2.5643563, 9.8334255, -4.557123, -10.038873, -0.6163562, 23.695879, 5.2930675, 14.901264)
 
-[node name="Lamp_042" parent="." index="118" unique_id=674214188]
+[node name="Lamp_042" parent="." index="118" unique_id=153662300]
 transform = Transform3D(9.667139, -4.3587513, -3.0779762, 1.0882268, -4.625089, 9.967474, -5.223831, -9.029732, -3.6196327, 23.648024, 5.3017406, 12.973118)
 
-[node name="Lamp_043" parent="." index="119" unique_id=592828660]
+[node name="Lamp_043" parent="." index="119" unique_id=1856519900]
 transform = Transform3D(9.6381645, -5.3875546, -0.079000406, -2.255823, -4.181757, 9.967469, -4.893183, -8.684091, -4.750747, 25.757914, 5.2884636, 12.992893)
 
-[node name="Lamp_044" parent="." index="120" unique_id=747467695]
+[node name="Lamp_044" parent="." index="120" unique_id=1142271672]
 transform = Transform3D(9.6381645, -5.3875546, -0.079000406, -2.255823, -4.181757, 9.967469, -4.893183, -8.684091, -4.750747, 28.006369, 5.337429, 12.93782)
 
-[node name="Lamp_046" parent="." index="122" unique_id=1562572186]
+[node name="Lamp_046" parent="." index="122" unique_id=1473950197]
 transform = Transform3D(9.899452, -0.627753, 4.8510814, -4.768368, 1.2034119, 9.88639, -1.0907483, -10.958282, 0.8078019, 28.57273, 5.3141437, 24.753967)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Lamp_046" index="0" unique_id=585500628]
@@ -2397,7 +2411,7 @@ transform = Transform3D(9.899452, -0.627753, 4.8510814, -4.768368, 1.2034119, 9.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp_046/StaticBody3D" index="0" unique_id=205551977]
 shape = SubResource("ConcavePolygonShape3D_vqh3b")
 
-[node name="Lamp_047" parent="." index="123" unique_id=762359005]
+[node name="Lamp_047" parent="." index="123" unique_id=1412215962]
 transform = Transform3D(11.0067215, -0.84036535, 0.26849425, -0.59308606, -4.5606422, 10.038675, -0.65310955, -10.021006, -4.5912004, 20.258486, 5.2989264, 15.680328)
 
 [node name="Mine_17" type="MeshInstance3D" parent="." index="124" unique_id=980676681 groups=["MineFloor"]]
@@ -2614,88 +2628,88 @@ shape = SubResource("ConcavePolygonShape3D_vqh3b")
 transform = Transform3D(11.0067215, -0.84036535, 0.26849425, -0.59308606, -4.5606422, 10.038675, -0.65310955, -10.021006, -4.5912004, -25.899073, 5.2989264, 19.46238)
 mesh = SubResource("ArrayMesh_l1awb")
 
-[node name="Lamp_039" parent="." index="170" unique_id=198828429]
+[node name="Lamp_039" parent="." index="170" unique_id=2047679362]
 transform = Transform3D(10.394436, -0.638551, 3.6707177, -3.6578417, 0.3200157, 10.413646, -0.70859605, -11.018895, 0.08971781, -43.960472, 5.318103, -3.077095)
 
-[node name="Lamp_048" parent="." index="171" unique_id=1076232818]
+[node name="Lamp_048" parent="." index="171" unique_id=363830211]
 transform = Transform3D(10.727276, -0.13629524, 2.6140373, -2.5915768, -2.1036909, 10.525418, 0.36809933, -10.838918, -2.0757153, -43.933075, 5.2924404, 0.39814472)
 
-[node name="Lamp_049" parent="." index="172" unique_id=301302596]
+[node name="Lamp_049" parent="." index="172" unique_id=297328035]
 transform = Transform3D(11.020975, 0.45437297, -0.50780034, 0.6196937, -3.2614222, 10.531158, 0.28336498, -10.539587, -3.280706, -43.127853, 5.314567, 1.0817003)
 
-[node name="Lamp_050" parent="." index="173" unique_id=215219367]
+[node name="Lamp_050" parent="." index="173" unique_id=1687931352]
 transform = Transform3D(10.8113, -0.1539052, 2.2401607, -2.238236, -1.6204386, 10.690682, 0.17973977, -10.921388, -1.6177771, -40.252556, 5.2979345, 1.0301447)
 
-[node name="Lamp_051" parent="." index="174" unique_id=1106364762]
+[node name="Lamp_051" parent="." index="174" unique_id=556491588]
 transform = Transform3D(10.322088, 0.049072914, 3.921515, -3.920041, -0.20362023, 10.320757, 0.11818238, -11.040034, -0.17292382, -40.06381, 5.3144546, 2.969514)
 
-[node name="Lamp_052" parent="." index="175" unique_id=2033825745]
+[node name="Lamp_052" parent="." index="175" unique_id=2053155306]
 transform = Transform3D(10.941727, 1.3531892, 0.6113231, -0.7073644, 0.7531572, 10.993572, 1.3055545, -10.932879, 0.83300334, -39.29576, 5.284436, 5.126643)
 
-[node name="Lamp_053" parent="." index="176" unique_id=1020244157]
+[node name="Lamp_053" parent="." index="176" unique_id=1777624892]
 transform = Transform3D(10.322088, 0.049072914, 3.921515, -3.920041, -0.20362023, 10.320757, 0.11818238, -11.040034, -0.17292382, -40.052868, 5.3144546, 7.271821)
 
-[node name="Lamp_054" parent="." index="177" unique_id=344091272]
+[node name="Lamp_054" parent="." index="177" unique_id=995951455]
 transform = Transform3D(10.055604, 0.19994457, 4.5575275, -4.267809, 4.3090987, 9.227334, -1.6114695, -10.164541, 4.0014343, -40.32739, 5.310241, 8.898652)
 
-[node name="Lamp_055" parent="." index="178" unique_id=1901737623]
+[node name="Lamp_055" parent="." index="178" unique_id=559687246]
 transform = Transform3D(10.9647255, -1.264688, -0.31871003, 0.8444844, 4.8280993, 9.894569, -0.99391055, -9.849683, 4.891024, -42.917965, 5.315449, 8.822446)
 
-[node name="Lamp_056" parent="." index="179" unique_id=1661558573]
+[node name="Lamp_056" parent="." index="179" unique_id=2024621653]
 transform = Transform3D(10.983294, -1.1029729, 0.2773854, 0.2350393, 4.8362236, 9.923805, -1.1127661, -9.865121, 4.83398, -45.63389, 5.318655, 9.01117)
 
-[node name="Lamp_057" parent="." index="180" unique_id=489852307]
+[node name="Lamp_057" parent="." index="180" unique_id=1917029757]
 transform = Transform3D(10.3417, -2.7841892, -2.6877058, 3.5145373, 3.5474877, 9.848329, -1.6197226, -10.079179, 4.208667, -49.29677, 5.1855035, 9.026502)
 
-[node name="Lamp_058" parent="." index="181" unique_id=95235428]
+[node name="Lamp_058" parent="." index="181" unique_id=874891092]
 transform = Transform3D(9.028659, -3.4514506, -5.3382607, 6.006787, 1.59749, 9.126488, -2.0803983, -10.366374, 3.1837764, -51.65631, 5.270197, 8.808135)
 
-[node name="Lamp_059" parent="." index="182" unique_id=276071047]
+[node name="Lamp_059" parent="." index="182" unique_id=957122454]
 transform = Transform3D(10.015238, -4.648438, -0.11509005, -0.008386713, -0.2913616, 11.038174, -4.649854, -10.011661, -0.26779962, -51.92102, 5.2868867, 5.178445)
 
-[node name="Lamp_060" parent="." index="183" unique_id=600213537]
+[node name="Lamp_060" parent="." index="183" unique_id=1462979241]
 transform = Transform3D(9.083217, -3.8172433, -4.9849815, 4.3190293, -2.5643563, 9.8334255, -4.557123, -10.038873, -0.6163562, -51.419205, 5.2930675, 2.9883776)
 
-[node name="Lamp_061" parent="." index="184" unique_id=1585494303]
+[node name="Lamp_061" parent="." index="184" unique_id=2107217418]
 transform = Transform3D(9.667139, -4.3587513, -3.0779762, 1.0882268, -4.625089, 9.967474, -5.223831, -9.029732, -3.6196327, -51.467064, 5.3017406, 1.0602312)
 
-[node name="Lamp_062" parent="." index="185" unique_id=703763121]
+[node name="Lamp_062" parent="." index="185" unique_id=1609325217]
 transform = Transform3D(9.6381645, -5.3875546, -0.079000406, -2.255823, -4.181757, 9.967469, -4.893183, -8.684091, -4.750747, -49.28842, 5.2884636, 1.0800066)
 
-[node name="Lamp_063" parent="." index="186" unique_id=539359266]
+[node name="Lamp_063" parent="." index="186" unique_id=723867519]
 transform = Transform3D(9.6381645, -5.3875546, -0.079000406, -2.255823, -4.181757, 9.967469, -4.893183, -8.684091, -4.750747, -47.039963, 5.337429, 1.0249338)
 
-[node name="Lamp_064" parent="." index="187" unique_id=1033618494]
+[node name="Lamp_064" parent="." index="187" unique_id=1603497091]
 transform = Transform3D(9.899452, -0.627753, 4.8510814, -4.768368, 1.2034119, 9.88639, -1.0907483, -10.958282, 0.8078019, -46.473602, 5.3141437, 12.841083)
 
-[node name="Lamp_065" parent="." index="188" unique_id=1747973094]
+[node name="Lamp_065" parent="." index="188" unique_id=1246912802]
 transform = Transform3D(11.0067215, -0.84036535, 0.26849425, -0.59308606, -4.5606422, 10.038675, -0.65310955, -10.021006, -4.5912004, -54.78785, 5.2989264, 3.7674398)
 
-[node name="Lamp_066" parent="." index="189" unique_id=1265181987]
+[node name="Lamp_066" parent="." index="189" unique_id=1062213822]
 transform = Transform3D(10.942558, 1.4088724, 0.4491004, -0.02349731, -3.1874678, 10.571928, 1.478533, -10.477657, -3.155759, -36.987663, 5.131287, 3.626298)
 
-[node name="Lamp_074" parent="." index="198" unique_id=1542244220]
+[node name="Lamp_074" parent="." index="198" unique_id=1742645906]
 transform = Transform3D(10.467599, -0.11074425, -3.5133076, 3.5020182, -0.6209858, 10.453539, -0.30242503, -11.02399, -0.5535577, -3.2247715, 5.247654, -16.35005)
 
-[node name="Cables_M_03" parent="." index="199" unique_id=1387798068]
+[node name="Cables_M_03" parent="." index="199" unique_id=1528663362]
 transform = Transform3D(5.9604645e-06, 4.3711398e-06, 100, 1.7763568e-13, 100, -4.3711398e-06, -100, 5.3290705e-13, 5.9604645e-06, -10.018915, 5.1556034, -30.632483)
 
-[node name="Lamp_075" parent="." index="200" unique_id=119588318]
+[node name="Lamp_075" parent="." index="200" unique_id=135481742]
 transform = Transform3D(10.718132, -0.71339643, 2.5571284, -2.5899575, -0.47394317, 10.723513, -0.583062, -11.008754, -0.62737113, -9.397985, 12.041048, -34.976368)
 
-[node name="Lamp_077" parent="." index="201" unique_id=448808544]
+[node name="Lamp_077" parent="." index="201" unique_id=968801342]
 transform = Transform3D(10.945341, -1.0562627, 1.0050067, -1.128067, -1.313122, 10.905476, -0.92368513, -10.912663, -1.409534, -8.758429, 5.1520824, -31.497383)
 
-[node name="Lamp_076" parent="." index="202" unique_id=2092576850]
+[node name="Lamp_076" parent="." index="202" unique_id=1369891234]
 transform = Transform3D(11.007283, -0.41525194, -0.7703782, 0.70622635, -1.5260221, 10.913238, -0.51687604, -10.928177, -1.4946637, -6.77125, 5.1788116, -31.593716)
 
-[node name="Lamp_078" parent="." index="203" unique_id=412804234]
+[node name="Lamp_078" parent="." index="203" unique_id=1409973047]
 transform = Transform3D(10.66706, 0.23240927, 2.8435938, -2.8522902, 0.6105158, 10.649785, 0.066930644, -11.022681, 0.6498182, -9.487473, 5.1565056, -28.610806)
 
-[node name="Lamp_079" parent="." index="204" unique_id=169331361]
+[node name="Lamp_079" parent="." index="204" unique_id=1848438072]
 transform = Transform3D(10.465361, 0.12786582, 3.5193892, -3.5129325, -0.39963344, 10.460679, 0.24850775, -11.034044, -0.33808273, -9.521156, 5.1684513, -26.534966)
 
-[node name="Lamp_080" parent="." index="205" unique_id=487076204]
+[node name="Lamp_080" parent="." index="205" unique_id=1759853914]
 transform = Transform3D(10.679197, 0.9046701, -2.6575427, 2.777681, -1.8905668, 10.518387, 0.4067562, -10.8412895, -2.0560205, -12.431186, 5.1729765, -31.581322)
 
 [node name="Rails_M_12" type="MeshInstance3D" parent="." index="206" unique_id=1184016961]
@@ -2722,7 +2736,7 @@ mesh = SubResource("ArrayMesh_lc7ef")
 transform = Transform3D(10.679197, 0.9046701, -2.6575427, 2.777681, -1.8905668, 10.518387, 0.4067562, -10.8412895, -2.0560205, -12.431186, 5.1729765, -31.581322)
 mesh = SubResource("ArrayMesh_85dfb")
 
-[node name="Lamp_081" parent="." index="212" unique_id=1121482550]
+[node name="Lamp_081" parent="." index="212" unique_id=1581742710]
 transform = Transform3D(11.022665, -0.4943204, 0.42743874, -0.56691486, -3.6406226, 10.409164, -0.32506007, -10.412865, -3.6596196, -14.482225, 5.1834927, -31.496979)
 
 [node name="Rails_M_13" type="MeshInstance3D" parent="." index="213" unique_id=44282033]
@@ -2911,34 +2925,34 @@ mesh = SubResource("ArrayMesh_85dfb")
 transform = Transform3D(11.022665, -0.4943204, 0.42743874, -0.56691486, -3.6406226, 10.409164, -0.32506007, -10.412865, -3.6596196, -28.427622, 5.1834927, 3.5634155)
 mesh = SubResource("ArrayMesh_84ks8")
 
-[node name="Cables_M_04" parent="." index="257" unique_id=1971907387]
+[node name="Cables_M_04" parent="." index="257" unique_id=924331833]
 transform = Transform3D(100, 0, 0, 0, 100, -4.371139e-06, 0, 4.371139e-06, 100, -10.295633, 5.157372, -20.250008)
 
-[node name="Lamp_082" parent="." index="258" unique_id=1692991685]
+[node name="Lamp_082" parent="." index="258" unique_id=459488999]
 transform = Transform3D(10.718132, -0.71339643, 2.5571284, -2.5899575, -0.47394317, 10.723513, -0.583062, -11.008754, -0.62737113, -9.397985, 5.171455, -23.312263)
 
-[node name="Lamp_083" parent="." index="259" unique_id=1451927377]
+[node name="Lamp_083" parent="." index="259" unique_id=1314787933]
 transform = Transform3D(10.945341, -1.0562627, 1.0050067, -1.128067, -1.313122, 10.905476, -0.92368513, -10.912663, -1.409534, -8.758429, 5.1520824, -20.571693)
 
-[node name="Lamp_084" parent="." index="260" unique_id=1057272826]
+[node name="Lamp_084" parent="." index="260" unique_id=648532212]
 transform = Transform3D(11.007283, -0.41525194, -0.7703782, 0.70622635, -1.5260221, 10.913238, -0.51687604, -10.928177, -1.4946637, -6.77125, 5.1788116, -20.668024)
 
-[node name="Lamp_085" parent="." index="261" unique_id=444626835]
+[node name="Lamp_085" parent="." index="261" unique_id=1170485090]
 transform = Transform3D(11.026486, -0.57385147, -0.116259776, 0.15214677, 0.6910142, 11.019327, -0.5653965, -11.005426, 0.6979491, -10.553919, 5.1301646, -17.857986)
 
-[node name="Lamp_086" parent="." index="262" unique_id=896083067]
+[node name="Lamp_086" parent="." index="262" unique_id=1577691917]
 transform = Transform3D(11.022665, -0.4943204, 0.42743874, -0.56691486, -3.6406226, 10.409164, -0.32506007, -10.412865, -3.6596196, -14.482225, 5.1834927, -20.571287)
 
-[node name="Cables_M_05" parent="." index="263" unique_id=1434495767]
+[node name="Cables_M_05" parent="." index="263" unique_id=1182684930]
 transform = Transform3D(5.9604645e-06, 4.3711398e-06, 100, 1.7763568e-13, 100, -4.3711398e-06, -100, 5.3290705e-13, 5.9604645e-06, -10.949518, 5.1592903, -12.802038)
 
-[node name="Lamp_087" parent="." index="264" unique_id=1420389775]
+[node name="Lamp_087" parent="." index="264" unique_id=274434847]
 transform = Transform3D(10.718132, -0.71339643, 2.5571284, -2.5899575, -0.47394317, 10.723513, -0.583062, -11.008754, -0.62737113, -9.397985, 5.171455, -15.917879)
 
-[node name="Lamp_089" parent="." index="265" unique_id=924850888]
+[node name="Lamp_089" parent="." index="265" unique_id=1402801361]
 transform = Transform3D(11.008875, -0.8436759, -0.13818103, 0.31733614, 2.375423, 10.778816, -0.7938392, -10.750433, 2.3925388, -10.556574, 5.1423936, -10.513273)
 
-[node name="Lamp_090" parent="." index="266" unique_id=827653565]
+[node name="Lamp_090" parent="." index="266" unique_id=2099660001]
 transform = Transform3D(11.022665, -0.4943204, 0.42743874, -0.56691486, -3.6406226, 10.409164, -0.32506007, -10.412865, -3.6596196, -14.482225, 5.1834927, -13.176905)
 
 [node name="Mine_15" type="MeshInstance3D" parent="." index="267" unique_id=1989814096 groups=["MineFloor"]]
@@ -3052,13 +3066,13 @@ shape = SubResource("ConcavePolygonShape3D_mst8y")
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -2.3975863, 2.8569863, 36.444435)
 mesh = SubResource("ArrayMesh_qfl8l")
 
-[node name="WoodRough" parent="." index="292" unique_id=1135920457]
+[node name="WoodRough" parent="." index="292" unique_id=1566517256]
 visible = false
 
-[node name="Elevator" parent="." index="293" unique_id=1546042658]
+[node name="Elevator" parent="." index="293" unique_id=1017616470]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -47.496258, 4.010638, 22.088198)
 
-[node name="Door_Elevator" parent="." index="294" unique_id=1799443010]
+[node name="Door_Elevator" parent="." index="294" unique_id=169719857]
 transform = Transform3D(113.269615, 0, 0, 0, 113.269615, -4.9511723e-06, 0, 4.9511723e-06, 113.269615, -46.472683, 4.0861607, 20.752382)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door_Elevator" index="0" unique_id=965555634]
@@ -3066,7 +3080,7 @@ transform = Transform3D(113.269615, 0, 0, 0, 113.269615, -4.9511723e-06, 0, 4.95
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door_Elevator/StaticBody3D" index="0" unique_id=1463857424]
 shape = SubResource("ConcavePolygonShape3D_tiqmc")
 
-[node name="MetalBeams" parent="." index="295" unique_id=1440208518]
+[node name="MetalBeams" parent="." index="295" unique_id=1519202488]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -47.273876, 3.7605855, 22.709389)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MetalBeams" index="0" unique_id=405150092]
@@ -3074,7 +3088,7 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MetalBeams/StaticBody3D" index="0" unique_id=1595003941]
 shape = SubResource("ConcavePolygonShape3D_tyk3x")
 
-[node name="Button" parent="." index="296" unique_id=1860947875]
+[node name="Button" parent="." index="296" unique_id=350261845]
 visible = false
 
 [node name="Player" parent="." index="298" unique_id=1581314821 instance=ExtResource("9_8uprw")]
@@ -4895,8 +4909,66 @@ shape = SubResource("BoxShape3D_tyk3x")
 
 [node name="tripo_convert_c8fc2fc3-c998-4ff1-bdc3-f13367131ded" parent="Bones/Bone82" index="1" unique_id=59853256 instance=ExtResource("25_mst8y")]
 
+[node name="EndGameArea" type="Area3D" parent="." index="326" unique_id=1260372109 groups=["BitisAlani"]]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.303856, 3.8576238, 19.894371)
+script = ExtResource("25_lvsx0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EndGameArea" index="0" unique_id=284462834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.236969, 0.50051904, 0)
+shape = SubResource("BoxShape3D_lvsx0")
+
+[node name="EndCanvas" type="CanvasLayer" parent="EndGameArea" index="1" unique_id=1282088225]
+
+[node name="ColorRect" type="ColorRect" parent="EndGameArea/EndCanvas" index="0" unique_id=224746143]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="EndGameArea/EndCanvas" index="1" unique_id=1588450288]
+offset_left = -34.0
+offset_top = 45.0
+offset_right = 1172.0
+offset_bottom = 627.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_fonts/font = ExtResource("15_q1lpj")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tiqmc")
+text = "I managed to escape from that damn place at the last moment.
+
+I need to inform the police as soon as possible.
+
+
+
+
+[Berke went to the police station and told them what had happened.]
+
+[Police officers arrived at the scene and conducted investigations.]
+
+[They informed that the house would be demolished without delay.]"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="EndGameArea/EndCanvas" index="2" unique_id=1886595367]
+offset_left = 782.0
+offset_top = 546.0
+offset_right = 1062.0
+offset_bottom = 586.0
+theme_override_colors/font_color = Color(0.7891976, 0.72368276, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.7254902, 0, 1)
+theme_override_fonts/font = ExtResource("25_tyk3x")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlg0r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuyoq")
+text = "Back To Menu"
+
 [connection signal="body_entered" from="Task/GeneratorTrigger" to="Task/GeneratorTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="Task/GeneratorTrigger" to="Task/GeneratorTrigger" method="_on_body_exited"]
 [connection signal="body_entered" from="KeyArea/KeyArea" to="KeyArea/KeyArea" method="_on_body_entered"]
 [connection signal="body_exited" from="KeyArea/KeyArea" to="KeyArea/KeyArea" method="_on_body_exited"]
 [connection signal="body_entered" from="KeyArea/MonsterTriggerArea" to="KeyArea/MonsterTriggerArea" method="_on_body_entered"]
+[connection signal="body_entered" from="EndGameArea" to="EndGameArea" method="_on_body_entered"]
+[connection signal="pressed" from="EndGameArea/EndCanvas/Button" to="EndGameArea" method="_on_button_pressed"]

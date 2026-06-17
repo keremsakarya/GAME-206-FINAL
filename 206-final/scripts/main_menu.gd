@@ -11,19 +11,24 @@ func _ready():
 		controls_button.hide()
 		exit_button.hide()
 		
+		# Fareyi başlangıçta gizle
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
-		logo_player.play()
-	
-	else:
-		if logo_player:
-			logo_player.queue_free()
+	if Global.skip_video:
+		# $LogoPlayer YERİNE DOĞRUDAN DEĞİŞKENİ KULLANIYORUZ
+		logo_player.stop()
+		logo_player.hide()
 		
+		# Video oynatılmadığı için butonları ve fareyi anında görünür yapıyoruz
 		start_button.show()
 		controls_button.show()
 		exit_button.show()
-		
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
+		Global.skip_video = false
+	else:
+		# Eğer skip_video false ise videoyu oynat
+		logo_player.play()
 
 
 func _on_logo_player_finished() -> void:
